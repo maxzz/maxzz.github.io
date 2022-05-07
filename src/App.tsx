@@ -20,8 +20,32 @@ type ProjectTitleProps = {
 
 const projectsList: ProjectTitleProps[] = [
     {
-        caption: "PMIT",
-        info: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nisi enim veniam illum totam laborum maxime assumenda facere aspernatur voluptatum a nihil dicta officia, suscipit dignissimos voluptatibus repudiandae inventore veritatis?",
+        caption: "Password manager investigation tool (PMIT)",
+        info: "Experimenting with Data-Driven User Interfaces (D2UI).",
+        url: "https://maxzz.github.io/dropzone",
+        preview: previewDropzon,
+    },
+    {
+        caption: "Password manager investigation tool (PMIT)",
+        info: "Experimenting with Data-Driven User Interfaces (D2UI).",
+        url: "https://maxzz.github.io/dropzone",
+        preview: previewDropzon,
+    },
+    {
+        caption: "Password manager investigation tool (PMIT)",
+        info: "Experimenting with Data-Driven User Interfaces (D2UI).",
+        url: "https://maxzz.github.io/dropzone",
+        preview: previewDropzon,
+    },
+    {
+        caption: "Password manager investigation tool (PMIT)",
+        info: "Experimenting with Data-Driven User Interfaces (D2UI).",
+        url: "https://maxzz.github.io/dropzone",
+        preview: previewDropzon,
+    },
+    {
+        caption: "Password manager investigation tool (PMIT)",
+        info: "Experimenting with Data-Driven User Interfaces (D2UI).",
         url: "https://maxzz.github.io/dropzone",
         preview: previewDropzon,
     },
@@ -41,17 +65,23 @@ function ProjectTitle({ url, preview, caption, info }: ProjectTitleProps) {
     );
 }
 
+function Header() {
+    return (
+        <header className="p-4 text-3xl uppercase">Fresh start</header>
+    );
+}
+
 function App() {
     return (<>
         <PopperRoot />
         <div className="min-h-full overflow-hidden text-slate-100 bg-slate-900">
             <div className="h-screen flex flex-col">
-                <header className="p-4 text-3xl uppercase">Fresh start</header>
-                <main className="mx-4 flex-1 flex flex-col justify-evenly">
-                    <ProjectTitle {...projectsList[0]} />
+                <Header />
 
-                    <section className="p-4 bg-slate-800">2</section>
-                    <section className="p-4 bg-slate-800">3</section>
+                <main className="mx-4 flex-1 flex flex-col justify-evenly overflow-y-auto">
+                    {projectsList.map((project, idx) => (
+                        <ProjectTitle {...project} key={idx} />
+                    ))}
                 </main>
             </div>
         </div>
