@@ -9,6 +9,8 @@ function PopperRoot() {
     );
 }
 
+import previewDropzon from "./assets/pages/dropzone-2022-03-04_15-29-37.png";
+
 type ProjectTitleProps = {
     url: string;
     preview: string;
@@ -39,7 +41,7 @@ function App() {
                 <main className="mx-4 flex-1 flex flex-col justify-evenly">
                     <ProjectTitle
                         url="https://maxzz.github.io/dropzone"
-                        preview="src/assets/pages/dropzone-2022-03-04_15-29-37.png"
+                        preview={previewDropzon}
                         caption="PMIT"
                         info="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nisi enim veniam illum totam laborum maxime assumenda facere aspernatur voluptatum a nihil dicta officia, suscipit dignissimos voluptatibus repudiandae inventore veritatis?"
                     />
