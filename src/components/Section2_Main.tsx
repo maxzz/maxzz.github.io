@@ -2,10 +2,10 @@ import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 
-function ProjectTile({ urlGithub: url, preview, caption, description: info }: ProjectType) {
+function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, }: ProjectType) {
     return (
         <section className="p-4 bg-slate-800 rounded">
-            <a className="flex justify-between" href={url} target="_blank">
+            <div className="flex justify-between">
 
                 <div className="flex flex-col items-start justify-between">
                     <div className="">
@@ -13,20 +13,20 @@ function ProjectTile({ urlGithub: url, preview, caption, description: info }: Pr
                             {caption}
                         </div>
                         <div className="mt-2 text-sm">
-                            {info}
+                            {description}
                         </div>
                     </div>
 
                     <div className="text-sm flex space-x-2">
-                        <button>Github</button>
-                        <button>Demo</button>
+                        <a className="" href={urlGithub} target="_blank">Github</a>
+                        <a className="" href={urlDemo} target="_blank">Demo</a>
                     </div>
                 </div>
 
                 <div className="flex-none w-24 h-auto">
-                    <img src={preview} alt="" />
+                    <img src={previewUrl} alt="" />
                 </div>
-            </a>
+            </div>
         </section>
     );
 }
