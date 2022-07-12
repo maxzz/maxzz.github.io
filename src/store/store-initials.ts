@@ -1,4 +1,4 @@
-import { ProjectTitleProps } from "./store-types";
+import { ProjectType, SectionType } from "./store-types";
 
 import previewDropzon from "../assets/pages/dropzone-2022-03-04_15-29-37.png";
 import simpleBorderRadius from "../assets/pages/simple-border-radius22-2022-07-08_18-46-46.png";
@@ -6,13 +6,23 @@ import red3Curves from "../assets/pages/red3-curves-2021-08-18_3-57-11.png";
 import borderRadiusGenerator from "../assets/pages/border-radius-generator-2020-12-18_4-44-41.png";
 import red3Path from "../assets/pages/red3-path-2021-09-04_19-45-16.png";
 
-export const projectsList: ProjectTitleProps[] = [
+export const projectsDp: ProjectType[] = [
     {
         caption: "Password manager investigation tool (PMIT)",
         info: "Experimenting with Data-Driven User Interfaces (D2UI)",
         urlProject: "https://maxzz.github.io/dropzone",
         preview: previewDropzon,
     },
+    // {
+    //     caption: "",
+    //     info: "",
+    //     urlProject: "",
+    //     urlDemo: "",
+    //     preview: ,
+    // },
+];
+
+export const projectsUx: ProjectType[] = [
     {
         caption: "simple-border-radius22",
         info: "CSS border radius generator",
@@ -47,5 +57,16 @@ export const projectsList: ProjectTitleProps[] = [
         urlProject: "https://github.com/maxzz/red3-path",
         urlDemo: "https://maxzz.github.io/red3-path",
         preview: red3Path,
+    },
+];
+
+export const sections: SectionType[] = [
+    {
+        name: 'UX',
+        projects: projectsUx,
+    },
+    {
+        name: 'DP',
+        projects: projectsDp,
     },
 ];
