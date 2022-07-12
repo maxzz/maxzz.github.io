@@ -9,7 +9,7 @@ import red3Path from "../assets/pages/red3-path-2021-09-04_19-45-16.png";
 export const projectsDp: ProjectType[] = [
     {
         caption: "Password manager investigation tool (PMIT)",
-        info: "Experimenting with Data-Driven User Interfaces (D2UI)",
+        description: "Experimenting with Data-Driven User Interfaces (D2UI)",
         urlProject: "https://maxzz.github.io/dropzone",
         preview: previewDropzon,
     },
@@ -25,21 +25,21 @@ export const projectsDp: ProjectType[] = [
 export const projectsUx: ProjectType[] = [
     {
         caption: "simple-border-radius22",
-        info: "CSS border radius generator",
+        description: "CSS border radius generator",
         urlProject: "https://github.com/maxzz/simple-border-radius22",
         urlDemo: "https://maxzz.github.io/simple-border-radius22",
         preview: simpleBorderRadius,
     },
     {
         caption: "red3-curves",
-        info: "Examination of the curves D3",
+        description: "Examination of the curves D3",
         urlProject: "https://github.com/maxzz/red3-curves",
         urlDemo: "https://maxzz.github.io/red3-curves",
         preview: red3Curves,
     },
     {
         caption: "border-radius-generator",
-        info: "Simplest border radius generator with Vue.js Composition API",
+        description: "Simplest border radius generator with Vue.js Composition API",
         urlProject: "https://github.com/maxzz/border-radius-generator",
         urlDemo: "https://maxzz.github.io/border-radius-generator",
         preview: borderRadiusGenerator,
@@ -52,8 +52,8 @@ export const projectsUx: ProjectType[] = [
     //     preview: ,
     // },
     {
-        caption: "https://github.com/maxzz/red3-path",
-        info: "Curve path simplification",
+        caption: "red3-path",
+        description: "Curve path simplification",
         urlProject: "https://github.com/maxzz/red3-path",
         urlDemo: "https://maxzz.github.io/red3-path",
         preview: red3Path,

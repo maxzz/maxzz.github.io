@@ -1,8 +1,8 @@
 import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
-import { projectsUx, sections } from '@/store/store-initials';
+import { sections } from '@/store/store-initials';
 
-function ProjectTile({ urlProject: url, preview, caption, info }: ProjectType) {
+function ProjectTile({ urlProject: url, preview, caption, description: info }: ProjectType) {
     return (
         <section className="p-4 bg-slate-800">
             <a className="flex items-center justify-between space-x-4" href={url} target="_blank">
