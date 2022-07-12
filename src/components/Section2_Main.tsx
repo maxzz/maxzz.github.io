@@ -33,12 +33,12 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, }: 
 
 function Section({ section }: { section: SectionType; }) {
     return (
-        <div className="w-full max-w-xl">
+        <div className="w-full max-w-7xl">
             <div className="">
                 {section.name}
             </div>
 
-            <div className="flex flex-col justify-evenly space-y-2 overflow-y-auto">
+            <div className="mx-4 grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-2 overflow-y-auto">
                 {section.projects.map((project, idx) => (
                     <ProjectTile {...project} key={idx} />
                 ))}
