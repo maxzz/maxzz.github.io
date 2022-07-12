@@ -2,17 +2,24 @@ import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 
-function ProjectTile({ urlProject: url, preview, caption, description: info }: ProjectType) {
+function ProjectTile({ urlGithub: url, preview, caption, description: info }: ProjectType) {
     return (
-        <section className="p-4 bg-slate-800">
-            <a className="flex items-center justify-between space-x-4" href={url} target="_blank">
+        <section className="p-4 bg-slate-800 rounded">
+            <a className="flex justify-between" href={url} target="_blank">
 
-                <div className="self-start">
-                    <div className="hoverurl inline-block uppercase">
-                        {caption}
-                    </div>
+                <div className="flex flex-col items-start justify-between">
                     <div className="">
-                        {info}
+                        <div className="hoverurl inline-block uppercase">
+                            {caption}
+                        </div>
+                        <div className="mt-2 text-sm">
+                            {info}
+                        </div>
+                    </div>
+
+                    <div className="text-sm flex space-x-2">
+                        <button>Github</button>
+                        <button>Demo</button>
                     </div>
                 </div>
 
