@@ -2,7 +2,7 @@ import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 
-function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, }: ProjectType) {
+function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
         <section className="flex flex-col">
             <div className="pb-1 text-slate-300 uppercase">
@@ -13,12 +13,23 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, }: 
                 <div className="text-sm">
                     {description}
                 </div>
+
                 <div className="text-sm flex space-x-2">
-                    <div className="h-5"><a className="hoverurl" href={urlGithub} target="_blank">Github</a></div>
-                    <div className="h-5"><a className="hoverurl" href={urlDemo} target="_blank">Demo</a></div>
+                    <div className="h-5" title="Open source code on GitHub"><a className="hoverurl" href={urlGithub} target="_blank">Github</a></div>
+                    <div className="h-5" title="Open demo project"><a className="hoverurl" href={urlDemo} target="_blank">Demo</a></div>
+                    {localPath &&
+                        <div className="h-5" title="Copy path on local hard drive">
+                            <button className="hoverurl"
+                                onClick={() => {
+                                    navigator.clipboard.writeText(localPath); //TODO: show copy notice
+                                }}
+                            >Local</button>
+                        </div>
+                    }
                 </div>
+
                 <div className="col-start-2 col-end-3 row-span-full place-self-center w-24 h-auto">
-                    <img src={previewUrl} alt="" />
+                    <img className="grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
                 </div>
             </div >
         </section>

@@ -31,6 +31,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/color-names22",
         urlDemo: "https://maxzz.github.io/color-names22",
         previewUrl: colorNames22,
+        localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
     },
     {
         caption: "simple-border-radius22",
