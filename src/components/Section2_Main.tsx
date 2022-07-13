@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
+import { UIArrow } from './UI/UIArrow';
 
 function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
@@ -38,9 +39,13 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, loc
 
 function Section({ section }: { section: SectionType; }) {
     return (
-        <div className="w-full max-w-7xl mx-4 grid grid-cols-[auto_minmax(0,1fr)] gap-4">
+        <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
+
             <div className="text-2xl p-4 border-slate-400 border rounded">
-                {section.name} v
+                <div className="flex items-center">
+                    <div className="leading-5">{section.name}</div>
+                    <UIArrow className="w-5 h-5 pt-1" open={false} />
+                </div>
             </div>
 
             <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
@@ -54,7 +59,7 @@ function Section({ section }: { section: SectionType; }) {
 
 export function Section2_Main() {
     return (
-        <main className="flex-1 py-4 flex flex-col items-center space-y-12 overflow-auto">
+        <main className="flex-1 py-4 mx-4 flex flex-col items-center space-y-12 overflow-auto">
             {sections.map((section, idx) => <Section section={section} key={idx} />)}
         </main>
     );
