@@ -7,6 +7,7 @@ import borderRadiusGenerator from "../assets/pages/border-radius-generator-2020-
 import red3Path from "../assets/pages/red3-path-2021-09-04_19-45-16.png";
 import colorNames22 from "../assets/pages/color-names22-2022-06-02_3-49-34.png";
 import svgPath from "../assets/pages/svg-path-2022-02-03_14-18-21-sub-paths.png";
+import testPmDomainLogins22 from "../assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png";
 
 export const projectsDp: ProjectType[] = [
     {
@@ -15,12 +16,19 @@ export const projectsDp: ProjectType[] = [
         urlGithub: "https://maxzz.github.io/dropzone",
         previewUrl: previewDropzon,
     },
+    {
+        caption: "test-pm-domain-logins22",
+        description: "Application for testing different login forms and password change in one domain.",
+        urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
+        urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
+        previewUrl: testPmDomainLogins22,
+    },
     // {
     //     caption: "",
     //     description: "",
     //     urlGithub: "",
     //     urlDemo: "",
-    //     preview: ,
+    //     previewUrl: ,
     // },
 ];
 
