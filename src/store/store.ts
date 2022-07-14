@@ -62,27 +62,29 @@ export const sectionOpenAtoms = AtomsFamily<boolean>(false);
 
 //////
 
-const AtomsFamily2 = <T>(initialValue: T, initAtom: (param: T) => PrimitiveAtom<T>) => {
-    let map = new Map<string, PrimitiveAtom<T>>();
+const AtomsFamily2 = <T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>) => {
+    let map = valuesToAtoms(initialValues);
     
+    function valuesToAtoms(newMap: Record<string, T>) {
+        return new Map((Object.entries(newMap || {}).map(([key, value]) => [key, initAtom(value)])));
+    }
+
     const getAtom = (key: string) => {
         let value = map.get(key);
         if (!value) {
-            value = initAtom(initialValue);
+            value = initAtom(atomInitialValue);
             map.set(key, value);
         }
         return value;
     };
 
     getAtom.setValues = (newMap: Record<string, T>) => {
-        const entries = Object.entries(newMap || {});
-        map = new Map((entries.map(([key, value]) => [key, initAtom(value)])));
+        map = valuesToAtoms(newMap);
     }
 
     getAtom.getValues = (get: Getter): Record<string, T> => {
-        const entries = map.entries();
         const rv: Record<string, T> = {};
-        for (const [key, value] of entries) {
+        for (const [key, value] of map.entries()) {
             rv[key] = get(value);
         }
         return rv;
@@ -91,4 +93,4 @@ const AtomsFamily2 = <T>(initialValue: T, initAtom: (param: T) => PrimitiveAtom<
     return getAtom;
 };
 
-export const sectionOpenAtoms2 = AtomsFamily2<boolean>(false, (param: boolean) => atom(param));
+export const sectionOpenAtoms2 = AtomsFamily2<boolean>({}, false, (param: boolean) => atom(param));
