@@ -48,10 +48,6 @@ export const sourceAtom = atom<boolean>(false);
 const AtomsFamily = <T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>) => {
     let map = valuesToAtoms(initialValues);
     
-    function valuesToAtoms(newMap: Record<string, T>) {
-        return new Map((Object.entries(newMap || {}).map(([key, value]) => [key, initAtom(value)])));
-    }
-
     const getAtom = (key: string) => {
         let value = map.get(key);
         if (!value) {
@@ -61,14 +57,16 @@ const AtomsFamily = <T>(initialValues: Record<string, T>, atomInitialValue: T, i
         return value;
     };
 
-    getAtom.setValues = (newMap: Record<string, T>) => {
-        map = valuesToAtoms(newMap);
+    function valuesToAtoms(newMap: Record<string, T>) {
+        return new Map((Object.entries(newMap || {}).map(([key, value]) => [key, initAtom(value)])));
     }
 
-    getAtom.getValues = (get: Getter): Record<string, T> => {
+    function atomsToValues(get: Getter): Record<string, T> {
         return Object.fromEntries([...map.entries()].map(([key, atom]) => [key, get(atom)]));
     }
 
+    getAtom.setValues = valuesToAtoms;
+    getAtom.getValues = atomsToValues;
     return getAtom;
 };
 
