@@ -59,3 +59,19 @@ const AtomsFamily = <T extends boolean>(initialValue: T) => {
 };
 
 export const sectionOpenAtoms = AtomsFamily<boolean>(false);
+
+//////
+
+const AtomsFamily2 = <T extends boolean>(initialValue: T, initAtom: (param: T) => PrimitiveAtom<T> ) => {
+    const map = new Map<string, PrimitiveAtom<T>>();
+    return (key: string) => {
+        let value = map.get(key);
+        if (!value) {
+            value = initAtom(initialValue);
+            map.set(key, value);
+        }
+        return value;
+    };
+};
+
+export const sectionOpenAtoms2 = AtomsFamily2<boolean>(false, (param: boolean) => atom(param));
