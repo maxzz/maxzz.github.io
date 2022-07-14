@@ -2,6 +2,9 @@ import React from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
+import { useAtom } from 'jotai';
+import { sectionOpenAtoms } from '@/store/store';
+import { UIAccordion } from './UI/UIAccordion';
 
 function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
@@ -37,22 +40,32 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, loc
     );
 }
 
+function SectionName({ section }: { section: SectionType; }) {
+    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
+    return (
+        <div className="text-2xl p-4 border-slate-400 border rounded" onClick={() => setSectionOpen((v) => !v)}>
+            <div className="flex items-center">
+                <div className="leading-5">{section.name}</div>
+                <UIArrow className="w-5 h-5 pt-1" open={sectionOpen} />
+            </div>
+        </div>
+    );
+}
+
 function Section({ section }: { section: SectionType; }) {
+    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
         <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
 
-            <div className="text-2xl p-4 border-slate-400 border rounded">
-                <div className="flex items-center">
-                    <div className="leading-5">{section.name}</div>
-                    <UIArrow className="w-5 h-5 pt-1" open={false} />
-                </div>
-            </div>
+            <SectionName section={section} />
 
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
-                {section.projects.map((project, idx) => (
-                    <ProjectTile {...project} key={idx} />
-                ))}
-            </div>
+            <UIAccordion open={sectionOpen} >
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
+                    {section.projects.map((project, idx) => (
+                        <ProjectTile {...project} key={idx} />
+                    ))}
+                </div>
+            </UIAccordion>
         </div>
     );
 }
