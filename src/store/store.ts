@@ -46,9 +46,10 @@ namespace Storage {
 
 //#endregion LocalStorage
 
+export const sourceAtom = atom<boolean>(false);
 
-const AtomFactory = (initialValue: boolean = false) => {
-    const map: Record<string, PrimitiveAtom<boolean>> = {};
+const AtomsFamily = <T extends boolean>(initialValue: T) => {
+    const map: Record<string, PrimitiveAtom<T>> = {};
     return (name: string) => {
         if (!map[name]) {
             map[name] = atom(initialValue);
@@ -57,6 +58,4 @@ const AtomFactory = (initialValue: boolean = false) => {
     };
 };
 
-export const sourceAtom = atom<boolean>(false);
-
-export const sectionOpenAtoms = AtomFactory();
+export const sectionOpenAtoms = AtomsFamily<boolean>(false);

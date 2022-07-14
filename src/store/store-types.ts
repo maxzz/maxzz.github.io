@@ -1,5 +1,6 @@
 export type ProjectType = {
-    caption: string;        // project name on github
+    //id: string;             // unique ID
+    caption: string;        // project name on github; caption is already unique ID
     description: string;    // project description
     urlGithub: string;      // URL to github source
     urlDemo?: string;       // URL to demo project
