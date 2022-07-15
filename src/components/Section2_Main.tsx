@@ -5,7 +5,7 @@ import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconGithubLogo, IconHardDrive } from './UI/UIIcons';
+import { IconGithubLogo, IconHardDrive, IconTv } from './UI/UIIcons';
 
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
@@ -42,7 +42,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                     {description}
                 </div>
                 <div className="-mb-2 text-xs flex select-none">
-                    <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank">Demo</a> </ButtonShell>
+                    <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} /> </ButtonShell>}
                 </div>
@@ -60,7 +60,7 @@ function SectionName({ section }: { section: SectionType; }) {
     return (
         <div className="text-2xl p-4 border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
             <div className="flex items-center">
-                <div className="leading-5">{section.name}</div>
+                <div className="leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5 pt-1" open={sectionOpen} />
             </div>
         </div>
