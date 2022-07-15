@@ -43,6 +43,7 @@ type AtomsFamilyResult<T> = {
 
 /**
  * AtomsFamily with inner items access
+ * 
  * @param initialValues - Object with initial values from Storage
  * @param atomInitialValue  - Default value for newly created items
  * @param initAtom  - function to create new atom
@@ -62,9 +63,9 @@ type AtomsFamilyResult<T> = {
  * 
  *      const [open, setOpen] = useAtom(openAtoms(section.name)); ... onClick={() => setOpen((v) => !v)}
  */
-export const atomsFamily = <T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>): AtomsFamilyResult<T> => {
+export function atomsFamily<T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>): AtomsFamilyResult<T> {
     let map = valuesToAtoms(initialValues);
-    
+
     const getAtom = (key: string) => {
         let value = map.get(key);
         if (!value) {
@@ -85,4 +86,4 @@ export const atomsFamily = <T>(initialValues: Record<string, T>, atomInitialValu
     getAtom.setValues = valuesToAtoms;
     getAtom.getValues = atomsToValues;
     return getAtom;
-};
+}

@@ -68,6 +68,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/red3-path",
         urlDemo: "https://maxzz.github.io/red3-path",
         previewUrl: red3Path,
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind"
     },
     {
         caption: "svg-path",
