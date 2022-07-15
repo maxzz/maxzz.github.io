@@ -10,7 +10,7 @@ import { IconGithubLogo, IconHardDrive } from './UI/UIIcons';
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
         <div
-            className="h-5 px-1.5 py-4 hover:bg-primary-700 hover:text-primary-200 rounded active:scale-[.97] flex items-center"
+            className="h-5 px-1.5 py-4 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center"
             {...rest}
         >
             {children}
@@ -43,8 +43,8 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 </div>
                 <div className="-mb-2 text-xs flex select-none">
                     <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank">Demo</a> </ButtonShell>
-                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-primary-500" /></a> </ButtonShell>
-                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-5 h-5 fill-primary-500" />} text={localPath} /> </ButtonShell>}
+                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
+                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} /> </ButtonShell>}
                 </div>
 
                 <div className="col-start-2 col-end-3 row-span-full place-self-center w-24 h-auto">
@@ -74,7 +74,7 @@ function Section({ section }: { section: SectionType; }) {
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(290px,1fr))] gap-2 overflow-y-auto">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
                     {section.projects.map((project, idx) => (
                         <TileProject {...project} key={idx} />
                     ))}
