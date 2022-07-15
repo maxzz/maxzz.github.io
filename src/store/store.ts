@@ -1,6 +1,6 @@
 import { atom, Getter, PrimitiveAtom } from "jotai";
 import debounce from "@/utils/debounce";
-import { atomWithCallback } from "@/hooks/atomsX";
+import { atomsFamily, atomWithCallback } from "@/hooks/atomsX";
 
 //#region LocalStorage
 
@@ -45,29 +45,4 @@ export const sourceAtom = atom<boolean>(false);
 
 //////
 
-const AtomsFamily = <T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>) => {
-    let map = valuesToAtoms(initialValues);
-    
-    const getAtom = (key: string) => {
-        let value = map.get(key);
-        if (!value) {
-            value = initAtom(atomInitialValue);
-            map.set(key, value);
-        }
-        return value;
-    };
-
-    function valuesToAtoms(newMap: Record<string, T>) {
-        return new Map((Object.entries(newMap || {}).map(([key, value]) => [key, initAtom(value)])));
-    }
-
-    function atomsToValues(get: Getter): Record<string, T> {
-        return Object.fromEntries([...map.entries()].map(([key, atom]) => [key, get(atom)]));
-    }
-
-    getAtom.setValues = valuesToAtoms;
-    getAtom.getValues = atomsToValues;
-    return getAtom;
-};
-
-export const sectionOpenAtoms = AtomsFamily<boolean>(Storage.initialData.openSections, false, (param: boolean) => atomWithCallback(param, Storage.save));
+export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSections, false, (param: boolean) => atomWithCallback(param, Storage.save));
