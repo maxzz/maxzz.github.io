@@ -10,7 +10,7 @@ import { IconGithubLogo, IconHardDrive, IconTv } from './UI/UIIcons';
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
         <div
-            className="h-5 px-1.5 py-4 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center"
+            className="h-5 px-1 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center"
             {...rest}
         >
             {children}
@@ -59,9 +59,9 @@ function SectionName({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
         <div className="text-2xl p-4 border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
-            <div className="flex items-center">
+            <div className="flex items-center rotate-180 space-y-2" style={{ writingMode: 'vertical-rl' }}>
                 <div className="leading-5 left-t">{section.name}</div>
-                <UIArrow className="w-5 h-5 pt-1" open={sectionOpen} />
+                <UIArrow className="w-5 h-5 pt-1 rotate-180" open={sectionOpen} />
             </div>
         </div>
     );
