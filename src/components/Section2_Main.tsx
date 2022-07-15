@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
@@ -6,7 +6,27 @@ import { useAtom } from 'jotai';
 import { sectionOpenAtoms } from '@/store/store';
 import { UIAccordion } from './UI/UIAccordion';
 
-function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
+function ButtonShell({ children }: HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className="h-5 hoverurl" title="Open source code on GitHub">
+            {children}
+        </div>
+    );
+}
+
+function ButtonCopy({ label, text }: { label: string; text: string; } & HTMLAttributes<HTMLDivElement>) {
+    return (
+        <button
+            onClick={() => {
+                navigator.clipboard.writeText(text); //TODO: show copy notice
+            }}
+        >
+            {label}
+        </button>
+    );
+}
+
+function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
         <section className="flex flex-col">
             <div className="pb-1 text-slate-300 uppercase">
@@ -19,17 +39,9 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 </div>
 
                 <div className="text-sm flex space-x-2 select-none">
-                    <div className="h-5" title="Open source code on GitHub"><a className="hoverurl" href={urlGithub} target="_blank">Github</a></div>
-                    <div className="h-5" title="Open demo project"><a className="hoverurl" href={urlDemo} target="_blank">Demo</a></div>
-                    {localPath &&
-                        <div className="h-5" title="Copy path on local hard drive">
-                            <button className="hoverurl"
-                                onClick={() => {
-                                    navigator.clipboard.writeText(localPath); //TODO: show copy notice
-                                }}
-                            >Local</button>
-                        </div>
-                    }
+                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank">Github</a> </ButtonShell>
+                    <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank">Demo</a> </ButtonShell>
+                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label="Local" text={localPath} /> </ButtonShell>}
                 </div>
 
                 <div className="col-start-2 col-end-3 row-span-full place-self-center w-24 h-auto">
@@ -61,7 +73,7 @@ function Section({ section }: { section: SectionType; }) {
             <UIAccordion open={sectionOpen} >
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
                     {section.projects.map((project, idx) => (
-                        <ProjectTile {...project} key={idx} />
+                        <TileProject {...project} key={idx} />
                     ))}
                 </div>
             </UIAccordion>

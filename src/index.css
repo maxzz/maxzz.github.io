@@ -4,7 +4,7 @@
 
 @layer components {
     .hoverurl {
-        @apply border-b hover:border-b-2 border-primary-200/40 hover:text-url;
+        @apply hover:border-b border-primary-200/40 hover:text-url;
     }
 
     .extension-small-icon-outline {
