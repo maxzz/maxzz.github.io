@@ -13,7 +13,8 @@ export const projectsDp: ProjectType[] = [
     {
         caption: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
-        urlGithub: "https://maxzz.github.io/dropzone",
+        urlGithub: "https://github.com/maxzz/dropzone",
+        urlDemo: "https://maxzz.github.io/dropzone",
         previewUrl: previewDropzon,
     },
     {

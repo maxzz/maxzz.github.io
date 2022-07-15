@@ -5,7 +5,7 @@ import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconHardDrive } from './UI/UIIcons';
+import { IconGithubLogo, IconHardDrive } from './UI/UIIcons';
 
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
@@ -41,11 +41,10 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 <div className="text-sm">
                     {description}
                 </div>
-
                 <div className="-mb-2 text-xs flex select-none">
-                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank">Github</a> </ButtonShell>
                     <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank">Demo</a> </ButtonShell>
-                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-5 h-5" />} text={localPath} /> </ButtonShell>}
+                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-primary-500" /></a> </ButtonShell>
+                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-5 h-5 fill-primary-500" />} text={localPath} /> </ButtonShell>}
                 </div>
 
                 <div className="col-start-2 col-end-3 row-span-full place-self-center w-24 h-auto">
