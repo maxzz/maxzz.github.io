@@ -74,7 +74,7 @@ function Section({ section }: { section: SectionType; }) {
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-2 overflow-y-auto">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(200px,1fr)] gap-2 overflow-y-auto">
                     {section.projects.map((project, idx) => (
                         <TileProject {...project} key={idx} />
                     ))}
