@@ -18,7 +18,7 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, loc
                     {description}
                 </div>
 
-                <div className="text-sm flex space-x-2">
+                <div className="text-sm flex space-x-2 select-none">
                     <div className="h-5" title="Open source code on GitHub"><a className="hoverurl" href={urlGithub} target="_blank">Github</a></div>
                     <div className="h-5" title="Open demo project"><a className="hoverurl" href={urlDemo} target="_blank">Demo</a></div>
                     {localPath &&
@@ -43,7 +43,7 @@ function ProjectTile({ caption, description, urlGithub, urlDemo, previewUrl, loc
 function SectionName({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="text-2xl p-4 border-slate-400 border rounded" onClick={() => setSectionOpen((v) => !v)}>
+        <div className="text-2xl p-4 border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
             <div className="flex items-center">
                 <div className="leading-5">{section.name}</div>
                 <UIArrow className="w-5 h-5 pt-1" open={sectionOpen} />
@@ -56,7 +56,6 @@ function Section({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
         <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
-
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
