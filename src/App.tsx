@@ -14,7 +14,7 @@ function PopperRoot() {
 function App() {
     return (<>
         <PopperRoot />
-        <div className="min-h-full overflow-hidden text-slate-100 bg-slate-900">
+        <div className="min-h-full overflow-hidden text-slate-100 bg-slate-900 debug-screens">
             <div className="h-screen flex flex-col">
                 <Section1_Head />
                 <Section2_Main />
