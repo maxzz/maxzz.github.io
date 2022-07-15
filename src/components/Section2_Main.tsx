@@ -1,10 +1,11 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
+import { useAtom } from 'jotai';
+import { sectionOpenAtoms } from '@/store/store';
 import { ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
-import { useAtom } from 'jotai';
-import { sectionOpenAtoms } from '@/store/store';
 import { UIAccordion } from './UI/UIAccordion';
+import { IconHardDrive } from './UI/UIIcons';
 
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
@@ -17,7 +18,7 @@ function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     );
 }
 
-function ButtonCopy({ label, text }: { label: string; text: string; } & HTMLAttributes<HTMLDivElement>) {
+function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
         <button
             onClick={() => {
@@ -44,7 +45,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 <div className="-mb-2 text-xs flex select-none">
                     <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank">Github</a> </ButtonShell>
                     <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank">Demo</a> </ButtonShell>
-                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label="Local" text={localPath} /> </ButtonShell>}
+                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-5 h-5" />} text={localPath} /> </ButtonShell>}
                 </div>
 
                 <div className="col-start-2 col-end-3 row-span-full place-self-center w-24 h-auto">
