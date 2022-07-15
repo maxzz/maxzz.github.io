@@ -1,7 +1,7 @@
 import { classNames } from "@/utils/classnames";
 import { HTMLAttributes, SVGProps } from "react";
 
-export function IconAppLogo({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconAppLogo({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 14 14" {...rest}>
             {title && <title>{title}</title>}
@@ -10,7 +10,7 @@ export function IconAppLogo({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAt
     );
 }
 
-export function IconGithubLogo({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconGithubLogo({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 1024 1024" {...rest}>
             {title && <title>{title}</title>}
@@ -19,7 +19,7 @@ export function IconGithubLogo({ title, ...rest }: SVGProps<SVGSVGElement> & HTM
     );
 }
 
-function IconLinkedNo({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+function IconLinkedNo({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 24 24" {...rest}>
             {title && <title>{title}</title>}
@@ -29,7 +29,7 @@ function IconLinkedNo({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttribut
     );
 }
 
-function IconLinkedOrg({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+function IconLinkedOrg({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 24 24" {...rest}>
             {title && <title>{title}</title>}
@@ -39,7 +39,7 @@ function IconLinkedOrg({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttribu
     );
 }
 
-function IconLinked({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+function IconLinked({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 24 24" {...rest}>
             {title && <title>{title}</title>}
@@ -56,7 +56,7 @@ function IconLinked({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes
     );
 }
 
-function IconLinkedRotated({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+function IconLinkedRotated({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 24 24" {...rest}>
             {title && <title>{title}</title>}
@@ -68,7 +68,7 @@ function IconLinkedRotated({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAtt
 
 //TODO: icon to remove duplicates
 // fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"
-export function IconImage({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconImage({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 512 512" {...rest}>
             {title && <title>{title}</title>}
@@ -79,7 +79,7 @@ export function IconImage({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttr
     );
 }
 
-export function IconImages({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconImages({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 512 512" {...rest}>
             {title && <title>{title}</title>}
@@ -91,7 +91,7 @@ export function IconImages({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAtt
     );
 }
 
-export function IconTrash({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconTrash({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg viewBox="0 0 16 16" {...rest}>
             {title && <title>{title}</title>}
@@ -100,9 +100,10 @@ export function IconTrash({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttr
     );
 }
 
-export function IconSunnyvale(props: React.HTMLAttributes<SVGSVGElement>) {
+export function IconSunnyvale({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
-        <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+        <svg viewBox="0 0 24 24" fill="currentColor" {...rest}>
+            {title && <title>{title}</title>}
             {/* <path fill="#e3e3e35e" d="M20 8l-8 14.2L2.8 5.8h4.4C8 .5 16 .5 16.8 5.8h4.4L20 8z" /> */}
             {/* <path fill="#fcc10a" d="M20.3 6.3L12 21.1 3.7 6.3h4C8 1 15.8 1 16.2 6.3z" /> */}
             <path d="M12 10.3c-5.6-.2-4.7-8.4.8-7.4 4.3.8 3.6 7.5-.8 7.4zM12.1 10.9h.5l.6 6a10.8 10.8 0 01-.8 1.1c0-2.4-.2-4.8-.3-7.1zM11.6 18l-.7-1.1c0-1.6.3-5.3.5-6a4.5 4.5 0 00.5 0c0 2.3-.3 4.7-.3 7.1zM14.8 14.2l-1 1.4-1-4.8a2.5 2.5 0 00.8-.2l1.2 3.6zM11 10.8c0 .9-.7 4-1 4.7a12.4 12.4 0 01-.8-1.3l1.1-3.6a7 7 0 00.8.2z" />
@@ -111,10 +112,20 @@ export function IconSunnyvale(props: React.HTMLAttributes<SVGSVGElement>) {
     );
 }
 
-export function IconHardDrive(props: SVGProps<SVGSVGElement>) {
+export function IconHardDrive({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
-        <svg viewBox="0 0 20 20" fill="currentColor" {...props}>
+        <svg viewBox="0 0 20 20" fill="currentColor" {...rest}>
+            {title && <title>{title}</title>}
             <path d="M14.25 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM2.24 10.84A2.94 2.94 0 0 0 2 12v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2c0-.38-.06-.77-.19-1.14a54.84 54.84 0 0 0-2.45-5.77A1.96 1.96 0 0 0 13.59 4H6.5a2 2 0 0 0-1.84 1.21l-2.41 5.63ZM6.49 5h7.1c.38 0 .71.2.87.53.47.95 1.27 2.65 1.99 4.52A2.01 2.01 0 0 0 16 10H4c-.11 0-.22 0-.32.03L5.57 5.6A1 1 0 0 1 6.49 5ZM17 14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2Z" />
+        </svg>
+    );
+}
+
+export function IconTv({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg viewBox="0 0 24 24" fill="currentColor" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="m11.05 14.5l4.15-2.65q.225-.15.338-.375q.112-.225.112-.475q0-.25-.112-.475q-.113-.225-.338-.375L11.05 7.5q-.5-.325-1.025-.05q-.525.275-.525.875v5.35q0 .6.525.875t1.025-.05ZM9 21q-.425 0-.712-.288Q8 20.425 8 20v-1H4q-.825 0-1.412-.587Q2 17.825 2 17V5q0-.825.588-1.413Q3.175 3 4 3h16q.825 0 1.413.587Q22 4.175 22 5v12q0 .825-.587 1.413Q20.825 19 20 19h-4v1q0 .425-.287.712Q15.425 21 15 21Zm-5-4h16V5H4v12Zm0 0V5v12Z" />
         </svg>
     );
 }
@@ -130,16 +141,16 @@ export function IconHardDrive(props: SVGProps<SVGSVGElement>) {
   <rect class="cls-1" x="8.38" y="5.78" width="12.43" height="12.43" rx="2.62" ry="2.62" transform="rotate(-45 14.6 12)"/>
 </svg> */}
 
-// export function IconImagePlus({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
-//     return (
-//         <svg fill="currentColor" viewBox="0 0 24 24" {...rest}>
-//             {title && <title>{title}</title>}
-//             <path d="M19 10a1 1 0 0 0-1 1v3.38l-1.48-1.48a2.79 2.79 0 0 0-3.93 0l-.7.71l-2.48-2.49a2.79 2.79 0 0 0-3.93 0L4 12.61V7a1 1 0 0 1 1-1h8a1 1 0 0 0 0-2H5a3 3 0 0 0-3 3v12.22A2.79 2.79 0 0 0 4.78 22h12.44a2.88 2.88 0 0 0 .8-.12a2.74 2.74 0 0 0 2-2.65V11A1 1 0 0 0 19 10zM5 20a1 1 0 0 1-1-1v-3.57l2.89-2.89a.78.78 0 0 1 1.1 0L15.46 20zm13-1a1 1 0 0 1-.18.54L13.3 15l.71-.7a.77.77 0 0 1 1.1 0L18 17.21zm3-15h-1V3a1 1 0 0 0-2 0v1h-1a1 1 0 0 0 0 2h1v1a1 1 0 0 0 2 0V6h1a1 1 0 0 0 0-2z" />
-//         </svg>
-//     );
-// }
+export function IconImagePlus({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="M19 10a1 1 0 0 0-1 1v3.38l-1.48-1.48a2.79 2.79 0 0 0-3.93 0l-.7.71l-2.48-2.49a2.79 2.79 0 0 0-3.93 0L4 12.61V7a1 1 0 0 1 1-1h8a1 1 0 0 0 0-2H5a3 3 0 0 0-3 3v12.22A2.79 2.79 0 0 0 4.78 22h12.44a2.88 2.88 0 0 0 .8-.12a2.74 2.74 0 0 0 2-2.65V11A1 1 0 0 0 19 10zM5 20a1 1 0 0 1-1-1v-3.57l2.89-2.89a.78.78 0 0 1 1.1 0L15.46 20zm13-1a1 1 0 0 1-.18.54L13.3 15l.71-.7a.77.77 0 0 1 1.1 0L18 17.21zm3-15h-1V3a1 1 0 0 0-2 0v1h-1a1 1 0 0 0 0 2h1v1a1 1 0 0 0 2 0V6h1a1 1 0 0 0 0-2z" />
+        </svg>
+    );
+}
 
-export function IconDownload({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconDownload({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} {...rest}>
             {title && <title>{title}</title>}
@@ -148,7 +159,7 @@ export function IconDownload({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLA
     );
 }
 
-export function IconClipboard({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconClipboard({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} {...rest}>
             {title && <title>{title}</title>}
@@ -157,7 +168,7 @@ export function IconClipboard({ title, ...rest }: SVGProps<SVGSVGElement> & HTML
     );
 }
 
-export function IconCross({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconCross({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg fill="currentColor" viewBox="0 0 20 20" {...rest}>
             {title && <title>{title}</title>}
@@ -166,7 +177,7 @@ export function IconCross({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttr
     );
 }
 
-export function IconCode({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconCode({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
         <svg fill="currentColor" viewBox="0 0 256 256" {...rest}>
             {title && <title>{title}</title>}
@@ -175,7 +186,7 @@ export function IconCode({ title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttri
     );
 }
 
-export function IconExperiments({ className, title, ...rest }: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconExperiments({ className, title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) { // microscope
     return (
         <svg viewBox="0 0 139 139" className={classNames("fill-transparent", className)} stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={5} {...rest}>
             {title && <title>{title}</title>}
@@ -185,7 +196,7 @@ export function IconExperiments({ className, title, ...rest }: SVGProps<SVGSVGEl
             <path d="M36 110h23" />
             <path className="cls-1" d="M47 129v-19m-16 19h77" />
         </svg>
-    )
+    );
 }
 /*
 export function UISymbolsDefs() {
@@ -217,7 +228,7 @@ export function UISymbolsDefs() {
     );
 }
 
-export function IconLogoCr(props: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSVGElement>) {
+export function IconLogoCr(props: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     const { title, ...rest } = props;
     return (
         <svg {...rest}>
@@ -227,4 +238,3 @@ export function IconLogoCr(props: SVGProps<SVGSVGElement> & HTMLAttributes<SVGSV
     );
 }
 */
-
