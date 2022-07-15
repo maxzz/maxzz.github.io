@@ -1,9 +1,12 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
     content: ['./index.html', './src/**/*.{tsx,ts,js,jsx}'],
     theme: {
         extend: {
             colors: {
-                url: '#0047cc',
+                primary: colors.slate,
+                url: colors.slate[300],
             },
             // keyframes: {
             //     slidein: {
@@ -17,6 +20,11 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms')
+        require('./tailwind/tailwnid-plugin-debug-styles'),
+        require('./tailwind/tailwind-plugin-debug-screens'),
+        require('@tailwindcss/forms'),
+        require('./tailwind/tailwind-plugin-colors-bridge')([
+            { prefix: '--tm-', groupName: 'primary' },
+        ]),
     ],
 };
