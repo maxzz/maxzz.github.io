@@ -49,8 +49,8 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 </div>
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center">
-                    <div className="bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50 hover:scale-[1.17] border shadow">
-                        <img className="object-contain grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
+                    <div className="bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50 hover:scale-[1.17] transition-transform border shadow">
+                        <img className="object-contain max-h-[177px] grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
                     </div>
                 </div>
             </div >
@@ -77,7 +77,7 @@ function Section({ section }: { section: SectionType; }) {
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(200px,1fr)] gap-2 overflow-y-auto">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
                     {section.projects.map((project, idx) => (
                         <TileProject {...project} key={idx} />
                     ))}
