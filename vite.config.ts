@@ -3,6 +3,7 @@ import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import visualizer from 'rollup-plugin-visualizer';
 import replace from '@rollup/plugin-replace';
+import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
 
 const buildAt = () => {
     const d = new Date();
@@ -34,6 +35,18 @@ export default (({ command }) => defineConfig({
             template: 'sunburst', // sunburst - d3 style (good as default as well); treemap - table (default); network - graph (slow to open).
             gzipSize: true,
             brotliSize: true,
+        }),
+
+        imagePresets({
+            thumbnail: widthPreset({
+                class: 'img thumb',
+                loading: 'lazy',
+                widths: [48, 96],
+                formats: {
+                    webp: { quality: 50 },
+                    jpg: { quality: 70 },
+                },
+            }),
         }),
     ],
     resolve: {

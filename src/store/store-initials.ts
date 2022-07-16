@@ -9,6 +9,11 @@ import colorNames22 from "../assets/pages/color-names22-2022-06-02_3-49-34.png";
 import svgPath from "../assets/pages/svg-path-2022-02-03_14-18-21-sub-paths.png";
 import testPmDomainLogins22 from "../assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png";
 
+import srcset from '../assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png';
+
+console.log('srcset', srcset);
+console.log('svgPath', svgPath);
+
 export const projectsDp: ProjectType[] = [
     {
         caption: "PMIT",
