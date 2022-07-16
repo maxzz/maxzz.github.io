@@ -22,6 +22,18 @@ export default (({ command }) => defineConfig({
     plugins: [
         react(),
 
+        imagePresets({
+            thumbnail: widthPreset({
+                class: 'img thumb',
+                loading: 'lazy',
+                widths: [48, 96],
+                formats: {
+                    webp: { quality: 50 },
+                    jpg: { quality: 70 },
+                },
+            }),
+        }),
+
         replace({
             values: {
                 __BUILD_DATE__: buildAt(),
@@ -37,17 +49,6 @@ export default (({ command }) => defineConfig({
             brotliSize: true,
         }),
 
-        imagePresets({
-            thumbnail: widthPreset({
-                class: 'img thumb',
-                loading: 'lazy',
-                widths: [48, 96],
-                formats: {
-                    webp: { quality: 50 },
-                    jpg: { quality: 70 },
-                },
-            }),
-        }),
     ],
     resolve: {
         alias: {
