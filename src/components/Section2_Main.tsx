@@ -48,8 +48,10 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                     {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} /> </ButtonShell>}
                 </div>
 
-                <div className="relative col-start-2 col-end-3 row-span-full w-24 hover:w-22 hover:h-[8rem] h-36 bg-primary-900 border border-primary-700/70 shadow hover:shadow-primary-500 flex items-center">
-                    <img className="hover:absolute top-0 left-0 px-2 hover:px-0 grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
+                <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center">
+                    <div className="bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50 hover:scale-[1.17] border shadow">
+                        <img className="object-contain grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
+                    </div>
                 </div>
             </div >
         </section>
