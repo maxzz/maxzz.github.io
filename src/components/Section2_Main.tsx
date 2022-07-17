@@ -6,6 +6,7 @@ import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
 import { IconGithubLogo, IconHardDrive, IconTv } from './UI/UIIcons';
+import { classNames } from '@/utils/classnames';
 
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
@@ -30,6 +31,12 @@ function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLA
     );
 }
 
+function Image({className, src }: {src: string} & HTMLAttributes<HTMLImageElement>) {
+    return(
+        <img className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0",className)} src={src} alt="project preview" />
+    )
+}
+
 function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
         <section className="flex flex-col">
@@ -50,7 +57,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <img className="object-contain max-h-[177px] grayscale hover:grayscale-0" src={previewUrl} alt="project preview" />
+                        <Image src={previewUrl} />
                     </div>
                 </div>
             </div >
