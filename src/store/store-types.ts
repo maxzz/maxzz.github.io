@@ -1,8 +1,4 @@
-import type { ImgHTMLAttributes } from "react";
-
 import { ImageAttrs } from "vite-plugin-image-presets";
-
-export type SrcSetType = ImgHTMLAttributes<HTMLElement>[] | string;
 
 export type ImageUrl = ImageAttrs[] | string;
 

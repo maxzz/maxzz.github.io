@@ -1,7 +1,7 @@
-import React, { HTMLAttributes, ImgHTMLAttributes, ReactNode, SourceHTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode, } from 'react';
 import { useAtom } from 'jotai';
 import { sectionOpenAtoms } from '@/store/store';
-import { ImageUrl, ProjectType, SectionType, SrcSetType } from '@/store/store-types';
+import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';

@@ -1,39 +1,13 @@
 import { ProjectType, SectionType } from "./store-types";
 import * as images from "./store-images";
 
-//const previewDropzon = (await import("@/assets/pages/dropzone-2022-03-04_15-29-37.png?preset=thumbnail")).default;
-//import previewDropzon from '../assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail';
-
-//import srcset from '@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail';
-let srcset = {
-    // previewDropzon: (await import("@/assets/pages/dropzone-2022-03-04_15-29-37.png?preset=thumbnail")).default,
-    // simpleBorderRadius: (await import("@/assets/pages/simple-border-radius22-2022-07-08_18-46-46.png?preset=thumbnail")).default,
-    // red3Curves: (await import("@/assets/pages/red3-curves-2021-08-18_3-57-11.png?preset=thumbnail")).default,
-    // borderRadiusGenerator: (await import("@/assets/pages/border-radius-generator-2020-12-18_4-44-41.png?preset=thumbnail")).default,
-    // red3Path: (await import("@/assets/pages/red3-path-2021-09-04_19-45-16.png?preset=thumbnail")).default,
-    // colorNames22: (await import("@/assets/pages/color-names22-2022-06-02_3-49-34.png?preset=thumbnail")).default,
-    // svgPath: (await import("@/assets/pages/svg-path-2022-02-03_14-18-21-sub-paths.png?preset=thumbnail")).default,
-    // testPmDomainLogins22: (await import('@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail')).default,
-};
-
-//import srcset from '@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png&srcset';
-
-console.log('srcset', srcset);
-//console.log('previewDropzon', previewDropzon);
-//console.log('svgPath', svgPath);
-
 export const projectsDp: ProjectType[] = [
     {
         caption: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
         urlGithub: "https://github.com/maxzz/dropzone",
         urlDemo: "https://maxzz.github.io/dropzone",
-        //previewUrl: '',
         previewUrl: images.previewDropzon,
-        // previewUrl: "@/assets/pages/dropzone-2022-03-04_15-29-37.png?preset=thumbnail&src",
-        // previewUrl: srcset[srcset.length - 1].src || '',
-        //previewUrl: srcset.testPmDomainLogins22[srcset.testPmDomainLogins22.length - 1].src || '',
-        //previewUrl: srcset.previewDropzon,
     },
 
     {
@@ -41,7 +15,6 @@ export const projectsDp: ProjectType[] = [
         description: "Application for testing different login forms and password change in one domain.",
         urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
-        // previewUrl: testPmDomainLogins22,
         previewUrl: images.testPmDomainLogins22,
     },
 
