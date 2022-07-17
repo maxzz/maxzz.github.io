@@ -9,7 +9,6 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/dropzone",
         previewUrl: images.previewDropzon,
     },
-
     {
         caption: "test-pm-domain-logins22",
         description: "Application for testing different login forms and password change in one domain.",
@@ -24,6 +23,7 @@ export const projectsDp: ProjectType[] = [
     //     urlGithub: "",
     //     urlDemo: "",
     //     previewUrl: ,
+    //     localPath: "",
     // },
 ];
 
