@@ -31,6 +31,7 @@ export default (({ command }) => defineConfig({
                     webp: { quality: 50 },
                     avif: { },
                     png: { },
+                    jpg: { quality: 70 },
                 },
             }),
         }),
