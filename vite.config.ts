@@ -24,14 +24,14 @@ export default (({ command }) => defineConfig({
 
         imagePresets({
             thumbnail: widthPreset({
-                class: 'img thumb',
+                className: 'img thumb',
                 loading: 'lazy',
-                widths: [96],
+                widths: [128],
                 formats: {
-                    webp: { quality: 50 },
-                    avif: { },
-                    png: { },
-                    jpg: { quality: 70 },
+                    // avif: {},
+                    // webp: { quality: 70 },
+                    // png: {},
+                    jpeg: { quality: 70 }
                 },
             }),
         }),
@@ -57,7 +57,13 @@ export default (({ command }) => defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+
+    build: {
+        minify: 'esbuild',
+        target: "esnext"
+    },
+
     server: {
         port: 3000,
-    }
+    },
 }));

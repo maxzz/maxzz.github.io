@@ -26,7 +26,7 @@ let srcset = {
 
 //import srcset from '@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png&srcset';
 
-//console.log('srcset', srcset);
+console.log('srcset', srcset);
 //console.log('previewDropzon', previewDropzon);
 //console.log('svgPath', svgPath);
 
