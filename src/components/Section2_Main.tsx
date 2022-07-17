@@ -32,10 +32,11 @@ function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLA
 }
 
 function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
-    const srcUrl = Array.isArray(src) ? src : [{srcset: src}];
+    const srcUrl = Array.isArray(src) ? src : [{src: src}];
+    const url = srcUrl[srcUrl.length - 1].src;
     return (
         <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
-            <img src={src} alt="project preview" />
+            <img src={url} alt="project preview" />
         </picture>
     );
 }
