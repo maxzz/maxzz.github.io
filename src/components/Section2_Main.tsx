@@ -31,11 +31,23 @@ function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLA
     );
 }
 
-function Image({className, src }: {src: string} & HTMLAttributes<HTMLImageElement>) {
-    return(
-        <img className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0",className)} src={src} alt="project preview" />
-    )
+type SrcSet = {
+
+};
+
+function Picture({ className, src, ...rest }: { src: string; } & HTMLAttributes<HTMLPictureElement>) {
+    return (
+        <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
+            <img src={src} alt="project preview" />
+        </picture>
+    );
 }
+
+// function Image({ className, src }: { src: string; } & HTMLAttributes<HTMLImageElement>) {
+//     return (
+//         <img className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} src={src} alt="project preview" />
+//     );
+// }
 
 function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
     return (
@@ -57,7 +69,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <Image src={previewUrl} />
+                        <Picture src={previewUrl} />
                     </div>
                 </div>
             </div >
