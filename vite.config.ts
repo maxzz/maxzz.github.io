@@ -27,6 +27,10 @@ export default (({ command }) => defineConfig({
                 className: 'img thumb',
                 loading: 'lazy',
                 widths: [128],
+
+                //height: 190, // avoid layout shift
+				//baseWidth: 48,
+
                 formats: {
                     // avif: {},
                     // webp: { quality: 70 },
