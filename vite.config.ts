@@ -26,10 +26,10 @@ export default (({ command }) => defineConfig({
             thumbnail: widthPreset({
                 class: 'img thumb',
                 loading: 'lazy',
-                widths: [48, 96],
+                widths: [96],
                 formats: {
                     webp: { quality: 50 },
-                    jpg: { quality: 70 },
+                    png: { quality: 100 },
                 },
             }),
         }),
