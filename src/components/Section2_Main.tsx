@@ -1,7 +1,7 @@
-import React, { HTMLAttributes, ReactNode } from 'react';
+import React, { HTMLAttributes, ImgHTMLAttributes, ReactNode, SourceHTMLAttributes } from 'react';
 import { useAtom } from 'jotai';
 import { sectionOpenAtoms } from '@/store/store';
-import { ProjectType, SectionType } from '@/store/store-types';
+import { ProjectType, SectionType, SrcSetType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
@@ -31,11 +31,8 @@ function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLA
     );
 }
 
-type SrcSet = {
-
-};
-
-function Picture({ className, src, ...rest }: { src: string; } & HTMLAttributes<HTMLPictureElement>) {
+function Picture({ className, src, ...rest }: { src: SrcSetType; } & HTMLAttributes<HTMLPictureElement>) {
+    const srcUrl = Array.isArray(src) ? src : [{srcset: src}] as SrcSetType;
     return (
         <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
             <img src={src} alt="project preview" />

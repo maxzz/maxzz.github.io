@@ -29,7 +29,8 @@ export default (({ command }) => defineConfig({
                 widths: [96],
                 formats: {
                     webp: { quality: 50 },
-                    png: { quality: 100 },
+                    avif: { },
+                    png: { },
                 },
             }),
         }),

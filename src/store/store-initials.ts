@@ -11,6 +11,8 @@ import testPmDomainLogins22 from "@/assets/pages/test-pm-domain-logins22-2022-06
 
 import srcset from '@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail';
 
+//import srcset from '@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png&srcset';
+
 console.log('srcset', srcset);
 console.log('svgPath', svgPath);
 
@@ -23,6 +25,7 @@ export const projectsDp: ProjectType[] = [
         // previewUrl: previewDropzon,
         // previewUrl: "@/assets/pages/dropzone-2022-03-04_15-29-37.png?preset=thumbnail&src",
         previewUrl: srcset[srcset.length - 1].src || '',
+        //previewUrl: '',
     },
     {
         caption: "test-pm-domain-logins22",
