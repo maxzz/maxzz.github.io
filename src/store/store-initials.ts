@@ -127,6 +127,14 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.cursors,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/2-image-processing/cursors",
     },
+    {
+        caption: "noise-gen",
+        description: "Noise generator",
+        urlGithub: "https://github.com/maxzz/noise-gen",
+        urlDemo: "https://maxzz.github.io/noise-gen",
+        previewUrl: images.noiseGen,
+        localPath: "C:/Y/w/2-web/7-my-webpages/webworker-noise-gen",
+    },
 
     {
         caption: "leva-ui-dynamic-boxes",

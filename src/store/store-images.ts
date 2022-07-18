@@ -14,6 +14,7 @@ import ngonGen22 from "@/assets/pages/ngon-gen22-2022-06-11_18-09-01.png?preset=
 import volumeIllusion from "@/assets/pages/volume-illusion-2021-05-04_18-32-05.png?preset=thumbnail";
 import pageQa2 from "@/assets/pages/page-qa2-2022-04-16_16-49-18.png?preset=thumbnail";
 import cursors from "@/assets/pages/cursors-2022-02-20_15-30-06.png?preset=thumbnail";
+import noiseGen from "@/assets/pages/noise-gen-2021-06-14_17-38-45.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -32,4 +33,5 @@ export {
     volumeIllusion,
     pageQa2,
     cursors,
+    noiseGen,
 };
