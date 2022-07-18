@@ -3,6 +3,14 @@ import * as images from "./store-images";
 
 export const projectsDp: ProjectType[] = [
     {
+        caption: "page-qa2",
+        description: "QA information website",
+        urlGithub: "https://github.com/maxzz/page-qa2",
+        urlDemo: "https://maxzz.github.io/page-qa2",
+        previewUrl: images.pageQa2,
+        localPath: "C:/Y/w/2-web/0-dp/page-qa2",
+    },
+    {
         caption: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
         urlGithub: "https://github.com/maxzz/dropzone",
@@ -43,6 +51,7 @@ export const projectsDp: ProjectType[] = [
     //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
+
 
 ];
 
