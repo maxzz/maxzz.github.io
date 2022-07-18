@@ -120,6 +120,14 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.levaUiDynamicBoxes,
         localPath: "C:/Y/w/2-web/7-my-webpages/leva-ui-dynamic-boxes",
     },
+    {
+        caption: "volume-illusion",
+        description: "Illusion of three-dimensional shapes.",
+        urlGithub: "https://github.com/maxzz/volume-illusion",
+        urlDemo: "https://maxzz.github.io/volume-illusion",
+        previewUrl: images.volumeIllusion,
+        localPath: "C:/Y/w/2-web/7-my-webpages/github-volume-illusion",
+    },
 ];
 
 export const sections: SectionType[] = [

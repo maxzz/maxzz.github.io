@@ -11,6 +11,7 @@ import testPmSecond from "@/assets/pages/test-pm-second-2022-05-21_20-03-21.png?
 import levaUiDynamicBoxes from "@/assets/pages/leva-ui-dynamic-boxes-2022-05-03_18-08-19.png?preset=thumbnail";
 import editorsSvgShapes22Template from "@/assets/pages/editors-svg-shapes22-template-2022-04-25_14-17-36.png?preset=thumbnail";
 import ngonGen22 from "@/assets/pages/ngon-gen22-2022-06-11_18-09-01.png?preset=thumbnail";
+import volumeIllusion from "@/assets/pages/volume-illusion-2021-05-04_18-32-05.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -26,4 +27,5 @@ export {
     levaUiDynamicBoxes,
     editorsSvgShapes22Template,
     ngonGen22,
+    volumeIllusion,
 };
