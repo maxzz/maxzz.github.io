@@ -5,7 +5,7 @@ import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconGithubLogo, IconHardDrive, IconTv } from './UI/UIIcons';
+import { IconGithubLogo, IconHardDrive, IconReact, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 
 function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
@@ -59,7 +59,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                     {description}
                 </div>
 
-                <div className="-mb-2 text-xs flex select-none">
+                <div className="-mb-2 text-xs flex items-center select-none">
                     <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     {localPath &&
@@ -67,6 +67,8 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                             <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                         </ButtonShell>
                     }
+                    {/* <IconReact className="w-3 h-3" />
+                    <IconVue className="w-3 h-3" /> */}
                 </div>
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
