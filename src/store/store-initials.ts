@@ -38,9 +38,10 @@ export const projectsDp: ProjectType[] = [
     //     description: "",
     //     urlGithub: "",
     //     urlDemo: "",
-    //     previewUrl: ,
+    //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
+
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -89,6 +90,7 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.svgPath,
     },
 
+    
     {
         caption: "leva-ui-dynamic-boxes",
         description: "Experimenting with box resizing handles using leva and zustand.",
@@ -96,6 +98,14 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/leva-ui-dynamic-boxes",
         previewUrl: images.levaUiDynamicBoxes,
         localPath: "C:/Y/w/2-web/7-my-webpages/leva-ui-dynamic-boxes",
+    },
+    {
+        caption: "ngon-gen22-template",
+        description: "Template for React, Jotai, TailwindCSS app",
+        urlGithub: "https://github.com/maxzz/ngon-gen22-template",
+        urlDemo: "https://maxzz.github.io/ngon-gen22",
+        previewUrl: images.editorsSvgShapes22Template,
+        localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22-template",
     },
 ];
 
