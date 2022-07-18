@@ -7,6 +7,7 @@ import colorNames22 from "@/assets/pages/color-names22-2022-06-02_3-49-34.png?pr
 import testPmDomainLogins22 from "@/assets/pages/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail";
 import svgPath from "@/assets/pages/svg-path-2022-02-03_14-18-21-sub-paths.png?preset=thumbnail";
 import pageExtensionInstallation from "@/assets/pages/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
+import testPmSecond from "@/assets/pages/test-pm-second-2022-05-21_20-03-21.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -18,4 +19,5 @@ export {
     testPmDomainLogins22,
     svgPath,
     pageExtensionInstallation,
+    testPmSecond,
 };

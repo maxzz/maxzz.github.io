@@ -24,6 +24,14 @@ export const projectsDp: ProjectType[] = [
         previewUrl: images.pageExtensionInstallation,
         localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
     },
+    {
+        caption: "test-pm-second",
+        description: "Second page for checking logins on the same domain.",
+        urlGithub: "https://github.com/maxzz/test-pm-second",
+        urlDemo: "https://maxzz.github.io/test-pm-second",
+        previewUrl: images.testPmSecond,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm-second",
+    },
 
     // {
     //     caption: "",
