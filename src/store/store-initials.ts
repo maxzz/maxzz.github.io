@@ -88,6 +88,15 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/svg-path",
         previewUrl: images.svgPath,
     },
+
+    {
+        caption: "leva-ui-dynamic-boxes",
+        description: "Experimenting with box resizing handles using leva and zustand.",
+        urlGithub: "https://github.com/maxzz/leva-ui-dynamic-boxes",
+        urlDemo: "https://maxzz.github.io/leva-ui-dynamic-boxes",
+        previewUrl: images.levaUiDynamicBoxes,
+        localPath: "C:/Y/w/2-web/7-my-webpages/leva-ui-dynamic-boxes",
+    },
 ];
 
 export const sections: SectionType[] = [

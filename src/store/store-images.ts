@@ -8,6 +8,7 @@ import testPmDomainLogins22 from "@/assets/pages/test-pm-domain-logins22-2022-06
 import svgPath from "@/assets/pages/svg-path-2022-02-03_14-18-21-sub-paths.png?preset=thumbnail";
 import pageExtensionInstallation from "@/assets/pages/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
 import testPmSecond from "@/assets/pages/test-pm-second-2022-05-21_20-03-21.png?preset=thumbnail";
+import levaUiDynamicBoxes from "@/assets/pages/leva-ui-dynamic-boxes-2022-05-03_18-08-19.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -20,4 +21,5 @@ export {
     svgPath,
     pageExtensionInstallation,
     testPmSecond,
+    levaUiDynamicBoxes,
 };
