@@ -32,7 +32,7 @@ function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLA
 }
 
 function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
-    const srcUrl = Array.isArray(src) ? src : [{src: src}];
+    const srcUrl = Array.isArray(src) ? src : [{ src: src }];
     const url = srcUrl[srcUrl.length - 1].src;
     return (
         <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
@@ -62,7 +62,11 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 <div className="-mb-2 text-xs flex select-none">
                     <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
-                    {localPath && <ButtonShell title="Copy path on local hard drive"> <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} /> </ButtonShell>}
+                    {localPath &&
+                        <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
+                            <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
+                        </ButtonShell>
+                    }
                 </div>
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
