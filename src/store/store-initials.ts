@@ -19,14 +19,6 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
     },
     {
-        caption: "test-pm-domain-logins22",
-        description: "Application for testing different login forms and password change in one domain.",
-        urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
-        urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
-        previewUrl: images.testPmDomainLogins22,
-        localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
-    },
-    {
         caption: "page-extension-installation",
         description: "Page for installing the DigitalPersona extension.",
         urlGithub: "https://github.com/maxzz/page-extension-installation",
@@ -35,12 +27,36 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
     },
     {
+        caption: "test-pm",
+        description: "Dynamic webpage to test Password Manager login and password change screens.",
+        urlGithub: "https://github.com/maxzz/test-pm",
+        urlDemo: "https://maxzz.github.io/test-pm",
+        previewUrl: images.testPm,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm",
+    },
+    {
         caption: "test-pm-second",
         description: "Second page for checking logins on the same domain.",
         urlGithub: "https://github.com/maxzz/test-pm-second",
         urlDemo: "https://maxzz.github.io/test-pm-second",
         previewUrl: images.testPmSecond,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-second",
+    },
+    {
+        caption: "test-pm-domain-logins",
+        description: "Test multiple logins under the same domain.",
+        urlGithub: "https://github.com/maxzz/test-pm-domain-logins",
+        urlDemo: "https://maxzz.github.io/test-pm-domain-logins/",
+        previewUrl: images.testPmDomainLogins,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins",
+    },
+    {
+        caption: "test-pm-domain-logins22",
+        description: "Application for testing different login forms and password change in one domain.",
+        urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
+        urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
+        previewUrl: images.testPmDomainLogins22,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
     },
 
     // {
@@ -135,6 +151,22 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.noiseGen,
         localPath: "C:/Y/w/2-web/7-my-webpages/webworker-noise-gen",
     },
+    {
+        caption: "css-3d",
+        description: "Experimanting with pseudo-3D shapes.",
+        urlGithub: "https://github.com/maxzz/css-3d",
+        urlDemo: "https://maxzz.github.io/css-3d",
+        previewUrl: images.css3d,
+        localPath: "C:/Y/w/2-web/7-my-webpages/github-css-3d",
+    },
+    {
+        caption: "react-spring-tests",
+        description: "Exploring different use cases for the react-spring library.",
+        urlGithub: "https://github.com/maxzz/react-spring-tests",
+        urlDemo: "https://maxzz.github.io/react-spring-tests",
+        previewUrl: images.reactSpringTests,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/1-animations/react-spring-tests",
+    },
 
     {
         caption: "leva-ui-dynamic-boxes",
@@ -152,6 +184,62 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.volumeIllusion,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-volume-illusion",
     },
+    {
+        caption: "real-time-resize-rcv",
+        description: "Created with CodeSandbox. Virtual lists.",
+        urlGithub: "https://github.com/maxzz/real-time-resize-rcv",
+        urlDemo: "https://codesandbox.io/s/github/maxzz/real-time-resize-rcv",
+        previewUrl: images.realTimeResizeRcv,
+        localPath: "https://codesandbox.io/s/github/maxzz/real-time-resize-rcv",
+    },
+];
+
+export const projectsNpm: ProjectType[] = [
+    {
+        caption: "work-weeks",
+        description: "Utility to generate working weeks per year.",
+        urlGithub: "https://github.com/maxzz/work-weeks",
+        urlDemo: "https://www.npmjs.com/package/work-weeks",
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/work-weeks-calendar",
+    },
+    {
+        caption: "rardir",
+        description: "Utility to pack meta data inside specified folders.",
+        urlGithub: "https://github.com/maxzz/rardir",
+        urlDemo: "https://www.npmjs.com/package/rardir",
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/rardir",
+    },
+];
+
+export const projectsVue: ProjectType[] = [
+    {
+        caption: "animated-sidebar",
+        description: "Animated sidebar with Vue.js 3, TailwindCSS/Jit, and Vite.",
+        urlGithub: "https://github.com/maxzz/animated-sidebar",
+        urlDemo: "https://maxzz.github.io/animated-sidebar",
+        previewUrl: images.animatedSidebar,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/3-vue/animated-sidebar",
+        stack: ["vue", "tailwindcss"],
+    },
+    {
+        caption: "ch-spy",
+        description: "Web scrapping video links.",
+        urlGithub: "https://github.com/maxzz/ch-spy",
+        urlDemo: "https://maxzz.github.io/ch-spy",
+        previewUrl: images.chSpy,
+        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser",
+        stack: ["vue", "tailwindcss"],
+    },
+    {
+        caption: "auto-dat-gui",
+        description: "dat-gui replica in Vue 3",
+        urlGithub: "https://github.com/maxzz/auto-dat-gui",
+        urlDemo: "https://maxzz.github.io/auto-dat-gui",
+        previewUrl: images.autoDatGui,
+        localPath: "C:/Y/w/2-web/2-generators/auto-dat-gui",
+    },
 ];
 
 export const sections: SectionType[] = [
@@ -162,5 +250,13 @@ export const sections: SectionType[] = [
     {
         name: 'DigitalPersona',
         projects: projectsDp,
+    },
+    {
+        name: 'npm',
+        projects: projectsNpm,
+    },
+    {
+        name: 'Vue',
+        projects: projectsVue,
     },
 ];

@@ -10,6 +10,8 @@ export type ProjectType = {
     urlDemo?: string;       // URL to demo project
     previewUrl: ImageUrl;   // image preview URL
     localPath?: string;     // folder path on local harddrive
+    stack?: string[];       // react, vite, svelte, tailwindcss
+    //date: created, updated
 };
 
 export type SectionType = {
