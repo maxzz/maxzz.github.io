@@ -89,8 +89,15 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/svg-path",
         previewUrl: images.svgPath,
     },
+    {
+        caption: "ngon-gen22",
+        description: "N-gon generator.",
+        urlGithub: "https://github.com/maxzz/ngon-gen22",
+        urlDemo: "https://maxzz.github.io/ngon-gen22",
+        previewUrl: images.ngonGen22,
+        localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22",
+    },
 
-    
     {
         caption: "leva-ui-dynamic-boxes",
         description: "Experimenting with box resizing handles using leva and zustand.",
