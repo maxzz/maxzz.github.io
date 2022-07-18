@@ -60,7 +60,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
                 </div>
 
                 <div className="-mb-2 text-xs flex items-center select-none">
-                    <ButtonShell title="Open demo project"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
+                    <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
                     {localPath &&
                         <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
@@ -73,7 +73,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <a href={urlDemo} target="_blank" title="Open demo project"><Picture src={previewUrl} /></a>
+                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${caption}`}><Picture src={previewUrl} /></a>
                     </div>
                 </div>
             </div >

@@ -135,6 +135,14 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/svg-path",
     },
     {
+        caption: "quadratic-curves",
+        description: "Quadratic curves experiments.",
+        urlGithub: "https://github.com/maxzz/quadratic-curves",
+        urlDemo: "https://github.com/maxzz/quadratic-curves", // no demo
+        previewUrl: images.quadraticCurves,
+        localPath: "C:/Y/w/2-web/7-my-webpages/editors-bezier/quadratic",
+    },
+    {
         caption: "ngon-gen22",
         description: "N-gon generator.",
         urlGithub: "https://github.com/maxzz/ngon-gen22",
@@ -215,6 +223,22 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.reactSm,
         localPath: "C:/Y/w/2-web/1-frameworks/1-react/react-state-management-flavours",
     },
+    {
+        caption: "blooming-gen",
+        description: "Blooming generator experiments.",
+        urlGithub: "https://github.com/maxzz/blooming-gen",
+        urlDemo: "https://maxzz.github.io/blooming-gen",
+        previewUrl: images.bloomingGen,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/blooming-gen",
+    },
+    {
+        caption: "giffy",
+        description: "Experimenting with CSS Masonry Grid using the simple Giphy client.",
+        urlGithub: "https://github.com/maxzz/giffy",
+        urlDemo: "https://maxzz.github.io/giffy",
+        previewUrl: images.giffy,
+        localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/giffy",
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -233,6 +257,30 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/rardir",
         previewUrl: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/rardir",
+    },
+    {
+        caption: "rarsrt",
+        description: "Utility to combine .SRT subtitles with .MP4 files inside specified folders.",
+        urlGithub: "https://github.com/maxzz/rarsrt",
+        urlDemo: "https://www.npmjs.com/package/rarsrt",
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/merge-video-subtitles",
+    },
+    {
+        caption: "spawn-loading-test",
+        description: "Node.js test with spawning child processes and a control panel via a web interface.",
+        urlGithub: "https://github.com/maxzz/spawn-loading-test",
+        urlDemo: "https://github.com/maxzz/spawn-loading-test", // no demo
+        previewUrl: images.spawnLoadingTest,
+        localPath: "C:/Y/w/1-node/1-utils/spawn-loading-test",
+    },
+    {
+        caption: "server-ocr",
+        description: "Explore the Tesseract OCR engine.",
+        urlGithub: "https://github.com/maxzz/server-ocr",
+        urlDemo: "https://github.com/maxzz/server-ocr", // no demo
+        previewUrl: images.serverOcr,
+        localPath: "C:/Y/w/2-web/7-my-webpages/server-ocr",
     },
 ];
 
@@ -256,12 +304,20 @@ export const projectsVue: ProjectType[] = [
         stack: ["vue", "tailwindcss"],
     },
     {
+        caption: "coursehunters-course-list-browser-ctx",
+        description: "The script can be embedded in the content of the page with the AddJS extension.",
+        urlGithub: "https://github.com/maxzz/ch-spy-ext",
+        urlDemo: "https://maxzz.github.io/ch-spy",
+        previewUrl: images.coursehuntersCourseListBrowserCtx,
+        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser-ctx",
+    },
+    {
         caption: "site-egghead.io-ctx",
         description: "Content script to embed in egghead.io with AddJs extension.",
         urlGithub: "https://github.com/maxzz/site-egghead.io-ctx",
-        urlDemo: "https://github.com/maxzz/site-egghead.io-ctx",
+        urlDemo: "https://maxzz.github.io/ch-spy",
         previewUrl: images.chSpy,
-        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser-ctx",
+        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/site-egghead.io-ctx",
     },
     {
         caption: "auto-dat-gui",
@@ -270,6 +326,22 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/auto-dat-gui",
         previewUrl: images.autoDatGui,
         localPath: "C:/Y/w/2-web/2-generators/auto-dat-gui",
+    },
+    {
+        caption: "back-to-90s-html",
+        description: "A quick and easy project to keep old memories alive.",
+        urlGithub: "https://github.com/maxzz/back-to-90s-html",
+        urlDemo: "https://maxzz.github.io/back-to-90s-html",
+        previewUrl: images.backTo90sHtml,
+        localPath: "C:/Y/w/2-web/7-my-webpages/back-to-90s-html",
+    },
+    {
+        caption: "vue-evens-todos",
+        description: "This is an integration test with codesandbox.io. Created with CodeSandbox.",
+        urlGithub: "https://github.com/maxzz/vue-evens-todos",
+        urlDemo: "https://codesandbox.io/s/github/maxzz/vue-evens-todos",
+        previewUrl: images.vue26SiteExamplesTodos,
+        localPath: "C:/Y/w/2-web/7-my-webpages/vue-examples/vue26-site-examples-todos",
     },
 ];
 

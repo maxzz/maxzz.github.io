@@ -27,6 +27,14 @@ import autoDatGui from "@/assets/pages/auto-dat-gui-2020-11-15_21-24-52.png?pres
 import reactSm from "@/assets/pages/react-sm-2021-08-05_18-18-46.png?preset=thumbnail";
 import reactD3Voronoi from "@/assets/pages/react-d3-voronoi-2022-07-18_15-36-06.png?preset=thumbnail";
 import reactD3 from "@/assets/pages/react-d3-2021-07-14_18-55-53.png?preset=thumbnail";
+import coursehuntersCourseListBrowserCtx from "@/assets/pages/coursehunters-course-list-browser-ctx-2021-05-07_19-17-13.png?preset=thumbnail";
+import spawnLoadingTest from "@/assets/pages/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
+import serverOcr from "@/assets/pages/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
+import quadraticCurves from "@/assets/pages/quadratic-curves-preview.png?preset=thumbnail";
+import giffy from "@/assets/pages/giffy-2021-04-17_21-05-46.png?preset=thumbnail";
+import vue26SiteExamplesTodos from "@/assets/pages/vue26-site-examples-todos-preview.png?preset=thumbnail";
+import backTo90sHtml from "@/assets/pages/back-to-90s-html-2020-12-12_19-48-25.png?preset=thumbnail";
+import bloomingGen from "@/assets/pages/blooming-gen-2022-07-18_16-45-15.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -58,4 +66,12 @@ export {
     reactSm,
     reactD3Voronoi,
     reactD3,
+    coursehuntersCourseListBrowserCtx,
+    spawnLoadingTest,
+    serverOcr,
+    quadraticCurves,
+    giffy,
+    vue26SiteExamplesTodos,
+    backTo90sHtml,
+    bloomingGen,
 };
