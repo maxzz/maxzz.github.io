@@ -8,6 +8,7 @@ export const projectsDp: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/dropzone",
         urlDemo: "https://maxzz.github.io/dropzone",
         previewUrl: images.previewDropzon,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
     },
     {
         caption: "test-pm-domain-logins22",
@@ -15,6 +16,7 @@ export const projectsDp: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
         previewUrl: images.testPmDomainLogins22,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
     },
     {
         caption: "page-extension-installation",
@@ -59,6 +61,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/simple-border-radius22",
         urlDemo: "https://maxzz.github.io/simple-border-radius22",
         previewUrl: images.simpleBorderRadius,
+        localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius22",
     },
     {
         caption: "border-radius-generator",
@@ -66,6 +69,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/border-radius-generator",
         urlDemo: "https://maxzz.github.io/border-radius-generator",
         previewUrl: images.borderRadiusGenerator,
+        localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius",
     },
     {
         caption: "red3-curves",
@@ -73,6 +77,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/red3-curves",
         urlDemo: "https://maxzz.github.io/red3-curves",
         previewUrl: images.red3Curves,
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-lines",
     },
     {
         caption: "red3-path",
@@ -80,7 +85,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/red3-path",
         urlDemo: "https://maxzz.github.io/red3-path",
         previewUrl: images.red3Path,
-        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind"
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind",
     },
     {
         caption: "svg-path",
@@ -88,6 +93,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/svg-path",
         urlDemo: "https://maxzz.github.io/svg-path",
         previewUrl: images.svgPath,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/svg-path",
     },
     {
         caption: "ngon-gen22",
@@ -97,6 +103,14 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.ngonGen22,
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22",
     },
+    {
+        caption: "ngon-gen22-template",
+        description: "Template for React, Jotai, TailwindCSS app",
+        urlGithub: "https://github.com/maxzz/ngon-gen22-template",
+        urlDemo: "https://maxzz.github.io/ngon-gen22",
+        previewUrl: images.editorsSvgShapes22Template,
+        localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22-template",
+    },
 
     {
         caption: "leva-ui-dynamic-boxes",
@@ -105,14 +119,6 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/leva-ui-dynamic-boxes",
         previewUrl: images.levaUiDynamicBoxes,
         localPath: "C:/Y/w/2-web/7-my-webpages/leva-ui-dynamic-boxes",
-    },
-    {
-        caption: "ngon-gen22-template",
-        description: "Template for React, Jotai, TailwindCSS app",
-        urlGithub: "https://github.com/maxzz/ngon-gen22-template",
-        urlDemo: "https://maxzz.github.io/ngon-gen22",
-        previewUrl: images.editorsSvgShapes22Template,
-        localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22-template",
     },
 ];
 
