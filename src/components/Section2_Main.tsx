@@ -71,7 +71,7 @@ function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, loc
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <Picture src={previewUrl} />
+                        <a href={urlDemo} target="_blank" title="Open demo project"><Picture src={previewUrl} /></a>
                     </div>
                 </div>
             </div >
