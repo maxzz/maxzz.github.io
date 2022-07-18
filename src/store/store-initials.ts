@@ -52,7 +52,6 @@ export const projectsDp: ProjectType[] = [
     //     localPath: "",
     // },
 
-
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -119,6 +118,14 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/ngon-gen22",
         previewUrl: images.editorsSvgShapes22Template,
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22-template",
+    },
+    {
+        caption: "cursors",
+        description: "Web Cursors Lab",
+        urlGithub: "https://github.com/maxzz/cursors",
+        urlDemo: "https://maxzz.github.io/cursors",
+        previewUrl: images.cursors,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/2-image-processing/cursors",
     },
 
     {

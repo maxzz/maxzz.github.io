@@ -13,6 +13,7 @@ import editorsSvgShapes22Template from "@/assets/pages/editors-svg-shapes22-temp
 import ngonGen22 from "@/assets/pages/ngon-gen22-2022-06-11_18-09-01.png?preset=thumbnail";
 import volumeIllusion from "@/assets/pages/volume-illusion-2021-05-04_18-32-05.png?preset=thumbnail";
 import pageQa2 from "@/assets/pages/page-qa2-2022-04-16_16-49-18.png?preset=thumbnail";
+import cursors from "@/assets/pages/cursors-2022-02-20_15-30-06.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -30,4 +31,5 @@ export {
     ngonGen22,
     volumeIllusion,
     pageQa2,
+    cursors,
 };
