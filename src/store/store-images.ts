@@ -24,6 +24,9 @@ import testPm from "@/assets/pages/test-pm.png?preset=thumbnail";
 import css3d from "@/assets/pages/css-3d-2021-05-24_1-43-59.png?preset=thumbnail";
 import realTimeResizeRcv from "@/assets/pages/real-time-resize-rcv-2022-07-18_1-34-33.png?preset=thumbnail";
 import autoDatGui from "@/assets/pages/auto-dat-gui-2020-11-15_21-24-52.png?preset=thumbnail";
+import reactSm from "@/assets/pages/react-sm-2021-08-05_18-18-46.png?preset=thumbnail";
+import reactD3Voronoi from "@/assets/pages/react-d3-voronoi-2022-07-18_15-36-06.png?preset=thumbnail";
+import reactD3 from "@/assets/pages/react-d3-2021-07-14_18-55-53.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -52,4 +55,7 @@ export {
     css3d,
     realTimeResizeRcv,
     autoDatGui,
+    reactSm,
+    reactD3Voronoi,
+    reactD3,
 };

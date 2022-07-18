@@ -67,7 +67,6 @@ export const projectsDp: ProjectType[] = [
     //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
-
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -110,6 +109,22 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/red3-path",
         previewUrl: images.red3Path,
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind",
+    },
+    {
+        caption: "red3-voronoi",
+        description: "Voronoi algorithm playground",
+        urlGithub: "https://github.com/maxzz/red3-voronoi",
+        urlDemo: "https://maxzz.github.io/red3-voronoi",
+        previewUrl: images.reactD3Voronoi,
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-voronoi",
+    },
+    {
+        caption: "react-d3",
+        description: "Coexistence of React with D3.js",
+        urlGithub: "https://github.com/maxzz/react-d3",
+        urlDemo: "https://maxzz.github.io/react-d3",
+        previewUrl: images.reactD3,
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-red3",
     },
     {
         caption: "svg-path",
@@ -192,6 +207,14 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.realTimeResizeRcv,
         localPath: "https://codesandbox.io/s/github/maxzz/real-time-resize-rcv",
     },
+    {
+        caption: "react-sm",
+        description: "React state management flavors.",
+        urlGithub: "https://github.com/maxzz/react-sm",
+        urlDemo: "https://maxzz.github.io/react-sm",
+        previewUrl: images.reactSm,
+        localPath: "C:/Y/w/2-web/1-frameworks/1-react/react-state-management-flavours",
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -231,6 +254,14 @@ export const projectsVue: ProjectType[] = [
         previewUrl: images.chSpy,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser",
         stack: ["vue", "tailwindcss"],
+    },
+    {
+        caption: "site-egghead.io-ctx",
+        description: "Content script to embed in egghead.io with AddJs extension.",
+        urlGithub: "https://github.com/maxzz/site-egghead.io-ctx",
+        urlDemo: "https://github.com/maxzz/site-egghead.io-ctx",
+        previewUrl: images.chSpy,
+        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser-ctx",
     },
     {
         caption: "auto-dat-gui",
