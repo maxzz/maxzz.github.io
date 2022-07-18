@@ -16,6 +16,14 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
         previewUrl: images.testPmDomainLogins22,
     },
+    {
+        caption: "page-extension-installation",
+        description: "Page for installing the DigitalPersona extension.",
+        urlGithub: "https://github.com/maxzz/page-extension-installation",
+        urlDemo: "https://maxzz.github.io/page-extension-installation",
+        previewUrl: images.pageExtensionInstallation,
+        localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
+    },
 
     // {
     //     caption: "",
