@@ -44,6 +44,10 @@ import reactSpringInterpolation from "@/assets/pages/react-spring-interpolation-
 import reactDelayUnmount from "@/assets/pages/react-delay-unmount-2021-03-13_2-07-43.png?preset=thumbnail";
 import reactScrollingCarousel from "@/assets/pages/react-scrolling-carousel-2022-07-18_17-49-30.png?preset=thumbnail";
 import gluehtml from "@/assets/pages/gluehtml-preview.png?preset=thumbnail";
+import svgIconsVite from "@/assets/pages/svg-icons-vite-2022-07-18_17-58-31.png?preset=thumbnail";
+import svgIconsFontSw from "@/assets/pages/svg-icons-font-sw-2022-07-18_18-03-13.png?preset=thumbnail";
+import simpleSiriwave from "@/assets/pages/simple-siriwave-2020-12-15_17-59-36.png?preset=thumbnail";
+import colorNames from "@/assets/pages/color-names-2020-12-02_4-55-29.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -92,4 +96,8 @@ export {
     reactDelayUnmount,
     reactScrollingCarousel,
     gluehtml,
+    svgIconsVite,
+    svgIconsFontSw,
+    simpleSiriwave,
+    colorNames,
 };

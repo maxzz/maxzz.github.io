@@ -83,14 +83,6 @@ export const projectsDp: ProjectType[] = [
     //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
-    // {
-    //     caption: "",
-    //     description: "",
-    //     urlGithub: "",
-    //     urlDemo: "",
-    //     previewUrl: images.editorsSvgShapes22Template,
-    //     localPath: "",
-    // },
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -303,6 +295,15 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.reactScrollingCarousel,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/scroller",
     },
+    {
+        caption: "svg-icons-font-sw",
+        description: "My learning and experimenting with custom SVG fonts.",
+        urlGithub: "https://github.com/maxzz/svg-icons-font-sw",
+        urlDemo: "https://maxzz.github.io/svg-icons-font-sw",
+        previewUrl: images.svgIconsFontSw,
+        localPath: "C:/Y/w/2-web/7-my-webpages/svg-icons-font-sw",
+        stack: ["js"]
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -362,9 +363,25 @@ export const projectsNpm: ProjectType[] = [
         previewUrl: images.gluehtml,
         localPath: "C:/Y/w/1-node/1-utils/create-single-html",
     },
+    {
+        caption: "netsh-rule",
+        description: "Utility to generate a batch file to manage inbound and outbound Windows firewall connections for a single .exe file or all .exe files in folder.",
+        urlGithub: "https://github.com/maxzz/netsh-rule",
+        urlDemo: "https://www.npmjs.com/package/netsh-rule",
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
+    },
 ];
 
 export const projectsVue: ProjectType[] = [
+    {
+        caption: "color-names",
+        description: "CSS color names playground",
+        urlGithub: "https://github.com/maxzz/color-names",
+        urlDemo: "https://maxzz.github.io/color-names",
+        previewUrl: images.colorNames,
+        localPath: "C:/Y/w/2-web/7-my-webpages/color-names",
+    },
     {
         caption: "ngon-gen",
         description: "n-gon SVG generator.",
@@ -446,6 +463,22 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/revue-playground/",
         previewUrl: images.revuePlayground,
         localPath: "C:/Y/w/1-node/1-utils/reverse-vue-render",
+    },
+    {
+        caption: "",
+        description: "",
+        urlGithub: "https://github.com/maxzz/svg-icons-vite",
+        urlDemo: "https://maxzz.github.io/svg-icons-vite",
+        previewUrl: images.svgIconsVite,
+        localPath: "C:/Y/w/2-web/7-my-webpages/svg-icons-vite",
+    },
+    {
+        caption: "simple-siriwave",
+        description: "This project is a simple wrapper for the wave control using the Vue composition API.",
+        urlGithub: "https://github.com/maxzz/simple-siriwave",
+        urlDemo: "https://maxzz.github.io/simple-siriwave",
+        previewUrl: images.simpleSiriwave,
+        localPath: "C:/Y/w/2-web/7-my-webpages/simple-siriwave",
     },
 ];
 
