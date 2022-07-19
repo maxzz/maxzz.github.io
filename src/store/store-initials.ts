@@ -304,6 +304,22 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/svg-icons-font-sw",
         stack: ["js"]
     },
+    {
+        caption: "react-admin-address-book",
+        description: "Address book using react-admin framework.",
+        urlGithub: "https://github.com/maxzz/react-admin-address-book",
+        urlDemo: "https://maxzz.github.io/react-admin-address-book",
+        previewUrl: images.reactAdminAddressBook,
+        localPath: "C:/Y/w/2-web/1-frameworks/1-react/react-admin-address-book",
+    },
+    {
+        caption: "react-lifecycles",
+        description: "React life cycles trace",
+        urlGithub: "https://github.com/maxzz/react-lifecycles",
+        urlDemo: "https://github.com/maxzz/react-lifecycles", // no demo
+        previewUrl: images.reactNoPreview,
+        localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/react-lifecycles",
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -479,6 +495,14 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/simple-siriwave",
         previewUrl: images.simpleSiriwave,
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-siriwave",
+    },
+    {
+        caption: "svg-bkg-stripes",
+        description: "SVG generation playground.",
+        urlGithub: "https://github.com/maxzz/svg-bkg-stripes",
+        urlDemo: "https://maxzz.github.io/svg-bkg-stripes",
+        previewUrl: images.svgBkgStripes,
+        localPath: "C:/Y/w/2-web/2-generators/svg-bkg-stripes",
     },
 ];
 

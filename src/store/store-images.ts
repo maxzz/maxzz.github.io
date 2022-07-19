@@ -48,6 +48,9 @@ import svgIconsVite from "@/assets/pages/svg-icons-vite-2022-07-18_17-58-31.png?
 import svgIconsFontSw from "@/assets/pages/svg-icons-font-sw-2022-07-18_18-03-13.png?preset=thumbnail";
 import simpleSiriwave from "@/assets/pages/simple-siriwave-2020-12-15_17-59-36.png?preset=thumbnail";
 import colorNames from "@/assets/pages/color-names-2020-12-02_4-55-29.png?preset=thumbnail";
+import reactAdminAddressBook from "@/assets/pages/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
+import svgBkgStripes from "@/assets/pages/svg-bkg-stripes-2022-07-18_18-25-35.png?preset=thumbnail";
+import reactNoPreview from "@/assets/pages/react-no-preview.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -100,4 +103,7 @@ export {
     svgIconsFontSw,
     simpleSiriwave,
     colorNames,
+    reactAdminAddressBook,
+    svgBkgStripes,
+    reactNoPreview,
 };
