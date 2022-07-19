@@ -67,6 +67,30 @@ export const projectsDp: ProjectType[] = [
     //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
+    // {
+    //     caption: "",
+    //     description: "",
+    //     urlGithub: "",
+    //     urlDemo: "",
+    //     previewUrl: images.editorsSvgShapes22Template,
+    //     localPath: "",
+    // },
+    // {
+    //     caption: "",
+    //     description: "",
+    //     urlGithub: "",
+    //     urlDemo: "",
+    //     previewUrl: images.editorsSvgShapes22Template,
+    //     localPath: "",
+    // },
+    // {
+    //     caption: "",
+    //     description: "",
+    //     urlGithub: "",
+    //     urlDemo: "",
+    //     previewUrl: images.editorsSvgShapes22Template,
+    //     localPath: "",
+    // },
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -239,6 +263,46 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.giffy,
         localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/giffy",
     },
+    {
+        caption: "react-focus-within-menus",
+        description: "Study project: Exploring UX of the menu interactions.",
+        urlGithub: "https://github.com/maxzz/react-focus-within-menus",
+        urlDemo: "https://maxzz.github.io/react-focus-within-menus",
+        previewUrl: images.reactFocusWithinMenus,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/fluid-menu-links",
+    },
+    {
+        caption: "react-gsap-menu",
+        description: "Menu with SVG animated blobs",
+        urlGithub: "https://github.com/maxzz/react-gsap-menu",
+        urlDemo: "https://maxzz.github.io/react-gsap-menu",
+        previewUrl: images.reactGsapMenu,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/react-gsap-menu",
+    },
+    {
+        caption: "react-spring-interpolation",
+        description: "Shapes interpolation with react-spring.",
+        urlGithub: "https://github.com/maxzz/react-spring-interpolation",
+        urlDemo: "https://maxzz.github.io/react-spring-interpolation",
+        previewUrl: images.reactSpringInterpolation,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/sprint-interpolation",
+    },
+    {
+        caption: "react-delay-unmount",
+        description: "Investigation of the possibility of animating components when mounting / unmounting.",
+        urlGithub: "https://github.com/maxzz/react-delay-unmount",
+        urlDemo: "https://maxzz.github.io/react-delay-unmount",
+        previewUrl: images.reactDelayUnmount,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/delay-unmount",
+    },
+    {
+        caption: "react-scrolling-carousel",
+        description: "Carousel React Component with scrolling.",
+        urlGithub: "https://github.com/maxzz/react-scrolling-carousel",
+        urlDemo: "https://maxzz.github.io/react-scrolling-carousel",
+        previewUrl: images.reactScrollingCarousel,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/scroller",
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -282,9 +346,33 @@ export const projectsNpm: ProjectType[] = [
         previewUrl: images.serverOcr,
         localPath: "C:/Y/w/2-web/7-my-webpages/server-ocr",
     },
+    {
+        caption: "test-graphql",
+        description: "GraphQL server test implementation.",
+        urlGithub: "https://github.com/maxzz/test-graphql",
+        urlDemo: "https://github.com/maxzz/test-graphql", // no demo
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/2-web/7-my-webpages/test-graphql",
+    },
+    {
+        caption: "gluehtml",
+        description: "Glue HTML local external files into solid HTML.",
+        urlGithub: "https://www.npmjs.com/package/gluehtml",
+        urlDemo: "https://www.npmjs.com/package/gluehtml",
+        previewUrl: images.gluehtml,
+        localPath: "C:/Y/w/1-node/1-utils/create-single-html",
+    },
 ];
 
 export const projectsVue: ProjectType[] = [
+    {
+        caption: "ngon-gen",
+        description: "n-gon SVG generator.",
+        urlGithub: "https://github.com/maxzz/ngon-gen",
+        urlDemo: "https://maxzz.github.io/ngon-gen",
+        previewUrl: images.ngonGen,
+        localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes",
+    },
     {
         caption: "animated-sidebar",
         description: "Animated sidebar with Vue.js 3, TailwindCSS/Jit, and Vite.",
@@ -342,6 +430,22 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://codesandbox.io/s/github/maxzz/vue-evens-todos",
         previewUrl: images.vue26SiteExamplesTodos,
         localPath: "C:/Y/w/2-web/7-my-webpages/vue-examples/vue26-site-examples-todos",
+    },
+    {
+        caption: "svg-gradients",
+        description: "Exploring SVG Gradients.",
+        urlGithub: "https://github.com/maxzz/svg-gradients",
+        urlDemo: "https://maxzz.github.io/svg-gradients",
+        previewUrl: images.svgGradients,
+        localPath: "C:/Y/w/2-web/7-my-webpages/github-gradients",
+    },
+    {
+        caption: "revue-playground",
+        description: "AST in the ESTree format playground.",
+        urlGithub: "https://github.com/maxzz/revue-playground",
+        urlDemo: "https://maxzz.github.io/revue-playground/",
+        previewUrl: images.revuePlayground,
+        localPath: "C:/Y/w/1-node/1-utils/reverse-vue-render",
     },
 ];
 

@@ -35,6 +35,15 @@ import giffy from "@/assets/pages/giffy-2021-04-17_21-05-46.png?preset=thumbnail
 import vue26SiteExamplesTodos from "@/assets/pages/vue26-site-examples-todos-preview.png?preset=thumbnail";
 import backTo90sHtml from "@/assets/pages/back-to-90s-html-2020-12-12_19-48-25.png?preset=thumbnail";
 import bloomingGen from "@/assets/pages/blooming-gen-2022-07-18_16-45-15.png?preset=thumbnail";
+import reactFocusWithinMenus from "@/assets/pages/react-focus-within-menus-preview-2021-04-01_4-35-18.png?preset=thumbnail";
+import ngonGen from "@/assets/pages/ngon-gen-preview-20200512.png?preset=thumbnail";
+import svgGradients from "@/assets/pages/svg-gradients-2020-10-20_21-25-34.png?preset=thumbnail";
+import revuePlayground from "@/assets/pages/revue-playground-2021-03-11_19-21-14.png?preset=thumbnail";
+import reactGsapMenu from "@/assets/pages/react-gsap-menu-2022-07-18_17-20-08.png?preset=thumbnail";
+import reactSpringInterpolation from "@/assets/pages/react-spring-interpolation-2022-07-18_17-37-52.png?preset=thumbnail";
+import reactDelayUnmount from "@/assets/pages/react-delay-unmount-2021-03-13_2-07-43.png?preset=thumbnail";
+import reactScrollingCarousel from "@/assets/pages/react-scrolling-carousel-2022-07-18_17-49-30.png?preset=thumbnail";
+import gluehtml from "@/assets/pages/gluehtml-preview.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -74,4 +83,13 @@ export {
     vue26SiteExamplesTodos,
     backTo90sHtml,
     bloomingGen,
+    reactFocusWithinMenus,
+    ngonGen,
+    svgGradients,
+    revuePlayground,
+    reactGsapMenu,
+    reactSpringInterpolation,
+    reactDelayUnmount,
+    reactScrollingCarousel,
+    gluehtml,
 };
