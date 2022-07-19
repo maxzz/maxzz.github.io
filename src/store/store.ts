@@ -1,6 +1,15 @@
 import { atom, Getter, PrimitiveAtom } from "jotai";
 import debounce from "@/utils/debounce";
-import { atomsFamily, atomWithCallback } from "@/hooks/atomsX";
+import { Atomize, atomsFamily, atomWithCallback } from "@/hooks/atomsX";
+
+type UIOptions = {
+    showType: ShowType;
+}
+
+const enum ShowType {
+    list,
+    preview,
+}
 
 //#region LocalStorage
 
@@ -8,10 +17,14 @@ namespace Storage {
     const KEY = 'maxzz-io-01';
 
     type Store = {
+        uiOptions: UIOptions;
         openSections: Record<string, boolean>;
     };
 
     export let initialData: Store = {
+        uiOptions: {
+            showType: ShowType.preview,
+        },
         openSections: {},
     };
 
@@ -31,6 +44,9 @@ namespace Storage {
 
     export const saveDebounced = debounce(function _save(get: Getter) {
         let newStore: Store = {
+            uiOptions: {
+                showType: get(uiOptionsAtoms.showTypeAtom),
+            },
             openSections: sectionOpenAtoms.getValues(get),
         };
         localStorage.setItem(KEY, JSON.stringify(newStore));
@@ -41,8 +57,10 @@ namespace Storage {
 
 //#endregion LocalStorage
 
-export const sourceAtom = atom<boolean>(false);
-
-//////
-
 export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSections, false, (param: boolean) => atomWithCallback(param, Storage.save));
+
+//////////
+
+const uiOptionsAtoms: Atomize<UIOptions> = {
+    showTypeAtom: atomWithCallback(Storage.initialData.uiOptions.showType, Storage.save),
+}
