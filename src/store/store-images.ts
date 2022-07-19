@@ -51,6 +51,8 @@ import colorNames from "@/assets/pages/color-names-2020-12-02_4-55-29.png?preset
 import reactAdminAddressBook from "@/assets/pages/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
 import svgBkgStripes from "@/assets/pages/svg-bkg-stripes-2022-07-18_18-25-35.png?preset=thumbnail";
 import reactNoPreview from "@/assets/pages/react-no-preview.png?preset=thumbnail";
+import maxzz from "@/assets/pages/maxzz-main.svg?preset=thumbnail";
+import maxzzGithubIo from "@/assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -106,4 +108,6 @@ export {
     reactAdminAddressBook,
     svgBkgStripes,
     reactNoPreview,
+    maxzz,
+    maxzzGithubIo,
 };

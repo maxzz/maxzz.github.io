@@ -67,22 +67,6 @@ export const projectsDp: ProjectType[] = [
     //     previewUrl: images.editorsSvgShapes22Template,
     //     localPath: "",
     // },
-    // {
-    //     caption: "",
-    //     description: "",
-    //     urlGithub: "",
-    //     urlDemo: "",
-    //     previewUrl: images.editorsSvgShapes22Template,
-    //     localPath: "",
-    // },
-    // {
-    //     caption: "",
-    //     description: "",
-    //     urlGithub: "",
-    //     urlDemo: "",
-    //     previewUrl: images.editorsSvgShapes22Template,
-    //     localPath: "",
-    // },
 ];
 
 export const projectsUx: ProjectType[] = [
@@ -320,6 +304,22 @@ export const projectsUx: ProjectType[] = [
         previewUrl: images.reactNoPreview,
         localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/react-lifecycles",
     },
+    {
+        caption: "maxzz",
+        description: "maxzz/maxzz is a special repository. This README.md will appear on your public profile.",
+        urlGithub: "https://github.com/maxzz/maxzz",
+        urlDemo: "https://github.com/maxzz",
+        previewUrl: images.maxzz,
+        localPath: "C:/Y/w/2-web/7-my-webpages/github-frontpage",
+    },
+    {
+        caption: "maxzz.github.io",
+        description: "Mirror image of this page on GitHub",
+        urlGithub: "https://github.com/maxzz/maxzz.github.io",
+        urlDemo: "https://maxzz.github.io",
+        previewUrl: images.maxzzGithubIo,
+        localPath: "C:/Y/w/2-web/7-my-webpages/maxzz",
+    },
 ];
 
 export const projectsNpm: ProjectType[] = [
@@ -386,6 +386,22 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/netsh-rule",
         previewUrl: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
+    },
+    {
+        caption: "maxzz-proxy",
+        description: "Proxy server with CORS.",
+        urlGithub: "https://github.com/maxzz/maxzz-proxy",
+        urlDemo: "https://github.com/maxzz/maxzz-proxy", // no demo
+        previewUrl: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/maxzz-proxy",
+    },
+    {
+        caption: "maxzz-python",
+        description: "Creating GitHub frontpage readme.md file with Python.",
+        urlGithub: "https://github.com/maxzz/maxzz-python",
+        urlDemo: "https://github.com/maxzz/maxzz-python", // no demo
+        previewUrl: images.npm,
+        localPath: "cannot find the local project anymore",
     },
 ];
 
