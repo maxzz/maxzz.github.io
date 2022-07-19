@@ -3,6 +3,7 @@ import * as images from "./store-images";
 
 export const projectsDp: ProjectType[] = [
     {
+        primary: 'DP',
         caption: "page-qa2",
         description: "QA information website",
         urlGithub: "https://github.com/maxzz/page-qa2",
@@ -11,6 +12,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/page-qa2",
     },
     {
+        primary: 'DP',
         caption: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
         urlGithub: "https://github.com/maxzz/dropzone",
@@ -19,6 +21,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
     },
     {
+        primary: 'DP',
         caption: "page-extension-installation",
         description: "Page for installing the DigitalPersona extension.",
         urlGithub: "https://github.com/maxzz/page-extension-installation",
@@ -27,6 +30,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
     },
     {
+        primary: 'DP',
         caption: "test-pm",
         description: "Dynamic webpage to test Password Manager login and password change screens.",
         urlGithub: "https://github.com/maxzz/test-pm",
@@ -35,6 +39,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/test-pm",
     },
     {
+        primary: 'DP',
         caption: "test-pm-second",
         description: "Second page for checking logins on the same domain.",
         urlGithub: "https://github.com/maxzz/test-pm-second",
@@ -43,6 +48,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/test-pm-second",
     },
     {
+        primary: 'DP',
         caption: "test-pm-domain-logins",
         description: "Test multiple logins under the same domain.",
         urlGithub: "https://github.com/maxzz/test-pm-domain-logins",
@@ -51,6 +57,7 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins",
     },
     {
+        primary: 'DP',
         caption: "test-pm-domain-logins22",
         description: "Application for testing different login forms and password change in one domain.",
         urlGithub: "https://github.com/maxzz/test-pm-domain-logins22",
@@ -60,6 +67,7 @@ export const projectsDp: ProjectType[] = [
     },
 
     // {
+    //     primary: 'DP',
     //     caption: "",
     //     description: "",
     //     urlGithub: "",
@@ -71,6 +79,7 @@ export const projectsDp: ProjectType[] = [
 
 export const projectsUx: ProjectType[] = [
     {
+        primary: 'UX',
         caption: "color-names22",
         description: "CSS color names selector",
         urlGithub: "https://github.com/maxzz/color-names22",
@@ -79,6 +88,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
     },
     {
+        primary: 'UX',
         caption: "simple-border-radius22",
         description: "CSS border radius generator",
         urlGithub: "https://github.com/maxzz/simple-border-radius22",
@@ -87,6 +97,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius22",
     },
     {
+        primary: 'UX',
         caption: "border-radius-generator",
         description: "Simplest border radius generator with Vue.js Composition API",
         urlGithub: "https://github.com/maxzz/border-radius-generator",
@@ -95,6 +106,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius",
     },
     {
+        primary: 'UX',
         caption: "red3-curves",
         description: "Examination of the curves D3",
         urlGithub: "https://github.com/maxzz/red3-curves",
@@ -103,6 +115,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-lines",
     },
     {
+        primary: 'UX',
         caption: "red3-path",
         description: "Curve path simplification",
         urlGithub: "https://github.com/maxzz/red3-path",
@@ -111,6 +124,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind",
     },
     {
+        primary: 'UX',
         caption: "red3-voronoi",
         description: "Voronoi algorithm playground",
         urlGithub: "https://github.com/maxzz/red3-voronoi",
@@ -119,6 +133,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-voronoi",
     },
     {
+        primary: 'UX',
         caption: "react-d3",
         description: "Coexistence of React with D3.js",
         urlGithub: "https://github.com/maxzz/react-d3",
@@ -127,6 +142,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-red3",
     },
     {
+        primary: 'UX',
         caption: "svg-path",
         description: "SVG path exploration",
         urlGithub: "https://github.com/maxzz/svg-path",
@@ -135,6 +151,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/svg-path",
     },
     {
+        primary: 'UX',
         caption: "quadratic-curves",
         description: "Quadratic curves experiments.",
         urlGithub: "https://github.com/maxzz/quadratic-curves",
@@ -143,6 +160,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-bezier/quadratic",
     },
     {
+        primary: 'UX',
         caption: "ngon-gen22",
         description: "N-gon generator.",
         urlGithub: "https://github.com/maxzz/ngon-gen22",
@@ -151,6 +169,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22",
     },
     {
+        primary: 'UX',
         caption: "ngon-gen22-template",
         description: "Template for React, Jotai, TailwindCSS app",
         urlGithub: "https://github.com/maxzz/ngon-gen22-template",
@@ -159,6 +178,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes22-template",
     },
     {
+        primary: 'UX',
         caption: "cursors",
         description: "Web Cursors Lab",
         urlGithub: "https://github.com/maxzz/cursors",
@@ -167,6 +187,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/2-image-processing/cursors",
     },
     {
+        primary: 'UX',
         caption: "noise-gen",
         description: "Noise generator",
         urlGithub: "https://github.com/maxzz/noise-gen",
@@ -175,6 +196,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/webworker-noise-gen",
     },
     {
+        primary: 'UX',
         caption: "css-3d",
         description: "Experimanting with pseudo-3D shapes.",
         urlGithub: "https://github.com/maxzz/css-3d",
@@ -183,6 +205,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/github-css-3d",
     },
     {
+        primary: 'UX',
         caption: "react-spring-tests",
         description: "Exploring different use cases for the react-spring library.",
         urlGithub: "https://github.com/maxzz/react-spring-tests",
@@ -192,6 +215,7 @@ export const projectsUx: ProjectType[] = [
     },
 
     {
+        primary: 'UX',
         caption: "leva-ui-dynamic-boxes",
         description: "Experimenting with box resizing handles using leva and zustand.",
         urlGithub: "https://github.com/maxzz/leva-ui-dynamic-boxes",
@@ -200,6 +224,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/leva-ui-dynamic-boxes",
     },
     {
+        primary: 'UX',
         caption: "volume-illusion",
         description: "Illusion of three-dimensional shapes.",
         urlGithub: "https://github.com/maxzz/volume-illusion",
@@ -208,6 +233,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/github-volume-illusion",
     },
     {
+        primary: 'UX',
         caption: "real-time-resize-rcv",
         description: "Created with CodeSandbox. Virtual lists.",
         urlGithub: "https://github.com/maxzz/real-time-resize-rcv",
@@ -216,6 +242,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "https://codesandbox.io/s/github/maxzz/real-time-resize-rcv",
     },
     {
+        primary: 'UX',
         caption: "react-sm",
         description: "React state management flavors.",
         urlGithub: "https://github.com/maxzz/react-sm",
@@ -224,6 +251,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/1-react/react-state-management-flavours",
     },
     {
+        primary: 'UX',
         caption: "blooming-gen",
         description: "Blooming generator experiments.",
         urlGithub: "https://github.com/maxzz/blooming-gen",
@@ -232,6 +260,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/blooming-gen",
     },
     {
+        primary: 'UX',
         caption: "giffy",
         description: "Experimenting with CSS Masonry Grid using the simple Giphy client.",
         urlGithub: "https://github.com/maxzz/giffy",
@@ -240,6 +269,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/giffy",
     },
     {
+        primary: 'UX',
         caption: "react-focus-within-menus",
         description: "Study project: Exploring UX of the menu interactions.",
         urlGithub: "https://github.com/maxzz/react-focus-within-menus",
@@ -248,6 +278,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/fluid-menu-links",
     },
     {
+        primary: 'UX',
         caption: "react-gsap-menu",
         description: "Menu with SVG animated blobs",
         urlGithub: "https://github.com/maxzz/react-gsap-menu",
@@ -256,6 +287,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/react-gsap-menu",
     },
     {
+        primary: 'UX',
         caption: "react-spring-interpolation",
         description: "Shapes interpolation with react-spring.",
         urlGithub: "https://github.com/maxzz/react-spring-interpolation",
@@ -264,6 +296,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/sprint-interpolation",
     },
     {
+        primary: 'UX',
         caption: "react-delay-unmount",
         description: "Investigation of the possibility of animating components when mounting / unmounting.",
         urlGithub: "https://github.com/maxzz/react-delay-unmount",
@@ -272,6 +305,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/delay-unmount",
     },
     {
+        primary: 'UX',
         caption: "react-scrolling-carousel",
         description: "Carousel React Component with scrolling.",
         urlGithub: "https://github.com/maxzz/react-scrolling-carousel",
@@ -280,6 +314,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/scroller",
     },
     {
+        primary: 'UX',
         caption: "svg-icons-font-sw",
         description: "My learning and experimenting with custom SVG fonts.",
         urlGithub: "https://github.com/maxzz/svg-icons-font-sw",
@@ -289,6 +324,7 @@ export const projectsUx: ProjectType[] = [
         stack: ["js"]
     },
     {
+        primary: 'UX',
         caption: "react-admin-address-book",
         description: "Address book using react-admin framework.",
         urlGithub: "https://github.com/maxzz/react-admin-address-book",
@@ -297,6 +333,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/1-frameworks/1-react/react-admin-address-book",
     },
     {
+        primary: 'UX',
         caption: "react-lifecycles",
         description: "React life cycles trace",
         urlGithub: "https://github.com/maxzz/react-lifecycles",
@@ -305,6 +342,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/react-lifecycles",
     },
     {
+        primary: 'UX',
         caption: "maxzz",
         description: "maxzz/maxzz is a special repository. This README.md will appear on your public profile.",
         urlGithub: "https://github.com/maxzz/maxzz",
@@ -313,6 +351,7 @@ export const projectsUx: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/github-frontpage",
     },
     {
+        primary: 'UX',
         caption: "maxzz.github.io",
         description: "Mirror image of this page on GitHub",
         urlGithub: "https://github.com/maxzz/maxzz.github.io",
@@ -324,6 +363,7 @@ export const projectsUx: ProjectType[] = [
 
 export const projectsNpm: ProjectType[] = [
     {
+        primary: 'npm',
         caption: "work-weeks",
         description: "Utility to generate working weeks per year.",
         urlGithub: "https://github.com/maxzz/work-weeks",
@@ -332,6 +372,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/work-weeks-calendar",
     },
     {
+        primary: 'npm',
         caption: "rardir",
         description: "Utility to pack meta data inside specified folders.",
         urlGithub: "https://github.com/maxzz/rardir",
@@ -340,6 +381,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/rardir",
     },
     {
+        primary: 'npm',
         caption: "rarsrt",
         description: "Utility to combine .SRT subtitles with .MP4 files inside specified folders.",
         urlGithub: "https://github.com/maxzz/rarsrt",
@@ -348,6 +390,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/merge-video-subtitles",
     },
     {
+        primary: 'npm',
         caption: "spawn-loading-test",
         description: "Node.js test with spawning child processes and a control panel via a web interface.",
         urlGithub: "https://github.com/maxzz/spawn-loading-test",
@@ -356,6 +399,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/spawn-loading-test",
     },
     {
+        primary: 'npm',
         caption: "server-ocr",
         description: "Explore the Tesseract OCR engine.",
         urlGithub: "https://github.com/maxzz/server-ocr",
@@ -364,6 +408,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/server-ocr",
     },
     {
+        primary: 'npm',
         caption: "test-graphql",
         description: "GraphQL server test implementation.",
         urlGithub: "https://github.com/maxzz/test-graphql",
@@ -372,6 +417,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/2-web/7-my-webpages/test-graphql",
     },
     {
+        primary: 'npm',
         caption: "gluehtml",
         description: "Glue HTML local external files into solid HTML.",
         urlGithub: "https://www.npmjs.com/package/gluehtml",
@@ -380,6 +426,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/create-single-html",
     },
     {
+        primary: 'npm',
         caption: "netsh-rule",
         description: "Utility to generate a batch file to manage inbound and outbound Windows firewall connections for a single .exe file or all .exe files in folder.",
         urlGithub: "https://github.com/maxzz/netsh-rule",
@@ -388,6 +435,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
     },
     {
+        primary: 'npm',
         caption: "maxzz-proxy",
         description: "Proxy server with CORS.",
         urlGithub: "https://github.com/maxzz/maxzz-proxy",
@@ -396,6 +444,7 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/maxzz-proxy",
     },
     {
+        primary: 'npm',
         caption: "maxzz-python",
         description: "Creating GitHub frontpage readme.md file with Python.",
         urlGithub: "https://github.com/maxzz/maxzz-python",
@@ -407,22 +456,27 @@ export const projectsNpm: ProjectType[] = [
 
 export const projectsVue: ProjectType[] = [
     {
+        primary: 'vue',
         caption: "color-names",
         description: "CSS color names playground",
         urlGithub: "https://github.com/maxzz/color-names",
         urlDemo: "https://maxzz.github.io/color-names",
         previewUrl: images.colorNames,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "ngon-gen",
         description: "n-gon SVG generator.",
         urlGithub: "https://github.com/maxzz/ngon-gen",
         urlDemo: "https://maxzz.github.io/ngon-gen",
         previewUrl: images.ngonGen,
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "animated-sidebar",
         description: "Animated sidebar with Vue.js 3, TailwindCSS/Jit, and Vite.",
         urlGithub: "https://github.com/maxzz/animated-sidebar",
@@ -432,6 +486,7 @@ export const projectsVue: ProjectType[] = [
         stack: ["vue", "tailwindcss"],
     },
     {
+        primary: 'vue',
         caption: "ch-spy",
         description: "Web scrapping video links.",
         urlGithub: "https://github.com/maxzz/ch-spy",
@@ -441,84 +496,104 @@ export const projectsVue: ProjectType[] = [
         stack: ["vue", "tailwindcss"],
     },
     {
+        primary: 'vue',
         caption: "coursehunters-course-list-browser-ctx",
         description: "The script can be embedded in the content of the page with the AddJS extension.",
         urlGithub: "https://github.com/maxzz/ch-spy-ext",
         urlDemo: "https://maxzz.github.io/ch-spy",
         previewUrl: images.coursehuntersCourseListBrowserCtx,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser-ctx",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "site-egghead.io-ctx",
         description: "Content script to embed in egghead.io with AddJs extension.",
         urlGithub: "https://github.com/maxzz/site-egghead.io-ctx",
         urlDemo: "https://maxzz.github.io/ch-spy",
         previewUrl: images.chSpy,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/site-egghead.io-ctx",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "auto-dat-gui",
         description: "dat-gui replica in Vue 3",
         urlGithub: "https://github.com/maxzz/auto-dat-gui",
         urlDemo: "https://maxzz.github.io/auto-dat-gui",
         previewUrl: images.autoDatGui,
         localPath: "C:/Y/w/2-web/2-generators/auto-dat-gui",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "back-to-90s-html",
         description: "A quick and easy project to keep old memories alive.",
         urlGithub: "https://github.com/maxzz/back-to-90s-html",
         urlDemo: "https://maxzz.github.io/back-to-90s-html",
         previewUrl: images.backTo90sHtml,
         localPath: "C:/Y/w/2-web/7-my-webpages/back-to-90s-html",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "vue-evens-todos",
         description: "This is an integration test with codesandbox.io. Created with CodeSandbox.",
         urlGithub: "https://github.com/maxzz/vue-evens-todos",
         urlDemo: "https://codesandbox.io/s/github/maxzz/vue-evens-todos",
         previewUrl: images.vue26SiteExamplesTodos,
         localPath: "C:/Y/w/2-web/7-my-webpages/vue-examples/vue26-site-examples-todos",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "svg-gradients",
         description: "Exploring SVG Gradients.",
         urlGithub: "https://github.com/maxzz/svg-gradients",
         urlDemo: "https://maxzz.github.io/svg-gradients",
         previewUrl: images.svgGradients,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-gradients",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "revue-playground",
         description: "AST in the ESTree format playground.",
         urlGithub: "https://github.com/maxzz/revue-playground",
         urlDemo: "https://maxzz.github.io/revue-playground/",
         previewUrl: images.revuePlayground,
         localPath: "C:/Y/w/1-node/1-utils/reverse-vue-render",
+        stack: ['vue']
     },
     {
-        caption: "",
-        description: "",
+        primary: 'vue',
+        caption: "svg-icons-vite",
+        description: "Vite + SVG icons experiment.",
         urlGithub: "https://github.com/maxzz/svg-icons-vite",
         urlDemo: "https://maxzz.github.io/svg-icons-vite",
         previewUrl: images.svgIconsVite,
         localPath: "C:/Y/w/2-web/7-my-webpages/svg-icons-vite",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "simple-siriwave",
         description: "This project is a simple wrapper for the wave control using the Vue composition API.",
         urlGithub: "https://github.com/maxzz/simple-siriwave",
         urlDemo: "https://maxzz.github.io/simple-siriwave",
         previewUrl: images.simpleSiriwave,
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-siriwave",
+        stack: ['vue']
     },
     {
+        primary: 'vue',
         caption: "svg-bkg-stripes",
         description: "SVG generation playground.",
         urlGithub: "https://github.com/maxzz/svg-bkg-stripes",
         urlDemo: "https://maxzz.github.io/svg-bkg-stripes",
         previewUrl: images.svgBkgStripes,
         localPath: "C:/Y/w/2-web/2-generators/svg-bkg-stripes",
+        stack: ['vue']
     },
 ];
 

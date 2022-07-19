@@ -4,6 +4,7 @@ export type ImageUrl = ImageAttrs[] | string;
 
 export type ProjectType = {
     //id: string;             // unique ID
+    primary: string;        // primary category
     caption: string;        // project name on github; caption is already unique ID
     description: string;    // project description
     urlGithub: string;      // URL to github source

@@ -96,7 +96,7 @@ function SectionName({ section }: { section: SectionType; }) {
 function Section({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
+        <div className="w-full max-w-7xl 2xl:max-w-full grid grid-cols-[auto_minmax(0,1fr)] gap-4">
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
