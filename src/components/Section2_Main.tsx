@@ -47,7 +47,7 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function TileProject({ caption, description, urlGithub, urlDemo, previewUrl, localPath, }: ProjectType) {
+function TileProject({ id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, }: ProjectType) {
     return (
         <section className="flex flex-col">
             <div className="pb-1 text-slate-300 uppercase">
