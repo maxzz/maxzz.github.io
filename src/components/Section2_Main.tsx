@@ -47,6 +47,23 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
+function ProjectIcons({ project }: { project: ProjectType; }) {
+    const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
+    return (
+        <div className="-mb-2 text-xs flex items-center select-none">
+            <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
+            <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
+            {localPath &&
+                <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
+                    <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
+                </ButtonShell>
+            }
+            {/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
+        </div>
+
+    );
+}
+
 function ProjectTile({ project }: { project: ProjectType; }) {
     const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
     return (
@@ -60,16 +77,7 @@ function ProjectTile({ project }: { project: ProjectType; }) {
                     {description}
                 </div>
 
-                <div className="-mb-2 text-xs flex items-center select-none">
-                    <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
-                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
-                    {localPath &&
-                        <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
-                            <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
-                        </ButtonShell>
-                    }
-                    {/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
-                </div>
+                <ProjectIcons project={project} />
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
@@ -84,8 +92,11 @@ function ProjectTile({ project }: { project: ProjectType; }) {
 function ProjectListItem({ project }: { project: ProjectType; }) {
     const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
     return (
-        <section className="flex flex-col">
-            <div className="pb-1 text-slate-300 uppercase">
+        <section className="flex items-center">
+
+            <ProjectIcons project={project} />
+
+            <div className="pb-1 text-sm text-slate-300 uppercase">
                 {caption}
             </div>
         </section>
