@@ -6,8 +6,8 @@ type UIOptions = {
     showType: ShowType;
 }
 
-const enum ShowType {
-    list,
+export const enum ShowType {
+    list = 0,
     preview,
 }
 
@@ -61,6 +61,6 @@ export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSec
 
 //////////
 
-const uiOptionsAtoms: Atomize<UIOptions> = {
+export const uiOptionsAtoms: Atomize<UIOptions> = {
     showTypeAtom: atomWithCallback(Storage.initialData.uiOptions.showType, Storage.save),
 }

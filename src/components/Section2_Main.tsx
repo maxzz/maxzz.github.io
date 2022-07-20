@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactNode, } from 'react';
-import { useAtom } from 'jotai';
-import { sectionOpenAtoms } from '@/store/store';
+import { useAtom, useAtomValue } from 'jotai';
+import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
@@ -47,7 +47,8 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function TileProject({ id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, }: ProjectType) {
+function TileProject({ project, showType }: { project: ProjectType; showType: ShowType }) {
+    const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
     return (
         <section className="flex flex-col">
             <div className="pb-1 text-slate-300 uppercase">
@@ -94,7 +95,8 @@ function SectionName({ section }: { section: SectionType; }) {
 }
 
 function Section({ section }: { section: SectionType; }) {
-    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
+    const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
+    const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
         <div className="w-full max-w-7xl 2xl:max-w-full grid grid-cols-[auto_minmax(0,1fr)] gap-4">
             <SectionName section={section} />
@@ -102,7 +104,7 @@ function Section({ section }: { section: SectionType; }) {
             <UIAccordion open={sectionOpen} >
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
                     {section.projects.map((project, idx) => (
-                        <TileProject {...project} key={idx} />
+                        <TileProject project={project} showType={showType} key={idx} />
                     ))}
                 </div>
             </UIAccordion>
