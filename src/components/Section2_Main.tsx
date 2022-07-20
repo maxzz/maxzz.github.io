@@ -104,10 +104,6 @@ function SectionName({ section }: { section: SectionType; }) {
     );
 }
 
-function Tile({ project, showType }: { project: ProjectType; showType: ShowType; }) {
-    return showType === ShowType.list ? <ProjectListItem project={project} /> : <ProjectTile project={project} />;
-}
-
 function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
@@ -116,11 +112,21 @@ function Section({ section }: { section: SectionType; }) {
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
-                    {section.projects.map((project, idx) => (
-                        <Tile project={project} showType={showType} key={idx} />
-                    ))}
-                </div>
+                <>
+                    {showType === ShowType.list ?
+                        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
+                            {section.projects.map((project, idx) => (
+                                <ProjectListItem project={project} key={idx} />
+                            ))}
+                        </div>
+                        :
+                        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
+                            {section.projects.map((project, idx) => (
+                                <ProjectTile project={project} key={idx} />
+                            ))}
+                        </div>
+                    }
+                </>
             </UIAccordion>
         </div>
     );
