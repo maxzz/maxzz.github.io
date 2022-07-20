@@ -59,7 +59,7 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function ProjectIcons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean } & HTMLAttributes<HTMLDivElement>) {
+function ProjectIcons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
@@ -128,14 +128,14 @@ function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
-        <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
-            {/* 2xl:max-w-full */}
+        <div className="w-full max-w-[96rem] grid grid-cols-[auto_minmax(0,1fr)] gap-4">
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
                 <>
-                    {showType === ShowType.list ?
-                        <div className="columns-2 lg:columns-3 2xl:columns-4 max-w-4xl">
+                    {showType === ShowType.list
+                        ?
+                        <div className="columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
                             {section.projects.map((project, idx) => (
                                 <ProjectListItem project={project} key={idx} />
                             ))}
