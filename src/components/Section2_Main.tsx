@@ -47,12 +47,18 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function ProjectIcons({ project }: { project: ProjectType; }) {
-    const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
+function ProjectIcons({ project, className, ...rest }: { project: ProjectType; } & HTMLAttributes<HTMLDivElement>) {
+    const { urlGithub, urlDemo, localPath, } = project;
     return (
-        <div className="-mb-2 text-xs flex items-center select-none">
-            <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
-            <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
+        <div className={classNames("-mb-2 text-xs flex items-center select-none", className)} {...rest}>
+            <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank">
+                <IconTv className="w-4 h-4 fill-current" /></a>
+            </ButtonShell>
+
+            <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank">
+                <IconGithubLogo className="w-4 h-4 fill-current" /></a>
+            </ButtonShell>
+
             {localPath &&
                 <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
@@ -60,16 +66,15 @@ function ProjectIcons({ project }: { project: ProjectType; }) {
             }
             {/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
         </div>
-
     );
 }
 
 function ProjectTile({ project }: { project: ProjectType; }) {
-    const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
+    const { id, description, urlDemo, urlPreview, } = project;
     return (
         <section className="flex flex-col">
-            <div className="pb-1 text-slate-300 uppercase">
-                {caption}
+            <div className="pb-1 text-slate-300 uppercase whitespace-nowrap">
+                {id}
             </div>
 
             <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded">
@@ -81,7 +86,7 @@ function ProjectTile({ project }: { project: ProjectType; }) {
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${caption}`}><Picture src={previewUrl} /></a>
+                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}><Picture src={urlPreview} /></a>
                     </div>
                 </div>
             </div >
@@ -90,14 +95,14 @@ function ProjectTile({ project }: { project: ProjectType; }) {
 }
 
 function ProjectListItem({ project }: { project: ProjectType; }) {
-    const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
+    const { id, } = project;
     return (
         <section className="flex items-center">
 
             <ProjectIcons project={project} />
 
-            <div className="pb-1 text-sm text-slate-300 uppercase">
-                {caption}
+            <div className="pb-1 text-sm text-slate-300 uppercase whitespace-nowrap">
+                {id}
             </div>
         </section>
     );
@@ -126,7 +131,7 @@ function Section({ section }: { section: SectionType; }) {
             <UIAccordion open={sectionOpen} >
                 <>
                     {showType === ShowType.list ?
-                        <div className="columns-2 lg:columns-3 xl:columns-4 max-w-4xl">
+                        <div className="columns-2 lg:columns-3 2xl:columns-4 max-w-4xl">
                             {section.projects.map((project, idx) => (
                                 <ProjectListItem project={project} key={idx} />
                             ))}
