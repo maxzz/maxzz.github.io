@@ -212,7 +212,7 @@ export function IconExperiments({ className, title, ...rest }: HTMLAttributes<SV
             <circle cx={94.6} cy={99.7} r={13.6} />
             <path d="M95 128v-14" />
             <path d="M36 110h23" />
-            <path className="cls-1" d="M47 129v-19m-16 19h77" />
+            <path d="M47 129v-19m-16 19h77" />
         </svg>
     );
 }
@@ -228,7 +228,7 @@ export function IconList({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVG
 
 export function IconGrid({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" viewBox="0 0 512 512" {...rest}>
+        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" viewBox="0 0 512 512" {...rest}>
             {title && <title>{title}</title>}
             <rect width="176" height="176" x="48" y="48" rx="20" ry="20" />
             <rect width="176" height="176" x="288" y="48" rx="20" ry="20" />

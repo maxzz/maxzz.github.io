@@ -114,7 +114,7 @@ function Section({ section }: { section: SectionType; }) {
 
             <UIAccordion open={sectionOpen} >
                 <>
-                    {showType !== ShowType.list ?
+                    {showType === ShowType.list ?
                         <div className="columns-2 lg:columns-3 xl:columns-4 max-w-4xl">
                             {section.projects.map((project, idx) => (
                                 <ProjectListItem project={project} key={idx} />
