@@ -21,10 +21,10 @@ export function Section1_Head() {
             </div>
 
             <div className="flex items-center space-x-1 text-primary-400">
-                <button className={classNames("w-6 h-6 p-1 rounded border-primary-200 active:scale-[.97]", showType === ShowType.list && "border bg-primary-800")} onClick={() => setShowType(ShowType.list)}>
+                <button className={classNames("w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded active:scale-[.97]", showType === ShowType.list && "border bg-primary-800")} onClick={() => setShowType(ShowType.list)}>
                     <IconList />
                 </button>
-                <button className={classNames("w-6 h-6 p-1 rounded border-primary-200 active:scale-[.97]", showType === ShowType.preview && "border bg-primary-800")} onClick={() => setShowType(ShowType.preview)}>
+                <button className={classNames("w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded active:scale-[.97]", showType === ShowType.preview && "border bg-primary-800")} onClick={() => setShowType(ShowType.preview)}>
                     <IconGrid />
                 </button>
             </div>
