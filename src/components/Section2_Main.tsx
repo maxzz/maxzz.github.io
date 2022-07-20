@@ -135,7 +135,7 @@ function Section({ section }: { section: SectionType; }) {
 
 export function Section2_Main() {
     return (
-        <main className="flex-1 py-4 mx-4 flex flex-col items-center space-y-12 overflow-auto">
+        <main className="flex-1 m-4 flex flex-col items-center space-y-12 overflow-auto">
             {sections.map((section, idx) => <Section section={section} key={idx} />)}
         </main>
     );
