@@ -47,7 +47,7 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function TileProject({ project, showType }: { project: ProjectType; showType: ShowType }) {
+function TileProject({ project, showType }: { project: ProjectType; showType: ShowType; }) {
     const { id: caption, description, urlGithub, urlDemo, urlPreview: previewUrl, localPath, } = project;
     return (
         <section className="flex flex-col">
@@ -55,29 +55,32 @@ function TileProject({ project, showType }: { project: ProjectType; showType: Sh
                 {caption}
             </div>
 
-            <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded">
-                <div className="text-sm">
-                    {description}
-                </div>
+            {showType === ShowType.list &&
+                <>
+                    <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded">
+                        <div className="text-sm">
+                            {description}
+                        </div>
 
-                <div className="-mb-2 text-xs flex items-center select-none">
-                    <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
-                    <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
-                    {localPath &&
-                        <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
-                            <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
-                        </ButtonShell>
-                    }
-                    {/* <IconReact className="w-3 h-3" />
-                    <IconVue className="w-3 h-3" /> */}
-                </div>
+                        <div className="-mb-2 text-xs flex items-center select-none">
+                            <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank"><IconTv className="w-4 h-4 fill-current" /></a> </ButtonShell>
+                            <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank"><IconGithubLogo className="w-4 h-4 fill-current" /></a> </ButtonShell>
+                            {localPath &&
+                                <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
+                                    <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
+                                </ButtonShell>
+                            }
+                            {/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
+                        </div>
 
-                <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
-                    <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${caption}`}><Picture src={previewUrl} /></a>
-                    </div>
-                </div>
-            </div >
+                        <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
+                            <div className="hover:scale-[1.17] transition-transform border shadow">
+                                <a href={urlDemo} target="_blank" title={`Open demo page for\n${caption}`}><Picture src={previewUrl} /></a>
+                            </div>
+                        </div>
+                    </div >
+                </>
+            }
         </section>
     );
 }
