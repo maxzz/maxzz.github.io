@@ -3,6 +3,14 @@ import { ShowType, uiOptionsAtoms } from "@/store/store";
 import { IconExperiments, IconGrid, IconList } from "./UI/UIIcons";
 import { classNames } from "@/utils/classnames";
 
+// function SwitchButton() {
+//     return (
+//         <div className="">
+//             <IconList className={classNames("w-6 h-6 p-1 rounded border-primary-200", showType === ShowType.list && "border bg-primary-800")} />
+//         </div>
+//     );
+// }
+
 export function Section1_Head() {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
@@ -13,8 +21,8 @@ export function Section1_Head() {
             </div>
 
             <div className="flex items-center space-x-1 text-primary-400">
-                <IconList className={classNames("w-6 h-6 p-1 rounded border-primary-200", showType === ShowType.list && "border bg-primary-800")} />
-                <IconGrid className={classNames("w-6 h-6 p-1 rounded border-primary-200", showType === ShowType.preview && "border bg-primary-800")} />
+                <IconList className={classNames("w-6 h-6 p-1 rounded border-primary-200 active:scale-[.97]", showType === ShowType.list && "border bg-primary-800")}  onClick={() => setShowType(ShowType.list)} />
+                <IconGrid className={classNames("w-6 h-6 p-1 rounded border-primary-200 active:scale-[.97]", showType === ShowType.preview && "border bg-primary-800")}  onClick={() => setShowType(ShowType.preview)} />
             </div>
         </header>
     );
