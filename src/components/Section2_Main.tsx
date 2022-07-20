@@ -8,11 +8,24 @@ import { UIAccordion } from './UI/UIAccordion';
 import { IconGithubLogo, IconHardDrive, IconReact, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 
-function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
+function SectionName({ section }: { section: SectionType; }) {
+    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div
-            className="h-5 px-1 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center"
-            {...rest}
+        <div className="text-2xl p-4 border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
+            <div className="flex items-center rotate-180 space-y-2" style={{ writingMode: 'vertical-rl' }}>
+                <div className="leading-5 left-t">{section.name}</div>
+                <UIArrow className="w-5 h-5 pt-1 rotate-180" open={sectionOpen} />
+            </div>
+        </div>
+    );
+}
+
+function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames(
+            "h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center",
+            className
+        )} {...rest}
         >
             {children}
         </div>
@@ -21,10 +34,9 @@ function ButtonShell({ children, ...rest }: HTMLAttributes<HTMLDivElement>) {
 
 function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
-        <button
-            onClick={() => {
-                navigator.clipboard.writeText(text); //TODO: show copy notice
-            }}
+        <button onClick={() => {
+            navigator.clipboard.writeText(text); //TODO: show copy notice
+        }}
         >
             {label}
         </button>
@@ -47,20 +59,24 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
 //     );
 // }
 
-function ProjectIcons({ project, className, ...rest }: { project: ProjectType; } & HTMLAttributes<HTMLDivElement>) {
+function ProjectIcons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
     return (
-        <div className={classNames("-mb-2 text-xs flex items-center select-none", className)} {...rest}>
-            <ButtonShell title="Open demo page"> <a href={urlDemo} target="_blank">
-                <IconTv className="w-4 h-4 fill-current" /></a>
+        <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
+            <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
+                <a href={urlDemo} target="_blank">
+                    <IconTv className="w-4 h-4 fill-current" />
+                </a>
             </ButtonShell>
 
-            <ButtonShell title="Open source code on GitHub"> <a href={urlGithub} target="_blank">
-                <IconGithubLogo className="w-4 h-4 fill-current" /></a>
+            <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open source code on GitHub">
+                <a href={urlGithub} target="_blank">
+                    <IconGithubLogo className="w-4 h-4 fill-current" />
+                </a>
             </ButtonShell>
 
             {localPath &&
-                <ButtonShell title={`Copy path on local hard drive\n${localPath}`}>
+                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive\n${localPath}`}>
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                 </ButtonShell>
             }
@@ -82,7 +98,7 @@ function ProjectTile({ project }: { project: ProjectType; }) {
                     {description}
                 </div>
 
-                <ProjectIcons project={project} />
+                <ProjectIcons className="-mb-2" project={project} inListItem={false} />
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
@@ -99,24 +115,12 @@ function ProjectListItem({ project }: { project: ProjectType; }) {
     return (
         <section className="flex items-center">
 
-            <ProjectIcons project={project} />
+            <ProjectIcons className="mr-2" project={project} inListItem={true} />
 
             <div className="pb-1 text-sm text-slate-300 uppercase whitespace-nowrap">
                 {id}
             </div>
         </section>
-    );
-}
-
-function SectionName({ section }: { section: SectionType; }) {
-    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
-    return (
-        <div className="text-2xl p-4 border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
-            <div className="flex items-center rotate-180 space-y-2" style={{ writingMode: 'vertical-rl' }}>
-                <div className="leading-5 left-t">{section.name}</div>
-                <UIArrow className="w-5 h-5 pt-1 rotate-180" open={sectionOpen} />
-            </div>
-        </div>
     );
 }
 
