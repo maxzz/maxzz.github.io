@@ -108,19 +108,20 @@ function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
-        <div className="w-full max-w-7xl 2xl:max-w-full grid grid-cols-[auto_minmax(0,1fr)] gap-4">
+        <div className="w-full max-w-7xl grid grid-cols-[auto_minmax(0,1fr)] gap-4">
+            {/* 2xl:max-w-full */}
             <SectionName section={section} />
 
             <UIAccordion open={sectionOpen} >
                 <>
-                    {showType === ShowType.list ?
-                        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
+                    {showType !== ShowType.list ?
+                        <div className="columns-2 lg:columns-3 xl:columns-4 max-w-4xl">
                             {section.projects.map((project, idx) => (
                                 <ProjectListItem project={project} key={idx} />
                             ))}
                         </div>
                         :
-                        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2 overflow-y-auto">
+                        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2">
                             {section.projects.map((project, idx) => (
                                 <ProjectTile project={project} key={idx} />
                             ))}
