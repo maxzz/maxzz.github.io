@@ -6,16 +6,42 @@ module.exports = plugin(function ({ addUtilities }) {
     const utils = {
         '.overflow-overlay': {
             'overflow': 'auto',
-            'overflow': 'overlay',
         },
+
         '.overflow-y-overlay': {
             'overflow-y': 'auto',
-            'overflow-y': 'overlay',
         },
+
         '.overflow-x-overlay': {
             'overflow-x': 'auto',
-            'overflow-x': 'overlay',
-        }
+        },
+
+        '@supports (overflow: overlay)': {
+            '.overflow-overlay': {
+                'overflow': 'overlay',
+            },
+
+            '.overflow-y-overlay': {
+                'overflow-y': 'overlay',
+            },
+
+            '.overflow-x-overlay': {
+                'overflow-x': 'overlay',
+            }
+        },
+
+        // '.overflow-overlay': {
+        //     'overflow': 'auto',
+        //     'overflow': 'overlay',
+        // },
+        // '.overflow-y-overlay': {
+        //     'overflow-y': 'auto',
+        //     'overflow-y': 'overlay',
+        // },
+        // '.overflow-x-overlay': {
+        //     'overflow-x': 'auto',
+        //     'overflow-x': 'overlay',
+        // },
     };
     addUtilities(utils);
 });
