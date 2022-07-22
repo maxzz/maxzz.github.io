@@ -4,31 +4,12 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(function ({ addUtilities }) {
     const utils = {
+
+        // overflow-overlay
+
         '.overflow-overlay': {
             'overflow': 'auto',
         },
-
-        '.overflow-y-overlay': {
-            'overflow-y': 'auto',
-        },
-
-        '.overflow-x-overlay': {
-            'overflow-x': 'auto',
-        },
-
-        // '@supports (overflow: overlay)': {
-        //     '.overflow-overlay': {
-        //         'overflow': 'overlay',
-        //     },
-
-        //     '.overflow-y-overlay': {
-        //         'overflow-y': 'overlay',
-        //     },
-
-        //     '.overflow-x-overlay': {
-        //         'overflow-x': 'overlay',
-        //     }
-        // },
 
         '@supports (overflow: overlay)': {
             '.overflow-overlay': {
@@ -36,10 +17,10 @@ module.exports = plugin(function ({ addUtilities }) {
             },
         },
 
-        '@supports (overflow-y: overlay)': {
-            '.overflow-y-overlay': {
-                'overflow-y': 'overlay',
-            },
+        // overflow-x-overlay
+
+        '.overflow-x-overlay': {
+            'overflow-x': 'auto',
         },
 
         '@supports (overflow-x: overlay)': {
@@ -48,18 +29,18 @@ module.exports = plugin(function ({ addUtilities }) {
             }
         },
 
-        // '.overflow-overlay': {
-        //     'overflow': 'auto',
-        //     'overflow': 'overlay',
-        // },
-        // '.overflow-y-overlay': {
-        //     'overflow-y': 'auto',
-        //     'overflow-y': 'overlay',
-        // },
-        // '.overflow-x-overlay': {
-        //     'overflow-x': 'auto',
-        //     'overflow-x': 'overlay',
-        // },
+        // overflow-y-overlay
+
+        '.overflow-y-overlay': {
+            'overflow-y': 'auto',
+        },
+        
+        '@supports (overflow-y: overlay)': {
+            '.overflow-y-overlay': {
+                'overflow-y': 'overlay',
+            },
+        },
+
     };
     addUtilities(utils);
 });
