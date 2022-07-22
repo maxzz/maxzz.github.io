@@ -11,3 +11,21 @@
         @apply outline outline-1 sm:outline-2 outline-offset-1 outline-green-500 sm:outline-green-500/30;
     }
 }
+
+/* Firefox scrollbars */
+.smallscroll {
+    --sb-width: 8px;
+    scrollbar-color: #666b7a transparent;
+    scrollbar-width: thin;
+}
+
+/* Chrome scrollbars */
+.smallscroll::-webkit-scrollbar {
+    width: var(--sb-width);
+    height: var(--sb-width);
+    background-color: transparent;
+}
+
+.smallscroll::-webkit-scrollbar-thumb {
+    background-color: #666b7a;
+}
