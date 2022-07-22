@@ -16,15 +16,33 @@ module.exports = plugin(function ({ addUtilities }) {
             'overflow-x': 'auto',
         },
 
+        // '@supports (overflow: overlay)': {
+        //     '.overflow-overlay': {
+        //         'overflow': 'overlay',
+        //     },
+
+        //     '.overflow-y-overlay': {
+        //         'overflow-y': 'overlay',
+        //     },
+
+        //     '.overflow-x-overlay': {
+        //         'overflow-x': 'overlay',
+        //     }
+        // },
+
         '@supports (overflow: overlay)': {
             '.overflow-overlay': {
                 'overflow': 'overlay',
             },
+        },
 
+        '@supports (overflow-y: overlay)': {
             '.overflow-y-overlay': {
                 'overflow-y': 'overlay',
             },
+        },
 
+        '@supports (overflow-x: overlay)': {
             '.overflow-x-overlay': {
                 'overflow-x': 'overlay',
             }
