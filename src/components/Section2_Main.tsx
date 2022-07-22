@@ -155,7 +155,7 @@ function Section({ section }: { section: SectionType; }) {
 
 export function Section2_Main() {
     return (
-        <main className="flex-1 my-4 flex flex-col items-center space-y-4 overflow-auto smallscroll">
+        <main className="flex-1 my-4 flex flex-col items-center space-y-4 overflow-overlay smallscroll">
             {sections.map((section, idx) => <Section section={section} key={idx} />)}
         </main>
     );
