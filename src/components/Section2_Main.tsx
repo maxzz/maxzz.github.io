@@ -8,11 +8,23 @@ import { UIAccordion } from './UI/UIAccordion';
 import { IconGithubLogo, IconHardDrive, IconReact, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 
-function SectionName({ section }: { section: SectionType; }) {
+function SectionName1({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="mb-2 p-4 text-2xl border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
+        <div className="mb-2 px-4 py-3 text-2xl border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
             <div className="flex items-center space-y-2">
+                <div className="leading-5 left-t">{section.name}</div>
+                <UIArrow className="w-5 h-5" open={sectionOpen} />
+            </div>
+        </div>
+    );
+}
+
+function SectionName2({ section }: { section: SectionType; }) {
+    const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
+    return (
+        <div className="mb-2 text-2xl cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
+            <div className="px-4 py-3 max-w-min border-slate-400 border rounded  flex items-center space-y-2">
                 <div className="leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5" open={sectionOpen} />
             </div>
@@ -129,7 +141,7 @@ function Section({ section }: { section: SectionType; }) {
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
         <div className="w-full px-4 max-w-[96rem] grid grid-rows-[auto_minmax(0,1fr)]">
-            <SectionName section={section} />
+            <SectionName2 section={section} />
 
             <UIAccordion open={sectionOpen} >
                 <>
