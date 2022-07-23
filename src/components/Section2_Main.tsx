@@ -46,9 +46,10 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
 
 function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
-        <button onClick={() => {
-            navigator.clipboard.writeText(text); //TODO: show copy notice
-        }}
+        <button
+            onClick={(event) => {
+                navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\')); //TODO: show copy notice
+            }}
         >
             {label}
         </button>
@@ -88,7 +89,7 @@ function ProjectIcons({ project, inListItem, className, ...rest }: { project: Pr
             </ButtonShell>
 
             {localPath &&
-                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive\n${localPath}`}>
+                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive\n(ctrl+click to copy in Unix format)\n\n${localPath}`}>
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                 </ButtonShell>
             }
