@@ -1,11 +1,11 @@
-import React, { HTMLAttributes, ReactNode, } from 'react';
+import React, { Fragment, HTMLAttributes, ReactNode, } from 'react';
 import { useAtom, useAtomValue } from 'jotai';
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconGithubLogo, IconHardDrive, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
+import { IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 
 function SectionName1({ section }: { section: SectionType; }) {
@@ -100,19 +100,13 @@ function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttri
     return (
         <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
             {name}
-            {/* <div className="ml-2 inline-flex items-center text-sky-500">
-                <IconReact className="w-3 h-3" />
-                <IconVue className="w-3 h-3" />
-                <IconTailwind className="w-3 h-3" strokeWidth={.5} />
-                <IconNpm className="w-4 text-sky-700" />
-                <IconJs className="w-3 h-3 text-sky-700" />
-            </div> */}
         </div>
     );
 }
 
 const stackComponents: Record<string, ReactNode> = {
-    react: <IconReact className="w-3 h-3" />,
+    react: <IconReact className="w-4 h-4" />,
+    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-700" />,
     vue: <IconVue className="w-3 h-3" />,
     tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} />,
     npm: <IconNpm className="w-4 text-sky-700" />,
@@ -124,7 +118,9 @@ function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTM
         {stack &&
             <div className={classNames("pb-1 inline-flex items-center text-sky-500 uppercase whitespace-nowrap", className)} {...rest}>
                 {stack.map((item, idx) => (
-                    <div className="" key={idx}>{stackComponents[item] || item}</div>
+                    <Fragment key={idx}>
+                        {stackComponents[item] || item}
+                    </Fragment>
                 ))}
             </div>
         }
@@ -160,7 +156,7 @@ function ProjectListItem({ project }: { project: ProjectType; }) {
         <section className="flex items-center text-sm">
             <ProjectIcons className="" project={project} inListItem={true} />
             <ProjectName className="mx-2" name={id} />
-            <ProjectStack className="flex text-[.6rem] text-sky-700 space-x-1" stack={stack} />
+            <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>
     );
 }
