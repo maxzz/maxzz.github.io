@@ -5,7 +5,7 @@ import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconGithubLogo, IconHardDrive, IconReact, IconTv, IconVue } from './UI/UIIcons';
+import { IconGithubLogo, IconHardDrive, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 
 function SectionName1({ section }: { section: SectionType; }) {
@@ -96,12 +96,17 @@ function ProjectIcons({ project, inListItem, className, ...rest }: { project: Pr
     );
 }
 
-//{/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
-
 function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
         <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
             {name}
+            {/* <div className="ml-2 inline-flex items-center text-sky-500">
+                <IconReact className="w-3 h-3" />
+                <IconVue className="w-3 h-3" />
+                <IconTailwind className="w-3 h-3" strokeWidth={.5} />
+                <IconNpm className="w-4 text-sky-700" />
+                <IconJs className="w-3 h-3 text-sky-700" />
+            </div> */}
         </div>
     );
 }
