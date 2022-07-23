@@ -111,12 +111,20 @@ function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttri
     );
 }
 
+const stackComponents: Record<string, ReactNode> = {
+    react: <IconReact className="w-3 h-3" />,
+    vue: <IconVue className="w-3 h-3" />,
+    tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} />,
+    npm: <IconNpm className="w-4 text-sky-700" />,
+    js: <IconJs className="w-3 h-3 text-sky-700" />,
+};
+
 function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
     return (<>
         {stack &&
-            <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+            <div className={classNames("pb-1 inline-flex items-center text-sky-500 uppercase whitespace-nowrap", className)} {...rest}>
                 {stack.map((item, idx) => (
-                    <div className="" key={idx}>{item}</div>
+                    <div className="" key={idx}>{stackComponents[item] || item}</div>
                 ))}
             </div>
         }
@@ -149,10 +157,10 @@ function ProjectTile({ project }: { project: ProjectType; }) {
 function ProjectListItem({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
-        <section className="flex items-center">
-            <ProjectIcons className="mr-2" project={project} inListItem={true} />
-            <ProjectName className="text-sm" name={id} />
-            <ProjectStack className="ml-2 flex text-[.6rem] text-sky-700 space-x-1" stack={stack} />
+        <section className="flex items-center text-sm">
+            <ProjectIcons className="" project={project} inListItem={true} />
+            <ProjectName className="mx-2" name={id} />
+            <ProjectStack className="flex text-[.6rem] text-sky-700 space-x-1" stack={stack} />
         </section>
     );
 }

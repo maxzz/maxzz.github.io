@@ -86,7 +86,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/color-names22",
         urlPreview: images.colorNames22,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
-        stack: ["react", "jotai", "tailwindcss"],
+        stack: ["react", "jotai", "tw"],
     },
     {
         primary: 'UX',
@@ -122,7 +122,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/red3-path",
         urlDemo: "https://maxzz.github.io/red3-path",
         urlPreview: images.red3Path,
-        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path/tailwind",
+        localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-path",
     },
     {
         primary: 'UX',
@@ -484,7 +484,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/animated-sidebar",
         urlPreview: images.animatedSidebar,
         localPath: "C:/Y/w/2-web/8-websites-ideas/3-vue/animated-sidebar",
-        stack: ["vue", "tailwindcss"],
+        stack: ["vue", "tw"],
     },
     {
         primary: 'vue',
@@ -494,7 +494,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/ch-spy",
         urlPreview: images.chSpy,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser",
-        stack: ["vue", "tailwindcss"],
+        stack: ["vue", "tw"],
     },
     {
         primary: 'vue',
