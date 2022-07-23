@@ -24,7 +24,7 @@ function SectionName2({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
         <div className="mb-2 text-2xl cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
-            <div className="px-4 py-3 max-w-min border-slate-400 border rounded  flex items-center space-y-2">
+            <div className="px-4 py-3 max-w-min border-slate-400 border rounded flex items-center space-y-2">
                 <div className="leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5" open={sectionOpen} />
             </div>
@@ -167,7 +167,8 @@ function Section({ section }: { section: SectionType; }) {
 
 export function Section2_Main() {
     return (
-        <main className="flex-1 my-4 flex flex-col items-center space-y-4 overflow-y-overlay smallscroll">
+        // <main className="flex-1 my-4 flex flex-col items-center space-y-4 overflow-y-overlay smallscroll">
+        <main className="flex-1 my-4 space-y-4 overflow-y-overlay smallscroll">
             {sections.map((section, idx) => <Section section={section} key={idx} />)}
         </main>
     );
