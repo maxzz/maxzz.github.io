@@ -92,7 +92,16 @@ function ProjectIcons({ project, inListItem, className, ...rest }: { project: Pr
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                 </ButtonShell>
             }
-            {/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
+        </div>
+    );
+}
+
+//{/* <IconReact className="w-3 h-3" /> <IconVue className="w-3 h-3" /> */}
+
+function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+            {name}
         </div>
     );
 }
@@ -101,9 +110,7 @@ function ProjectTile({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
         <section className="flex flex-col">
-            <div className="pb-1 text-slate-300 uppercase whitespace-nowrap">
-                {id}
-            </div>
+            <ProjectName name={id} />
 
             <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded">
                 <div className="text-sm">
@@ -126,12 +133,8 @@ function ProjectListItem({ project }: { project: ProjectType; }) {
     const { id, } = project;
     return (
         <section className="flex items-center">
-
             <ProjectIcons className="mr-2" project={project} inListItem={true} />
-
-            <div className="pb-1 text-sm text-slate-300 uppercase whitespace-nowrap">
-                {id}
-            </div>
+            <ProjectName name={id} className="text-sm" />
         </section>
     );
 }
