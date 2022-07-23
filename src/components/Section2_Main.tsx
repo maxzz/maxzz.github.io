@@ -106,6 +106,18 @@ function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttri
     );
 }
 
+function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
+    return (<>
+        {stack &&
+            <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+                {stack.map((item, idx) => (
+                    <div className="" key={idx}>{item}</div>
+                ))}
+            </div>
+        }
+    </>);
+}
+
 function ProjectTile({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
@@ -130,11 +142,12 @@ function ProjectTile({ project }: { project: ProjectType; }) {
 }
 
 function ProjectListItem({ project }: { project: ProjectType; }) {
-    const { id, } = project;
+    const { id, stack } = project;
     return (
         <section className="flex items-center">
             <ProjectIcons className="mr-2" project={project} inListItem={true} />
-            <ProjectName name={id} className="text-sm" />
+            <ProjectName className="text-sm" name={id} />
+            <ProjectStack className="ml-2 flex text-[.6rem] text-sky-700 space-x-1" stack={stack} />
         </section>
     );
 }

@@ -86,6 +86,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/color-names22",
         urlPreview: images.colorNames22,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
+        stack: ["react", "jotai", "tailwindcss"],
     },
     {
         primary: 'UX',
@@ -463,7 +464,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/color-names",
         urlPreview: images.colorNames,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -473,7 +474,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/ngon-gen",
         urlPreview: images.ngonGen,
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-svg-shapes",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -503,7 +504,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/ch-spy",
         urlPreview: images.coursehuntersCourseListBrowserCtx,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/coursehunters-course-list-browser-ctx",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -513,7 +514,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/ch-spy",
         urlPreview: images.chSpy,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/site-egghead.io-ctx",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -523,7 +524,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/auto-dat-gui",
         urlPreview: images.autoDatGui,
         localPath: "C:/Y/w/2-web/2-generators/auto-dat-gui",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -533,7 +534,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/back-to-90s-html",
         urlPreview: images.backTo90sHtml,
         localPath: "C:/Y/w/2-web/7-my-webpages/back-to-90s-html",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -543,7 +544,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://codesandbox.io/s/github/maxzz/vue-evens-todos",
         urlPreview: images.vue26SiteExamplesTodos,
         localPath: "C:/Y/w/2-web/7-my-webpages/vue-examples/vue26-site-examples-todos",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -553,7 +554,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/svg-gradients",
         urlPreview: images.svgGradients,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-gradients",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -563,7 +564,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/revue-playground/",
         urlPreview: images.revuePlayground,
         localPath: "C:/Y/w/1-node/1-utils/reverse-vue-render",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -573,7 +574,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/svg-icons-vite",
         urlPreview: images.svgIconsVite,
         localPath: "C:/Y/w/2-web/7-my-webpages/svg-icons-vite",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -583,7 +584,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/simple-siriwave",
         urlPreview: images.simpleSiriwave,
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-siriwave",
-        stack: ['vue']
+        stack: ['vue'],
     },
     {
         primary: 'vue',
@@ -593,7 +594,7 @@ export const projectsVue: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/svg-bkg-stripes",
         urlPreview: images.svgBkgStripes,
         localPath: "C:/Y/w/2-web/2-generators/svg-bkg-stripes",
-        stack: ['vue']
+        stack: ['vue'],
     },
 ];
 
