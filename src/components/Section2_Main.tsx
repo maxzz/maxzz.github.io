@@ -107,7 +107,8 @@ function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttri
 
 const stackComponents: Record<string, ReactNode> = {
     react: <IconReact className="w-4 h-4" />,
-    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-700" />,
+    //jotai: <IconJotai0 className="w-3.5 h-3.5 pr-0.5 text-sky-700" />,
+    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-500" />,
     vue: <IconVue className="w-3 h-3" />,
     tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} />,
     npm: <IconNpm className="w-4 text-sky-700" />,
