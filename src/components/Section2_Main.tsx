@@ -1,17 +1,18 @@
-import React, { Fragment, HTMLAttributes, ReactNode, } from 'react';
+import React, { Fragment, HTMLAttributes, ReactNode, useState, } from 'react';
 import { useAtom, useAtomValue } from 'jotai';
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
+import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
+import { a, easings, useTransition } from '@react-spring/web';
 
 function SectionName1({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="mb-2 px-4 py-3 text-2xl border-slate-400 border rounded cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
+        <div className="mb-2 px-4 py-3 text-2xl border-slate-400 border rounded cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
             <div className="flex items-center space-y-2">
                 <div className="leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5" open={sectionOpen} />
@@ -23,7 +24,7 @@ function SectionName1({ section }: { section: SectionType; }) {
 function SectionName2({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="mb-2 text-2xl cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
+        <div className="mb-2 text-2xl cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
             <div className="px-4 py-3 max-w-min border-slate-400 border rounded flex items-center space-y-2">
                 <div className="leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5" open={sectionOpen} />
@@ -44,14 +45,30 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
     );
 }
 
+function MountCopyNotice({ show, setShow, children }: { show: boolean; setShow?: (v: boolean) => void; } & HTMLAttributes<HTMLDivElement>) {
+    const transitions = useTransition(Number(show), {
+        from: { scale: 1, opacity: 0, },
+        enter: { scale: 1, opacity: 1, },
+        leave: { scale: 0, opacity: 0, config: { duration: 800, easing: easings.easeOutQuad }, onRest: ({ finished }) => show && finished && setShow?.(false), },
+    });
+    return transitions((styles, item) => item ? <a.div style={styles}> {children} </a.div> : null);
+}
+
 function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLAttributes<HTMLDivElement>) {
+    const [showNotice, setShowNotice] = useState(false);
     return (
         <button
+        className="flex"
             onClick={(event) => {
-                navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\')); //TODO: show copy notice
+                navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\'));
+                setShowNotice(true);
             }}
         >
-            {label}
+            {!showNotice && <>{label}</>}
+
+            <MountCopyNotice show={showNotice} setShow={setShowNotice}>
+                <IconCheckFrameless className="w-4 h-4 text-green-400 stroke-[2]" />
+            </MountCopyNotice>
         </button>
     );
 }
@@ -106,21 +123,21 @@ function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttri
 }
 
 const stackComponents: Record<string, ReactNode> = {
-    react: <IconReact className="w-4 h-4" />,
-    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-700" />,
-    vue: <IconVue className="w-3 h-3" />,
-    tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} />,
-    npm: <IconNpm className="w-4 text-sky-700" />,
-    js: <IconJs className="w-3 h-3 text-sky-700" />,
+    react: <IconReact className="w-4 h-4" title="React" />,
+    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-700" title="Jotai" />,
+    vue: <IconVue className="w-3 h-3" title="Vue" />,
+    tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} title="Tailwind" />,
+    npm: <IconNpm className="w-4 text-sky-700" title="npm" />,
+    js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
 };
 
 function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
     return (<>
         {stack &&
-            <div className={classNames("pb-1 inline-flex items-center text-sky-500 uppercase whitespace-nowrap", className)} {...rest}>
-                {stack.map((item, idx) => (
+            <div className={classNames("pb-1 inline-flex items-center text-sky-500 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
+                {stack.map((name, idx) => (
                     <Fragment key={idx}>
-                        {stackComponents[item] || item}
+                        {stackComponents[name] || <div className="px-0.5" title={name}>{name}</div>}
                     </Fragment>
                 ))}
             </div>
@@ -199,3 +216,5 @@ export function Section2_Main() {
         </main>
     );
 }
+
+//TODO: optimize icons to local font
