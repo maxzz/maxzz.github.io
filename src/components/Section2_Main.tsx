@@ -45,30 +45,33 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
     );
 }
 
-function MountCopyNotice({ show, setShow, children }: { show: boolean; setShow?: (v: boolean) => void; } & HTMLAttributes<HTMLDivElement>) {
+function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v: boolean) => void; items: ReactNode[]; } & HTMLAttributes<HTMLDivElement>) {
     const transitions = useTransition(Number(show), {
-        from: { scale: 1, opacity: 0, },
-        enter: { scale: 1, opacity: 1, },
-        leave: { scale: 0, opacity: 0, config: { duration: 800, easing: easings.easeOutQuad }, onRest: ({ finished }) => show && finished && setShow?.(false), },
+        from: { opacity: 0 },
+        enter: { opacity: 1, },
+        leave: { opacity: 0 },
+        config: { duration: 800, easing: easings.easeOutQuad }, onRest: ({ finished }) => show && finished && setShow?.(false),
     });
-    return transitions((styles, item) => item ? <a.div style={styles}> {children} </a.div> : null);
+    return transitions((styles, item) => {
+        console.log(styles, item);
+        return <a.div style={{position: 'absolute', ...styles}}> {items[item]} </a.div>;
+    });
 }
 
 function ButtonCopy({ label, text }: { label: ReactNode; text: string; } & HTMLAttributes<HTMLDivElement>) {
     const [showNotice, setShowNotice] = useState(false);
     return (
         <button
-        className="flex"
+            className="relative"
             onClick={(event) => {
                 navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\'));
                 setShowNotice(true);
             }}
         >
-            {!showNotice && <>{label}</>}
-
-            <MountCopyNotice show={showNotice} setShow={setShowNotice}>
-                <IconCheckFrameless className="w-4 h-4 text-green-400 stroke-[2]" />
-            </MountCopyNotice>
+            <MountCopyNotice show={showNotice} setShow={setShowNotice} items={[
+                <>{label}</>,
+                <IconCheckFrameless className="w-4 h-4 text-green-400 stroke-[2]" />,
+            ]} />
         </button>
     );
 }
@@ -218,3 +221,4 @@ export function Section2_Main() {
 }
 
 //TODO: optimize icons to local font
+
