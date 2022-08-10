@@ -5,7 +5,7 @@ import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIArrow } from './UI/UIArrow';
 import { UIAccordion } from './UI/UIAccordion';
-import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
+import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpm, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 import { a, easings, useTransition } from '@react-spring/web';
 
@@ -131,13 +131,22 @@ const stackComponents: Record<string, ReactNode> = {
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
 };
 
+const stackComponentsNew: Record<string, ReactNode> = {
+    react: <IconStackReact className="w-4 h-4" title="React" />,
+    jotai: <IconStackJotai className="w-4 h-4" title="Jotai" />,
+    vue: <IconStackVue className="w-4 h-4" title="Vue" />,
+    tw: <IconStackTailwind className="w-4 h-4" title="Tailwind" />,
+    npm: <IconStackNpmLines className="w-4 h-4" title="npm" />,
+    js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
+};
+
 function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
     return (<>
         {stack &&
-            <div className={classNames("pb-1 inline-flex items-center text-sky-500 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
+            <div className={classNames("pb-1 inline-flex items-center text-sky-700 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
                 {stack.map((name, idx) => (
                     <Fragment key={idx}>
-                        {stackComponents[name] || <div className="px-0.5" title={name}>{name}</div>}
+                        {stackComponentsNew[name] || <div className="px-0.5" title={name}>{name}</div>}
                     </Fragment>
                 ))}
             </div>

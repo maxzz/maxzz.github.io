@@ -10,6 +10,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/page-qa2",
         urlPreview: images.pageQa2,
         localPath: "C:/Y/w/2-web/0-dp/page-qa2",
+        stack: ['react', 'tw', 'jotai'],
     },
     {
         primary: 'DP',
@@ -19,6 +20,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/dropzone",
         urlPreview: images.previewDropzon,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
+        stack: ['react', 'tw', 'jotai'],
     },
     {
         primary: 'DP',
@@ -28,6 +30,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/page-extension-installation",
         urlPreview: images.pageExtensionInstallation,
         localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
+        stack: ['react', 'tw', 'jotai'],
     },
     {
         primary: 'DP',
@@ -37,6 +40,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm",
         urlPreview: images.testPm,
         localPath: "C:/Y/w/2-web/0-dp/test-pm",
+        stack: ['vue', 'css'],
     },
     {
         primary: 'DP',
@@ -46,6 +50,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-second",
         urlPreview: images.testPmSecond,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-second",
+        stack: ['react', 'tw', 'jotai'],
     },
     {
         primary: 'DP',
@@ -55,6 +60,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins/",
         urlPreview: images.testPmDomainLogins,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins",
+        stack: ['vue', 'css'],
     },
     {
         primary: 'DP',
@@ -64,6 +70,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
         urlPreview: images.testPmDomainLogins22,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
+        stack: ['react', 'tw', 'jotai'],
     },
 
     // {
@@ -371,6 +378,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/work-weeks",
         urlPreview: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/work-weeks-calendar",
+        stack: ['npm'],
     },
     {
         primary: 'npm',
@@ -407,6 +415,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://github.com/maxzz/server-ocr", // no demo
         urlPreview: images.serverOcr,
         localPath: "C:/Y/w/2-web/7-my-webpages/server-ocr",
+        stack: ['npm', 'js'],
     },
     {
         primary: 'npm',
