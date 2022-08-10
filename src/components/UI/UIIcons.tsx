@@ -137,8 +137,8 @@ export function IconTv({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGPr
     </style>
   </defs>
   <path fill="#999" d="M0 0h24v24H0z"/>
-  <rect class="cls-1" x="3.19" y="5.78" width="12.43" height="12.43" rx="2.62" ry="2.62" transform="rotate(-45 9.4 12)"/>
-  <rect class="cls-1" x="8.38" y="5.78" width="12.43" height="12.43" rx="2.62" ry="2.62" transform="rotate(-45 14.6 12)"/>
+  <rect x="3.19" y="5.78" width="12.43" height="12.43" rx="2.62" ry="2.62" transform="rotate(-45 9.4 12)"/>
+  <rect x="8.38" y="5.78" width="12.43" height="12.43" rx="2.62" ry="2.62" transform="rotate(-45 14.6 12)"/>
 </svg> */}
 
 export function IconImagePlus({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
@@ -284,6 +284,72 @@ export function IconCheckFrameless({ title, ...rest }: HTMLAttributes<SVGSVGElem
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
             {title && <title>{title}</title>}
             <path d="m3.1 12 5.94 5.94L20.9 6.06" />
+        </svg>
+    );
+}
+
+// Brand logo new icons
+
+export function IconStackJotai({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="M9.71 1.54c5-.34 9.81 3.56 9.22 8.79 3.2.77 3.51 3.17 2.67 6.41-.21.82-.99 1.03-1.28.18-.26-.76-.19-1.28-.81-2.3s-1.27-.83-1.37.17c-.79 10.22-9.86 7.98-15.05 5.97-1.49-.58 2.88-.25 4.36-.96.5-.24.77-.44.84-.84A7.61 7.61 0 0 1 6.21 15c-.09-.36-.66-.53-1.07-.32-.86.44-.82 3.61-2 2.43-2.63-2.63-.24-6.76 2.75-6.76-.33-1.57-.49-4.97 1.68-6.73a9.03 9.03 0 0 0-2.14-1.23c-.19-.07-.18-.32.01-.36 2.28-.39 3.48-.48 4.28-.48" />
+            <path d="m10.29 6.94.04 2.82" />
+            <path d="M14.11 6.99v2.83" />
+            <path d="M10.59 12.43H14" />
+        </svg>
+    );
+}
+
+export function IconStackNpmLines({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="M6.05 16.7V7.55H1.59v9.15" />
+            <path d="M8.37 15.81h4.98V7.55H8.37v11.52" />
+            <path d="M22.41 16.7V7.55h-6.73v9.15" />
+            <path d="M19.05 7.67v9.03" />
+        </svg>
+    );
+}
+
+export function IconStackNpm({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="M2.22 8.94v4.89h2.44v-3.67h1.22v3.67H7.1V8.94H2.22m6.11 0v6.11h2.44v-1.22h2.44V8.94H8.32m3.67 1.22v2.44h-1.22v-2.44h1.22m2.44-1.22v4.89h2.44v-3.67h1.22v3.67h1.22v-3.67h1.22v3.67h1.22V8.94h-7.33M1 7.72h22v7.33H12v1.22H7.11v-1.22H1V7.72Z" />
+        </svg>
+    );
+}
+
+export function IconStackReact({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <ellipse cx="12" cy="12" rx="3.9" ry="10.5" />
+            <ellipse cx="12" cy="12" rx="10.5" ry="3.9" transform="rotate(-30 12 12)" />
+            <ellipse cx="12" cy="12" rx="3.9" ry="10.5" transform="rotate(-60 12 12)" />
+            <circle cx="11.96" cy="11.93" r="1.59" />
+        </svg>
+    );
+}
+
+export function IconStackTailwind({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" strokeLinejoin="round" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="M12 5.31c-2.78 0-4.51 1.49-5.21 4.46 1.04-1.49 2.26-2.05 3.64-1.68.79.22 1.35.83 1.98 1.52C13.45 10.73 14.63 12 17.2 12c2.78 0 4.51-1.49 5.21-4.46-1.04 1.49-2.26 2.05-3.64 1.68-.79-.22-1.35-.83-1.98-1.52-1.04-1.12-2.22-2.39-4.79-2.39ZM6.79 12c-2.78 0-4.51 1.49-5.21 4.46 1.04-1.49 2.26-2.05 3.64-1.68.79.22 1.35.83 1.98 1.52 1.04 1.12 2.2 2.39 4.79 2.39 2.78 0 4.51-1.49 5.21-4.46-1.04 1.49-2.26 2.05-3.64 1.68-.79-.22-1.35-.83-1.98-1.52C10.54 13.27 9.38 12 6.79 12Z" />
+        </svg>
+    );
+}
+
+export function IconStackVue({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {...rest}>
+            {title && <title>{title}</title>}
+            <path d="m9.51 3.08 1.88 3.17c.13.21.35.34.6.33.24 0 .47-.13.6-.33l1.88-3.17h3.95l-4.18 6.87L12 13.62 5.58 3.08h3.93Z" />
+            <path d="M18.42 3.08h3.99L12 20.92 1.59 3.08h3.99" />
         </svg>
     );
 }
