@@ -133,7 +133,7 @@ const stackComponents: Record<string, ReactNode> = {
 
 const stackComponentsNew: Record<string, ReactNode> = {
     react: <IconStackReact className="w-4 h-4" title="React" />,
-    jotai: <IconStackJotai className="w-4 h-4" title="Jotai" />,
+    jotai: <IconStackJotai className="w-3.5 h-3.5" title="Jotai" />,
     vue: <IconStackVue className="w-4 h-4" title="Vue" />,
     tw: <IconStackTailwind className="w-4 h-4" title="Tailwind" />,
     npm: <IconStackNpmLines className="w-4 h-4" title="npm" />,
@@ -143,10 +143,14 @@ const stackComponentsNew: Record<string, ReactNode> = {
 function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
     return (<>
         {stack &&
-            <div className={classNames("pb-1 inline-flex items-center text-sky-700 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
+            <div className={classNames("pb-1 inline-flex items-center space-x-px text-sky-700 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
                 {stack.map((name, idx) => (
                     <Fragment key={idx}>
-                        {stackComponentsNew[name] || <div className="px-0.5" title={name}>{name}</div>}
+                        {stackComponentsNew[name] ||
+                            <div className="px-0.5" title={name}>
+                                {name}
+                            </div>
+                        }
                     </Fragment>
                 ))}
             </div>
