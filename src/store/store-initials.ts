@@ -10,7 +10,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/page-qa2",
         urlPreview: images.pageQa2,
         localPath: "C:/Y/w/2-web/0-dp/page-qa2",
-        stack: ['react', 'tw', 'jotai'],
+        stack: ['react', 'jotai', 'tw'],
     },
     {
         primary: 'DP',
@@ -20,7 +20,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/dropzone",
         urlPreview: images.previewDropzon,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
-        stack: ['react', 'tw', 'jotai'],
+        stack: ['react', 'jotai', 'tw'],
     },
     {
         primary: 'DP',
@@ -30,7 +30,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/page-extension-installation",
         urlPreview: images.pageExtensionInstallation,
         localPath: "C:/Y/w/2-web/0-dp/page-extension-installation",
-        stack: ['react', 'tw', 'jotai'],
+        stack: ['react', 'jotai', 'tw'],
     },
     {
         primary: 'DP',
@@ -50,7 +50,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-second",
         urlPreview: images.testPmSecond,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-second",
-        stack: ['react', 'tw', 'jotai'],
+        stack: ['react', 'jotai', 'tw'],
     },
     {
         primary: 'DP',
@@ -70,7 +70,7 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
         urlPreview: images.testPmDomainLogins22,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
-        stack: ['react', 'tw', 'jotai'],
+        stack: ['react', 'jotai', 'tw'],
     },
 
     // {
@@ -446,6 +446,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "pm-domain-credentials-switch",
+        description: "Utility to convert PM domain credentials to credentials that only apply to the exact URL.",
+        urlGithub: "https://github.com/maxzz/pm-domain-credentials-switch",
+        urlDemo: "https://github.com/maxzz/pm-domain-credentials-switch", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-domain-credentials-switch",
+        stack: ['npm'],
+    },
+    {
+        primary: 'npm',
         id: "maxzz-proxy",
         description: "Proxy server with CORS.",
         urlGithub: "https://github.com/maxzz/maxzz-proxy",
@@ -625,3 +635,8 @@ export const sections: SectionType[] = [
         projects: projectsVue,
     },
 ];
+
+//TODO: add link to https://github.com/maxzz
+
+//TODO: add C:\Y\w\2-web\0-dp\utils\sftp-shell
+//TODO: add C:\Y\w\2-web\0-dp\utils\sftp-test
