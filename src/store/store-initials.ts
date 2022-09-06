@@ -636,7 +636,5 @@ export const sections: SectionType[] = [
     },
 ];
 
-//TODO: add link to https://github.com/maxzz
-
 //TODO: add C:\Y\w\2-web\0-dp\utils\sftp-shell
 //TODO: add C:\Y\w\2-web\0-dp\utils\sftp-test

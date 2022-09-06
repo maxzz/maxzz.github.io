@@ -25,10 +25,10 @@ export function Section1_Head() {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
-            <div className="">
+            <a href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
                 <span>// todo: name to come up with </span>
                 <IconExperiments className="pb-px w-4 h-4 stroke-slate-400 inline-block" />
-            </div>
+            </a>
 
             <div className="flex items-center space-x-1 text-primary-400">
                 <SwitchButton thisType={ShowType.list}><IconList /></SwitchButton>
