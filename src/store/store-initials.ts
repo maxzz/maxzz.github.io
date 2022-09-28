@@ -4,22 +4,32 @@ import * as images from "./store-images";
 export const projectsDp: ProjectType[] = [
     {
         primary: 'DP',
-        id: "page-qa2",
-        description: "QA information website",
-        urlGithub: "https://github.com/maxzz/page-qa2",
-        urlDemo: "https://maxzz.github.io/page-qa2",
-        urlPreview: images.pageQa2,
-        localPath: "C:/Y/w/2-web/0-dp/page-qa2",
-        stack: ['react', 'jotai', 'tw'],
-    },
-    {
-        primary: 'DP',
         id: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
         urlGithub: "https://github.com/maxzz/dropzone",
         urlDemo: "https://maxzz.github.io/dropzone",
         urlPreview: images.previewDropzon,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/dropzone",
+        stack: ['react', 'jotai', 'tw'],
+    },
+    {
+        primary: 'DP',
+        id: "PMAC", // former: pm-domain-credentials-switch
+        description: "Password manager administrator command. Utility to convert PM domain credentials to credentials that only apply to the exact URL.",
+        urlGithub: "https://github.com/maxzz/pm-domain-credentials-switch",
+        urlDemo: "https://maxzz.github.io/pm-domain-credentials-switch",
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-domain-credentials-switch",
+        stack: ['npm', 'ts', 'tw'],
+    },
+    {
+        primary: 'DP',
+        id: "page-qa2",
+        description: "QA information website",
+        urlGithub: "https://github.com/maxzz/page-qa2",
+        urlDemo: "https://maxzz.github.io/page-qa2",
+        urlPreview: images.pageQa2,
+        localPath: "C:/Y/w/2-web/0-dp/page-qa2",
         stack: ['react', 'jotai', 'tw'],
     },
     {
@@ -443,16 +453,6 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/netsh-rule",
         urlPreview: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
-    },
-    {
-        primary: 'npm',
-        id: "pm-domain-credentials-switch",
-        description: "Utility to convert PM domain credentials to credentials that only apply to the exact URL.",
-        urlGithub: "https://github.com/maxzz/pm-domain-credentials-switch",
-        urlDemo: "https://github.com/maxzz/pm-domain-credentials-switch", // no demo
-        urlPreview: images.npm,
-        localPath: "C:/Y/w/2-web/0-dp/utils/pm-domain-credentials-switch",
-        stack: ['npm'],
     },
     {
         primary: 'npm',
