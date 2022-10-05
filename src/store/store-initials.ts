@@ -16,8 +16,8 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "PMAC", // former: pm-domain-credentials-switch
         description: "Password manager administrator command. Utility to convert PM domain credentials to credentials that only apply to the exact URL.",
-        urlGithub: "https://github.com/maxzz/pm-domain-credentials-switch",
-        urlDemo: "https://maxzz.github.io/pm-domain-credentials-switch",
+        urlGithub: "https://github.com/maxzz/pmac",
+        urlDemo: "https://maxzz.github.io/pmac",
         urlPreview: images.npm,
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-domain-credentials-switch",
         stack: ['npm', 'ts', 'tw'],
@@ -173,9 +173,10 @@ export const projectsUx: ProjectType[] = [
         id: "quadratic-curves",
         description: "Quadratic curves experiments.",
         urlGithub: "https://github.com/maxzz/quadratic-curves",
-        urlDemo: "https://github.com/maxzz/quadratic-curves", // no demo
+        urlDemo: "https://maxzz.github.io/quadratic-curves",
         urlPreview: images.quadraticCurves,
         localPath: "C:/Y/w/2-web/7-my-webpages/editors-bezier/quadratic",
+        stack: ['ts', 'tw'],
     },
     {
         primary: 'UX',
