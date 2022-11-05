@@ -32,6 +32,21 @@ import reactAdminAddressBook from "@/assets/pages/react/react-admin-address-book
 import maxzz from "@/assets/pages/react/maxzz-main.svg?preset=thumbnail";
 import maxzzGithubIo from "@/assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
 
+//dp
+import previewDropzon from "@/assets/pages/dp/dropzone-2022-03-04_15-29-37.png?preset=thumbnail";
+import testPm from "@/assets/pages/dp/test-pm.png?preset=thumbnail";
+import testPmSecond from "@/assets/pages/dp/test-pm-second-2022-05-21_20-03-21.png?preset=thumbnail";
+import testPmDomainLogins22 from "@/assets/pages/dp/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail";
+import pageQa2 from "@/assets/pages/dp/page-qa2-2022-04-16_16-49-18.png?preset=thumbnail";
+import testPmDomainLogins from "@/assets/pages/dp/test-pm-domain-logins-2022-03-01_19-09-50.jpg?preset=thumbnail";
+import pageExtensionInstallation from "@/assets/pages/dp/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
+
+//npm
+import npm from "@/assets/pages/npm/npm-node-package-manager.webp?preset=thumbnail";
+import gluehtml from "@/assets/pages/npm/gluehtml-preview.png?preset=thumbnail";
+import spawnLoadingTest from "@/assets/pages/npm/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
+import serverOcr from "@/assets/pages/npm/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
+
 //ux, vue
 import colorNames from "@/assets/pages/vue/color-names-2020-12-02_4-55-29.png?preset=thumbnail";
 import ngonGen from "@/assets/pages/vue/ngon-gen-preview-20200512.png?preset=thumbnail";
@@ -47,59 +62,8 @@ import svgIconsVite from "@/assets/pages/vue/svg-icons-vite-2022-07-18_17-58-31.
 import simpleSiriwave from "@/assets/pages/vue/simple-siriwave-2020-12-15_17-59-36.png?preset=thumbnail";
 import svgBkgStripes from "@/assets/pages/vue/svg-bkg-stripes-2022-07-18_18-25-35.png?preset=thumbnail";
 
-//npm
-import npm from "@/assets/pages/npm/npm-node-package-manager.webp?preset=thumbnail";
-import gluehtml from "@/assets/pages/npm/gluehtml-preview.png?preset=thumbnail";
-import spawnLoadingTest from "@/assets/pages/npm/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
-import serverOcr from "@/assets/pages/npm/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
-
-//dp
-import previewDropzon from "@/assets/pages/dp/dropzone-2022-03-04_15-29-37.png?preset=thumbnail";
-import testPm from "@/assets/pages/dp/test-pm.png?preset=thumbnail";
-import testPmSecond from "@/assets/pages/dp/test-pm-second-2022-05-21_20-03-21.png?preset=thumbnail";
-import testPmDomainLogins22 from "@/assets/pages/dp/test-pm-domain-logins22-2022-06-29_1-32-01.png?preset=thumbnail";
-import pageQa2 from "@/assets/pages/dp/page-qa2-2022-04-16_16-49-18.png?preset=thumbnail";
-import testPmDomainLogins from "@/assets/pages/dp/test-pm-domain-logins-2022-03-01_19-09-50.jpg?preset=thumbnail";
-import pageExtensionInstallation from "@/assets/pages/dp/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
-
 export {
     reactNoPreview,
-};
-
-//ux, vue
-export {
-    colorNames,
-    ngonGen,
-    animatedSidebar,
-    chSpy,
-    coursehuntersCourseListBrowserCtx,
-    autoDatGui,
-    backTo90sHtml,
-    vue26SiteExamplesTodos,
-    svgGradients,
-    revuePlayground,
-    svgIconsVite,
-    simpleSiriwave,
-    svgBkgStripes,
-};
-
-//npm
-export {
-    npm,
-    gluehtml,
-    spawnLoadingTest,
-    serverOcr,
-};
-
-//dp
-export {
-    previewDropzon,
-    testPm,
-    testPmSecond,
-    testPmDomainLogins22,
-    pageQa2,
-    testPmDomainLogins,
-    pageExtensionInstallation,
 };
 
 //ux, react
@@ -134,4 +98,40 @@ export {
     reactAdminAddressBook,
     maxzz,
     maxzzGithubIo,
+};
+
+//dp
+export {
+    previewDropzon,
+    testPm,
+    testPmSecond,
+    testPmDomainLogins22,
+    pageQa2,
+    testPmDomainLogins,
+    pageExtensionInstallation,
+};
+
+//npm
+export {
+    npm,
+    gluehtml,
+    spawnLoadingTest,
+    serverOcr,
+};
+
+//ux, vue
+export {
+    colorNames,
+    ngonGen,
+    animatedSidebar,
+    chSpy,
+    coursehuntersCourseListBrowserCtx,
+    autoDatGui,
+    backTo90sHtml,
+    vue26SiteExamplesTodos,
+    svgGradients,
+    revuePlayground,
+    svgIconsVite,
+    simpleSiriwave,
+    svgBkgStripes,
 };
