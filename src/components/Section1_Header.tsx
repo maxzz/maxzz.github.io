@@ -21,7 +21,7 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
     );
 }
 
-export function Section1_Head() {
+export function Section1_Header() {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
