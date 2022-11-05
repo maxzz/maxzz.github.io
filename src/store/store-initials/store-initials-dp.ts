@@ -82,15 +82,4 @@ export const projectsDp: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
         stack: ['react', 'jotai', 'tw'],
     },
-
-    // {
-    //     primary: 'DP',
-    //     caption: "",
-    //     description: "",
-    //     urlGithub: "",
-    //     urlDemo: "",
-    //     previewUrl: images.editorsSvgShapes22Template,
-    //     localPath: "",
-    // },
 ];
-

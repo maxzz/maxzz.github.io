@@ -1,7 +1,6 @@
 import { Section1_Head } from './components/Section1_Head';
 import { Section2_Main } from './components/Section2_Main';
 import { Section3_Footer } from './components/Section3_Footer';
-import './App.css';
 
 function PopperRoot() {
     return (
