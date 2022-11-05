@@ -54,7 +54,7 @@ import gluehtml from "@/assets/pages/npm/gluehtml-preview.png?preset=thumbnail";
 import spawnLoadingTest from "@/assets/pages/npm/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
 import serverOcr from "@/assets/pages/npm/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
 
-//DP
+//dp
 import previewDropzon from "@/assets/pages/dp/dropzone-2022-03-04_15-29-37.png?preset=thumbnail";
 import testPm from "@/assets/pages/dp/test-pm.png?preset=thumbnail";
 import testPmSecond from "@/assets/pages/dp/test-pm-second-2022-05-21_20-03-21.png?preset=thumbnail";
