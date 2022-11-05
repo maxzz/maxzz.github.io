@@ -41,11 +41,6 @@ import pageQa2 from "@/assets/pages/dp/page-qa2-2022-04-16_16-49-18.png?preset=t
 import testPmDomainLogins from "@/assets/pages/dp/test-pm-domain-logins-2022-03-01_19-09-50.jpg?preset=thumbnail";
 import pageExtensionInstallation from "@/assets/pages/dp/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
 
-//npm
-import npm from "@/assets/pages/npm/npm-node-package-manager.webp?preset=thumbnail";
-import gluehtml from "@/assets/pages/npm/gluehtml-preview.png?preset=thumbnail";
-import spawnLoadingTest from "@/assets/pages/npm/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
-import serverOcr from "@/assets/pages/npm/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
 
 //ux, vue
 import colorNames from "@/assets/pages/vue/color-names-2020-12-02_4-55-29.png?preset=thumbnail";
@@ -112,12 +107,7 @@ export {
 };
 
 //npm
-export {
-    npm,
-    gluehtml,
-    spawnLoadingTest,
-    serverOcr,
-};
+export * from './images-npm';
 
 //ux, vue
 export {
