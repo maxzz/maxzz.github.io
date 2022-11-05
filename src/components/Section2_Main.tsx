@@ -26,7 +26,7 @@ function SectionName2({ section }: { section: SectionType; }) {
     return (
         <div className="mb-2 text-2xl cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
             <div className="px-4 py-3 max-w-min border-slate-400 border rounded flex items-center space-y-2">
-                <div className="leading-5 left-t">{section.name}</div>
+                <div className="w-max leading-5 left-t">{section.name}</div>
                 <UIArrow className="w-5 h-5" open={sectionOpen} />
             </div>
         </div>

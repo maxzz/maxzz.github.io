@@ -9,19 +9,19 @@ import { projectsVue } from "./store-initials-vue";
 
 export const sections: SectionType[] = [
     {
-        name: 'UX,React',
+        name: 'UX, react',
         projects: projectsUx,
     },
     {
-        name: 'DigitalPersona',
+        name: 'digitalPersona',
         projects: projectsDp,
     },
     {
-        name: 'npm,node.js',
+        name: 'node, npm',
         projects: projectsNpm,
     },
     {
-        name: 'UX,Vue',
+        name: 'UX, vue',
         projects: projectsVue,
     },
 ];
