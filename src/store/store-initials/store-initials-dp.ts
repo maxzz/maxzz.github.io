@@ -1,5 +1,5 @@
-import { ProjectType, SectionType } from "../store-types";
-import * as images from "../../assets/pages/react/store-images";
+import { ProjectType } from "../store-types";
+import * as images from "./store-images";
 
 export const projectsDp: ProjectType[] = [
     {
