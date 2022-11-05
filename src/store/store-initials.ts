@@ -368,6 +368,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://github.com/maxzz",
         urlPreview: images.maxzz,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-frontpage",
+        stack: ['github', 'ts'],
     },
     {
         primary: 'UX',
@@ -377,6 +378,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io",
         urlPreview: images.maxzzGithubIo,
         localPath: "C:/Y/w/2-web/7-my-webpages/maxzz",
+        stack: ['github', 'ts'],
     },
 ];
 
@@ -399,6 +401,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/rardir",
         urlPreview: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/rardir",
+        stack: ['npm', 'ts'],
     },
     {
         primary: 'npm',
@@ -408,6 +411,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/rarsrt",
         urlPreview: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/merge-video-subtitles",
+        stack: ['npm', 'ts'],
     },
     {
         primary: 'npm',
@@ -445,6 +449,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/gluehtml",
         urlPreview: images.gluehtml,
         localPath: "C:/Y/w/1-node/1-utils/create-single-html",
+        stack: ['npm', 'ts'],
     },
     {
         primary: 'npm',
@@ -454,6 +459,16 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/netsh-rule",
         urlPreview: images.npm,
         localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
+    },
+    {
+        primary: 'npm',
+        id: "topdirs",
+        description: "The topdirs utility replicates the folder structure without copying the files it contains.",
+        urlGithub: "https://github.com/maxzz/topdirs",
+        urlDemo: "https://github.com/maxzz/topdirs", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/topdirs",
+        stack: ['npm', 'ts'],
     },
     {
         primary: 'npm',
@@ -620,7 +635,7 @@ export const projectsVue: ProjectType[] = [
 
 export const sections: SectionType[] = [
     {
-        name: 'UX',
+        name: 'UX,React',
         projects: projectsUx,
     },
     {
@@ -628,11 +643,11 @@ export const sections: SectionType[] = [
         projects: projectsDp,
     },
     {
-        name: 'npm',
+        name: 'npm,node.js',
         projects: projectsNpm,
     },
     {
-        name: 'Vue',
+        name: 'UX,Vue',
         projects: projectsVue,
     },
 ];
