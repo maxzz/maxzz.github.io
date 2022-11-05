@@ -21,8 +21,16 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
     );
 }
 
+function ViewSelector() {
+    return (
+        <div className="flex items-center space-x-1 text-primary-400">
+            <SwitchButton thisType={ShowType.list}><IconList /></SwitchButton>
+            <SwitchButton thisType={ShowType.preview}><IconGrid /></SwitchButton>
+        </div>
+    );
+}
+
 export function Section1_Header() {
-    const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
             <a href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
@@ -30,10 +38,7 @@ export function Section1_Header() {
                 <IconExperiments className="pb-px w-4 h-4 stroke-slate-400 inline-block" />
             </a>
 
-            <div className="flex items-center space-x-1 text-primary-400">
-                <SwitchButton thisType={ShowType.list}><IconList /></SwitchButton>
-                <SwitchButton thisType={ShowType.preview}><IconGrid /></SwitchButton>
-            </div>
+            <ViewSelector />
         </header>
     );
 }
