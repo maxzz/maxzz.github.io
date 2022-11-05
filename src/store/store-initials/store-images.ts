@@ -29,7 +29,6 @@ import reactDelayUnmount from "@/assets/pages/react/react-delay-unmount-2021-03-
 import reactScrollingCarousel from "@/assets/pages/react/react-scrolling-carousel-2022-07-18_17-49-30.png?preset=thumbnail";
 import svgIconsFontSw from "@/assets/pages/react/svg-icons-font-sw-2022-07-18_18-03-13.png?preset=thumbnail";
 import reactAdminAddressBook from "@/assets/pages/react/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
-
 import maxzz from "@/assets/pages/react/maxzz-main.svg?preset=thumbnail";
 import maxzzGithubIo from "@/assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
 
@@ -64,59 +63,75 @@ import testPmDomainLogins from "@/assets/pages/dp/test-pm-domain-logins-2022-03-
 import pageExtensionInstallation from "@/assets/pages/dp/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
 
 export {
-    previewDropzon,
-    simpleBorderRadius,
-    red3Curves,
-    borderRadiusGenerator,
-    red3Path,
-    colorNames22,
-    testPmDomainLogins22,
-    svgPath,
-    pageExtensionInstallation,
-    testPmSecond,
-    levaUiDynamicBoxes,
-    editorsSvgShapes22Template,
-    ngonGen22,
-    volumeIllusion,
-    pageQa2,
-    cursors,
-    noiseGen,
-    npm,
-    animatedSidebar,
-    reactSpringTests,
-    chSpy,
-    testPmDomainLogins,
-    testPm,
-    css3d,
-    realTimeResizeRcv,
-    autoDatGui,
-    reactSm,
-    reactD3Voronoi,
-    reactD3,
-    coursehuntersCourseListBrowserCtx,
-    spawnLoadingTest,
-    serverOcr,
-    quadraticCurves,
-    giffy,
-    vue26SiteExamplesTodos,
-    backTo90sHtml,
-    bloomingGen,
-    reactFocusWithinMenus,
+    reactNoPreview,
+};
+
+//ux, vue
+export {
+    colorNames,
     ngonGen,
+    animatedSidebar,
+    chSpy,
+    coursehuntersCourseListBrowserCtx,
+    autoDatGui,
+    backTo90sHtml,
+    vue26SiteExamplesTodos,
     svgGradients,
     revuePlayground,
+    svgIconsVite,
+    simpleSiriwave,
+    svgBkgStripes,
+};
+
+//npm
+export {
+    npm,
+    gluehtml,
+    spawnLoadingTest,
+    serverOcr,
+};
+
+//dp
+export {
+    previewDropzon,
+    testPm,
+    testPmSecond,
+    testPmDomainLogins22,
+    pageQa2,
+    testPmDomainLogins,
+    pageExtensionInstallation,
+};
+
+//ux, react
+export {
+    colorNames22,
+    simpleBorderRadius,
+    borderRadiusGenerator,
+    red3Curves,
+    red3Path,
+    reactD3Voronoi,
+    reactD3,
+    svgPath,
+    quadraticCurves,
+    ngonGen22,
+    editorsSvgShapes22Template,
+    cursors,
+    noiseGen,
+    css3d,
+    reactSpringTests,
+    levaUiDynamicBoxes,
+    volumeIllusion,
+    realTimeResizeRcv,
+    reactSm,
+    bloomingGen,
+    giffy,
+    reactFocusWithinMenus,
     reactGsapMenu,
     reactSpringInterpolation,
     reactDelayUnmount,
     reactScrollingCarousel,
-    gluehtml,
-    svgIconsVite,
     svgIconsFontSw,
-    simpleSiriwave,
-    colorNames,
     reactAdminAddressBook,
-    svgBkgStripes,
-    reactNoPreview,
     maxzz,
     maxzzGithubIo,
 };
