@@ -11,15 +11,12 @@ import ngonGen22 from "@/assets/pages/ngon-gen22-2022-06-11_18-09-01.png?preset=
 import volumeIllusion from "@/assets/pages/volume-illusion-2021-05-04_18-32-05.png?preset=thumbnail";
 
 import cursors from "@/assets/pages/cursors-2022-02-20_15-30-06.png?preset=thumbnail";
-import npm from "@/assets/pages/npm-node-package-manager.webp?preset=thumbnail";
 import reactSpringTests from "@/assets/pages/react-spring-tests-2021-11-26_01-28-49.png?preset=thumbnail";
 import css3d from "@/assets/pages/css-3d-2021-05-24_1-43-59.png?preset=thumbnail";
 import realTimeResizeRcv from "@/assets/pages/real-time-resize-rcv-2022-07-18_1-34-33.png?preset=thumbnail";
 import reactSm from "@/assets/pages/react-sm-2021-08-05_18-18-46.png?preset=thumbnail";
 import reactD3Voronoi from "@/assets/pages/react-d3-voronoi-2022-07-18_15-36-06.png?preset=thumbnail";
 import reactD3 from "@/assets/pages/react-d3-2021-07-14_18-55-53.png?preset=thumbnail";
-import spawnLoadingTest from "@/assets/pages/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
-import serverOcr from "@/assets/pages/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
 import quadraticCurves from "@/assets/pages/quadratic-curves-preview.jpg?preset=thumbnail";
 import giffy from "@/assets/pages/giffy-2021-04-17_21-05-46.png?preset=thumbnail";
 import bloomingGen from "@/assets/pages/blooming-gen-2022-07-18_16-45-15.png?preset=thumbnail";
@@ -53,7 +50,10 @@ import simpleSiriwave from "@/assets/pages/vue/simple-siriwave-2020-12-15_17-59-
 import svgBkgStripes from "@/assets/pages/vue/svg-bkg-stripes-2022-07-18_18-25-35.png?preset=thumbnail";
 
 //npm
-import gluehtml from "@/assets/pages/gluehtml-preview.png?preset=thumbnail";
+import npm from "@/assets/pages/npm/npm-node-package-manager.webp?preset=thumbnail";
+import gluehtml from "@/assets/pages/npm/gluehtml-preview.png?preset=thumbnail";
+import spawnLoadingTest from "@/assets/pages/npm/spawn-loading-test-2021-04-29_17-07-57.png?preset=thumbnail";
+import serverOcr from "@/assets/pages/npm/server-ocr-ocr-text-recognition.jpg?preset=thumbnail";
 
 //DP
 import testPm from "@/assets/pages/dp/test-pm.png?preset=thumbnail";
