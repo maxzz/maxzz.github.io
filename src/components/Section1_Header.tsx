@@ -41,10 +41,11 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
             className={classNames(
                 "relative transition-all",
                 "hover:bg-primary-800 active:scale-[.97]",
+                `[--me:${angle}]`,
                 isActive && "bg-primary-800/70",
                 thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px] rounded-tr-[6px] rounded-br-[6px]",
                 thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px] rounded-tl-[6px] rounded-bl-[6px]",
-                isActive && `after:absolute after:inset-0 after:rounded-[inherit] after:[background:linear-gradient(${angle},#ffffff24_-.68%,transparent_46.86%)]`,
+                isActive && `after:absolute after:inset-0 after:rounded-[inherit] after:[background:linear-gradient(var(--me),#ffffff24_-.68%,transparent_46.86%)]`,
             )}
             style={{ boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05' }}
             onClick={() => setShowType(thisType)}
