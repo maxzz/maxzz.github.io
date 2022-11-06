@@ -33,14 +33,18 @@ function ViewSelectorOld() {
 
 function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
+    const isActive = showType === thisType;
     return (
         <button
             className={classNames(
+                "relative",
                 "hover:bg-primary-800 border-primary-400 active:scale-[.97]",
-                showType === thisType && "border bg-primary-800",
-                thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px]",
-                thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px]",
+                isActive && "border bg-primary-800",
+                thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px] rounded-tr-[6px] rounded-br-[6px]",
+                thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px] rounded-tl-[6px] rounded-bl-[6px]",
+                "after:absolute after:inset-0 after:rounded-[inherit] after:[background-color:red]",
             )}
+            style={{boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05'}}
             onClick={() => setShowType(thisType)}
             title={thisType === ShowType.list ? "Show List" : "Show Grid"}
             {...rest}
