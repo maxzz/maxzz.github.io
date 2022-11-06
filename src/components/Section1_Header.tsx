@@ -5,7 +5,7 @@ import { IconExperiments, IconGrid, IconList } from "./UI/UIIcons";
 import { classNames } from "@/utils/classnames";
 import { a, easings, useSpring } from "@react-spring/web";
 
-function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
+function SwitchButtonOld({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
         <button
@@ -22,11 +22,39 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
     );
 }
 
-function ViewSelector() {
+function ViewSelectorOld() {
     return (
         <div className="flex items-center space-x-1 text-primary-400">
-            <SwitchButton thisType={ShowType.list}><IconList /></SwitchButton>
-            <SwitchButton thisType={ShowType.preview}><IconGrid /></SwitchButton>
+            <SwitchButtonOld thisType={ShowType.list}><IconList /></SwitchButtonOld>
+            <SwitchButtonOld thisType={ShowType.preview}><IconGrid /></SwitchButtonOld>
+        </div>
+    );
+}
+
+function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
+    const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
+    return (
+        <button
+            className={classNames(
+                "hover:bg-primary-800 border-primary-400 active:scale-[.97]",
+                showType === thisType && "border bg-primary-800",
+                thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px]",
+                thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px]",
+            )}
+            onClick={() => setShowType(thisType)}
+            title={thisType === ShowType.list ? "Show List" : "Show Grid"}
+            {...rest}
+        >
+            {children}
+        </button>
+    );
+}
+
+function ViewSelector() {
+    return (
+        <div className="p-1 flex items-center space-x-1 text-primary-400 bg-slate-800 rounded-3xl">
+            <SwitchButton thisType={ShowType.list}><div className="px-2 flex items-center text-xs"><IconList className="p-1 w-6 h-6" />List</div></SwitchButton>
+            <SwitchButton thisType={ShowType.preview}><div className="px-2 flex items-center text-xs"><IconGrid className="p-1 w-6 h-6" />Grid</div></SwitchButton>
         </div>
     );
 }
