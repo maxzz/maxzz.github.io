@@ -3,6 +3,7 @@ import { useAtom } from "jotai";
 import { ShowType, uiOptionsAtoms } from "@/store/store";
 import { IconExperiments, IconGrid, IconList } from "./UI/UIIcons";
 import { classNames } from "@/utils/classnames";
+import { a, easings, useSpring } from "@react-spring/web";
 
 function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
@@ -31,6 +32,7 @@ function ViewSelector() {
 }
 
 export function Section1_Header() {
+    const styles = useSpring({ from: { x: -200, opacity: 0 }, x: 0, opacity: 1, config: { duration: 4000, easing: easings.easeOutBounce } });
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
             <div className="grid grid-cols-2 items-end space-x-2 text-slate-500 tracking-tighter scale-y-125">
@@ -39,12 +41,14 @@ export function Section1_Header() {
                     Directory of ...
                 </div>
 
-                <div className="translate-y-px">
-                    <a className="space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
-                        <span className="text-sm"> // todo: name to come up with</span>
-                        <IconExperiments className="pb-0.5 w-4 h-4 origin-bottom scale-125 stroke-slate-400 inline-block" />
-                    </a>
-                </div>
+                <a.div style={styles} className="">
+                    <div className="translate-y-px">
+                        <a className="space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
+                            <span className="text-sm"> // todo: name to come up with</span>
+                            <IconExperiments className="pb-0.5 w-4 h-4 origin-bottom scale-125 stroke-slate-400 inline-block" />
+                        </a>
+                    </div>
+                </a.div>
 
             </div>
             <ViewSelector />
