@@ -39,10 +39,10 @@ export function Section1_Header() {
                     Directory of ...
                 </div>
 
-                <div className="">
-                    <a className="" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
-                        <span className="text-sm"> // todo: name to come up with </span>
-                        <IconExperiments className="pb-px w-4 h-4 scale-75 stroke-slate-400 inline-block" />
+                <div className="translate-y-px">
+                    <a className="space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
+                        <span className="text-sm"> // todo: name to come up with</span>
+                        <IconExperiments className="pb-0.5 w-4 h-4 origin-bottom scale-125 stroke-slate-400 inline-block" />
                     </a>
                 </div>
 
