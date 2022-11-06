@@ -35,24 +35,23 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     const isActive = showType === thisType;
     const isLeft = thisType === ShowType.list;
-    const angle = isLeft ? '235deg' : '235deg';
+    const angle = isLeft ? '135deg' : '230deg';
     return (
         <button
             className={classNames(
                 "relative transition-all",
-                "hover:bg-primary-800 active:scale-[.97]",
-                `[--me:${angle}]`,
-                isActive && "bg-primary-800/70",
+                " hover:text-primary-300 hover:bg-primary-800 active:scale-[.97]",
+                isActive ? "text-primary-400 bg-primary-800/70" : "text-primary-600",
                 thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px] rounded-tr-[6px] rounded-br-[6px]",
                 thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px] rounded-tl-[6px] rounded-bl-[6px]",
-                isActive && `after:absolute after:inset-0 after:rounded-[inherit] after:[background:linear-gradient(var(--me),#ffffff24_-.68%,transparent_46.86%)]`,
+                isActive && `after:absolute after:inset-0 after:rounded-[inherit] after:[background:linear-gradient(var(--me),#fff2_-.1%,transparent_75%)]`,
             )}
-            style={{ boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05' }}
+            style={{ boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05', '--me': angle } as React.CSSProperties}
             onClick={() => setShowType(thisType)}
             title={thisType === ShowType.list ? "Show List" : "Show Grid"}
             {...rest}
         >
-            <div className="px-4 py-1 flex items-center text-xs">
+            <div className="px-4 py-1 flex items-center text-[.65rem] bg-primary-800/30 rounded-[inherit]">
                 {children}
             </div>
         </button>
@@ -61,7 +60,7 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
 
 function ViewSelector() {
     return (
-        <div className="p-0.5 flex items-center space-x-1 text-primary-400 bg-slate-800/50 rounded-3xl">
+        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/50 rounded-3xl">
             <SwitchButton thisType={ShowType.list}><><IconList className="p-1 w-6 h-6" /><span>List</span></></SwitchButton>
             <SwitchButton thisType={ShowType.preview}><><IconGrid className="p-1 w-6 h-6" /><span>Grid</span></></SwitchButton>
         </div>
