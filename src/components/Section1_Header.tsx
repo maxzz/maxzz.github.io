@@ -33,11 +33,20 @@ function ViewSelector() {
 export function Section1_Header() {
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
-            <a href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
-                <span>// todo: name to come up with </span>
-                <IconExperiments className="pb-px w-4 h-4 stroke-slate-400 inline-block" />
-            </a>
+            <div className="grid grid-cols-2 items-end space-x-2 text-slate-500 tracking-tighter scale-y-125">
 
+                <div className="text-4xl ">
+                    Directory of ...
+                </div>
+
+                <div className="">
+                    <a className="" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
+                        <span className="text-sm"> // todo: name to come up with </span>
+                        <IconExperiments className="pb-px w-4 h-4 scale-75 stroke-slate-400 inline-block" />
+                    </a>
+                </div>
+
+            </div>
             <ViewSelector />
         </header>
     );
