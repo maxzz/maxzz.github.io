@@ -95,13 +95,13 @@ function ProjectIcons({ project, inListItem, className, ...rest }: { project: Pr
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
-                <a href={urlDemo} target="_blank">
+                <a href={urlDemo} target="_blank" aria-label="Open demo page">
                     <IconTv className="w-4 h-4 fill-current" />
                 </a>
             </ButtonShell>
 
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open source code on GitHub">
-                <a href={urlGithub} target="_blank">
+                <a href={urlGithub} target="_blank" aria-label="Open source code on GitHub">
                     <IconGithubLogo className="w-4 h-4 fill-current" />
                 </a>
             </ButtonShell>
