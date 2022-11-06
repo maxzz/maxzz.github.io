@@ -59,7 +59,7 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
 
 export function UIViewSelector() {
     return (
-        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/20 rounded-3xl">
+        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/20 rounded-3xl select-none">
             <SwitchButton thisType={ShowType.list}><><IconList className="p-1 w-6 h-6" /><span>List</span></></SwitchButton>
             <SwitchButton thisType={ShowType.preview}><><IconGrid className="p-1 w-6 h-6" /><span>Grid</span></></SwitchButton>
         </div>
