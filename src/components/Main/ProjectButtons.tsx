@@ -1,6 +1,6 @@
+import { HTMLAttributes } from "react";
 import { ProjectType } from "@/store/store-types";
 import { classNames } from "@/utils/classnames";
-import { HTMLAttributes } from "react";
 import { IconGithubLogo, IconHardDrive, IconTv } from "../UI/UIIcons";
 import { ButtonCopy } from "./ProjectButtonCopy";
 

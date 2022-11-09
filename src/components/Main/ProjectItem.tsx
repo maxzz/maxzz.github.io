@@ -28,7 +28,7 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
     );
 }
 
-export function ProjectTile({ project }: { project: ProjectType; }) {
+export function ProjectGridItem({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
         <section className="flex flex-col">
@@ -43,7 +43,9 @@ export function ProjectTile({ project }: { project: ProjectType; }) {
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
-                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}><Picture src={urlPreview} /></a>
+                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
+                            <Picture src={urlPreview} />
+                        </a>
                     </div>
                 </div>
             </div >

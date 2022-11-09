@@ -1,5 +1,5 @@
 export {
-    ProjectTile,
+    ProjectGridItem as ProjectTile,
     ProjectListItem,
 } from "./ProjectItem";
 
