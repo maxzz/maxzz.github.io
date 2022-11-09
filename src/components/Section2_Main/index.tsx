@@ -3,9 +3,9 @@ import { useAtom, useAtomValue } from 'jotai';
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { ImageUrl, ProjectType, SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
-import { UIArrow } from './UI/UIArrow';
-import { UIAccordion } from './UI/UIAccordion';
-import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpm, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconTv, IconVue } from './UI/UIIcons';
+import { UIArrow } from '../UI/UIArrow';
+import { UIAccordion } from '../UI/UIAccordion';
+import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpm, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconTv, IconVue } from '../UI/UIIcons';
 import { classNames } from '@/utils/classnames';
 import { a, easings, useTransition } from '@react-spring/web';
 
