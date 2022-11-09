@@ -1,9 +1,9 @@
-import { HTMLAttributes, ReactNode, useState } from "react";
-import { a, easings, useTransition } from "@react-spring/web";
+import { HTMLAttributes } from "react";
 import { classNames } from "@/utils/classnames";
 import { ImageUrl, ProjectType } from "@/store/store-types";
-import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconTv } from '../UI/UIIcons';
+import { IconGithubLogo, IconHardDrive, IconTv } from '../UI/UIIcons';
 import { ProjectStack } from "./ProjectStackIcons";
+import { ButtonCopy } from "./ProjectButtonCopy";
 
 function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
@@ -31,17 +31,6 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
     );
 }
 
-function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v: boolean) => void; items: ReactNode[]; }) {
-    const transitions = useTransition(Number(show), {
-        from: { scale: 0, opacity: 0, },
-        enter: { scale: 1, opacity: 1, },
-        leave: { scale: 0, opacity: 0, delay: 100, config: { duration: 300, easing: easings.easeOutQuad }, },
-        onRest: ({ finished }) => show && finished && setShow?.(false),
-    });
-    return transitions((styles, item) => <a.div style={styles} className="absolute left-0 top-0"> {items[item]} </a.div>);
-}
-
-
 function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
     const srcUrl = Array.isArray(src) ? src : [{ src: src }];
     const url = srcUrl[srcUrl.length - 1].src;
@@ -52,24 +41,6 @@ function Picture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttribute
     );
 }
 
-function ButtonCopy({ label, text }: { label: ReactNode; text: string; }) {
-    const [showNotice, setShowNotice] = useState(false);
-    return (
-        <button
-            className="relative w-4 h-4"
-            onClick={(event) => {
-                navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\'));
-                setShowNotice(true);
-            }}
-            aria-label="Copy project path"
-        >
-            <MountCopyNotice show={showNotice} setShow={setShowNotice} items={[
-                label,
-                <IconCheckFrameless className="w-4 h-4 text-green-100 bg-emerald-500 stroke-[2] rounded-sm" />,
-            ]} />
-        </button>
-    );
-}
 
 function ProjectIcons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
