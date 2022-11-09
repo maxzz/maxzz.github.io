@@ -9,7 +9,7 @@ export function Section1_Header() {
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
             <div className="grid grid-rows-[minmax(0,1fr)_1rem] sm:grid-rows-none sm:grid-cols-2 items-end sm:space-x-2 text-slate-500 tracking-tighter scale-y-125">
 
-                <div className="text-xl sm:text-4xl">
+                <div className="text-xl text-primary-700 sm:text-4xl" style={{ WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 }}>
                     Directory of ...
                 </div>
 
@@ -22,7 +22,7 @@ export function Section1_Header() {
                     </div>
                 </a.div>
             </div>
-            
+
             <UIViewSelector />
         </header>
     );
