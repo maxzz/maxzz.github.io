@@ -4,7 +4,7 @@ import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIAccordion } from './UI/UIAccordion';
-import { ProjectListItem, ProjectTile, SectionName2 } from './Main';
+import { ProjectListItem, ProjectGridItem, SectionName2 } from './Main';
 
 function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
@@ -25,7 +25,7 @@ function Section({ section }: { section: SectionType; }) {
                         :
                         <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2">
                             {section.projects.map((project, idx) => (
-                                <ProjectTile project={project} key={idx} />
+                                <ProjectGridItem project={project} key={idx} />
                             ))}
                         </div>
                     }

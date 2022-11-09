@@ -1,5 +1,5 @@
-import { classNames } from "@/utils/classnames";
 import { Fragment, HTMLAttributes, ReactNode } from "react";
+import { classNames } from "@/utils/classnames";
 import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from '../UI/UIIcons';
 
 const stackComponents: Record<string, ReactNode> = {
