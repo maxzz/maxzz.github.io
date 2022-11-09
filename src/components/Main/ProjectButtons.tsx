@@ -33,7 +33,7 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
             </ButtonShell>
 
             {localPath &&
-                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive\n(ctrl+click to copy in Unix format)\n\n${localPath}`}>
+                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive. (Ctrl+click to copy in Unix format)\n${localPath}`}>
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                 </ButtonShell>
             }
