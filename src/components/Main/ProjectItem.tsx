@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 import { classNames } from "@/utils/classnames";
 import { ImageUrl, ProjectType } from "@/store/store-types";
 import { ProjectStack } from "./ProjectStackIcons";
-import { ProjectIcons } from "./ProjectLinkButtons";
+import { ProjectButtons } from "./ProjectButtons";
 
 function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
@@ -39,7 +39,7 @@ export function ProjectTile({ project }: { project: ProjectType; }) {
                     {description}
                 </div>
 
-                <ProjectIcons className="-mb-2" project={project} inListItem={false} />
+                <ProjectButtons className="-mb-2" project={project} inListItem={false} />
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
@@ -55,7 +55,7 @@ export function ProjectListItem({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
         <section className="flex items-center text-sm">
-            <ProjectIcons className="" project={project} inListItem={true} />
+            <ProjectButtons className="" project={project} inListItem={true} />
             <ProjectName className="mx-2" name={id} />
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>

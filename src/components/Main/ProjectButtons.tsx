@@ -16,7 +16,7 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
     );
 }
 
-export function ProjectIcons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
+export function ProjectButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
