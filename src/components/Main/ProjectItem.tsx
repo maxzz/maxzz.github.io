@@ -1,8 +1,9 @@
-import { ImageUrl, ProjectType } from "@/store/store-types";
-import { classNames } from "@/utils/classnames";
+import { HTMLAttributes, ReactNode, useState } from "react";
 import { a, easings, useTransition } from "@react-spring/web";
-import { Fragment, HTMLAttributes, ReactNode, useState } from "react";
-import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpm, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconTv, IconVue } from '../UI/UIIcons';
+import { classNames } from "@/utils/classnames";
+import { ImageUrl, ProjectType } from "@/store/store-types";
+import { IconCheckFrameless, IconGithubLogo, IconHardDrive, IconTv } from '../UI/UIIcons';
+import { ProjectStack } from "./ProjectStackIcons";
 
 function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
@@ -93,42 +94,6 @@ function ProjectIcons({ project, inListItem, className, ...rest }: { project: Pr
             }
         </div>
     );
-}
-
-const stackComponents: Record<string, ReactNode> = {
-    react: <IconReact className="w-4 h-4" title="React" />,
-    jotai: <IconJotai className="w-3.5 h-3.5 pr-0.5 text-sky-700" title="Jotai" />,
-    vue: <IconVue className="w-3 h-3" title="Vue" />,
-    tw: <IconTailwind className="w-4 h-4" strokeWidth={.5} title="Tailwind" />,
-    npm: <IconNpm className="w-4 text-sky-700" title="npm" />,
-    js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
-};
-
-const stackComponentsNew: Record<string, ReactNode> = {
-    react: <IconStackReact className="w-4 h-4" title="React" />,
-    jotai: <IconStackJotai className="w-3.5 h-3.5" title="Jotai" />,
-    vue: <IconStackVue className="w-4 h-4" title="Vue" />,
-    tw: <IconStackTailwind className="w-4 h-4" title="Tailwind" />,
-    npm: <IconStackNpmLines className="w-4 h-4" title="npm" />,
-    js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
-};
-
-function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
-    return (<>
-        {stack &&
-            <div className={classNames("pb-1 inline-flex items-center space-x-px text-sky-700 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
-                {stack.map((name, idx) => (
-                    <Fragment key={idx}>
-                        {stackComponentsNew[name] ||
-                            <div className="px-0.5" title={name}>
-                                {name}
-                            </div>
-                        }
-                    </Fragment>
-                ))}
-            </div>
-        }
-    </>);
 }
 
 export function ProjectTile({ project }: { project: ProjectType; }) {
