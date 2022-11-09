@@ -4,8 +4,7 @@ import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
 import { SectionType } from '@/store/store-types';
 import { sections } from '@/store/store-initials';
 import { UIAccordion } from './UI/UIAccordion';
-import { ProjectListItem, ProjectTile } from './Section2_Main/ProjectItem';
-import { SectionName2 } from './Section2_Main/SectionName';
+import { ProjectListItem, ProjectTile, SectionName2 } from './Main';
 
 function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
