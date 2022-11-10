@@ -54,6 +54,26 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "sftp-shell",
+        description: "Transfer files to/from FTP server over SFTP protocol",
+        urlGithub: "https://github.com/maxzz/sftp-shell",
+        urlDemo: "https://github.com/maxzz/sftp-shell", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-shell",
+        stack: ['ts'],
+    },
+    {
+        primary: 'npm',
+        id: "sftp-test",
+        description: "Test transfer files to/from FTP server over SFTP protocol",
+        urlGithub: "https://github.com/maxzz/sftp-test",
+        urlDemo: "https://github.com/maxzz/sftp-test", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-test",
+        stack: ['js'],
+    },
+    {
+        primary: 'npm',
         id: "spawn-loading-test",
         description: "Node.js test with spawning child processes and a control panel via a web interface.",
         urlGithub: "https://github.com/maxzz/spawn-loading-test",
