@@ -269,13 +269,13 @@ export const projectsUx: ProjectType[] = [
     },
     {
         primary: 'UX',
-        id: "maxzz",
+        id: "maxzz-readme",
         description: "maxzz/maxzz is a special repository. This README.md will appear on your public profile.",
         urlGithub: "https://github.com/maxzz/maxzz",
         urlDemo: "https://github.com/maxzz",
         urlPreview: images.maxzz,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-frontpage",
-        stack: ['github', 'ts'],
+        stack: ['github actions', 'ts'],
     },
     {
         primary: 'UX',
