@@ -21,7 +21,13 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
     function OpenFromGithub(event: MouseEvent) {
         if (event.ctrlKey) {
             event.stopPropagation();
-            window.open(`${urlGithub}/blob/master/package.json`, '_blank');
+            event.preventDefault();
+            const link = document.querySelector('.a111') as HTMLAnchorElement;
+            console.log('link', link);
+            
+            link?.click();
+            //window.open(`${urlGithub}/blob/master/package.json`, '_blank');
+            
         }
     }
     return (
@@ -32,14 +38,16 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
                 </a>
             </ButtonShell>
 
-            <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open source code on GitHub\nCtrl+click to open project.json" onClick={OpenFromGithub}>
+            <ButtonShell className={inListItem ? "px-px" : "p-1"} title={"Open source code on GitHub\nCtrl+click to open project.json"} onClick={OpenFromGithub}>
+                <a href={`${urlGithub}/blob/master/package.json`} className="a111 hidden" target="_blank" aria-label="Open project.json on GitHub">
+                </a>
                 <a href={urlGithub} target="_blank" aria-label="Open source code on GitHub">
                     <IconGithubLogo className="w-4 h-4 fill-current" />
                 </a>
             </ButtonShell>
 
             {localPath &&
-                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive. (Ctrl+click to copy in Unix format)\n${localPath}`}>
+                <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path on local hard drive.\nCtrl+click to copy in Unix format\n${localPath}`}>
                     <ButtonCopy label={<IconHardDrive className="w-4 h-4 fill-current" />} text={localPath} />
                 </ButtonShell>
             }
