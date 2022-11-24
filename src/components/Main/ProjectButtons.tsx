@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, MouseEvent } from "react";
 import { ProjectType } from "@/store/store-types";
 import { classNames } from "@/utils/classnames";
 import { IconGithubLogo, IconHardDrive, IconTv } from "../UI/UIIcons";
@@ -18,6 +18,12 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
 
 export function ProjectButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
+    function OpenFromGithub(event: MouseEvent) {
+        if (event.ctrlKey) {
+            event.stopPropagation();
+            window.open(`${urlGithub}/blob/master/package.json`, '_blank');
+        }
+    }
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
@@ -26,7 +32,7 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
                 </a>
             </ButtonShell>
 
-            <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open source code on GitHub">
+            <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open source code on GitHub\nCtrl+click to open project.json" onClick={OpenFromGithub}>
                 <a href={urlGithub} target="_blank" aria-label="Open source code on GitHub">
                     <IconGithubLogo className="w-4 h-4 fill-current" />
                 </a>
