@@ -1,6 +1,6 @@
 import { Fragment, HTMLAttributes, ReactNode } from "react";
 import { classNames } from "@/utils/classnames";
-import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from '../UI/UIIcons';
+import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from '../UI/Icons/UIIcons';
 
 const stackComponents: Record<string, ReactNode> = {
     react: <IconReact className="w-4 h-4" title="React" />,

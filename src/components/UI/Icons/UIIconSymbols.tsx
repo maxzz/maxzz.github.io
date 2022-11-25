@@ -1,5 +1,5 @@
-import { classNames } from "@/utils/classnames";
 import { HTMLAttributes, SVGAttributes, SVGProps } from "react";
+import { classNames } from "@/utils/classnames";
 
 function DefNavIcons() {
     return (<>

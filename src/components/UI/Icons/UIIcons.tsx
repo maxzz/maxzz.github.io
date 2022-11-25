@@ -1,5 +1,5 @@
-import { classNames } from "@/utils/classnames";
 import { HTMLAttributes, SVGProps } from "react";
+import { classNames } from "@/utils/classnames";
 
 export function IconAppLogo({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (

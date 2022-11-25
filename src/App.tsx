@@ -1,7 +1,7 @@
 import { Section1_Header } from './components/Section1_Header';
 import { Section2_Main } from './components/Section2_Main';
 import { Section3_Footer } from './components/Section3_Footer';
-import { UISymbolDefs } from './components/UI/UIIconSymbols';
+import { UISymbolDefs } from './components/UI/Icons/UIIconSymbols';
 
 function PopperRoot() {
     return (

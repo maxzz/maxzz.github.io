@@ -1,5 +1,5 @@
 import React from "react";
-import { IconExperiments } from "./UI/UIIcons";
+import { IconExperiments } from "./UI/Icons/UIIcons";
 import { a, easings, useSpring } from "@react-spring/web";
 import { UIViewSelector } from "./UI/UIViewSelector";
 
