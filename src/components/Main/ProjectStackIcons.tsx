@@ -1,7 +1,7 @@
 import { Fragment, HTMLAttributes, ReactNode } from "react";
 import { classNames } from "@/utils/classnames";
 import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from '../UI/Icons/UIIcons';
-import { IconStitches } from "../UI/Icons/UIIconSymbols";
+import { IconReactSpring, IconStitches } from "../UI/Icons/UIIconSymbols";
 
 const stackComponents: Record<string, ReactNode> = {
     react: <IconReact className="w-4 h-4" title="React" />,
@@ -11,6 +11,7 @@ const stackComponents: Record<string, ReactNode> = {
     npm: <IconNpm className="w-4 text-sky-700" title="npm" />,
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
     stitches: <IconStitches className="w-3 h-3 text-sky-700" title="@stitches/react" />,
+    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700" title="@react-spring/web" />,
 };
 
 const stackComponentsNew: Record<string, ReactNode> = {
@@ -21,6 +22,7 @@ const stackComponentsNew: Record<string, ReactNode> = {
     npm: <IconStackNpmLines className="w-4 h-4" title="npm" />,
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
     stitches: <IconStitches className="w-3 h-3 text-sky-700" title="@stitches/react" />,
+    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700" title="@react-spring/web" />,
 };
 
 export function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
