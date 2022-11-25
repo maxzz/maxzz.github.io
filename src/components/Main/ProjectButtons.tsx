@@ -48,7 +48,7 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
         }
     }
     */
-    //TODO: open iframe and run clean up script there
+    //TODO: open iframe and run clean up script there (but it still github frame w/ limited control for us)
     //TODO: prebuild github data during this app build
 
     return (
