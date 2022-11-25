@@ -24,7 +24,7 @@ const stackComponentsNew: Record<string, ReactNode> = {
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
     stitches: <IconStitches className="w-3 h-3 text-sky-700" title="@stitches/react" />,
     'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700" title="@react-spring/web" />,
-    'react-use-gesture': <IconManualMode className="w-3 h-3 stroke-2 text-sky-700" title="@use-gesture/react" />,
+    'react-use-gesture': <IconManualMode className="w-3 h-3 text-sky-700" title="@use-gesture/react" />,
 };
 
 export function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {

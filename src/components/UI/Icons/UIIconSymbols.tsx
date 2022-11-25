@@ -63,7 +63,7 @@ export function UISymbolDefs() {
 
 export function IconManualMode({ title, className, ...rest }: HTMLAttributes<SVGSVGElement> & SVGAttributes<SVGSVGElement>) {
     return (
-        <svg className={classNames("fill-none stroke-current stroke-1", className)} {...rest}>
+        <svg className={classNames("fill-none stroke-current", className)} {...rest}>
             {title && <title>{title}</title>}
             <use xlinkHref="#icon-manual-mode" /> {/* one hand */}
         </svg>
