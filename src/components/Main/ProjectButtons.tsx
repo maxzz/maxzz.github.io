@@ -18,17 +18,31 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
 
 export function ProjectButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
-    function OpenFromGithub(event: MouseEvent) {
+    function OpenFromGithub0(event: MouseEvent) {
         if (event.ctrlKey) {
             event.stopPropagation();
             event.preventDefault();
-            
+
             // const link = document.querySelector('.a111') as HTMLAnchorElement;
             // console.log('link', link);
             // link?.click();
 
             window.open(`${urlGithub}/blob/master/package.json`, '_blank');
-            
+        }
+    }
+    async function OpenFromGithub(event: MouseEvent) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        try {
+            const body = await fetch(`${urlGithub}/blob/master/package.json`);
+            if (!body.ok) {
+                throw new Error(body.statusText);
+            }
+            const obj = await body.json();
+            console.log('obj', obj);
+        } catch (error) {
+            console.log(error);
         }
     }
     return (
