@@ -20,7 +20,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/simple-border-radius22",
         urlPreview: images.simpleBorderRadius,
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius22",
-        stack: ["react", "jotai", "tw", "stitches", "react-use-gesture"],
+        stack: ["react", "jotai", "tw", "stitches", "react-spring", "react-use-gesture"],
     },
     {
         primary: 'UX',
