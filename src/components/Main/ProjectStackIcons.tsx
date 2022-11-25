@@ -11,19 +11,19 @@ const stackComponents: Record<string, ReactNode> = {
     npm: <IconNpm className="w-4 text-sky-700" title="npm" />,
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
     stitches: <IconStitches className="w-3 h-3 text-sky-700" title="@stitches/react" />,
-    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700" title="@react-spring/web" />,
+    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700/70" title="@react-spring/web" />,
     'react-use-gesture': <IconManualMode className="w-3 h-3 text-sky-700" title="@use-gesture/react" />,
 };
 
 const stackComponentsNew: Record<string, ReactNode> = {
-    react: <IconStackReact className="w-4 h-4" title="React" />,
+    react: <IconStackReact className="w-3.5 h-3.5" title="React" />,
     jotai: <IconStackJotai className="w-3.5 h-3.5" title="Jotai" />,
-    vue: <IconStackVue className="w-4 h-4" title="Vue" />,
+    vue: <IconStackVue className="w-3.5 h-3.5" title="Vue" />,
     tw: <IconStackTailwind className="w-4 h-4" title="Tailwind" />,
     npm: <IconStackNpmLines className="w-4 h-4" title="npm" />,
     js: <IconJs className="w-3 h-3 text-sky-700" title="JS" />,
     stitches: <IconStitches className="w-3 h-3 text-sky-700" title="@stitches/react" />,
-    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700" title="@react-spring/web" />,
+    'react-spring': <IconReactSpring className="w-3 h-3 text-sky-700/70" title="@react-spring/web" />,
     'react-use-gesture': <IconManualMode className="w-3 h-3 text-sky-700" title="@use-gesture/react" />,
 };
 

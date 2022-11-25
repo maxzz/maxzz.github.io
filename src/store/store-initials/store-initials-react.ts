@@ -276,7 +276,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://github.com/maxzz",
         urlPreview: images.maxzz,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-frontpage",
-        stack: ['github actions', 'ts'],
+        stack: ['ts,', 'github actions,', 'readme'],
     },
     {
         primary: 'UX',
@@ -286,7 +286,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io",
         urlPreview: images.maxzzGithubIo,
         localPath: "C:/Y/w/2-web/7-my-webpages/maxzz",
-        stack: ['github', 'ts'],
+        stack: ['ts,', 'github,', 'this dir'],
     },
 ];
 
