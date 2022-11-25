@@ -10,7 +10,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/color-names22",
         urlPreview: images.colorNames22,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
-        stack: ["react", "jotai", "tw"],
+        stack: ["react", "jotai", "tw", "stitches"],
     },
     {
         primary: 'UX',
@@ -20,6 +20,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/simple-border-radius22",
         urlPreview: images.simpleBorderRadius,
         localPath: "C:/Y/w/2-web/7-my-webpages/simple-border-radius22",
+        stack: ["react", "jotai", "tw", "stitches", "react-use-gesture"],
     },
     {
         primary: 'UX',

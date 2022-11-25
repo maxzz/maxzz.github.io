@@ -19,9 +19,23 @@ function DefNavIcons() {
 
 function DefApps() {
     return (<>
+        {/* use-gesture */}
         <symbol id="icon-manual-mode" viewBox="0 0 24 24">
             <path d="M22.52 12.93c-.45-1.22-2.45-.96-3.97.02-.61.4-1.13.65-2.59.95-.64 0-.78-.68-.66-1.35l1.47-8.19c.42-2.08-2.14-2.84-2.65-.7l-1.27 7.12c-.64 1.78-.88 0-.88 0l-.35-7.67c0-2.78-2.73-2.95-2.73 0l.32 7.01c.14 2.77-.52 1.21-.52.99L7.4 4.87c-.62-2.63-3.07-1.95-2.63.44l1.19 5.56c.2 1.29-.81.68-.99.37L3.8 8.55c-.97-2.05-3.05-1.23-2.38.8l1.95 4.98c.19.54.33 1.09.42 1.66 0 1.4.91 4.26 1.65 5.01a6.87 6.87 0 0 0 9.73 0c1.8-2.02 2.66-2.87 3.37-4.42 0 0 1.82-1.53 4.08-2.81.2-.12-.11-.86-.11-.86Z" />
         </symbol>
+
+        {/* stitches */}
+        <symbol id="icon-stitches" viewBox="0 0 35 35">
+            <circle cx="17.5" cy="17.5" r="14.5" stroke="currentColor" stroke-width="2" />
+            <path d="m12.82 31.32 19.05-11" stroke="currentColor" />
+            <path d="m3.32 14.87 19.05-11" stroke="currentColor" />
+            <path d="m8.65 29.1 17.32-10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="m9.22 16.08 17.32-10" stroke="currentColor" stroke-linecap="round" />
+            <path d="m13.23 14.23 9.28 6.88" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="m16.7 12.23 9.27 6.88" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="m9.22 16.08 9.83 7.03" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+
     </>);
 }
 
@@ -34,6 +48,25 @@ export function UISymbolDefs() {
                 {DefNavIcons()}
                 {DefApps()}
             </defs>
+        </svg>
+    );
+}
+
+// DefApps
+
+export function IconManualMode({ title, className, ...rest }: HTMLAttributes<SVGSVGElement> & SVGAttributes<SVGSVGElement>) {
+    return (
+        <svg className={classNames("fill-none stroke-current stroke-[.6]", className)} {...rest}>
+            {title && <title>{title}</title>}
+            <use xlinkHref="#icon-manual-mode" /> {/* one hand */}
+        </svg>
+    );
+}
+export function IconStitches({ title, className, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
+    return (
+        <svg className={classNames("fill-none stroke-current", className)} {...rest}>
+            {title && <title>{title}</title>}
+            <use xlinkHref="#icon-stitches" />
         </svg>
     );
 }
@@ -63,17 +96,6 @@ export function IconHardDrive({ title, className, ...rest }: HTMLAttributes<SVGS
         <svg className={classNames("fill-current", className)} {...rest}>
             {title && <title>{title}</title>}
             <use xlinkHref="#icon-hard-drive" />
-        </svg>
-    );
-}
-
-// DefApps
-
-export function IconManualMode({ title, className, ...rest }: HTMLAttributes<SVGSVGElement> & SVGAttributes<SVGSVGElement>) {
-    return (
-        <svg className={classNames("fill-none stroke-current stroke-[.6]", className)} {...rest}>
-            {title && <title>{title}</title>}
-            <use xlinkHref="#icon-manual-mode" /> {/* one hand */}
         </svg>
     );
 }
