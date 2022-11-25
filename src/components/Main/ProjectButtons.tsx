@@ -18,7 +18,7 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
 
 export function ProjectButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
-    function OpenFromGithub0(event: MouseEvent) {
+    function OpenFromGithub(event: MouseEvent) {
         if (event.ctrlKey) {
             event.stopPropagation();
             event.preventDefault();
@@ -30,7 +30,9 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
             window.open(`${urlGithub}/blob/master/package.json`, '_blank');
         }
     }
-    async function OpenFromGithub(event: MouseEvent) {
+
+    /*
+    async function OpenFromGithub2(event: MouseEvent) {
         event.stopPropagation();
         event.preventDefault();
 
@@ -42,9 +44,13 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
             const obj = await body.json();
             console.log('obj', obj);
         } catch (error) {
-            console.log(error);
+            console.log('tm', error);
         }
     }
+    */
+    //TODO: open iframe and run clean up script there
+    //TODO: prebuild github data during this app build
+
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
