@@ -66,6 +66,7 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/react-d3",
         urlPreview: images.reactD3,
         localPath: "C:/Y/w/2-web/1-frameworks/5-d3/react-d3-red3",
+        stack: ["react", "zustand", "tw", "d3"],
     },
     {
         primary: 'UX',
