@@ -1,10 +1,10 @@
 import { atom, Getter, PrimitiveAtom } from "jotai";
-import debounce from "@/utils/debounce";
+import { debounce } from "@/utils/debounce";
 import { Atomize, atomsFamily, atomWithCallback } from "@/hooks/atomsX";
 
 type UIOptions = {
     showType: ShowType;
-}
+};
 
 export const enum ShowType {
     list = 0,
@@ -63,4 +63,4 @@ export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSec
 
 export const uiOptionsAtoms: Atomize<UIOptions> = {
     showTypeAtom: atomWithCallback(Storage.initialData.uiOptions.showType, Storage.save),
-}
+};
