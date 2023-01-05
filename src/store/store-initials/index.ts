@@ -2,6 +2,7 @@ import { SectionType } from "../store-types";
 import { projectsDp } from "./store-initials-dp";
 import { projectsNpm } from "./store-initials-npm";
 import { projectsUx } from "./store-initials-react";
+import { projectsSu } from "./store-initials-stacks";
 import { projectsVue } from "./store-initials-vue";
 
 //TODO: add C:\Y\w\2-web\0-dp\utils\sftp-shell
@@ -23,5 +24,9 @@ export const sections: SectionType[] = [
     {
         name: 'UX, vue',
         projects: projectsVue,
+    },
+    {
+        name: 'Stack',
+        projects: projectsSu,
     },
 ];
