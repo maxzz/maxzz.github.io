@@ -24,6 +24,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "srt-from-vtt",
+        description: "Utility to convert .vtt files to .srt format.",
+        urlGithub: "https://github.com/maxzz/srt-from-vtt",
+        urlDemo: "https://github.com/maxzz/srt-from-vtt", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/srt-from-vtt",
+        stack: ['ts'],
+    },
+    {
+        primary: 'npm',
         id: "gluehtml",
         description: "Glue HTML local external files into solid HTML.",
         urlGithub: "https://www.npmjs.com/package/gluehtml",
@@ -131,37 +141,5 @@ export const projectsNpm: ProjectType[] = [
         urlPreview: images.npm,
         localPath: "cannot find the local project anymore",
         stack: ['python'],
-    },
-
-    // new projects
-    {
-        primary: 'npm',
-        id: "wmax-vanilla-gulp",
-        description: "Build with gulp",
-        urlGithub: "https://github.com/maxzz/wmax-vanilla-gulp",
-        urlDemo: "https://github.com/maxzz/wmax-vanilla-gulp", // no demo
-        urlPreview: images.npm,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/wmax-vanilla-gulp",
-        stack: ['ts'],
-    },
-    {
-        primary: 'npm',
-        id: "wmax-vanilla-vite",
-        description: "Build with Vite",
-        urlGithub: "https://github.com/maxzz/wmax-vanilla-vite",
-        urlDemo: "https://github.com/maxzz/wmax-vanilla-vite", // no demo
-        urlPreview: images.npm,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/wmax-vanilla-vite",
-        stack: ['ts'],
-    },
-    {
-        primary: 'npm',
-        id: "srt-from-vtt",
-        description: "Utility to convert .vtt files to .srt format.",
-        urlGithub: "https://github.com/maxzz/srt-from-vtt",
-        urlDemo: "https://github.com/maxzz/srt-from-vtt", // no demo
-        urlPreview: images.npm,
-        localPath: "C:/Y/w/1-node/1-utils/srt-from-vtt",
-        stack: ['ts'],
     },
 ];
