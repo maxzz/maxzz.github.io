@@ -21,7 +21,7 @@ export function ButtonCopy({ label, text }: { label: ReactNode; text: string; })
                 navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\'));
                 setShowNotice(true);
             }}
-            aria-label="Copy project path"
+            aria-label="Copy the project path"
         >
             <MountCopyNotice show={showNotice} setShow={setShowNotice} items={[
                 label,
