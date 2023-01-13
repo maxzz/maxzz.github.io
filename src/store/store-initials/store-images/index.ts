@@ -16,3 +16,6 @@ export * from './images-dp';
 
 // ux, vue
 export * from './images-vue';
+
+// stack
+export * from './images-stack';
