@@ -26,3 +26,6 @@ function App() {
 }
 
 export default App;
+
+//TODO: optimize icons to local font
+//TODO: load project preview image in show grid mode only for open section

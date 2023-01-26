@@ -44,4 +44,3 @@ export function Section2_Main() {
     );
 }
 
-//TODO: optimize icons to local font
