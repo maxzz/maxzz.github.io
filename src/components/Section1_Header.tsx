@@ -8,23 +8,28 @@ const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextS
 function Title() {
     const styles = useSpring({
         from: {
-            'scaley': '500%',
+            'scaley': '10%',
+            'scalex': '50%',
         },
         to: [
-            { 'scaley': '100%' },
-            { 'scaley': '120%' },
-            { 'scaley': '100%' },
+            { 'scaley': '100%', config: { duration: 200 }, },
+            { 'scaley': '400%', },
+            { 'scaley': '100%', },
+            { 'scalex': '100%', },
         ],
+        //config: { duration: 2000, },
     });
     return (
-        <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke }}>
-            Directory of ...
-        </a.div>
+        <div className="overflow-hidden">
+            <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke, transformOrigin: 'left center' }}>
+                Directory of ...
+            </a.div>
+        </div>
     );
 }
 
 function Notes() {
-    const styles = useSpring({ from: { x: -200, opacity: 0 }, x: 0, opacity: 1, delay: 4000, config: { duration: 4000, easing: easings.easeOutBounce } });
+    const styles = useSpring({ from: { x: -200, opacity: 0 }, x: 0, opacity: 1, delay: 900, config: { duration: 1700, easing: easings.easeOutBounce } });
     return (
         <a.div style={styles}>
             <div className="translate-y-px">
