@@ -29,7 +29,15 @@ function Title() {
 }
 
 function Notes() {
-    const styles = useSpring({ from: { x: -200, opacity: 0 }, x: 0, opacity: 1, delay: 900, config: { duration: 1700, easing: easings.easeOutBounce } });
+    const styles = useSpring({
+        from: { x: -200, opacity: 0 },
+        to: {
+            x: 0,
+            opacity: 1,
+        },
+        delay: 900,
+        config: { duration: 1700, easing: easings.easeOutBounce },
+    });
     return (
         <a.div style={styles}>
             <div className="translate-y-px">
