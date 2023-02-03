@@ -30,13 +30,11 @@ function Title() {
 
 function Notes() {
     const styles = useSpring({
-        from: { x: -200, opacity: 0 },
-        to: {
-            x: 0,
-            opacity: 1,
-        },
-        delay: 900,
-        config: { duration: 1700, easing: easings.easeOutBounce },
+        from: { x: 400, opacity: 0, scaley: 0, transformOrigin: 'left bottom' },
+        to: [
+            { x: 0, opacity: 1, scaley: .2, delay: 1000, config: { duration: 200 }, },
+            { scaley: 1, delay: 200, config: { duration: 1200, easing: easings.easeOutBounce }, },
+        ],
     });
     return (
         <a.div style={styles}>
@@ -47,7 +45,6 @@ function Notes() {
                 </a>
             </div>
         </a.div>
-
     );
 }
 
