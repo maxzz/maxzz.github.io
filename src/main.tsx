@@ -24,3 +24,5 @@ ReactDOM.render(
     document.getElementById('root')
 );
 /**/
+
+//TODO: show project preview on hover when view items as list selected
