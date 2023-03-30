@@ -24,6 +24,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "forms-react-hook-form",
+        description: "React forms with react-hook-form",
+        urlGithub: "https://github.com/maxzz/forms-react-hook-form",
+        urlDemo: "https://maxzz.github.io/forms-react-hook-form",
+        urlPreview: images.formsReactHookForm,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form",
+        stack: ['react', 'ts', 'css', 'react-hook-form'],
+    },
+    {
+        primary: 'stack',
         id: "ui-vanilla-dropdown",
         description: "Vanilla JS dropdown menu",
         urlGithub: "https://github.com/maxzz/ui-vanilla-dropdown",
@@ -40,7 +50,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://maxzz.github.io/ui-pie-menu", // no demo
         urlPreview: images.uiPieMenu,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/ui-pie-menu",
-        stack: ['react', 'ts', 'sass'],
+        stack: ['react', 'valtio', 'ts', 'sass'],
     },
     {
         primary: 'stack',
