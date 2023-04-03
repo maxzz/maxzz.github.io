@@ -5,7 +5,7 @@ console.log('styles', styles);
 
 export function Star({ ...rest }: HTMLAttributes<HTMLElement>) {
     return (
-        <div className={`${styles.gift__star} w-4 h-4 [--dur:2.5s]`} {...rest}>
+        <div className={`${styles.star} w-4 h-4 [--dur:2.5s]`} {...rest}>
         </div>
     );
 }

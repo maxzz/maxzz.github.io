@@ -1,4 +1,4 @@
-.gift__star {
+.star {
     position: absolute;
     animation: starRotateCW var(--dur) ease-in infinite;
     background-color: #fff;
