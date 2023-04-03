@@ -78,7 +78,7 @@ export function Section1_Header() {
 
             <div className="relative">
                 <UIViewSelector />
-                <div className="absolute -right-2 -top-3 "><Star /></div>
+                <div className="absolute right-4 -top-1 "><Star /></div>
             </div>
 
         </header>
