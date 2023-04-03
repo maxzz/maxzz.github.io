@@ -2,6 +2,7 @@ import React from "react";
 import { IconExperiments } from "./UI/Icons";
 import { a, easings, useSpring } from "@react-spring/web";
 import { UIViewSelector } from "./UI/UIViewSelector";
+import { Star } from "./UI/Icons/Star";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 };
 
@@ -75,7 +76,11 @@ export function Section1_Header() {
                 <Notes />
             </div>
 
-            <UIViewSelector />
+            <div className="relative">
+                <UIViewSelector />
+                <div className="absolute -right-2 -top-3 "><Star /></div>
+            </div>
+
         </header>
     );
 }

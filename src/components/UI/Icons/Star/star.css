@@ -1,0 +1,62 @@
+.gift {
+    --dur: 9.5s;
+    position: relative;
+    width: 18em;
+    height: 18em;
+}
+.gift__star {
+    position: absolute;
+}
+.gift__star {
+    animation: starRotateCW var(--dur) ease-in infinite;
+    background-color: var(--white1);
+    clip-path: polygon(50% 0, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0 50%, 35% 35%);
+    transform: scale(0);
+}
+.gift__star--2,
+.gift__star--4,
+.gift__star--5 {
+    animation-name: starRotateCCW;
+}
+.gift__star--1 {
+    animation-delay: calc(var(--dur) * 0.5);
+    top: 0;
+    left: 12.5em;
+    width: 1.5em;
+    height: 1.5em;
+}
+.gift__star--2 {
+    animation-delay: calc(var(--dur) * 0.125);
+    top: 2em;
+    left: 10em;
+    width: 1.75em;
+    height: 1.75em;
+}
+
+/* Animations */
+@keyframes starRotateCW {
+    from {
+        transform: scale(0) rotate(0);
+    }
+    25% {
+        animation-timing-function: ease-out;
+        transform: scale(1) rotate(0.25turn);
+    }
+    50%,
+    to {
+        transform: scale(0) rotate(0.5turn);
+    }
+}
+@keyframes starRotateCCW {
+    from {
+        transform: scale(0) rotate(0);
+    }
+    25% {
+        animation-timing-function: ease-out;
+        transform: scale(1) rotate(-0.25turn);
+    }
+    50%,
+    to {
+        transform: scale(0) rotate(-0.5turn);
+    }
+}
