@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import { a, easings, useTransition } from "@react-spring/web";
-import { IconCheckFrameless } from '../UI/Icons/UIIcons';
+import { IconCheckFrameless } from '../UI/Icons';
 
 function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v: boolean) => void; items: ReactNode[]; }) {
     const transitions = useTransition(Number(show), {
