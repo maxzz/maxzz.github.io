@@ -34,6 +34,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "forms-react-hook-form-radix",
+        description: "React forms with react-hook-form",
+        urlGithub: "https://github.com/maxzz/forms-react-hook-form-radix",
+        urlDemo: "https://maxzz.github.io/forms-react-hook-form-radix", // no demo yet
+        urlPreview: images.formsReactHookForm, // no img yet
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form-radix",
+        stack: ['react', 'jotai', 'valtio', 'tw', 'react-hook-form', 'radix-ui'],
+    },
+    {
+        primary: 'stack',
         id: "ui-vanilla-dropdown",
         description: "Vanilla JS dropdown menu",
         urlGithub: "https://github.com/maxzz/ui-vanilla-dropdown",
