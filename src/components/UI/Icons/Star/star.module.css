@@ -20,3 +20,25 @@
         transform: scale(0) rotate(0.5turn);
     }
 }
+@keyframes starsGroup {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    97% {
+        animation-timing-function: ease-in;
+        transform: scale(1);
+        opacity: 1;
+    }
+    98% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
