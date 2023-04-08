@@ -3,6 +3,24 @@ import { useMeasure } from 'react-use';
 import { a, config, useSpring } from '@react-spring/web';
 import { disableHiddenChildren } from '@/utils/disableHiddenChildren';
 
+//https://www.matuzo.at/blog/2023/100daysof-day73 'Day 73: size container features'
+//https://www.stefanjudis.com/snippets/how-to-animate-height-with-css-grid 'How to animate an element's height with CSS grid'
+/*
+.grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-in-out;
+}
+
+.grid.open {
+  grid-template-rows: 1fr;
+}
+
+.grid-inner {
+  overflow: hidden;
+}
+*/
+
 export function UIAccordion({ open, children }: { open: boolean, children: React.ReactNode; }) {
     const [refFn, { height, top }] = useMeasure<HTMLDivElement>();
     const [refEl, setEl] = useState<HTMLDivElement>();
