@@ -38,9 +38,19 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         description: "React forms with react-hook-form",
         urlGithub: "https://github.com/maxzz/forms-react-hook-form-radix",
         urlDemo: "https://maxzz.github.io/forms-react-hook-form-radix", // no demo yet
-        urlPreview: images.formsReactHookForm, // no img yet
+        urlPreview: images.formsReactHookFormRadix,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form-radix",
         stack: ['react', 'jotai', 'valtio', 'tw', 'react-hook-form', 'radix-ui'],
+    },
+    {
+        primary: 'stack',
+        id: "reactivity-valtio-jotai",
+        description: "React state management with valtio and jotai libraries",
+        urlGithub: "https://github.com/maxzz/reactivity-valtio-jotai",
+        urlDemo: "https://maxzz.github.io/reactivity-valtio-jotai", // no demo yet
+        urlPreview: images.reactivityValtioJotai, // no img yet
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/reactivity-valtio-jotai",
+        stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
     {
         primary: 'stack',
