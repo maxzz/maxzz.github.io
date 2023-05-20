@@ -58,7 +58,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         description: "Stanford SRP protocol playground",
         urlGithub: "https://github.com/maxzz/srp-play-tssrp6a",
         urlDemo: "https://maxzz.github.io/srp-play-tssrp6a", // no demo yet
-        urlPreview: images.reactivityValtioJotai, // no img yet
+        urlPreview: images.srpPlayTssrp6a, // no img yet
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/srp-play-tssrp6a",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
