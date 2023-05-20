@@ -64,6 +64,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "workers-comlink",
+        description: "React + Worker + Vite using comlink",
+        urlGithub: "https://github.com/maxzz/workers-comlink",
+        urlDemo: "https://maxzz.github.io/workers-comlink", // no demo yet
+        urlPreview: images.reactivityValtioJotai, // no img yet
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/workers-comlink",
+        stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
+    },
+    {
+        primary: 'stack',
         id: "ui-vanilla-dropdown",
         description: "Vanilla JS dropdown menu",
         urlGithub: "https://github.com/maxzz/ui-vanilla-dropdown",
