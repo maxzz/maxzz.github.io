@@ -6,6 +6,7 @@ import formsReactHookForm from "@/assets/pages/stack/forms-react-hook-form,2023-
 import formsReactHookFormRadix from "@/assets/pages/stack/forms-react-hook-form-radix,2023-04-27_17-57-52,two.png?preset=thumbnail";
 import reactivityValtioJotai from "@/assets/pages/stack/reactivity-valtio-jotai,2023-04-27_17-40-25.png?preset=thumbnail";
 import srpPlayTssrp6a from "@/assets/pages/stack/srp-play-tssrp6a,2023-05-20_14-13-51.png?preset=thumbnail";
+import workersComlink from "@/assets/pages/stack/workers-comlink,2023-05-20_14-03-38.png?preset=thumbnail";
 import uiVanillaDropdown from "@/assets/pages/stack/ui-vanilla-dropdown,2023-01-13_14-54-42.png?preset=thumbnail";
 import electronReact from "@/assets/pages/stack/electron-react,2023-02-17_16-25-10.png?preset=thumbnail";
 import uiPieMenu from "@/assets/pages/stack/ui-pie-menu,2023-02-24_16-12-23.png?preset=thumbnail";
@@ -18,6 +19,7 @@ export {
     formsReactHookFormRadix,
     reactivityValtioJotai,
     srpPlayTssrp6a,
+    workersComlink,
     uiVanillaDropdown,
     electronReact,
     uiPieMenu,

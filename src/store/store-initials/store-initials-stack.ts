@@ -37,7 +37,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         id: "forms-react-hook-form-radix",
         description: "React forms with react-hook-form",
         urlGithub: "https://github.com/maxzz/forms-react-hook-form-radix",
-        urlDemo: "https://maxzz.github.io/forms-react-hook-form-radix", // no demo yet
+        urlDemo: "https://maxzz.github.io/forms-react-hook-form-radix",
         urlPreview: images.formsReactHookFormRadix,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form-radix",
         stack: ['react', 'jotai', 'valtio', 'tw', 'react-hook-form', 'radix-ui'],
@@ -47,8 +47,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         id: "reactivity-valtio-jotai",
         description: "React state management with valtio and jotai libraries",
         urlGithub: "https://github.com/maxzz/reactivity-valtio-jotai",
-        urlDemo: "https://maxzz.github.io/reactivity-valtio-jotai", // no demo yet
-        urlPreview: images.reactivityValtioJotai, // no img yet
+        urlDemo: "https://maxzz.github.io/reactivity-valtio-jotai",
+        urlPreview: images.reactivityValtioJotai,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/reactivity-valtio-jotai",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
@@ -57,8 +57,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         id: "srp-play-tssrp6a",
         description: "Stanford SRP protocol playground",
         urlGithub: "https://github.com/maxzz/srp-play-tssrp6a",
-        urlDemo: "https://maxzz.github.io/srp-play-tssrp6a", // no demo yet
-        urlPreview: images.srpPlayTssrp6a, // no img yet
+        urlDemo: "https://maxzz.github.io/srp-play-tssrp6a",
+        urlPreview: images.srpPlayTssrp6a,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/srp-play-tssrp6a",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
@@ -67,8 +67,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         id: "workers-comlink",
         description: "React + Worker + Vite using comlink",
         urlGithub: "https://github.com/maxzz/workers-comlink",
-        urlDemo: "https://maxzz.github.io/workers-comlink", // no demo yet
-        urlPreview: images.reactivityValtioJotai, // no img yet
+        urlDemo: "https://maxzz.github.io/workers-comlink",
+        urlPreview: images.workersComlink,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/workers-comlink",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
@@ -86,8 +86,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         primary: 'stack',
         id: "ui-pie-menu",
         description: "Pie menu with SASS",
-        urlGithub: "https://github.com/maxzz/ui-pie-menu", // no demo
-        urlDemo: "https://maxzz.github.io/ui-pie-menu", // no demo
+        urlGithub: "https://github.com/maxzz/ui-pie-menu",
+        urlDemo: "https://maxzz.github.io/ui-pie-menu",
         urlPreview: images.uiPieMenu,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/ui-pie-menu",
         stack: ['react', 'valtio', 'ts', 'sass'],
