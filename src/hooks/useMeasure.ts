@@ -42,6 +42,4 @@ function useMeasure<E extends Element = Element>(): UseMeasureResult<E> {
     return [ref, rect];
 }
 
-export default isBrowser && typeof (window as any).ResizeObserver !== 'undefined'
-    ? useMeasure
-    : ((() => [noop, defaultState]) as typeof useMeasure);
+export default isBrowser ? useMeasure : ((() => [noop, defaultState]) as typeof useMeasure);
