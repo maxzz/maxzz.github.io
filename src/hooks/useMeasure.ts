@@ -31,13 +31,12 @@ function useMeasure<E extends Element = Element>(): UseMeasureResult<E> {
     );
 
     useIsomorphicLayoutEffect(() => {
-        if (!element) {
-            return;
+        if (element) {
+            observer.observe(element);
+            return () => {
+                observer.disconnect();
+            };
         }
-        observer.observe(element);
-        return () => {
-            observer.disconnect();
-        };
     }, [element]);
 
     return [ref, rect];
