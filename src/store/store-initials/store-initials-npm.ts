@@ -142,4 +142,24 @@ export const projectsNpm: ProjectType[] = [
         localPath: "cannot find the local project anymore",
         stack: ['python'],
     },
+    {
+        primary: 'npm',
+        id: "ts-sjcl",
+        description: "Stanford Javascript Crypto Library (SJCL) upgraded to Typescript and ES6 module format.",
+        urlGithub: "https://github.com/maxzz/ts-sjcl",
+        urlDemo: "https://github.com/maxzz/ts-sjcl", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/ts-sjcl",
+        stack: ['ts'],
+    },
+    {
+        primary: 'npm',
+        id: "ts-srpclient",
+        description: "Secure Remote Password library upgraded to Typescript and ES6 module format.",
+        urlGithub: "https://github.com/maxzz/ts-srpclient",
+        urlDemo: "https://github.com/maxzz/ts-srpclient", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/ts-srpclient",
+        stack: ['ts'],
+    },
 ];

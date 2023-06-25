@@ -104,13 +104,43 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "electron-window-monitor",
+        description: "Electron app to test nodejs napi plugins",
+        urlGithub: "https://github.com/maxzz/electron-window-monitor",
+        urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/electron-window-monitor",
+        stack: ['react', 'tw', 'ts', 'electron'],
+    },
+    {
+        primary: 'stack',
         id: "electron-vite-plugin-e",
         description: "Electron app with vite-plugin-electron, slow but vite compliant",
         urlGithub: "https://github.com/maxzz/electron-vite-plugin-e",
         urlDemo: "https://github.com/maxzz/electron-vite-plugin-e", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm, // no img
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/electron-vite-plugin-e",
         stack: ['react', 'ts', 'electron'],
+    },
+    {
+        primary: 'stack',
+        id: "react-spring-message-hub",
+        description: "Message Toaster with @react-spring/web",
+        urlGithub: "https://github.com/maxzz/react-spring-message-hub",
+        urlDemo: "https://github.com/maxzz/react-spring-message-hub", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-message-hub",
+        stack: ['react', 'ts'],
+    },
+    {
+        primary: 'stack',
+        id: "react-spring-transition-chain",
+        description: "@react-spring/web animations chain",
+        urlGithub: "https://github.com/maxzz/react-spring-transition-chain",
+        urlDemo: "https://github.com/maxzz/react-spring-transition-chain", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-transition-chain",
+        stack: ['react', 'ts'],
     },
     {
         primary: 'stack',
