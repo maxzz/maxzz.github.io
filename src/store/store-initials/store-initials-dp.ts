@@ -19,7 +19,7 @@ export const projectsDp: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/pmac",
         urlDemo: "https://maxzz.github.io/pmac",
         urlPreview: images.npm,
-        localPath: "C:/Y/w/2-web/0-dp/utils/pm-domain-credentials-switch",
+        localPath: "C:/Y/w/2-web/0-dp/utils/pmac",
         stack: ['npm', 'ts', 'tw'],
     },
     {
@@ -80,6 +80,16 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/test-pm-domain-logins22",
         urlPreview: images.testPmDomainLogins22,
         localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins22",
+        stack: ['react', 'jotai', 'tw'],
+    },
+    {
+        primary: 'DP',
+        id: "pmat-manual-mode",
+        description: "Prototype of the PMAT manual mode editor.",
+        urlGithub: "https://github.com/maxzz/pmat-manual-mode",
+        urlDemo: "https://maxzz.github.io/pmat-manual-mode", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "c:/Y/w/2-web/0-dp/pmat-manual-mode",
         stack: ['react', 'jotai', 'tw'],
     },
 ];

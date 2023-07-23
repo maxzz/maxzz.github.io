@@ -162,4 +162,24 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-srpclient",
         stack: ['ts'],
     },
+    {
+        primary: 'npm',
+        id: "pm-manifest",
+        description: "PM manifest definitions.",
+        urlGithub: "https://github.com/maxzz/pm-manifest",
+        urlDemo: "https://github.com/maxzz/pm-manifest", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest",
+        stack: ['ts'],
+    },
+    {
+        primary: 'npm',
+        id: "pm-manifest-icons",
+        description: "PM manifest icons.",
+        urlGithub: "https://github.com/maxzz/pm-manifest-icons",
+        urlDemo: "https://github.com/maxzz/pm-manifest-icons", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest-icons",
+        stack: ['react', 'ts'],
+    },
 ];
