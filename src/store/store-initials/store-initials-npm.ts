@@ -182,4 +182,34 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest-icons",
         stack: ['react', 'ts'],
     },
+    {
+        primary: 'npm',
+        id: "pm-xtn-dom",
+        description: "PM extension DOM access.",
+        urlGithub: "https://github.com/maxzz/pm-xtn-dom",
+        urlDemo: "https://github.com/maxzz/pm-xtn-dom", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-dom",
+        stack: ['react', 'ts'],
+    },
+    {
+        primary: 'npm',
+        id: "pm-xtn-csui",
+        description: "PM extension content scripts UI.",
+        urlGithub: "https://github.com/maxzz/pm-xtn-csui",
+        urlDemo: "https://github.com/maxzz/pm-xtn-csui", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui",
+        stack: ['react', 'ts'],
+    },
+    {
+        primary: 'npm',
+        id: "pm-xtn-csui-res",
+        description: "PM extension content scripts UI resources builder.",
+        urlGithub: "https://github.com/maxzz/pm-xtn-csui-res",
+        urlDemo: "https://github.com/maxzz/pm-xtn-csui-res", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui-res",
+        stack: ['react', 'ts'],
+    },
 ];
