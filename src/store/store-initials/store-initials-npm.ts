@@ -144,6 +144,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "rollup-plugin-replace-regex",
+        description: "This is a modified copy of @rollup/plugin-replace with the ability to match regular expression strings and process conditional comment blocks.",
+        urlGithub: "https://github.com/maxzz/rollup-plugin-replace-regex",
+        urlDemo: "https://www.npmjs.com/package/rollup-plugin-replace-regex",
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/rollup-plugin-replace-regex",
+        stack: ['ts', 'rollup'],
+    },
+    {
+        primary: 'npm',
         id: "ts-sjcl",
         description: "Stanford Javascript Crypto Library (SJCL) upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-sjcl",
