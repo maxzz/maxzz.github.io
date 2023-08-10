@@ -92,4 +92,14 @@ export const projectsDp: ProjectType[] = [
         localPath: "c:/Y/w/2-web/0-dp/pmat-manual-mode",
         stack: ['react', 'jotai', 'tw'],
     },
+    {
+        primary: 'DP',
+        id: "pm-xtn-csui-test-vanilla",
+        description: "Test application for pm-xtn-csui.",
+        urlGithub: "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
+        urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
+        stack: ['react', 'jotai', 'tw'],
+    },
 ];
