@@ -100,6 +100,6 @@ export const projectsDp: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
         urlPreview: images.npm, // no img
         localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
-        stack: ['react', 'jotai', 'tw'],
+        stack: ['js'],
     },
 ];

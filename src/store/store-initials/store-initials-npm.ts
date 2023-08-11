@@ -154,6 +154,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "node-chalk",
+        description: "The only difference between chalk and node-chalk is that node-chalk only has a node.js version. https://github.com/chalk/chalk",
+        urlGithub: "https://github.com/maxzz/node-chalk",
+        urlDemo: "https://www.npmjs.com/package/node-chalk",
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/node-chalk",
+        stack: ['js'],
+    },
+    {
+        primary: 'npm',
         id: "ts-sjcl",
         description: "Stanford Javascript Crypto Library (SJCL) upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-sjcl",
