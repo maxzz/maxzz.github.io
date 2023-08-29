@@ -154,6 +154,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "rollup-plugin-pack-json-values",
+        description: "Pack JSON values to strings.",
+        urlGithub: "https://github.com/maxzz/rollup-plugin-pack-json-values",
+        urlDemo: "https://www.npmjs.com/package/rollup-plugin-pack-json-values",
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/utils/rollup-plugin-pack-json-values",
+        stack: ['ts', 'rollup'],
+    },
+    {
+        primary: 'npm',
         id: "node-chalk",
         description: "The only difference between chalk and node-chalk is that node-chalk only has a node.js version. https://github.com/chalk/chalk",
         urlGithub: "https://github.com/maxzz/node-chalk",
