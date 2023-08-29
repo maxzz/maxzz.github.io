@@ -17,7 +17,7 @@
         "@use-gesture/react": "10.2.27",
         "dom-confetti": "^0.2.2",
         "jotai": "2.3.1",
-        "marked": "7.0.2",
+        "marked": "7.0.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-hot-toast": "2.4.1",
@@ -29,8 +29,8 @@
         "@rollup/plugin-replace": "5.0.2",
         "@tailwindcss/forms": "0.5.4",
         "@types/marked": "5.0.1",
-        "@types/node": "20.5.0",
-        "@types/react": "18.2.20",
+        "@types/node": "20.5.7",
+        "@types/react": "18.2.21",
         "@types/react-dom": "18.2.7",
         "@types/sharp": "0.32.0",
         "@vitejs/plugin-react": "4.0.4",
@@ -39,7 +39,7 @@
         "rollup-plugin-visualizer": "5.9.2",
         "sass": "1.65.1",
         "tailwindcss": "3.3.3",
-        "typescript": "5.1.6",
+        "typescript": "5.2.2",
         "vite": "4.4.9",
         "vite-plugin-image-presets": "0.3.4"
     }
