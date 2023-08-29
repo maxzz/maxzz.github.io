@@ -232,4 +232,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui-res",
         stack: ['react', 'ts'],
     },
+    {
+        primary: 'npm',
+        id: "pm-xtn-csui-test-vanilla",
+        description: "Test application for pm-xtn-csui.",
+        urlGithub: "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
+        urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
+        stack: ['js'],
+    },
 ];
