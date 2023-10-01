@@ -13,7 +13,6 @@ import editorsSvgShapes22Template from "@/assets/pages/react/editors-svg-shapes2
 import cursors from "@/assets/pages/react/cursors-2022-02-20_15-30-06.png?preset=thumbnail";
 import noiseGen from "@/assets/pages/react/noise-gen-2021-06-14_17-38-45.png?preset=thumbnail";
 import css3d from "@/assets/pages/react/css-3d-2021-05-24_1-43-59.png?preset=thumbnail";
-import reactSpringTests from "@/assets/pages/react/react-spring-tests-2021-11-26_01-28-49.png?preset=thumbnail";
 import levaUiDynamicBoxes from "@/assets/pages/react/leva-ui-dynamic-boxes-2022-05-03_18-08-19.png?preset=thumbnail";
 import volumeIllusion from "@/assets/pages/react/volume-illusion-2021-05-04_18-32-05.png?preset=thumbnail";
 import realTimeResizeRcv from "@/assets/pages/react/real-time-resize-rcv-2022-07-18_1-34-33.png?preset=thumbnail";
@@ -45,7 +44,6 @@ export {
     cursors,
     noiseGen,
     css3d,
-    reactSpringTests,
     levaUiDynamicBoxes,
     volumeIllusion,
     realTimeResizeRcv,

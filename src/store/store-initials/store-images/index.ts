@@ -5,17 +5,8 @@ export {
     reactNoPreview,
 };
 
-// ux, react
-export * from './images-react';
-
-// npm
-export * from './images-npm';
-
-// dp
-export * from './images-dp';
-
-// ux, vue
-export * from './images-vue';
-
-// stack
-export * from './images-stack';
+export * from './images-react'; // ux, react
+export * from './images-npm'; // npm
+export * from './images-dp'; // dp
+export * from './images-vue'; // ux, vue
+export * from './images-stack'; // stack
