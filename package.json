@@ -3,20 +3,12 @@
     "version": "0.0.1",
     "license": "MIT",
     "description": "QA website",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "build_types": "tsc && vite build",
-        "preview": "vite preview",
-        "predeploy": "yarn build",
-        "deploy": "gh-pages -d dist"
-    },
     "dependencies": {
         "@popperjs/core": "2.11.8",
         "@react-spring/web": "9.7.3",
-        "@use-gesture/react": "10.2.27",
+        "@use-gesture/react": "10.3.0",
         "dom-confetti": "^0.2.2",
-        "jotai": "2.4.2",
+        "jotai": "2.4.3",
         "marked": "7.0.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
@@ -28,19 +20,26 @@
     "devDependencies": {
         "@rollup/plugin-replace": "5.0.2",
         "@tailwindcss/forms": "0.5.6",
-        "@types/marked": "5.0.1",
-        "@types/node": "20.6.2",
-        "@types/react": "18.2.22",
-        "@types/react-dom": "18.2.7",
-        "@types/sharp": "0.32.0",
-        "@vitejs/plugin-react": "4.0.4",
-        "autoprefixer": "10.4.15",
-        "postcss": "8.4.28",
+        "@types/marked": "5.0.2",
+        "@types/node": "20.8.0",
+        "@types/react": "18.2.23",
+        "@types/react-dom": "18.2.8",
+        "@vitejs/plugin-react": "4.1.0",
+        "autoprefixer": "10.4.16",
+        "postcss": "8.4.31",
         "rollup-plugin-visualizer": "5.9.2",
-        "sass": "1.66.1",
+        "sass": "1.68.0",
         "tailwindcss": "3.3.3",
         "typescript": "5.2.2",
         "vite": "4.4.9",
         "vite-plugin-image-presets": "0.3.4"
+    },
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "build_types": "tsc && vite build",
+        "preview": "vite preview",
+        "deploy": "pnpm run build && gh-pages -d dist"
     }
 }
