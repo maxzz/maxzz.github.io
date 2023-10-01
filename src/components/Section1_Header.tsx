@@ -2,7 +2,7 @@ import React from "react";
 import { IconExperiments } from "./UI/Icons";
 import { a, easings, useSpring } from "@react-spring/web";
 import { UIViewSelector } from "./UI/UIViewSelector";
-import { Star, Stars } from "./UI/Icons/Star";
+import { Star, Stars } from "./UI/Icons/icon-star";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 };
 

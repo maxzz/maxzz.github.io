@@ -2,7 +2,7 @@ import { HTMLAttributes, MouseEvent } from "react";
 import { ProjectType } from "@/store/store-types";
 import { classNames } from "@/utils/classnames";
 import { ButtonCopy } from "./ProjectButtonCopy";
-import { IconGithubLogo, IconHardDrive, IconTv } from "../UI/Icons/UIIconSymbols";
+import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../UI/Icons/symbols";
 
 function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
@@ -55,20 +55,20 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
                 <a href={urlDemo} target="_blank" aria-label="Open demo page">
-                    <IconTv className="w-4 h-4" />
+                    <SymbolTv className="w-4 h-4" />
                 </a>
             </ButtonShell>
 
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title={"Open source on GitHub\nCtrl+click to open project.json"} onClick={OpenFromGithub}>
                 {/* <a href={`${urlGithub}/blob/master/package.json`} className="a111 hidden" target="_blank" aria-label="Open project.json on GitHub"> </a> */}
                 <a href={urlGithub} target="_blank" aria-label="Open source code on GitHub">
-                    <IconGithubLogo className="w-4 h-4" />
+                    <SymbolGithubLogo className="w-4 h-4" />
                 </a>
             </ButtonShell>
 
             {localPath &&
                 <ButtonShell className={inListItem ? "px-px" : "p-1"} title={`Copy path to the project location on your hard drive.\nCtrl+Click to copy path in Unix format\n${localPath}`}>
-                    <ButtonCopy label={<IconHardDrive className="w-4 h-4" />} text={localPath} />
+                    <ButtonCopy label={<SymbolHardDrive className="w-4 h-4" />} text={localPath} />
                 </ButtonShell>
             }
         </div>
