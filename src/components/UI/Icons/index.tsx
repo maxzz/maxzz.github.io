@@ -1,1 +1,2 @@
-export * from './UIIcons';
+export * from './normal';
+export * from './symbols';

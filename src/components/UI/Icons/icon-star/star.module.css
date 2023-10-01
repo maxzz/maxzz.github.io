@@ -1,0 +1,44 @@
+.star {
+    position: absolute;
+    animation: starRotateCW var(--dur) ease-in infinite;
+    background-color: #fff;
+    clip-path: polygon(50% 0, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0 50%, 35% 35%);
+    transform: scale(0);
+
+    animation-delay: calc(var(--dur) * 0.5);
+}
+@keyframes starRotateCW {
+    from {
+        transform: scale(0) rotate(0);
+    }
+    25% {
+        animation-timing-function: ease-out;
+        transform: scale(1) rotate(0.25turn);
+    }
+    50%,
+    to {
+        transform: scale(0) rotate(0.5turn);
+    }
+}
+@keyframes starsGroup {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    97% {
+        animation-timing-function: ease-in;
+        transform: scale(1);
+        opacity: 1;
+    }
+    98% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
