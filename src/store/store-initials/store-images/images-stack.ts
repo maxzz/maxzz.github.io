@@ -10,10 +10,12 @@ import workersComlink from "@/assets/pages/stack/workers-comlink,2023-05-20_14-0
 import uiVanillaDropdown from "@/assets/pages/stack/ui-vanilla-dropdown,2023-01-13_14-54-42.png?preset=thumbnail";
 import electronReact from "@/assets/pages/stack/electron-react,2023-02-17_16-25-10.png?preset=thumbnail";
 import reactSpringTests from "@/assets/pages/stack/react-spring-tests-2021-11-26_01-28-49.png?preset=thumbnail";
+import reactSpringTestsSprung from "@/assets/pages/stack/react-spring-tests-sprung,2023-10-17_20-13-03.png?preset=thumbnail";
 import reactSpringMessageHub from "@/assets/pages/stack/react-spring-message-hub, 2023-09-30_16-11-21.png?preset=thumbnail";
 import reactSpringTransitionPages from "@/assets/pages/stack/react-spring-transition-pages, 2023-09-30_17-54-52.png?preset=thumbnail";
 import reactSpringTransitionChain from "@/assets/pages/stack/react-spring-transition-chain, 2023-09-30_16-14-21.png?preset=thumbnail";
 import uiPieMenu from "@/assets/pages/stack/ui-pie-menu,2023-02-24_16-12-23.png?preset=thumbnail";
+import shardcnTv from "@/assets/pages/stack/shardcn-tv,2023-10-07_16-16-33.png?preset=thumbnail";
 
 export {
     wmaxVanillaVite,
@@ -27,8 +29,10 @@ export {
     uiVanillaDropdown,
     electronReact,
     reactSpringTests,
+    reactSpringTestsSprung,
     reactSpringMessageHub,
     reactSpringTransitionPages,
     reactSpringTransitionChain,
     uiPieMenu,
+    shardcnTv,
 };

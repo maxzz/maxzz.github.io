@@ -14,6 +14,16 @@ export const projectsUx: ProjectType[] = [
     },
     {
         primary: 'UX',
+        id: "color-names23",
+        description: "CSS color names selector",
+        urlGithub: "https://github.com/maxzz/color-names23",
+        urlDemo: "https://maxzz.github.io/color-names23",
+        urlPreview: images.colorNames22,
+        localPath: "C:/Y/w/2-web/7-my-webpages/color-names23",
+        stack: ["react", "jotai", "valtio", "tw", "shardcn"],
+    },
+    {
+        primary: 'UX',
         id: "simple-border-radius22",
         description: "CSS border radius generator",
         urlGithub: "https://github.com/maxzz/simple-border-radius22",
@@ -132,15 +142,6 @@ export const projectsUx: ProjectType[] = [
         urlPreview: images.css3d,
         localPath: "C:/Y/w/2-web/7-my-webpages/github-css-3d",
     },
-    {
-        primary: 'UX',
-        id: "react-spring-tests",
-        description: "Exploring different use cases for the react-spring library.",
-        urlGithub: "https://github.com/maxzz/react-spring-tests",
-        urlDemo: "https://maxzz.github.io/react-spring-tests",
-        urlPreview: images.reactSpringTests,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/1-animations/react-spring-tests",
-    },
 
     {
         primary: 'UX',
@@ -195,6 +196,15 @@ export const projectsUx: ProjectType[] = [
         urlDemo: "https://maxzz.github.io/giffy",
         urlPreview: images.giffy,
         localPath: "C:/Y/w/2-web/7-my-webpages/tests-react/giffy",
+    },
+    {
+        primary: 'UX',
+        id: "webfont-tools",
+        description: "Experiments with web-fonts.",
+        urlGithub: "https://github.com/maxzz/webfont-tools",
+        urlDemo: "https://maxzz.github.io/webfont-tools",
+        urlPreview: images.npm, // no preview
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/webfont-tools",
     },
     {
         primary: 'UX',

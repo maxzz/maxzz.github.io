@@ -194,12 +194,12 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
-        id: "ts-websdk",
+        id: "ts-digitalpersona-transport",
         description: "Secure Remote Password client library. HID DigitalPersona WebSdk (2023 version). Transport layer aka digitalpersona-transport. This is so far is private",
         urlGithub: "https://github.com/hidglobal/digitalpersona-transport", //TODO: so far is is private
         urlDemo: "https://github.com/hidglobal/digitalpersona-transport", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-dp/utils/ts-websdk",
+        localPath: "C:/Y/w/2-web/0-dp/utils/ts-digitalpersona-transport",
         stack: ['ts'],
     },
     {

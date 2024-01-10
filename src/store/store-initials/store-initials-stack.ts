@@ -124,12 +124,41 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "react-spring-tests",
+        description: "Exploring different use cases for the react-spring library.",
+        urlGithub: "https://github.com/maxzz/react-spring-tests",
+        urlDemo: "https://maxzz.github.io/react-spring-tests",
+        urlPreview: images.reactSpringTests,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/1-animations/react-spring-tests",
+    },
+    {
+        primary: 'stack',
+        id: "react-spring-tests-sprung",
+        description: "Various scenarios for using the react-spring library.",
+        urlGithub: "https://github.com/maxzz/react-spring-tests-sprung",
+        urlDemo: "https://maxzz.github.io/react-spring-tests-sprung",
+        urlPreview: images.reactSpringTestsSprung,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/1-animations/react-spring-tests-sprung",
+    },
+
+    {
+        primary: 'stack',
         id: "react-spring-message-hub",
         description: "Message Toaster with @react-spring/web",
         urlGithub: "https://github.com/maxzz/react-spring-message-hub",
-        urlDemo: "https://github.com/maxzz/react-spring-message-hub", // no demo
-        urlPreview: images.npm, // no img
+        urlDemo: "https://maxzz.github.io/react-spring-message-hub",
+        urlPreview: images.reactSpringMessageHub,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-message-hub",
+        stack: ['react', 'ts'],
+    },
+    {
+        primary: 'stack',
+        id: "react-spring-transition-pages",
+        description: "Page transitions using the recent react-spring.",
+        urlGithub: "https://github.com/maxzz/react-spring-transition-pages",
+        urlDemo: "https://maxzz.github.io/react-spring-transition-pages",
+        urlPreview: images.reactSpringTransitionPages,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-transition-pages",
         stack: ['react', 'ts'],
     },
     {
@@ -137,8 +166,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         id: "react-spring-transition-chain",
         description: "@react-spring/web animations chain",
         urlGithub: "https://github.com/maxzz/react-spring-transition-chain",
-        urlDemo: "https://github.com/maxzz/react-spring-transition-chain", // no demo
-        urlPreview: images.npm, // no img
+        urlDemo: "https://maxzz.github.io/react-spring-transition-chain",
+        urlPreview: images.reactSpringTransitionChain,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-transition-chain",
         stack: ['react', 'ts'],
     },
@@ -161,5 +190,25 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlPreview: images.npm,
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/wmax-vanilla-gulp",
         stack: ['ts'],
+    },
+    {
+        primary: 'stack',
+        id: "wmax-vanilla-gulp",
+        description: "Build with gulp",
+        urlGithub: "https://github.com/maxzz/wmax-vanilla-gulp",
+        urlDemo: "https://github.com/maxzz/wmax-vanilla-gulp", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/wmax-vanilla-gulp",
+        stack: ['ts'],
+    },
+    {
+        primary: 'stack',
+        id: "shardcn-tv",
+        description: "Shardcn-tv is a clone of shardcn manually installed components.",
+        urlGithub: "https://github.com/maxzz/shardcn-tv",
+        urlDemo: "https://maxzz.github.io/shardcn-tv",
+        urlPreview: images.shardcnTv,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/shardcn-tv",
+        stack: ['radix-ui', 'shardcn'],
     },
 ];
