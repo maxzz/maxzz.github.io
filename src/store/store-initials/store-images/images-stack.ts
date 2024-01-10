@@ -16,6 +16,7 @@ import reactSpringTransitionPages from "@/assets/pages/stack/react-spring-transi
 import reactSpringTransitionChain from "@/assets/pages/stack/react-spring-transition-chain, 2023-09-30_16-14-21.png?preset=thumbnail";
 import uiPieMenu from "@/assets/pages/stack/ui-pie-menu,2023-02-24_16-12-23.png?preset=thumbnail";
 import shardcnTv from "@/assets/pages/stack/shardcn-tv,2023-10-07_16-16-33.png?preset=thumbnail";
+import editorCodemirrorHighlight from "@/assets/pages/stack/editor-codemirror-highlight,2024-01-09_15-04-28.png?preset=thumbnail";
 
 export {
     wmaxVanillaVite,
@@ -35,4 +36,5 @@ export {
     reactSpringTransitionChain,
     uiPieMenu,
     shardcnTv,
+    editorCodemirrorHighlight,
 };

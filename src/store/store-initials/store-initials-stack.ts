@@ -211,4 +211,14 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/shardcn-tv",
         stack: ['radix-ui', 'shardcn'],
     },
+    {
+        primary: 'stack',
+        id: "editor-codemirror-highlight",
+        description: "Code highlighter with codemirror and tokens cache.",
+        urlGithub: "https://github.com/maxzz/editor-codemirror-highlight",
+        urlDemo: "https://maxzz.github.io/editor-codemirror-highlight",
+        urlPreview: images.editorCodemirrorHighlight,
+        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/2-editors/cm-highlight",
+        stack: ['radix-ui', 'shardcn'],
+    },
 ];
