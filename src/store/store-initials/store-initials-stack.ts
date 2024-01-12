@@ -9,7 +9,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/forms-formik",
         urlDemo: "https://maxzz.github.io/forms-formik",
         urlPreview: images.formsFormik,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-formik",
+        localPath: "C:/Y/w/2-web/0-stack/forms-formik",
         stack: ['react', 'tw', 'ts', 'formik'],
     },
     {
@@ -19,7 +19,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/forms-wreducer",
         urlDemo: "https://maxzz.github.io/forms-wreducer",
         urlPreview: images.formsWreducer,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-wreducer",
+        localPath: "C:/Y/w/2-web/0-stack/forms-wreducer",
         stack: ['react', 'ts', 'css'],
     },
     {
@@ -29,7 +29,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/forms-react-hook-form",
         urlDemo: "https://maxzz.github.io/forms-react-hook-form",
         urlPreview: images.formsReactHookForm,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form",
+        localPath: "C:/Y/w/2-web/0-stack/forms-react-hook-form",
         stack: ['react', 'ts', 'css', 'react-hook-form'],
     },
     {
@@ -39,7 +39,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/forms-react-hook-form-radix",
         urlDemo: "https://maxzz.github.io/forms-react-hook-form-radix",
         urlPreview: images.formsReactHookFormRadix,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/forms-react-hook-form-radix",
+        localPath: "C:/Y/w/2-web/0-stack/forms-react-hook-form-radix",
         stack: ['react', 'jotai', 'valtio', 'tw', 'react-hook-form', 'radix-ui'],
     },
     {
@@ -49,7 +49,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/reactivity-valtio-jotai",
         urlDemo: "https://maxzz.github.io/reactivity-valtio-jotai",
         urlPreview: images.reactivityValtioJotai,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/reactivity-valtio-jotai",
+        localPath: "C:/Y/w/2-web/0-stack/reactivity-valtio-jotai",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
     {
@@ -59,7 +59,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/srp-play-tssrp6a",
         urlDemo: "https://maxzz.github.io/srp-play-tssrp6a",
         urlPreview: images.srpPlayTssrp6a,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/srp-play-tssrp6a",
+        localPath: "C:/Y/w/2-web/0-stack/srp-play-tssrp6a",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
     {
@@ -69,7 +69,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/workers-comlink",
         urlDemo: "https://maxzz.github.io/workers-comlink",
         urlPreview: images.workersComlink,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/workers-comlink",
+        localPath: "C:/Y/w/2-web/0-stack/workers-comlink",
         stack: ['react', 'jotai', 'valtio', 'tw', 'radix-ui'],
     },
     {
@@ -79,7 +79,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/ui-vanilla-dropdown",
         urlDemo: "https://maxzz.github.io/ui-vanilla-dropdown",
         urlPreview: images.uiVanillaDropdown,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/ui-vanilla-dropdown",
+        localPath: "C:/Y/w/2-web/0-stack/ui-vanilla-dropdown",
         stack: ['ts', 'css'],
     },
     {
@@ -89,7 +89,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/ui-pie-menu",
         urlDemo: "https://maxzz.github.io/ui-pie-menu",
         urlPreview: images.uiPieMenu,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/ui-pie-menu",
+        localPath: "C:/Y/w/2-web/0-stack/ui-pie-menu",
         stack: ['react', 'valtio', 'ts', 'sass'],
     },
     {
@@ -99,7 +99,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-react",
         urlDemo: "https://github.com/maxzz/electron-react", // no demo
         urlPreview: images.electronReact,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/electron-react",
+        localPath: "C:/Y/w/2-web/0-stack/electron-react",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -109,7 +109,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-window-monitor",
         urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/electron-window-monitor",
+        localPath: "C:/Y/w/2-web/0-stack/electron-window-monitor",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -119,7 +119,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-vite-plugin-e",
         urlDemo: "https://github.com/maxzz/electron-vite-plugin-e", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/electron-vite-plugin-e",
+        localPath: "C:/Y/w/2-web/0-stack/electron-vite-plugin-e",
         stack: ['react', 'ts', 'electron'],
     },
     {
@@ -148,7 +148,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/react-spring-message-hub",
         urlDemo: "https://maxzz.github.io/react-spring-message-hub",
         urlPreview: images.reactSpringMessageHub,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-message-hub",
+        localPath: "C:/Y/w/2-web/0-stack/react-spring-message-hub",
         stack: ['react', 'ts'],
     },
     {
@@ -158,7 +158,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/react-spring-transition-pages",
         urlDemo: "https://maxzz.github.io/react-spring-transition-pages",
         urlPreview: images.reactSpringTransitionPages,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-transition-pages",
+        localPath: "C:/Y/w/2-web/0-stack/react-spring-transition-pages",
         stack: ['react', 'ts'],
     },
     {
@@ -168,7 +168,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/react-spring-transition-chain",
         urlDemo: "https://maxzz.github.io/react-spring-transition-chain",
         urlPreview: images.reactSpringTransitionChain,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/react-spring-transition-chain",
+        localPath: "C:/Y/w/2-web/0-stack/react-spring-transition-chain",
         stack: ['react', 'ts'],
     },
     {
@@ -208,7 +208,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/shardcn-tv",
         urlDemo: "https://maxzz.github.io/shardcn-tv",
         urlPreview: images.shardcnTv,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/shardcn-tv",
+        localPath: "C:/Y/w/2-web/0-stack/shardcn-tv",
         stack: ['radix-ui', 'shardcn'],
     },
     {
@@ -218,7 +218,17 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/editor-codemirror-highlight",
         urlDemo: "https://maxzz.github.io/editor-codemirror-highlight",
         urlPreview: images.editorCodemirrorHighlight,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/9-web-expiriments/stack/2-editors/cm-highlight",
-        stack: ['radix-ui', 'shardcn'],
+        localPath: "C:/Y/w/2-web/0-stack/2-editors/cm-highlight",
+        stack: ['radix-ui', 'shardcn', 'codemirror'],
+    },
+    {
+        primary: 'stack',
+        id: "highlight-xml-md",
+        description: "Simple XML/MD syntax highlighting.",
+        urlGithub: "https://github.com/maxzz/highlight-xml-md",
+        urlDemo: "https://maxzz.github.io/highlight-xml-md",
+        urlPreview: images.highlightXmlMd,
+        localPath: "C:/Y/w/2-web/0-stack/2-editors/highlight-xml-md",
+        stack: ['radix-ui', 'shardcn', 'react-syntax-highlighter'],
     },
 ];
