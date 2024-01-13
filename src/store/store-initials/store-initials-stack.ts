@@ -231,4 +231,14 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/2-editors/highlight-xml-md",
         stack: ['radix-ui', 'shardcn', 'react-syntax-highlighter'],
     },
+    {
+        primary: 'stack',
+        id: "routes-nextjs",
+        description: "Next.js Static Routes.",
+        urlGithub: "https://github.com/maxzz/routes-nextjs",
+        urlDemo: "https://github.com/maxzz/routes-nextjs", // no demo
+        urlPreview: images.routesNextjs,
+        localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-nextjs",
+        stack: ['radix-ui', 'shardcn', 'react-syntax-highlighter'],
+    },
 ];
