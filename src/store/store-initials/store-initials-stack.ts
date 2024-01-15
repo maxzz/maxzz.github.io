@@ -239,6 +239,6 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://github.com/maxzz/routes-nextjs", // no demo
         urlPreview: images.routesNextjs,
         localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-nextjs",
-        stack: ['radix-ui', 'shardcn', 'react-syntax-highlighter'],
+        stack: ['radix-ui', 'shardcn', 'nextjs'],
     },
 ];
