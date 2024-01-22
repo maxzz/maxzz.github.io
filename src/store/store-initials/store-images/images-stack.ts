@@ -19,6 +19,7 @@ import shardcnTv from "@/assets/pages/stack/shardcn-tv,2023-10-07_16-16-33.png?p
 import editorCodemirrorHighlight from "@/assets/pages/stack/editor-codemirror-highlight,2024-01-09_15-04-28.png?preset=thumbnail";
 import highlightXmlMd from "@/assets/pages/stack/highlight-xml-md,2024-01-11_15-26-57.png?preset=thumbnail";
 import routesNextjs from "@/assets/pages/stack/routes-nextjs,2024-01-13_14-35-32.png?preset=thumbnail";
+import routesRouter from "@/assets/pages/stack/routesRouter,2024-01-21_18-50-17.png?preset=thumbnail";
 
 export {
     wmaxVanillaVite,
@@ -41,4 +42,5 @@ export {
     editorCodemirrorHighlight,
     highlightXmlMd,
     routesNextjs,
+    routesRouter,
 };

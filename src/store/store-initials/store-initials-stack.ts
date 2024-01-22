@@ -241,4 +241,14 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-nextjs",
         stack: ['radix-ui', 'shardcn', 'nextjs'],
     },
+    {
+        primary: 'stack',
+        id: "routes-router",
+        description: "React router with react-router-dom.",
+        urlGithub: "https://github.com/maxzz/routes-router",
+        urlDemo: "https://github.com/maxzz/routes-router",
+        urlPreview: images.routesRouter,
+        localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-router",
+        stack: ['radix-ui', 'shardcn', 'nextjs'],
+    },
 ];
