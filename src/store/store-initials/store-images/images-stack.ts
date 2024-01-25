@@ -20,6 +20,7 @@ import editorCodemirrorHighlight from "@/assets/pages/stack/editor-codemirror-hi
 import highlightXmlMd from "@/assets/pages/stack/highlight-xml-md,2024-01-11_15-26-57.png?preset=thumbnail";
 import routesNextjs from "@/assets/pages/stack/routes-nextjs,2024-01-13_14-35-32.png?preset=thumbnail";
 import routesRouter from "@/assets/pages/stack/routesRouter,2024-01-21_18-50-17.png?preset=thumbnail";
+import routesTanRouter from "@/assets/pages/stack/routes-tan-router,2024-01-24_17-22-48.png?preset=thumbnail";
 
 export {
     wmaxVanillaVite,
@@ -43,4 +44,5 @@ export {
     highlightXmlMd,
     routesNextjs,
     routesRouter,
+    routesTanRouter,
 };
