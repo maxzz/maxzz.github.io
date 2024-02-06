@@ -21,6 +21,7 @@ import highlightXmlMd from "@/assets/pages/stack/highlight-xml-md,2024-01-11_15-
 import routesNextjs from "@/assets/pages/stack/routes-nextjs,2024-01-13_14-35-32.png?preset=thumbnail";
 import routesRouter from "@/assets/pages/stack/routesRouter,2024-01-21_18-50-17.png?preset=thumbnail";
 import routesTanRouter from "@/assets/pages/stack/routes-tan-router,2024-01-24_17-22-48.png?preset=thumbnail";
+import flowXarrows from "@/assets/pages/stack/flow-xarrows,2024-02-05_15-48-57.png?preset=thumbnail";
 
 export {
     wmaxVanillaVite,
@@ -45,4 +46,5 @@ export {
     routesNextjs,
     routesRouter,
     routesTanRouter,
+    flowXarrows,
 };

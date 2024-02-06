@@ -238,7 +238,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/routes-nextjs",
         urlDemo: "https://github.com/maxzz/routes-nextjs", // no demo
         urlPreview: images.routesNextjs,
-        localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-nextjs",
+        localPath: "C:/Y/w/2-web/0-stack/3-router/routes-nextjs",
         stack: ['radix-ui', 'shardcn', 'nextjs'],
     },
     {
@@ -248,7 +248,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/routes-router",
         urlDemo: "https://maxzz.github.io/routes-router",
         urlPreview: images.routesRouter,
-        localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-router",
+        localPath: "C:/Y/w/2-web/0-stack/3-router/routes-router",
         stack: ['radix-ui', 'shardcn', 'nextjs'],
     },
     {
@@ -258,7 +258,17 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/routes-tan-router",
         urlDemo: "https://maxzz.github.io/routes-tan-router",
         urlPreview: images.routesTanRouter,
-        localPath: "C:/Y/w/2-web/0-stack/2-editors/routes-tan-router",
+        localPath: "C:/Y/w/2-web/0-stack/3-router/routes-tan-router",
+        stack: ['radix-ui', 'shardcn', 'nextjs'],
+    },
+    {
+        primary: 'stack',
+        id: "flow-xarrows",
+        description: "React router with react-router-dom.",
+        urlGithub: "https://github.com/maxzz/flow-xarrows",
+        urlDemo: "https://maxzz.github.io/flow-xarrows",
+        urlPreview: images.flowXarrows,
+        localPath: "C:/Y/w/2-web/0-stack/4-flow/flow-xarrows",
         stack: ['radix-ui', 'shardcn', 'nextjs'],
     },
 ];
