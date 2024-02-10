@@ -9,6 +9,7 @@ import srpPlayTssrp6a from "@/assets/pages/stack/srp-play-tssrp6a,2023-05-20_14-
 import workersComlink from "@/assets/pages/stack/workers-comlink,2023-05-20_14-03-38.png?preset=thumbnail";
 import uiVanillaDropdown from "@/assets/pages/stack/ui-vanilla-dropdown,2023-01-13_14-54-42.png?preset=thumbnail";
 import electronReact from "@/assets/pages/stack/electron-react,2023-02-17_16-25-10.png?preset=thumbnail";
+import electronReact24 from "@/assets/pages/stack/electron-react24,2024-02-09_19-46-53.png?preset=thumbnail";
 import reactSpringTests from "@/assets/pages/stack/react-spring-tests-2021-11-26_01-28-49.png?preset=thumbnail";
 import reactSpringTestsSprung from "@/assets/pages/stack/react-spring-tests-sprung,2023-10-17_20-13-03.png?preset=thumbnail";
 import reactSpringMessageHub from "@/assets/pages/stack/react-spring-message-hub, 2023-09-30_16-11-21.png?preset=thumbnail";
@@ -34,6 +35,7 @@ export {
     workersComlink,
     uiVanillaDropdown,
     electronReact,
+    electronReact24,
     reactSpringTests,
     reactSpringTestsSprung,
     reactSpringMessageHub,

@@ -99,8 +99,18 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-react",
         urlDemo: "https://github.com/maxzz/electron-react", // no demo
         urlPreview: images.electronReact,
-        localPath: "C:/Y/w/2-web/0-stack/electron-react",
+        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-react",
         stack: ['react', 'tw', 'ts', 'electron'],
+    },
+    {
+        primary: 'stack',
+        id: "electron-react24",
+        description: "Electron app with vite HMR 2024: 'p create @quick-start/electron .'",
+        urlGithub: "https://github.com/maxzz/electron-react24",
+        urlDemo: "https://github.com/maxzz/electron-react24", // no demo
+        urlPreview: images.electronReact24,
+        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-react24",
+        stack: ['react', 'ts', 'electron'],
     },
     {
         primary: 'stack',
@@ -109,7 +119,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-window-monitor",
         urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-stack/electron-window-monitor",
+        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-window-monitor",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -119,7 +129,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-vite-plugin-e",
         urlDemo: "https://github.com/maxzz/electron-vite-plugin-e", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-stack/electron-vite-plugin-e",
+        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-vite-plugin-e",
         stack: ['react', 'ts', 'electron'],
     },
     {
