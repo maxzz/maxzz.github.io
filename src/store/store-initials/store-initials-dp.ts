@@ -92,4 +92,14 @@ export const projectsDp: ProjectType[] = [
         localPath: "c:/Y/w/2-web/0-dp/pmat-manual-mode",
         stack: ['react', 'jotai', 'tw'],
     },
+    {
+        primary: 'DP',
+        id: "pmat24-lite",
+        description: "Password Manager Admin Tool (inital, light version).",
+        urlGithub: "https://github.com/maxzz/pmat24-lite",
+        urlDemo: "https://github.com/maxzz/pmat24-lite", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-dp/pmat24-lite",
+        stack: ['electron', 'react', 'jotai', 'valtio', 'tw'],
+    },
 ];
