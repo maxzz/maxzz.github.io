@@ -4,6 +4,16 @@ import * as images from "./store-images";
 export const projectsSt: ProjectType[] = [ // tech stack updates
     {
         primary: 'stack',
+        id: "shadcn-tv",
+        description: "Shadcn-tv is a clone of shadcn manually installed components.",
+        urlGithub: "https://github.com/maxzz/shadcn-tv",
+        urlDemo: "https://maxzz.github.io/shadcn-tv",
+        urlPreview: images.shadcnTv,
+        localPath: "C:/Y/w/2-web/0-stack/shadcn-tv",
+        stack: ['radix-ui', 'shadcn'],
+    },
+    {
+        primary: 'stack',
         id: "forms-formik",
         description: "React forms playground with Formik",
         urlGithub: "https://github.com/maxzz/forms-formik",
@@ -213,23 +223,13 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
-        id: "shardcn-tv",
-        description: "Shardcn-tv is a clone of shardcn manually installed components.",
-        urlGithub: "https://github.com/maxzz/shardcn-tv",
-        urlDemo: "https://maxzz.github.io/shardcn-tv",
-        urlPreview: images.shardcnTv,
-        localPath: "C:/Y/w/2-web/0-stack/shardcn-tv",
-        stack: ['radix-ui', 'shardcn'],
-    },
-    {
-        primary: 'stack',
         id: "editor-codemirror-highlight",
         description: "Code highlighter with codemirror and tokens cache.",
         urlGithub: "https://github.com/maxzz/editor-codemirror-highlight",
         urlDemo: "https://maxzz.github.io/editor-codemirror-highlight",
         urlPreview: images.editorCodemirrorHighlight,
         localPath: "C:/Y/w/2-web/0-stack/2-editors/cm-highlight",
-        stack: ['radix-ui', 'shardcn', 'codemirror'],
+        stack: ['radix-ui', 'shadcn', 'codemirror'],
     },
     {
         primary: 'stack',
@@ -239,7 +239,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://maxzz.github.io/highlight-xml-md",
         urlPreview: images.highlightXmlMd,
         localPath: "C:/Y/w/2-web/0-stack/2-editors/highlight-xml-md",
-        stack: ['radix-ui', 'shardcn', 'react-syntax-highlighter'],
+        stack: ['radix-ui', 'shadcn', 'react-syntax-highlighter'],
     },
     {
         primary: 'stack',
@@ -249,7 +249,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://github.com/maxzz/routes-nextjs", // no demo
         urlPreview: images.routesNextjs,
         localPath: "C:/Y/w/2-web/0-stack/3-router/routes-nextjs",
-        stack: ['radix-ui', 'shardcn', 'nextjs'],
+        stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
     {
         primary: 'stack',
@@ -259,7 +259,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://maxzz.github.io/routes-router",
         urlPreview: images.routesRouter,
         localPath: "C:/Y/w/2-web/0-stack/3-router/routes-router",
-        stack: ['radix-ui', 'shardcn', 'nextjs'],
+        stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
     {
         primary: 'stack',
@@ -269,7 +269,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://maxzz.github.io/routes-tan-router",
         urlPreview: images.routesTanRouter,
         localPath: "C:/Y/w/2-web/0-stack/3-router/routes-tan-router",
-        stack: ['radix-ui', 'shardcn', 'nextjs'],
+        stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
     {
         primary: 'stack',
@@ -279,6 +279,6 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlDemo: "https://maxzz.github.io/flow-xarrows",
         urlPreview: images.flowXarrows,
         localPath: "C:/Y/w/2-web/0-stack/4-flow/flow-xarrows",
-        stack: ['radix-ui', 'shardcn', 'nextjs'],
+        stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
 ];

@@ -16,7 +16,7 @@ import reactSpringMessageHub from "@/assets/pages/stack/react-spring-message-hub
 import reactSpringTransitionPages from "@/assets/pages/stack/react-spring-transition-pages, 2023-09-30_17-54-52.png?preset=thumbnail";
 import reactSpringTransitionChain from "@/assets/pages/stack/react-spring-transition-chain, 2023-09-30_16-14-21.png?preset=thumbnail";
 import uiPieMenu from "@/assets/pages/stack/ui-pie-menu,2023-02-24_16-12-23.png?preset=thumbnail";
-import shardcnTv from "@/assets/pages/stack/shardcn-tv,2023-10-07_16-16-33.png?preset=thumbnail";
+import shadcnTv from "@/assets/pages/stack/shadcn-tv,2023-10-07_16-16-33.png?preset=thumbnail";
 import editorCodemirrorHighlight from "@/assets/pages/stack/editor-codemirror-highlight,2024-01-09_15-04-28.png?preset=thumbnail";
 import highlightXmlMd from "@/assets/pages/stack/highlight-xml-md,2024-01-11_15-26-57.png?preset=thumbnail";
 import routesNextjs from "@/assets/pages/stack/routes-nextjs,2024-01-13_14-35-32.png?preset=thumbnail";
@@ -42,7 +42,7 @@ export {
     reactSpringTransitionPages,
     reactSpringTransitionChain,
     uiPieMenu,
-    shardcnTv,
+    shadcnTv,
     editorCodemirrorHighlight,
     highlightXmlMd,
     routesNextjs,
