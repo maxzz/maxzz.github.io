@@ -4,6 +4,16 @@ import * as images from "./store-images";
 export const projectsDp: ProjectType[] = [
     {
         primary: 'DP',
+        id: "pmat24-lite",
+        description: "Password Manager Admin Tool (inital, light version).",
+        urlGithub: "https://github.com/maxzz/pmat24-lite",
+        urlDemo: "https://maxzz.github.io/pmat24-lite",
+        urlPreview: images.pmat24Lite,
+        localPath: "C:/Y/w/2-web/0-dp/pmat24-lite",
+        stack: ['electron', 'react', 'jotai', 'valtio', 'tw'],
+    },
+    {
+        primary: 'DP',
         id: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
         urlGithub: "https://github.com/maxzz/dropzone",
@@ -91,15 +101,5 @@ export const projectsDp: ProjectType[] = [
         urlPreview: images.npm, // no img
         localPath: "c:/Y/w/2-web/0-dp/pmat-manual-mode",
         stack: ['react', 'jotai', 'tw'],
-    },
-    {
-        primary: 'DP',
-        id: "pmat24-lite",
-        description: "Password Manager Admin Tool (inital, light version).",
-        urlGithub: "https://github.com/maxzz/pmat24-lite",
-        urlDemo: "https://github.com/maxzz/pmat24-lite", // no demo
-        urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-dp/pmat24-lite",
-        stack: ['electron', 'react', 'jotai', 'valtio', 'tw'],
     },
 ];

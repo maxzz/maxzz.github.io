@@ -4,16 +4,6 @@ import * as images from "./store-images";
 export const projectsUx: ProjectType[] = [
     {
         primary: 'UX',
-        id: "color-names22",
-        description: "CSS color names selector",
-        urlGithub: "https://github.com/maxzz/color-names22",
-        urlDemo: "https://maxzz.github.io/color-names22",
-        urlPreview: images.colorNames22,
-        localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
-        stack: ["react", "jotai", "tw", "stitches"],
-    },
-    {
-        primary: 'UX',
         id: "color-names23",
         description: "CSS color names selector",
         urlGithub: "https://github.com/maxzz/color-names23",
@@ -21,6 +11,16 @@ export const projectsUx: ProjectType[] = [
         urlPreview: images.colorNames22,
         localPath: "C:/Y/w/2-web/7-my-webpages/color-names23",
         stack: ["react", "jotai", "valtio", "tw", "shardcn"],
+    },
+    {
+        primary: 'UX',
+        id: "color-names22",
+        description: "CSS color names selector",
+        urlGithub: "https://github.com/maxzz/color-names22",
+        urlDemo: "https://maxzz.github.io/color-names22",
+        urlPreview: images.colorNames22,
+        localPath: "C:/Y/w/2-web/7-my-webpages/color-names22",
+        stack: ["react", "jotai", "tw", "stitches"],
     },
     {
         primary: 'UX',
