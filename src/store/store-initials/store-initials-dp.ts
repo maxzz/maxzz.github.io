@@ -94,6 +94,16 @@ export const projectsDp: ProjectType[] = [
     },
     {
         primary: 'DP',
+        id: "test-pm-domain-logins24",
+        description: "Application for testing different login forms and password change in one domain.",
+        urlGithub: "https://github.com/maxzz/test-pm-domain-logins24",
+        urlDemo: "https://maxzz.github.io/test-pm-domain-logins24",
+        urlPreview: images.testPmDomainLogins22,
+        localPath: "C:/Y/w/2-web/0-dp/test-pm-domain-logins24",
+        stack: ['react', 'jotai', 'valtio', 'tw'],
+    },
+    {
+        primary: 'DP',
         id: "pmat-manual-mode",
         description: "Prototype of the PMAT manual mode editor.",
         urlGithub: "https://github.com/maxzz/pmat-manual-mode",
