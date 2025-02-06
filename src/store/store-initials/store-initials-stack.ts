@@ -64,6 +64,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "jotai-effect-herrington",
+        description: "React state management with valtio and jotai libraries",
+        urlGithub: "https://github.com/maxzz/jotai-effect-herrington",
+        urlDemo: "https://maxzz.github.io/jotai-effect-herrington",
+        urlPreview: images.jotaiEffectHerrington,
+        localPath: "C:/Y/w/2-web/0-stack/jotai-effect-herrington",
+        stack: ['react', 'jotai', 'jotai-effect'],
+    },
+    {
+        primary: 'stack',
         id: "srp-play-tssrp6a",
         description: "Stanford SRP protocol playground",
         urlGithub: "https://github.com/maxzz/srp-play-tssrp6a",
@@ -160,7 +170,6 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlPreview: images.reactSpringTestsSprung,
         localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/1-animations/react-spring-tests-sprung",
     },
-
     {
         primary: 'stack',
         id: "react-spring-message-hub",
@@ -190,6 +199,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlPreview: images.reactSpringTransitionChain,
         localPath: "C:/Y/w/2-web/0-stack/react-spring-transition-chain",
         stack: ['react', 'ts'],
+    },
+    {
+        primary: 'stack',
+        id: "test-motion-primitives",
+        description: "motion primitives test",
+        urlGithub: "https://github.com/maxzz/test-motion-primitives",
+        urlDemo: "https://github.com/maxzz/test-motion-primitives",
+        urlPreview: images.testMotionPrimitives,
+        localPath: "C:/Y/w/2-web/0-stack/7-animations/test-motion-primitives",
+        stack: ['react', 'ts', 'motion'],
     },
     {
         primary: 'stack',
@@ -282,3 +301,6 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
 ];
+
+//TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table
+//TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table-ai
