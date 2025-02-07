@@ -52,6 +52,8 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/forms-react-hook-form-radix",
         stack: ['react', 'jotai', 'valtio', 'tw', 'react-hook-form', 'radix-ui'],
     },
+
+    //reactivity
     {
         primary: 'stack',
         id: "reactivity-valtio-jotai",
@@ -69,9 +71,10 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/jotai-effect-herrington",
         urlDemo: "https://maxzz.github.io/jotai-effect-herrington",
         urlPreview: images.jotaiEffectHerrington,
-        localPath: "C:/Y/w/2-web/0-stack/jotai-effect-herrington",
+        localPath: "C:/Y/w/2-web/0-stack/1-jotai/jotai-effect-herrington",
         stack: ['react', 'jotai', 'jotai-effect'],
     },
+
     {
         primary: 'stack',
         id: "srp-play-tssrp6a",
@@ -139,7 +142,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-window-monitor",
         urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-window-monitor",
+        localPath: "C:/Y/w/2-web/0-dp/win-mon",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -200,6 +203,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/react-spring-transition-chain",
         stack: ['react', 'ts'],
     },
+    //animations
     {
         primary: 'stack',
         id: "test-motion-primitives",
@@ -210,6 +214,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/7-animations/test-motion-primitives",
         stack: ['react', 'ts', 'motion'],
     },
+
     {
         primary: 'stack',
         id: "wmax-vanilla-vite",
