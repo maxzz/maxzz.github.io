@@ -141,7 +141,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         description: "Electron app to test nodejs napi plugins",
         urlGithub: "https://github.com/maxzz/electron-window-monitor",
         urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.electronWindowMonitor,
         localPath: "C:/Y/w/2-web/0-dp/win-mon",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
