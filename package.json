@@ -20,7 +20,7 @@
     "devDependencies": {
         "@rollup/plugin-replace": "6.0.2",
         "@tailwindcss/forms": "0.5.10",
-        "@types/node": "22.10.3",
+        "@types/node": "22.13.10",
         "@types/react": "18.3.12",
         "@types/react-dom": "18.3.1",
         "@vitejs/plugin-react": "4.3.4",
@@ -29,7 +29,7 @@
         "rollup-plugin-visualizer": "5.13.1",
         "sass": "1.85.1",
         "tailwindcss": "3.4.17",
-        "typescript": "5.7.2",
+        "typescript": "5.8.2",
         "vite": "6.0.6",
         "vite-plugin-image-presets": "0.3.4"
     },
