@@ -1,7 +1,7 @@
 import { sectionOpenAtoms } from "@/store/store";
 import { useAtom } from "jotai";
 import { SectionType } from "@/store/store-types";
-import { UIArrow } from "../UI/UIArrow";
+import { UIArrow } from "../ui";
 
 function SectionName1({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));

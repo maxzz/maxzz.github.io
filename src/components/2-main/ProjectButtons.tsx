@@ -2,7 +2,7 @@ import { HTMLAttributes, MouseEvent } from "react";
 import { ProjectType } from "@/store/store-types";
 import { classNames } from "@/utils/classnames";
 import { ButtonCopy } from "./ProjectButtonCopy";
-import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../UI/Icons/symbols";
+import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../ui";
 
 function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (

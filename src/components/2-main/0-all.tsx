@@ -1,10 +1,10 @@
-import { useAtomValue } from 'jotai';
-import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from '@/store/store';
-import { SectionType } from '@/store/store-types';
-import { sections } from '@/store/store-initials';
-import { UIAccordion } from '../UI/UIAccordion';
-import { SectionName2 } from './SectionName';
-import { ProjectGridItem, ProjectListItem } from './ProjectItem';
+import { useAtomValue } from "jotai";
+import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
+import { SectionType } from "@/store/store-types";
+import { sections } from "@/store/store-initials";
+import { UIAccordion } from "../ui";
+import { SectionName2 } from "./SectionName";
+import { ProjectGridItem, ProjectListItem } from "./ProjectItem";
 
 function Section({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
