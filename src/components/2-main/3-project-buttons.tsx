@@ -6,11 +6,7 @@ import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../ui";
 
 function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames(
-            "h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center",
-            className
-        )} {...rest}
-        >
+        <div className={classNames("h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center", className)} {...rest}>
             {children}
         </div>
     );
@@ -18,6 +14,7 @@ function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivEle
 
 export function ProjectButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
+
     function OpenFromGithub(event: MouseEvent) {
         if (event.ctrlKey) {
             event.stopPropagation();
@@ -53,6 +50,7 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
 
     return (
         <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
+
             <ButtonShell className={inListItem ? "px-px" : "p-1"} title="Open demo page">
                 <a href={urlDemo} target="_blank" aria-label="Open demo page">
                     <SymbolTv className="w-4 h-4" />
@@ -71,6 +69,7 @@ export function ProjectButtons({ project, inListItem, className, ...rest }: { pr
                     <ButtonCopy label={<SymbolHardDrive className="w-4 h-4" />} text={localPath} />
                 </ButtonShell>
             }
+            
         </div>
     );
 }

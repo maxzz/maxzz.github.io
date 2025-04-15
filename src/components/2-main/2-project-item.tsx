@@ -4,30 +4,6 @@ import { ImageUrl, ProjectType } from "@/store/store-types";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectButtons } from "./3-project-buttons";
 
-function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
-    return (
-        <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
-            {name}
-        </div>
-    );
-}
-
-// function Image({ className, src }: { src: string; } & HTMLAttributes<HTMLImageElement>) {
-//     return (
-//         <img className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} src={src} alt="project preview" />
-//     );
-// }
-
-function ProjectPicture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
-    const srcUrl = Array.isArray(src) ? src : [{ src: src }];
-    const url = srcUrl[srcUrl.length - 1].src;
-    return (
-        <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
-            <img src={url} alt="project preview" />
-        </picture>
-    );
-}
-
 export function ProjectGridItem({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
@@ -61,5 +37,29 @@ export function ProjectListItem({ project }: { project: ProjectType; }) {
             <ProjectName className="mx-2" name={id} />
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>
+    );
+}
+
+function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+            {name}
+        </div>
+    );
+}
+
+// function Image({ className, src }: { src: string; } & HTMLAttributes<HTMLImageElement>) {
+//     return (
+//         <img className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} src={src} alt="project preview" />
+//     );
+// }
+
+function ProjectPicture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
+    const srcUrl = Array.isArray(src) ? src : [{ src: src }];
+    const url = srcUrl[srcUrl.length - 1].src;
+    return (
+        <picture className={classNames("object-contain max-h-[177px] grayscale hover:grayscale-0", className)} {...rest}>
+            <img src={url} alt="project preview" />
+        </picture>
     );
 }

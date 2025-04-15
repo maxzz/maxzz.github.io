@@ -1,4 +1,4 @@
-import { atom, Getter, PrimitiveAtom, SetStateAction, Setter, WritableAtom } from 'jotai';
+import { atom, Getter, type PrimitiveAtom, type SetStateAction, type Setter, type WritableAtom } from 'jotai';
 
 export type OnValueChange<Value> = ({ get, set, nextValue }: { get: Getter; set: Setter; nextValue: Value; }) => void;
 

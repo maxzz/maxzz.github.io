@@ -1,6 +1,5 @@
 import { type Getter } from "jotai";
-import { debounce } from "@/utils";
-import { Atomize, atomsFamily, atomWithCallback } from "@/hooks/atomsX";
+import { Atomize, atomsFamily, atomWithCallback, debounce } from "@/utils";
 
 type UIOptions = {
     showType: ShowType;

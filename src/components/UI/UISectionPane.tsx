@@ -1,5 +1,4 @@
-import React from 'react';
-import { HTMLAttributes } from 'react';
+import { type HTMLAttributes } from 'react';
 import { UIArrow } from './UIArrow';
 
 export function UISectionPane({ className, children, open = true, ...rest }: { open?: boolean; } & HTMLAttributes<HTMLDivElement>) {

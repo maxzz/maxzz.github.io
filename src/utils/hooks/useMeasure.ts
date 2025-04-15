@@ -42,4 +42,6 @@ function useMeasure<E extends Element = Element>(): UseMeasureResult<E> {
     return [ref, rect];
 }
 
-export default isBrowser ? useMeasure : ((() => [noop, defaultState]) as typeof useMeasure);
+export default isBrowser
+    ? useMeasure
+    : ((() => [noop, defaultState]) as typeof useMeasure);

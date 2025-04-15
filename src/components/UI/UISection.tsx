@@ -17,6 +17,7 @@ export function UISection({ className, title, children, openAtom }: { className?
             >
                 {title}
             </UISectionPane>
+            
             <UIAccordion open={open}>
                 {children}
             </UIAccordion>

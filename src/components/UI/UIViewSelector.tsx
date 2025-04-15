@@ -3,33 +3,16 @@ import { useAtom } from "jotai";
 import { classNames } from "@/utils";
 import { IconGrid, IconList } from "./icons";
 import { ShowType, uiOptionsAtoms } from "@/store/store";
-/*
-function SwitchButtonOld({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
-    const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
-    return (
-        <button
-            className={classNames(
-                "w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded active:scale-[.97]",
-                showType === thisType && "border bg-primary-800"
-            )}
-            onClick={() => setShowType(thisType)}
-            title={thisType === ShowType.list ? "Show List" : "Show Grid"}
-            {...rest}
-        >
-            {children}
-        </button>
-    );
-}
 
-function ViewSelectorOld() {
+export function UIViewSelector() {
     return (
-        <div className="flex items-center space-x-1 text-primary-400">
-            <SwitchButtonOld thisType={ShowType.list}><IconList /></SwitchButtonOld>
-            <SwitchButtonOld thisType={ShowType.preview}><IconGrid /></SwitchButtonOld>
+        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/20 rounded-3xl select-none">
+            <SwitchButton thisType={ShowType.list}><><IconList className="p-1 w-6 h-6" /><span>List</span></></SwitchButton>
+            <SwitchButton thisType={ShowType.preview}><><IconGrid className="p-1 w-6 h-6" /><span>Grid</span></></SwitchButton>
         </div>
     );
 }
-*/
+
 function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     const isActive = showType === thisType;
@@ -57,11 +40,30 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
     );
 }
 
-export function UIViewSelector() {
+/*
+function SwitchButtonOld({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
+    const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);
     return (
-        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/20 rounded-3xl select-none">
-            <SwitchButton thisType={ShowType.list}><><IconList className="p-1 w-6 h-6" /><span>List</span></></SwitchButton>
-            <SwitchButton thisType={ShowType.preview}><><IconGrid className="p-1 w-6 h-6" /><span>Grid</span></></SwitchButton>
+        <button
+            className={classNames(
+                "w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded active:scale-[.97]",
+                showType === thisType && "border bg-primary-800"
+            )}
+            onClick={() => setShowType(thisType)}
+            title={thisType === ShowType.list ? "Show List" : "Show Grid"}
+            {...rest}
+        >
+            {children}
+        </button>
+    );
+}
+
+function ViewSelectorOld() {
+    return (
+        <div className="flex items-center space-x-1 text-primary-400">
+            <SwitchButtonOld thisType={ShowType.list}><IconList /></SwitchButtonOld>
+            <SwitchButtonOld thisType={ShowType.preview}><IconGrid /></SwitchButtonOld>
         </div>
     );
 }
+*/
