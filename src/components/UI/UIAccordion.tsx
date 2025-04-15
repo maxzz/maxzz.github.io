@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import useMeasure from '@/hooks/useMeasure';
-import { a, config, useSpring } from '@react-spring/web';
-import { disableHiddenChildren } from '@/utils/disableHiddenChildren';
+import { useState } from "react";
+import useMeasure from "@/hooks/useMeasure";
+import { a, config, useSpring } from "@react-spring/web";
+import { disableHiddenChildren } from "@/utils";
 
-//https://www.matuzo.at/blog/2023/100daysof-day73 'Day 73: size container features'
-//https://www.stefanjudis.com/snippets/how-to-animate-height-with-css-grid 'How to animate an element's height with CSS grid'
+//https://www.matuzo.at/blog/2023/100daysof-day73 "Day 73: size container features"
+//https://www.stefanjudis.com/snippets/how-to-animate-height-with-css-grid "How to animate an element"s height with CSS grid"
 /*
 .grid {
   display: grid;
@@ -24,7 +24,7 @@ import { disableHiddenChildren } from '@/utils/disableHiddenChildren';
 export function UIAccordion({ open, children }: { open: boolean, children: React.ReactNode; }) {
     const [refFn, { height, top }] = useMeasure<HTMLDivElement>();
     const [refEl, setEl] = useState<HTMLDivElement>();
-    const [firstRun, setFirstRun] = React.useState(true);
+    const [firstRun, setFirstRun] = useState(true);
     const animation = useSpring({
         overflow: "hidden",
         height: open ? height + top : 0,
@@ -46,7 +46,7 @@ export function UIAccordion({ open, children }: { open: boolean, children: React
 //     const [firstRun, setFirstRun] = React.useState(true);
 //     const animation = useSpring({
 //         overflow: "hidden",
-//         width: toggle ? width + left : '300px',
+//         width: toggle ? width + left : "300px",
 //         config: firstRun ? { duration: 0 } : { mass: 0.2, tension: 392, clamp: true, duration: 3000 },
 //         onRest: () => firstRun && setFirstRun(false),
 //     });

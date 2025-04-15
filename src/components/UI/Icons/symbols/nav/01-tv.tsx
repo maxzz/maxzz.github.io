@@ -1,5 +1,5 @@
-import { HTMLAttributes, SVGAttributes } from 'react';
-import { classNames } from "@/utils/classnames";
+import { type HTMLAttributes, type SVGAttributes } from "react";
+import { classNames } from "@/utils";
 
 export function SvgSymbolIconTv() {
     return (<>

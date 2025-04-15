@@ -1,8 +1,7 @@
-import React from "react";
-import { PrimitiveAtom, useAtom } from "jotai";
+import { type PrimitiveAtom, useAtom } from "jotai";
+import { classNames } from "@/utils";
 import { UISectionPane } from "./UISectionPane";
 import { UIAccordion } from "./UIAccordion";
-import { classNames } from "@/utils/classnames";
 
 export const textShadow = { textShadow: '1px 1px 2px #000' };
 

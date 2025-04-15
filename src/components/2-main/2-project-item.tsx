@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
-import { classNames } from "@/utils/classnames";
+import { type HTMLAttributes } from "react";
+import { classNames } from "@/utils";
 import { ImageUrl, ProjectType } from "@/store/store-types";
-import { ProjectStack } from "./ProjectStackIcons";
-import { ProjectButtons } from "./ProjectButtons";
+import { ProjectStack } from "./5-project-stack-icons";
+import { ProjectButtons } from "./3-project-buttons";
 
 function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (

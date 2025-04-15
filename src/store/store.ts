@@ -1,5 +1,5 @@
-import { atom, Getter, PrimitiveAtom } from "jotai";
-import { debounce } from "@/utils/debounce";
+import { type Getter } from "jotai";
+import { debounce } from "@/utils";
 import { Atomize, atomsFamily, atomWithCallback } from "@/hooks/atomsX";
 
 type UIOptions = {

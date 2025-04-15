@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { type HTMLAttributes } from "react";
 import { useAtom } from "jotai";
-import { ShowType, uiOptionsAtoms } from "@/store/store";
-import { classNames } from "@/utils/classnames";
+import { classNames } from "@/utils";
 import { IconGrid, IconList } from "./icons";
+import { ShowType, uiOptionsAtoms } from "@/store/store";
 /*
 function SwitchButtonOld({ thisType, children, ...rest }: { thisType: ShowType; } & HTMLAttributes<HTMLButtonElement>) {
     const [showType, setShowType] = useAtom(uiOptionsAtoms.showTypeAtom);

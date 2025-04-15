@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react';
-import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
-import { isBrowser, noop } from './utils';
+import { useMemo, useState } from "react";
+import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
+import { isBrowser, noop } from "./utils";
 
-export type UseMeasureRect = Pick<DOMRectReadOnly, 'x' | 'y' | 'top' | 'left' | 'right' | 'bottom' | 'height' | 'width'>;
+export type UseMeasureRect = Pick<DOMRectReadOnly, "x" | "y" | "top" | "left" | "right" | "bottom" | "height" | "width">;
 export type UseMeasureRef<E extends Element = Element> = (element: E) => void;
 export type UseMeasureResult<E extends Element = Element> = [UseMeasureRef<E>, UseMeasureRect];
 

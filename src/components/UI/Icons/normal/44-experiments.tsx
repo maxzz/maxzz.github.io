@@ -1,5 +1,5 @@
-import { HTMLAttributes, SVGProps } from "react";
-import { classNames } from "@/utils/classnames";
+import { type HTMLAttributes, type SVGProps } from "react";
+import { classNames } from "@/utils";
 
 export function IconExperiments({ className, title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) { // microscope
     return (

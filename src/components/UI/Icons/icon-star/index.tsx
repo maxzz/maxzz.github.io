@@ -1,6 +1,6 @@
-import { HTMLAttributes } from "react"; //https://codepen.io/maxzz/pen/LYJwNoq
+import { type HTMLAttributes } from "react"; //https://codepen.io/maxzz/pen/LYJwNoq
+import { classNames } from "@/utils";
 import styles from './star.module.css';
-import { classNames } from "@/utils/classnames";
 
 export function Star({ ...rest }: HTMLAttributes<HTMLElement>) {
     return (

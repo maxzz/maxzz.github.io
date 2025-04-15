@@ -1,6 +1,6 @@
-import { classNames } from "@/utils/classnames";
+import { type SVGAttributes } from "react";
+import { classNames } from "@/utils";
 import { a, useSpring } from "@react-spring/web";
-import { SVGAttributes } from "react";
 
 export function UIArrow({ open, className, ...rest }: { open: boolean; } & SVGAttributes<SVGSVGElement>) {
     const styles = useSpring({ open: open ? 1 : 0, config: { mass: 0.2, tension: 492, clamp: true } });

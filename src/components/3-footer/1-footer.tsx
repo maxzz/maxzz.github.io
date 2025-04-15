@@ -1,5 +1,5 @@
-import { HTMLAttributes } from "react";
-import { classNames } from "@/utils/classnames";
+import { type HTMLAttributes } from "react";
+import { classNames } from "@/utils";
 import { IconSunnyvale } from "../ui";
 
 export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {

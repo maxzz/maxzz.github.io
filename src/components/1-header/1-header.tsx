@@ -2,6 +2,25 @@ import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments, UIViewSelector } from "../ui";
 import { Star, Stars } from "../ui/icons/icon-star";
 
+export function Section1_Header() {
+
+    return (
+        <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
+            <div className="grid grid-rows-[minmax(0,1fr)_1rem] sm:grid-rows-none sm:grid-cols-2 items-end sm:space-x-2 text-slate-500 tracking-tighter scale-y-125">
+                <Title />
+                <Notes />
+            </div>
+
+            <div className="relative">
+                <UIViewSelector />
+                {/* <div className="absolute right-4 -top-1 "><Star /></div> */}
+                <div className="absolute -right-2 -top-2 w-6 h-6"><Stars className="stroke-none fill-current" /></div>
+            </div>
+
+        </header>
+    );
+}
+
 const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 };
 
 function Title() {
@@ -62,24 +81,5 @@ function Notes() {
                 </a>
             </div>
         </a.div>
-    );
-}
-
-export function Section1_Header() {
-
-    return (
-        <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
-            <div className="grid grid-rows-[minmax(0,1fr)_1rem] sm:grid-rows-none sm:grid-cols-2 items-end sm:space-x-2 text-slate-500 tracking-tighter scale-y-125">
-                <Title />
-                <Notes />
-            </div>
-
-            <div className="relative">
-                <UIViewSelector />
-                {/* <div className="absolute right-4 -top-1 "><Star /></div> */}
-                <div className="absolute -right-2 -top-2 w-6 h-6"><Stars className="stroke-none fill-current" /></div>
-            </div>
-
-        </header>
     );
 }
