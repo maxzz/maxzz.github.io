@@ -1,20 +1,16 @@
 {
     "name": "maxzz-io",
-    "version": "0.0.1",
+    "version": "0.2025.1",
     "license": "MIT",
     "description": "List of my projects on github",
     "type": "module",
     "dependencies": {
-        "@popperjs/core": "2.11.8",
         "@react-spring/web": "9.7.5",
         "@use-gesture/react": "10.3.1",
-        "dom-confetti": "^0.2.2",
         "jotai": "2.12.3",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "react-hot-toast": "2.5.2",
-        "react-popper": "^2.2.5",
-        "react-popper-tooltip": "4.4.2",
         "react-use": "^17.6.0"
     },
     "devDependencies": {
