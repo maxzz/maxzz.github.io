@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useAtom } from "jotai";
 import { UIViewSelector } from "../ui";
 import { Stars } from "../ui/icons/icon-star";
 import { SpringTitle } from "./2-spring-title";
 import { SpringNotes } from "./3-spring-notes";
 import { MotionTitle } from "./4-motion-title";
 import { MotionNotes } from "./5-motion-notes";
+import { rerenderAtom } from "./8-atoms";
 
 export function Section1_Header() {
-    const [foo, setFoo] = useState(false);
+    const [foo, setFoo] = useAtom(rerenderAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
             <div className={leftClasses}>
@@ -15,6 +17,7 @@ export function Section1_Header() {
 
                 <SpringTitle />
                 <SpringNotes />
+                
                 <MotionTitle />
                 <MotionNotes />
             </div>
