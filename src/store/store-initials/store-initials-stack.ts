@@ -157,6 +157,16 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "electron-vite-2025", //04.29.25
+        description: "Electron app with electron-vite 2025 edition",
+        urlGithub: "https://github.com/maxzz/electron-vite-2025",
+        urlDemo: "https://github.com/maxzz/electron-vite-2025", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-vite-2025",
+        stack: ['react', 'ts', 'electron'],
+    },
+    {
+        primary: 'stack',
         id: "react-spring-tests",
         description: "Exploring different use cases for the react-spring library.",
         urlGithub: "https://github.com/maxzz/react-spring-tests",
