@@ -161,7 +161,7 @@ export const projectsSt: ProjectType[] = [ // tech stack updates
         description: "Electron app with electron-vite 2025 edition",
         urlGithub: "https://github.com/maxzz/electron-vite-2025",
         urlDemo: "https://github.com/maxzz/electron-vite-2025", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.electronVite2025,
         localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-vite-2025",
         stack: ['react', 'ts', 'electron'],
     },
