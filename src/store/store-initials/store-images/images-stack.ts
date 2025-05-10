@@ -12,6 +12,7 @@ import uiVanillaDropdown from "@/assets/pages/stack/ui-vanilla-dropdown,2023-01-
 import electronReact from "@/assets/pages/stack/electron-react,2023-02-17_16-25-10.png?preset=thumbnail";
 import electronReact24 from "@/assets/pages/stack/electron-react24,2024-02-09_19-46-53.png?preset=thumbnail";
 import electronWindowMonitor from "@/assets/pages/stack/electron-window-monitor,2025-02-08_16-59-21.png?preset=thumbnail";
+import electronVite2025 from "@/assets/pages/stack/electron-vite-2025,2025-05-09_20-02-54.png?preset=thumbnail";
 import reactSpringTests from "@/assets/pages/stack/react-spring-tests-2021-11-26_01-28-49.png?preset=thumbnail";
 import reactSpringTestsSprung from "@/assets/pages/stack/react-spring-tests-sprung,2023-10-17_20-13-03.png?preset=thumbnail";
 import reactSpringMessageHub from "@/assets/pages/stack/react-spring-message-hub, 2023-09-30_16-11-21.png?preset=thumbnail";
@@ -41,6 +42,7 @@ export {
     electronReact,
     electronReact24,
     electronWindowMonitor,
+    electronVite2025,
     reactSpringTests,
     reactSpringTestsSprung,
     reactSpringMessageHub,
