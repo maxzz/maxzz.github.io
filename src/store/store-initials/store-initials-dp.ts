@@ -6,7 +6,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "pmat24-lite",
         description: "Password Manager Admin Tool (inital, light version).",
-        urlGithub: "https://github.com/maxzz/pmat24-lite",
+        urlGithub: "https://github.com/maxzz/pmat24-lite", //https://deepwiki.com/maxzz/pmat24-lite
         urlDemo: "https://maxzz.github.io/pmat24-lite",
         urlPreview: images.pmat24Lite,
         localPath: "C:/Y/w/2-web/0-dp/pmat24-lite",
