@@ -5,3 +5,8 @@ dist-ssr
 *.local
 visualization.html
 yarn.error.log
+/.pnpm
+/.packages
+packages/*/node_modules
+env.local
+.vscode
