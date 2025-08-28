@@ -1,4 +1,4 @@
-import { SectionType } from "../store-types";
+import { SectionType } from "./store-types";
 import { projectsDp } from "./store-initials-dp";
 import { projectsNpm } from "./store-initials-npm";
 import { projectsUx } from "./store-initials-react";

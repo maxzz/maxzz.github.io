@@ -1,6 +1,6 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
-import { ImageUrl, ProjectType } from "@/store/store-types";
+import { ImageUrl, ProjectType } from "@/store/store-initials/store-types";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectButtons } from "./3-project-buttons";
 

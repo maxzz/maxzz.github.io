@@ -1,6 +1,6 @@
 import { useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
-import { SectionType } from "@/store/store-types";
+import { SectionType } from "@/store/store-initials/store-types";
 import { sections } from "@/store/store-initials";
 import { UIAccordion } from "../ui";
 import { SectionName2 } from "./1-section-name";
