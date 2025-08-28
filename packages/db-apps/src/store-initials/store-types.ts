@@ -1,4 +1,6 @@
-import { ImageAttrs } from "vite-plugin-image-presets";
+import { type ImageAttrs as ImageAttrsOrg } from "vite-plugin-image-presets";
+
+export type ImageAttrs = ImageAttrsOrg;
 
 export type ImageUrl = ImageAttrs[] | string;
 

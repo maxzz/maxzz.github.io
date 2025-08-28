@@ -1,13 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "declaration": true,
-    "outDir": "dist",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "resolveJsonModule": true,
-    "isolatedModules": true
-  },
-  "include": ["src"]
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "declaration": true,
+        //"outDir": "dist",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+    },
+    "include": [
+        "src"
+    ]
 }
