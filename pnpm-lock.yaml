@@ -82,6 +82,8 @@ importers:
         specifier: 0.3.4
         version: 0.3.4
 
+  packages/db-apps: {}
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

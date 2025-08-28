@@ -1,0 +1,14 @@
+{
+  "name": "@maxzz/db-apps",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["src"],
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    }
+  }
+}

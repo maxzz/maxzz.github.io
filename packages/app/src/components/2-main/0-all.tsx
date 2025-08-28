@@ -1,7 +1,7 @@
 import { useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
-import { SectionType } from "@/store/store-initials/store-types";
-import { sections } from "@/store/store-initials";
+import { SectionType } from "@maxzz/db-apps/store-types";
+import { sections } from "@maxzz/db-apps";
 import { UIAccordion } from "../ui";
 import { SectionName2 } from "./1-section-name";
 import { ProjectGridItem, ProjectListItem } from "./2-project-item";

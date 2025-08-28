@@ -1,6 +1,6 @@
 import { type HTMLAttributes, type MouseEvent } from "react";
 import { classNames } from "@/utils";
-import { type ProjectType } from "@/store/store-initials/store-types";
+import { type ProjectType } from "@maxzz/db-apps/store-types";
 import { ButtonCopy } from "./4-project-button-copy";
 import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../ui";
 

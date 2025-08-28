@@ -6,6 +6,7 @@
     "description": "List of my projects on github",
     "type": "module",
     "dependencies": {
+    "@maxzz/db-apps": "workspace:*",
         "@react-spring/web": "10.0.1",
         "@use-gesture/react": "10.3.1",
         "jotai": "2.13.1",

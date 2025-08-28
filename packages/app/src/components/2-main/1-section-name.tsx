@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import { UIArrow } from "../ui";
-import { type SectionType } from "@/store/store-initials/store-types";
+import { type SectionType } from "@maxzz/db-apps/store-types";
 import { sectionOpenAtoms } from "@/store/store";
 
 export function SectionName2({ section }: { section: SectionType; }) {
