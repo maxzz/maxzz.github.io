@@ -13,13 +13,13 @@ export function Section1_Header() {
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
             <div className={leftClasses}>
-                <ButtonRerender foo={foo} setFoo={setFoo} />
+                {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
 
                 <SpringTitle />
                 <SpringNotes />
                 
-                <MotionTitle />
-                <MotionNotes />
+                {/* <MotionTitle />
+                <MotionNotes /> */}
             </div>
 
             <div className="relative">
