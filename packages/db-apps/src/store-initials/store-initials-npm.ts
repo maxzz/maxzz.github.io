@@ -1,5 +1,5 @@
 import { type ProjectType } from "./store-types";
-import * as images from "./store-images";
+import * as images from "../assets";
 
 export const projectsNpm: ProjectType[] = [
     {
