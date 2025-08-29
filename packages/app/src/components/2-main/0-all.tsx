@@ -5,17 +5,12 @@ import { UIAccordion } from "../ui";
 import { SectionName2 } from "./1-section-name";
 import { ProjectGridItem, ProjectListItem } from "./2-project-item";
 
-console.log('sections', sections);
-
 export function Section2_Main() {
-    return (
-        // <main className="flex-1 my-4 flex flex-col items-center space-y-4 overflow-y-overlay smallscroll">
-        <main className="flex-1 my-4 space-y-4 overflow-y-overlay smallscroll">
-            {sections.map(
-                (section, idx) => <Section section={section} key={idx} />
-            )}
-        </main>
-    );
+    return (<>
+        {sections.map(
+            (section, idx) => <Section section={section} key={idx} />
+        )}
+    </>);
 }
 
 function Section({ section }: { section: SectionType; }) {

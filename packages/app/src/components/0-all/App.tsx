@@ -5,12 +5,14 @@ export function App() {
     return (<>
         <PopperRoot />
         <UISymbolDefs />
-        <div className="min-h-full overflow-hidden text-slate-100 bg-slate-900"> {/* debug-screens */}
-            <div className="h-screen flex flex-col">
-                <Section1_Header />
+        <div className="h-screen min-h-full overflow-hidden text-slate-100 bg-slate-900 flex flex-col"> {/* debug-screens */}
+            <Section1_Header />
+
+            <main className="flex-1 my-4 space-y-4 overflow-y-overlay smallscroll">
                 <Section2_Main />
-                <Section3_Footer />
-            </div>
+            </main>
+
+            <Section3_Footer />
         </div>
     </>);
 }
