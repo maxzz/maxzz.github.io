@@ -1,9 +1,9 @@
-import path from 'node:path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-import replace from '@rollup/plugin-replace';
-import imagePresets, { widthPreset } from 'vite-plugin-image-presets';
+import path from "node:path";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
+import replace from "@rollup/plugin-replace";
+import imagePresets, { widthPreset } from "vite-plugin-image-presets";
 
 const buildAt = () => {
     const d = new Date();

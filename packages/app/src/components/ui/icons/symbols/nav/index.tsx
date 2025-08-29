@@ -1,10 +1,10 @@
-import { SvgSymbolIconTv } from './01-tv';
-import { SvgSymbolGithubLogo } from './02-github';
-import { SvgSymbolHardDrive } from './03-hdd';
+import { SvgSymbolIconTv } from "./01-tv";
+import { SvgSymbolGithubLogo } from "./02-github";
+import { SvgSymbolHardDrive } from "./03-hdd";
 
-export * from './01-tv';
-export * from './02-github';
-export * from './03-hdd';
+export * from "./01-tv";
+export * from "./02-github";
+export * from "./03-hdd";
 
 export function DefNavTypes() {
     return (<>

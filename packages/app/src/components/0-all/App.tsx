@@ -1,5 +1,5 @@
-import { Section1_Header, Section2_Main, Section3_Footer } from '..';
-import { UISymbolDefs } from '../ui/icons/symbols';
+import { Section1_Header, Section2_Main, Section3_Footer } from "..";
+import { UISymbolDefs } from "../ui/icons/symbols";
 
 export function App() {
     return (<>
