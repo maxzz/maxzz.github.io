@@ -1,0 +1,34 @@
+{
+	"files": [
+		{
+			"path": "packages/db-apps/package.json",
+			"bookmarks": [
+				{
+					"line": 19,
+					"column": 16,
+					"label": "package.json - db-apps"
+				}
+			]
+		},
+		{
+			"path": "packages/app/package.json",
+			"bookmarks": [
+				{
+					"line": 34,
+					"column": 6,
+					"label": "package.json - app"
+				}
+			]
+		},
+		{
+			"path": "package.json",
+			"bookmarks": [
+				{
+					"line": 10,
+					"column": 7,
+					"label": "package.json - root"
+				}
+			]
+		}
+	]
+}

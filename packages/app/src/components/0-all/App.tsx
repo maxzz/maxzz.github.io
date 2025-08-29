@@ -1,14 +1,6 @@
 import { Section1_Header, Section2_Main, Section3_Footer } from '..';
 import { UISymbolDefs } from '../ui/icons/symbols';
 
-function PopperRoot() {
-    return (
-        <div className="absolute z-50">
-            <div id="portal"></div>
-        </div>
-    );
-}
-
 export function App() {
     return (<>
         <PopperRoot />
@@ -21,4 +13,12 @@ export function App() {
             </div>
         </div>
     </>);
+}
+
+function PopperRoot() {
+    return (
+        <div className="absolute z-50">
+            <div id="portal"></div>
+        </div>
+    );
 }
