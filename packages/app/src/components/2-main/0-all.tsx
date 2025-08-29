@@ -3,7 +3,7 @@ import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
 import { UIAccordion } from "../ui";
 import { SectionName2 } from "./1-section-name";
-import { ProjectGridItem, ProjectListItem } from "./2-project-item";
+import { ProjectItem_Grid, ProjectItem_List } from "./2-project-item";
 
 export function Section2_Main() {
     return (<>
@@ -27,7 +27,7 @@ function Section({ section }: { section: SectionType; }) {
                             <div className="columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
                                 {section.projects.map(
                                     (project, idx) => (
-                                        <ProjectListItem project={project} key={idx} />
+                                        <ProjectItem_List project={project} key={idx} />
                                     )
                                 )}
                             </div>
@@ -36,7 +36,7 @@ function Section({ section }: { section: SectionType; }) {
                             <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2">
                                 {section.projects.map(
                                     (project, idx) => (
-                                        <ProjectGridItem project={project} key={idx} />
+                                        <ProjectItem_Grid project={project} key={idx} />
                                     )
                                 )}
                             </div>

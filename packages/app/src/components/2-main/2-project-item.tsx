@@ -4,7 +4,7 @@ import { ImageUrl, ProjectType } from "@maxzz/db-apps";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectButtons } from "./3-project-buttons";
 
-export function ProjectGridItem({ project }: { project: ProjectType; }) {
+export function ProjectItem_Grid({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
         <section className="flex flex-col">
@@ -29,7 +29,7 @@ export function ProjectGridItem({ project }: { project: ProjectType; }) {
     );
 }
 
-export function ProjectListItem({ project }: { project: ProjectType; }) {
+export function ProjectItem_List({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
         <section className="flex items-center text-sm">
