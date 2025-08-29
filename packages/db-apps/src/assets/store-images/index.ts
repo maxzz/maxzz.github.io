@@ -1,5 +1,5 @@
 // common
-import reactNoPreview from "./pages/react-no-preview.png?preset=thumbnail";
+import reactNoPreview from "../../assets/pages/react-no-preview.png?preset=thumbnail";
 
 export {
     reactNoPreview,
