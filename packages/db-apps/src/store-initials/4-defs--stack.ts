@@ -1,4 +1,4 @@
-import { type ProjectType } from "./store-types";
+import { type ProjectType } from "./9-types";
 import * as images from "../assets";
 
 export const projectsSt: ProjectType[] = [ // tech stack updates

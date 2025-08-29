@@ -1,2 +1,2 @@
 export * from "./store-initials";
-export * from "./store-initials/store-types";
+export * from "./store-initials/9-types";
