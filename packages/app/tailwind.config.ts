@@ -32,15 +32,15 @@ module.exports = {
         },
     },
     plugins: [
-        debugStyles,
-        debugScreens,
-        forms,
-        overflowOverlay,
-        colorsBridge([
-            {
-                prefix: '--tm-',
-                groupName: 'primary',
-            },
-        ]),
+        // debugStyles,
+        // debugScreens,
+        // forms,
+        // overflowOverlay,
+        // colorsBridge([
+        //     {
+        //         prefix: '--tm-',
+        //         groupName: 'primary',
+        //     },
+        // ]),
     ],
 };
