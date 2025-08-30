@@ -1,6 +1,6 @@
 ## maxzz.github.io
 
-Links to my projects with demos and source code. (Main)
+Links to my projects with demos and source code.
 
 Legend:
 

@@ -1,39 +1,14 @@
 {
-    "name": "maxzz-io",
-    "version": "0.2025.1",
-    "license": "MIT",
-    "description": "List of my projects on github",
-    "type": "module",
-    "dependencies": {
-        "@react-spring/web": "9.7.5",
-        "@use-gesture/react": "10.3.1",
-        "jotai": "2.12.3",
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
-        "react-hot-toast": "2.5.2",
-        "react-use": "^17.6.0"
-    },
-    "devDependencies": {
-        "@rollup/plugin-replace": "6.0.2",
-        "@tailwindcss/forms": "0.5.10",
-        "@types/node": "22.14.1",
-        "@types/react": "18.3.12",
-        "@types/react-dom": "18.3.1",
-        "@vitejs/plugin-react": "4.3.4",
-        "autoprefixer": "10.4.21",
-        "postcss": "8.5.3",
-        "rollup-plugin-visualizer": "5.14.0",
-        "sass": "1.86.3",
-        "tailwindcss": "3.4.17",
-        "typescript": "5.8.3",
-        "vite": "6.2.6",
-        "vite-plugin-image-presets": "0.3.4"
-    },
+    "name": "maxzz-monorepo",
+    "private": true,
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "build_types": "tsc && vite build",
-        "preview": "vite preview",
-        "deploy": "pnpm run build && gh-pages -d dist"
+        "bootstrap": "pnpm -w install",
+        "dev": "pnpm --filter ./packages/app dev",
+        "build": "pnpm -w --filter ./packages/app build",
+        "preview": "pnpm --filter ./packages/app preview"
     }
 }
