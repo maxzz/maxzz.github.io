@@ -1,6 +1,6 @@
 import colors from 'tailwindcss/colors';
 import debugStyles from './tailwind/tailwnid-plugin-debug-styles';
-import debugScreens from './tailwind/tailwind-plugin-debug-screens';
+import debugScreens from './tailwind/tailwind-plugin-debug-screens.js';
 import forms from '@tailwindcss/forms';
 import overflowOverlay from './tailwind/tailwind-plugin-overflow-overlay';
 import colorsBridge from './tailwind/tailwind-plugin-colors-bridge';
