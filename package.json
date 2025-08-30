@@ -1,17 +1,14 @@
 {
-  "name": "maxzz-monorepo",
-  "private": true,
-  "version": "0.0.0",
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "pnpm": "^8.0.0"
-  },
-  "scripts": {
-    "bootstrap": "pnpm -w install",
-    "dev": "pnpm --filter ./packages/app dev",
-    "build": "pnpm -w --filter ./packages/app build",
-    "preview": "pnpm --filter ./packages/app preview"
-  }
+    "name": "maxzz-monorepo",
+    "private": true,
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "bootstrap": "pnpm -w install",
+        "dev": "pnpm --filter ./packages/app dev",
+        "build": "pnpm -w --filter ./packages/app build",
+        "preview": "pnpm --filter ./packages/app preview"
+    }
 }
