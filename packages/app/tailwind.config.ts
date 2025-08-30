@@ -32,7 +32,7 @@ module.exports = {
         },
     },
     plugins: [
-        // debugStyles,
+        debugStyles,
         // debugScreens,
         // forms,
         // overflowOverlay,
