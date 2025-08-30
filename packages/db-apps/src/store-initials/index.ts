@@ -7,11 +7,15 @@ import { projectsVue } from "./5-defs--vue";
 
 export const sections: SectionType[] = [
     {
-        name: 'UX, react',
+        name: 'UX, React',
         projects: projectsUx,
     },
     {
-        name: 'digitalPersona',
+        name: 'Stack',
+        projects: projectsSt,
+    },
+    {
+        name: 'Digital Persona',
         projects: projectsDp,
     },
     {
@@ -19,11 +23,7 @@ export const sections: SectionType[] = [
         projects: projectsNpm,
     },
     {
-        name: 'UX, vue',
+        name: 'UX, Vue',
         projects: projectsVue,
-    },
-    {
-        name: 'Stack',
-        projects: projectsSt,
     },
 ];
