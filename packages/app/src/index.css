@@ -1,8 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
+/* @config "../tailwind/tailwind-plugin-colors-bridge.js"; */
+
+/* @theme {
+    --color-primary: theme('colors.green');
+} */
+
+/* @plugin "./tailwind/tailwnid-plugin-debug-styles.cjs"; */
+/* @plugin "./tailwind/tailwind-plugin-debug-screens";
+@plugin "./tailwind/tailwind-plugin-overflow-overlay";
+@plugin "./tailwind/tailwind-plugin-colors-bridge";
+@plugin "./@tailwindcss/forms"; */
+
+/* @theme {
+  --color-primary-50: #e0f2fe;
+  /* Lightest primary shade * /
+  --color-primary-100: #bfdbfe;
+  --color-primary-200: #93c5fd;
+  --color-primary-300: #60a5fa;
+  --color-primary-400: #3b82f6;
+  --color-primary-500: #2563eb;
+  /* Default primary shade * /
+  --color-primary-600: #1d4ed8;
+  --color-primary-700: #1e40af;
+  --color-primary-800: #1e3a8a;
+  --color-primary-900: #1f2937;
+  /* Darkest primary shade * /
+} */
+
+/* @theme {
+    @each $shade in 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950 {
+        --color-primary-#{$shade}: var(--color-slate-#{$shade});
+    }
+} */
+
+@config "../tailwind.config.ts";
+
+/*OK*/
+/* @theme {
+  --color-primary-50: var(--color-slate-50);
+  --color-primary-100: var(--color-slate-100);
+  --color-primary-200: var(--color-slate-200);
+  --color-primary-300: var(--color-slate-300);
+  --color-primary-400: var(--color-slate-400);
+  --color-primary-500: var(--color-slate-500);
+  --color-primary-600: var(--color-slate-600);
+  --color-primary-700: var(--color-slate-700);
+  --color-primary-800: var(--color-slate-800);
+  --color-primary-900: var(--color-slate-900);
+} */
+
+/* @layer components {
     .hoverurl {
         @apply hover:border-b border-primary-200/40 hover:text-url;
     }
@@ -10,7 +58,7 @@
     .extension-small-icon-outline {
         @apply outline outline-1 sm:outline-2 outline-offset-1 outline-green-500 sm:outline-green-500/30;
     }
-}
+} */
 
 /* Firefox scrollbars */
 .smallscroll {

@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 import { visualizer } from "rollup-plugin-visualizer";
 import replace from "@rollup/plugin-replace";
 import imagePresets, { widthPreset } from "vite-plugin-image-presets";
+import tailwindcss from "@tailwindcss/vite";
 
 const buildAt = () => {
     const d = new Date();
@@ -21,6 +22,7 @@ export default (({ command }) => defineConfig({
     base: command === 'build' ? '' : '',
     plugins: [
         react(),
+        tailwindcss(),
 
         imagePresets({
             thumbnail: widthPreset({
