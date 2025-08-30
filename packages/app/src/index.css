@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @config "../tailwind/tailwind-plugin-colors-bridge.js"; */
+
+@theme {
+    --color-primary: theme('colors.primary');
+}
+
 @layer components {
     .hoverurl {
         @apply hover:border-b border-primary-200/40 hover:text-url;
