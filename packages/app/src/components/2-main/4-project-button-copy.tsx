@@ -16,7 +16,7 @@ export function ButtonCopy({ label, text }: { label: ReactNode; text: string; })
             <MountCopyNotice show={showNotice} setShow={setShowNotice}
                 items={[
                     label,
-                    <IconCheckFrameless className="w-4 h-4 text-green-100 bg-emerald-500 stroke-2 rounded-sm" />,
+                    <IconCheckFrameless className="w-4 h-4 text-green-100 bg-emerald-500 stroke-[2] rounded-sm" />,
                 ]}
             />
         </button>
