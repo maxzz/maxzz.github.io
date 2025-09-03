@@ -1,4 +1,4 @@
-import { HTMLAttributes, SVGProps } from "react";
+import { type HTMLAttributes, type SVGProps } from "react";
 
 export function IconTrash({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (

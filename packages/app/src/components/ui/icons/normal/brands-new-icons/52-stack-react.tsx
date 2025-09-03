@@ -1,4 +1,4 @@
-import { HTMLAttributes, SVGProps } from "react";
+import { type HTMLAttributes, type SVGProps } from "react";
 
 export function IconStackReact({ title, ...rest }: HTMLAttributes<SVGSVGElement> & SVGProps<SVGSVGElement>) {
     return (

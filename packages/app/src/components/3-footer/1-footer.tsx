@@ -9,7 +9,7 @@ export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivEl
                 Created by Max Zakharzhevskiy.
             </p>
 
-            <IconSunnyvale className="w-5 h-5" />
+            <IconSunnyvale className="size-5" />
 
             <p>
                 Open sourced on <a className="underline" href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">Github</a>.

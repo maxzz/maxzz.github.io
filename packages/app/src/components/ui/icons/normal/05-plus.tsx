@@ -1,4 +1,4 @@
-import { HTMLAttributes, SVGProps } from "react";
+import { type HTMLAttributes, type SVGProps } from "react";
 
 {/* <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <defs>
