@@ -64,6 +64,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "topdirs 2025. make-topdirs",
+        description: "The topdirs utility replicates the folder structure without copying the files it contains. 2025 version.",
+        urlGithub: "https://github.com/maxzz/make-topdirs",
+        urlDemo: "https://github.com/maxzz/make-topdirs", // no demo
+        urlPreview: images.npm,
+        localPath: "C:/Y/w/1-node/1-utils/make-topdirs",
+        stack: ['npm', 'ts'],
+    },
+    {
+        primary: 'npm',
         id: "sftp-shell",
         description: "Transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-shell",
