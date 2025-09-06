@@ -9,9 +9,9 @@ export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivEl
 
             <IconSunnyvale className="pt-1 size-8" />
 
-            <a className={urlClasses} href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">Open sourced on GitHub</a>.
+            <a className={urlClasses} href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">Open source code on GitHub.</a>
         </div>
     );
 }
 
-const urlClasses = "hover:underline cursor-pointer";
+const urlClasses = "hover:underline underline-offset-2 hover:text-primary-500 cursor-pointer transition-all";
