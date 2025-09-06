@@ -11,8 +11,8 @@ export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivEl
 
             <IconSunnyvale className="size-5" />
 
-            <p>
-                Open sourced on <a className="underline" href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">Github</a>.
+            <p className="hover:underline cursor-pointer">
+                Open sourced on <a href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">GitHub</a>.
             </p>
         </div>
     );
