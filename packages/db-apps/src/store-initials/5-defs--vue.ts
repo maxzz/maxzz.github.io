@@ -84,6 +84,26 @@ export const projectsVue: ProjectType[] = [
     },
     {
         primary: 'vue',
+        id: "back-to-90s-original",
+        description: "back-to-90s assets.",
+        urlGithub: "https://github.com/maxzz/back-to-90s-original",
+        urlDemo: "https://maxzz.github.io/back-to-90s-original",
+        urlPreview: images.npm, // TODO: no image
+        localPath: "C:/Y/w/2-web/7-my-webpages/back-to-90s-original",
+        stack: ['vue'],
+    },
+    {
+        primary: 'vue',
+        id: "back-to-90s",
+        description: "A quick and easy project to keep old memories alive.",
+        urlGithub: "https://github.com/maxzz/back-to-90s",
+        urlDemo: "https://maxzz.github.io/back-to-90s",
+        urlPreview: images.npm, // TODO: no image
+        localPath: "C:/Y/w/2-web/7-my-webpages/back-to-90s",
+        stack: ['vue'],
+    },
+    {
+        primary: 'vue',
         id: "vue-evens-todos",
         description: "This is an integration test with codesandbox.io. Created with CodeSandbox.",
         urlGithub: "https://github.com/maxzz/vue-evens-todos",
