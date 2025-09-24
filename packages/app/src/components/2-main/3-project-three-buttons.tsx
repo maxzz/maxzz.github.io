@@ -1,7 +1,7 @@
 import { type HTMLAttributes, type MouseEvent } from "react";
 import { classNames } from "@/utils";
 import { type ProjectType } from "@maxzz/db-apps";
-import { ButtonCopy } from "./4-project-button-copy";
+import { ButtonCopyPath } from "./4-project-button-copy-path";
 import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../ui";
 
 export function ProjectThreeButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
@@ -33,7 +33,7 @@ export function ProjectThreeButtons({ project, inListItem, className, ...rest }:
                     className={inListItem ? "px-px" : "p-1"}
                     title={`Copy path to the project location on your hard drive.\nCtrl+Click to copy path in Unix format\n${localPath}`}
                 >
-                    <ButtonCopy label={<SymbolHardDrive className="size-4" />} text={localPath} />
+                    <ButtonCopyPath label={<SymbolHardDrive className="size-4" />} text={localPath} />
                 </ButtonShell>
             )}
         </div>

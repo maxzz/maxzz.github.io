@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import { a, easings, useTransition } from "@react-spring/web";
 import { IconCheckFrameless } from "../ui";
 
-export function ButtonCopy({ label, text }: { label: ReactNode; text: string; }) {
+export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string; }) {
     const [showNotice, setShowNotice] = useState(false);
     return (
         <button
