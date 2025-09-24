@@ -1,10 +1,22 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
-import { ProjectType } from "@maxzz/db-apps";
+import { ProjectType, SectionType } from "@maxzz/db-apps";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectThreeButtons } from "./3-project-three-buttons";
 
-export function ProjectItem_List({ project }: { project: ProjectType; }) {
+export function ProjectsAsList({ section }: { section: SectionType; }) {
+    return (
+        <div className="columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
+            {section.projects.map(
+                (project, idx) => (
+                    <ProjectItem_List project={project} key={idx} />
+                )
+            )}
+        </div>
+    );
+}
+
+function ProjectItem_List({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
         <section className="text-sm flex items-center">

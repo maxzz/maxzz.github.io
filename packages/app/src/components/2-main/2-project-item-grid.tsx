@@ -1,10 +1,22 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
-import { ImageUrl, ProjectType } from "@maxzz/db-apps";
+import { ImageUrl, ProjectType, SectionType } from "@maxzz/db-apps";
 import { ProjectName } from "./2-project-item-list";
 import { ProjectThreeButtons } from "./3-project-three-buttons";
 
-export function ProjectItem_Grid({ project }: { project: ProjectType; }) {
+export function ProjectsAsGroup({ section }: { section: SectionType; }) {
+    return (
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(250px,1fr)] gap-2">
+            {section.projects.map(
+                (project, idx) => (
+                    <ProjectItem_Grid project={project} key={idx} />
+                )
+            )}
+        </div>
+    );
+}
+
+function ProjectItem_Grid({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
     return (
         <section className="flex flex-col">
