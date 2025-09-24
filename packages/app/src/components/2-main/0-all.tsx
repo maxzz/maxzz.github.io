@@ -8,12 +8,14 @@ import { ProjectItem_Grid, ProjectItem_List } from "./2-project-item";
 export function Section2_Main() {
     return (<>
         {sections.map(
-            (section, idx) => <Section section={section} key={idx} />
+            (section, idx) => (
+                <ProjectsGroup section={section} key={idx} />
+            )
         )}
     </>);
 }
 
-function Section({ section }: { section: SectionType; }) {
+function ProjectsGroup({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (

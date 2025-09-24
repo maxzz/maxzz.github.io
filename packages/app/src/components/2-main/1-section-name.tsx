@@ -6,8 +6,8 @@ import { sectionOpenAtoms } from "@/store/store";
 export function SectionName({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="mb-2 text-2xl cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
-            <div className="px-4 py-3 max-w-min bg-primary-800/70 border-primary-400/50 shadow shadow-primary-800 hover:bg-primary-700/50 border rounded flex items-center space-y-2">
+        <div className="mb-2 text-xl cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
+            <div className={buttonClasses}>
 
                 <div className="w-max leading-5 left-t">
                     {section.name}
@@ -18,3 +18,11 @@ export function SectionName({ section }: { section: SectionType; }) {
         </div>
     );
 }
+
+const buttonClasses = "\
+px-3 py-2 max-w-min \
+bg-primary-800/70 border-primary-400/50 shadow shadow-primary-800 hover:bg-primary-700/50 \
+border \
+rounded \
+flex items-center space-y-2 \
+";

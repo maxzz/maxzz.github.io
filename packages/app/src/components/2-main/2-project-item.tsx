@@ -32,7 +32,7 @@ export function ProjectItem_Grid({ project }: { project: ProjectType; }) {
 export function ProjectItem_List({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
-        <section className="flex items-center text-sm">
+        <section className="text-sm flex items-center">
             <ProjectThreeButtons className="" project={project} inListItem={true} />
             <ProjectName className="mx-2" name={id} />
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
