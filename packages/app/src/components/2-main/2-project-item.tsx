@@ -2,7 +2,7 @@ import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
 import { ImageUrl, ProjectType } from "@maxzz/db-apps";
 import { ProjectStack } from "./5-project-stack-icons";
-import { ProjectButtons } from "./3-project-buttons";
+import { ProjectThreeButtons } from "./3-project-three-buttons";
 
 export function ProjectItem_Grid({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
@@ -15,7 +15,7 @@ export function ProjectItem_Grid({ project }: { project: ProjectType; }) {
                     {description}
                 </div>
 
-                <ProjectButtons className="-mb-2" project={project} inListItem={false} />
+                <ProjectThreeButtons className="-mb-2" project={project} inListItem={false} />
 
                 <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
                     <div className="hover:scale-[1.17] transition-transform border shadow">
@@ -33,7 +33,7 @@ export function ProjectItem_List({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
         <section className="flex items-center text-sm">
-            <ProjectButtons className="" project={project} inListItem={true} />
+            <ProjectThreeButtons className="" project={project} inListItem={true} />
             <ProjectName className="mx-2" name={id} />
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>
