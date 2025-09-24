@@ -2,7 +2,7 @@ import { useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
 import { UIAccordion } from "../ui";
-import { SectionName2 } from "./1-section-name";
+import { SectionName } from "./1-section-name";
 import { ProjectItem_Grid, ProjectItem_List } from "./2-project-item";
 
 export function Section2_Main() {
@@ -18,7 +18,7 @@ function Section({ section }: { section: SectionType; }) {
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
         <div className="w-full px-4 max-w-[96rem] grid grid-rows-[auto_minmax(0,1fr)]">
-            <SectionName2 section={section} />
+            <SectionName section={section} />
 
             <UIAccordion open={sectionOpen}>
                 <>
