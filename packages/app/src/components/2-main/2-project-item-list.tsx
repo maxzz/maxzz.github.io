@@ -19,9 +19,9 @@ export function ProjectsAsList({ section }: { section: SectionType; }) {
 function ProjectItem_List({ project }: { project: ProjectType; }) {
     const { id, stack } = project;
     return (
-        <section className="text-sm flex items-center">
+        <section className="text-sm flex items-center gap-x-2">
             <ProjectThreeButtons className="" project={project} inListItem={true} />
-            <ProjectName className="mx-2" name={id} />
+            <ProjectName className="" name={id} />
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>
     );
@@ -29,7 +29,7 @@ function ProjectItem_List({ project }: { project: ProjectType; }) {
 
 export function ProjectName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("pb-1 text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+        <div className={classNames("pb-1 text-sm text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
             {name}
         </div>
     );
