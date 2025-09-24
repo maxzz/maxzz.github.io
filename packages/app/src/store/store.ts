@@ -5,16 +5,14 @@ type UIOptions = {
     showType: ShowType;
 };
 
-export type ShowType = typeof showType[keyof typeof showType];
-
-export const showType = {
-    list: 0,
-    preview: 1,
-} as const;
+export const enum ShowType {
+    list = 0,
+    preview,
+}
 
 //#region LocalStorage
 
-//namespace Storage {
+namespace Storage {
     const KEY = 'maxzz-io-01';
 
     type Store = {
@@ -24,7 +22,7 @@ export const showType = {
 
     export let initialData: Store = {
         uiOptions: {
-            showType: showType.preview,
+            showType: ShowType.preview,
         },
         openSections: {},
     };
@@ -53,15 +51,15 @@ export const showType = {
         localStorage.setItem(KEY, JSON.stringify(newStore));
     }, 1000);
 
-    export const save = ({ get }: { get: Getter; }) => saveDebounced(get);
-//}
+    export const save = ({ get }: { get: Getter; }) => Storage.saveDebounced(get);
+}
 
 //#endregion LocalStorage
 
-export const sectionOpenAtoms = atomsFamily<boolean>(initialData.openSections, false, (param: boolean) => atomWithCallback(param, save));
+export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSections, false, (param: boolean) => atomWithCallback(param, Storage.save));
 
 //////////
 
 export const uiOptionsAtoms: Atomize<UIOptions> = {
-    showTypeAtom: atomWithCallback(initialData.uiOptions.showType, save),
+    showTypeAtom: atomWithCallback(Storage.initialData.uiOptions.showType, Storage.save),
 };
