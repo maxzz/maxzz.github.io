@@ -282,4 +282,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/1-node/1-utils/update-env",
         stack: ['ts'],
     },
+    {
+        primary: 'npm',
+        id: "upen",
+        description: "A utility package for environment variable management.",
+        urlGithub: "https://github.com/maxzz/update-env-upen",
+        urlDemo: "https://maxzz.github.io/update-env-upen", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/1-node/1-utils/update-env-upen",
+        stack: ['ts'],
+    },
 ];
