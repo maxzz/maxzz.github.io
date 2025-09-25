@@ -28,7 +28,7 @@ underline-offset-2 \
 hover:underline \
 hover:text-primary-500 \
 scale-y-50 \
-hover:scale-y-150 \
-duration-500 \
+hover:scale-y-125 \
 transition-colors \
+duration-1000 \
 cursor-pointer";
