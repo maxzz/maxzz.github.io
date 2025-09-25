@@ -1,1 +1,1 @@
-export * from "./store-images";
+export * from "./store-image-imports";
