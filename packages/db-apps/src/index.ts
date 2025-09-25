@@ -1,2 +1,2 @@
-export * from "./store-initials";
-export * from "./store-initials/9-types";
+export * from "./store-project-groups";
+export * from "./store-project-groups/9-types";
