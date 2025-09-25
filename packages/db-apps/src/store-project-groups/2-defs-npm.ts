@@ -272,4 +272,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
         stack: ['js'],
     },
+    {
+        primary: 'npm',
+        id: "update-env",
+        description: "A utility package for environment variable management.",
+        urlGithub: "https://github.com/maxzz/update-env",
+        urlDemo: "https://maxzz.github.io/update-env", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/1-node/1-utils/update-env",
+        stack: ['ts'],
+    },
 ];
