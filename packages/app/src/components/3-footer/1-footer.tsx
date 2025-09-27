@@ -1,5 +1,5 @@
 import { type HTMLAttributes } from "react";
-import { classNames } from "@/utils";
+import { classNames, envBuildVersion, envModifiedDate } from "@/utils";
 import { IconSunnyvale } from "../ui";
 
 export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
@@ -12,7 +12,7 @@ export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivEl
 
             <IconSunnyvale
                 className="pt-1 size-8 hover:scale-150 transition-all duration-300"
-                title={`Sunnyvale Produce\n         ${import.meta.env.VITE_MODIFIED_VERSION}`}
+                title={`${envModifiedDate()}\n   Sunnyvale Produce\n\tVersion ${envBuildVersion()}`}
             />
 
             <a className={urlClasses} href="https://github.com/maxzz/maxzz.github.io" target="_blank" rel="noopener">
