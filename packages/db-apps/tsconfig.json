@@ -9,6 +9,9 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
+
+        // not relly needed if no option composite is set        
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     },
     "include": [
         "src"
