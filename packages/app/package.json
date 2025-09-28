@@ -35,6 +35,7 @@
     },
     "scripts": {
         "dev": "vite",
+        "_tsc": "tsc --project tsconfig.json",
         "build": "upen && vite build",
         "build_types": "tsc && upen && vite build",
         "preview": "vite preview",
