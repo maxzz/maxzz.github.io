@@ -8,7 +8,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Utility to pack meta data inside specified folders.",
         urlGithub: "https://github.com/maxzz/rardir",
         urlDemo: "https://www.npmjs.com/package/rardir",
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/rardir",
         stack: ['npm', 'ts'],
     },
