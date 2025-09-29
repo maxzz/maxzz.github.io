@@ -18,7 +18,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Utility to combine .SRT subtitles with .MP4 files inside specified folders.",
         urlGithub: "https://github.com/maxzz/rarsrt",
         urlDemo: "https://www.npmjs.com/package/rarsrt",
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/merge-video-subtitles",
         stack: ['npm', 'ts'],
     },
@@ -28,7 +28,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Utility to convert .vtt files to .srt format.",
         urlGithub: "https://github.com/maxzz/srt-from-vtt",
         urlDemo: "https://github.com/maxzz/srt-from-vtt", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/srt-from-vtt",
         stack: ['ts'],
     },
@@ -48,7 +48,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Utility to generate a batch file to manage inbound and outbound Windows firewall connections for a single .exe file or all .exe files in folder.",
         urlGithub: "https://github.com/maxzz/netsh-rule",
         urlDemo: "https://www.npmjs.com/package/netsh-rule",
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/netsh-firewall-rules",
         stack: ['npm', 'ts'],
     },
@@ -58,7 +58,7 @@ export const projectsNpm: ProjectType[] = [
         description: "The topdirs utility replicates the folder structure without copying the files it contains.",
         urlGithub: "https://github.com/maxzz/topdirs",
         urlDemo: "https://github.com/maxzz/topdirs", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/topdirs",
         stack: ['npm', 'ts'],
     },
@@ -68,7 +68,7 @@ export const projectsNpm: ProjectType[] = [
         description: "The topdirs utility replicates the folder structure without copying the files it contains. 2025 version.",
         urlGithub: "https://github.com/maxzz/make-topdirs",
         urlDemo: "https://github.com/maxzz/make-topdirs", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/make-topdirs",
         stack: ['npm', 'ts'],
     },
@@ -78,7 +78,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-shell",
         urlDemo: "https://github.com/maxzz/sftp-shell", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-shell",
         stack: ['ts'],
     },
@@ -88,7 +88,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Test transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-test",
         urlDemo: "https://github.com/maxzz/sftp-test", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-test",
         stack: ['js'],
     },
@@ -118,7 +118,7 @@ export const projectsNpm: ProjectType[] = [
         description: "GraphQL server test implementation.",
         urlGithub: "https://github.com/maxzz/test-graphql",
         urlDemo: "https://github.com/maxzz/test-graphql", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/7-my-webpages/test-graphql",
         stack: ['js'],
     },
@@ -128,7 +128,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Utility to generate working weeks per year.",
         urlGithub: "https://github.com/maxzz/work-weeks",
         urlDemo: "https://www.npmjs.com/package/work-weeks",
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/work-weeks-calendar",
         stack: ['npm', 'ts'],
     },
@@ -138,7 +138,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Proxy server with CORS.",
         urlGithub: "https://github.com/maxzz/maxzz-proxy",
         urlDemo: "https://github.com/maxzz/maxzz-proxy", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/1-web-scraping/maxzz-proxy",
         stack: ['js'],
     },
@@ -148,7 +148,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Creating GitHub frontpage readme.md file with Python.",
         urlGithub: "https://github.com/maxzz/maxzz-python",
         urlDemo: "https://github.com/maxzz/maxzz-python", // no demo
-        urlPreview: images.npm,
+        urlPreview: images.npm25,
         localPath: "cannot find the local project anymore",
         stack: ['python'],
     },
@@ -158,7 +158,7 @@ export const projectsNpm: ProjectType[] = [
         description: "This is a modified copy of @rollup/plugin-replace with the ability to match regular expression strings and process conditional comment blocks.",
         urlGithub: "https://github.com/maxzz/rollup-plugin-replace-regex",
         urlDemo: "https://www.npmjs.com/package/rollup-plugin-replace-regex",
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/rollup-plugin-replace-regex",
         stack: ['ts', 'rollup'],
     },
@@ -168,7 +168,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Pack JSON values to strings.",
         urlGithub: "https://github.com/maxzz/rollup-plugin-pack-json-values",
         urlDemo: "https://www.npmjs.com/package/rollup-plugin-pack-json-values",
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/rollup-plugin-pack-json-values",
         stack: ['ts', 'rollup'],
     },
@@ -178,7 +178,7 @@ export const projectsNpm: ProjectType[] = [
         description: "The only difference between chalk and node-chalk is that node-chalk only has a node.js version. https://github.com/chalk/chalk",
         urlGithub: "https://github.com/maxzz/node-chalk",
         urlDemo: "https://www.npmjs.com/package/node-chalk",
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/node-chalk",
         stack: ['js'],
     },
@@ -188,7 +188,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Stanford Javascript Crypto Library (SJCL) upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-sjcl",
         urlDemo: "https://github.com/maxzz/ts-sjcl", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-sjcl",
         stack: ['ts'],
     },
@@ -198,7 +198,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Secure Remote Password library upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-srpclient",
         urlDemo: "https://github.com/maxzz/ts-srpclient", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-srpclient",
         stack: ['ts'],
     },
@@ -208,7 +208,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Secure Remote Password client library. HID DigitalPersona WebSdk (2023 version). Transport layer aka digitalpersona-transport. This is so far is private",
         urlGithub: "https://github.com/hidglobal/digitalpersona-transport", //TODO: so far is is private
         urlDemo: "https://github.com/hidglobal/digitalpersona-transport", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-digitalpersona-transport",
         stack: ['ts'],
     },
@@ -218,7 +218,7 @@ export const projectsNpm: ProjectType[] = [
         description: "PM manifest definitions.",
         urlGithub: "https://github.com/maxzz/pm-manifest",
         urlDemo: "https://github.com/maxzz/pm-manifest", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest",
         stack: ['ts'],
     },
@@ -228,7 +228,7 @@ export const projectsNpm: ProjectType[] = [
         description: "PM manifest icons.",
         urlGithub: "https://github.com/maxzz/pm-manifest-icons",
         urlDemo: "https://github.com/maxzz/pm-manifest-icons", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest-icons",
         stack: ['react', 'ts'],
     },
@@ -238,7 +238,7 @@ export const projectsNpm: ProjectType[] = [
         description: "PM extension DOM access.",
         urlGithub: "https://github.com/maxzz/pm-xtn-dom",
         urlDemo: "https://github.com/maxzz/pm-xtn-dom", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-dom",
         stack: ['react', 'ts'],
     },
@@ -248,7 +248,7 @@ export const projectsNpm: ProjectType[] = [
         description: "PM extension content scripts UI.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui",
         urlDemo: "https://github.com/maxzz/pm-xtn-csui", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui",
         stack: ['react', 'ts'],
     },
@@ -258,7 +258,7 @@ export const projectsNpm: ProjectType[] = [
         description: "PM extension content scripts UI resources builder.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-res",
         urlDemo: "https://github.com/maxzz/pm-xtn-csui-res", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui-res",
         stack: ['react', 'ts'],
     },
@@ -268,7 +268,7 @@ export const projectsNpm: ProjectType[] = [
         description: "Test application for pm-xtn-csui.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
         urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
         stack: ['js'],
     },
@@ -278,7 +278,7 @@ export const projectsNpm: ProjectType[] = [
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/update-env",
         urlDemo: "https://maxzz.github.io/update-env", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env",
         stack: ['ts'],
     },
@@ -288,7 +288,7 @@ export const projectsNpm: ProjectType[] = [
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/update-env-upen",
         urlDemo: "https://maxzz.github.io/update-env-upen", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env-upen",
         stack: ['ts'],
     },
