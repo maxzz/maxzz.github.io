@@ -18,6 +18,7 @@ export function ProjectsAsGrid({ section }: { section: SectionType; }) {
 
 function ProjectItem_Grid({ project }: { project: ProjectType; }) {
     const { id, description, urlDemo, urlPreview, } = project;
+    const isSvg = typeof urlPreview === "string" && urlPreview.endsWith(".svg");
     return (
         <section className="flex flex-col">
             <ProjectName name={id} />
@@ -29,12 +30,10 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
 
                 <ProjectThreeButtons className="-mb-2" project={project} inListItem={false} />
 
-                <div className="relative col-start-2 col-end-3 row-span-full w-24 h-auto flex items-center bg-primary-900 border-primary-700/70 shadow-primary-600/50 hover:shadow-primary-400/50">
-                    <div className="hover:scale-150 transition-transform border shadow">
-                        <a href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
-                            <ProjectPicture src={urlPreview} />
-                        </a>
-                    </div>
+                <div className={pictureClasses}>
+                    <a className={classNames("transition-transform border shadow", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
+                        <ProjectPicture src={urlPreview} />
+                    </a>
                 </div>
             </div >
         </section>
@@ -50,3 +49,11 @@ function ProjectPicture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAt
         </picture>
     );
 }
+
+const pictureClasses = "\
+relative col-start-2 col-end-3 row-span-full w-24 h-auto \
+flex items-center \
+bg-primary-900 \
+border-primary-700/70 \
+shadow-primary-600/50 \
+hover:shadow-primary-400/50";
