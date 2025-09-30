@@ -64,7 +64,7 @@ type AtomsFamilyResult<T> = {
  *      const [open, setOpen] = useAtom(openAtoms(section.name)); ... onClick={() => setOpen((v) => !v)}
  */
 export function atomsFamily<T>(initialValues: Record<string, T>, atomInitialValue: T, initAtom: (param: T) => PrimitiveAtom<T>): AtomsFamilyResult<T> {
-    let map = valuesToAtoms(initialValues);
+    const map = valuesToAtoms(initialValues);
 
     const getAtom = (key: string) => {
         let value = map.get(key);
@@ -74,16 +74,20 @@ export function atomsFamily<T>(initialValues: Record<string, T>, atomInitialValu
         }
         return value;
     };
+    getAtom.setValues = valuesToAtoms;
+    getAtom.getValues = atomsToValues;
 
     function valuesToAtoms(values: Record<string, T>) {
-        return new Map((Object.entries(values || {}).map(([key, value]) => [key, initAtom(value)])));
+        return new Map((Object.entries(values || {}).map(
+            ([key, value]) => [key, initAtom(value)]
+        )));
     }
 
     function atomsToValues(get: Getter): Record<string, T> {
-        return Object.fromEntries([...map.entries()].map(([key, atom]) => [key, get(atom)]));
+        return Object.fromEntries([...map.entries()].map(
+            ([key, atom]) => [key, get(atom)]
+        ));
     }
 
-    getAtom.setValues = valuesToAtoms;
-    getAtom.getValues = atomsToValues;
     return getAtom;
 }
