@@ -29,3 +29,12 @@
 .smallscroll::-webkit-scrollbar-thumb {
     background-color: #666b7a;
 }
+
+/* 3D cube animations */
+.cube-perspective {
+    perspective: 800px;
+}
+
+.cube-3d {
+    transform-style: preserve-3d;
+}
