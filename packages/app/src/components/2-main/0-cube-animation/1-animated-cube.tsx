@@ -20,98 +20,9 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
     useEffect(() => {
         if (trigger) {
-            playAnimation();
+            playAnimation(cubeControls, sideControls, onAnimationComplete);
         }
     }, [trigger]);
-
-    const playAnimation = async () => {
-        try {
-            // Reset all animations with isometric view
-            await cubeControls.set({
-                rotateX: -15,
-                rotateY: 45,
-                opacity: 1,
-                scale: 1,
-            });
-
-            // Set initial cube face positions and transforms
-            await Promise.all([
-                // sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                // sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                // sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                // sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                // sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                // sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.front.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.back.set({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0 }),
-                sideControls.left.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0 }),
-                sideControls.right.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0 }),
-                sideControls.top.set({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0 }),
-                sideControls.bottom.set({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0 }),
-            ]);
-
-            // 1. Rotate cube twice (720 degrees total) from isometric view
-            await cubeControls.start({
-                rotateX: -15,
-                rotateY: 45 + 720,
-                transition: { duration: 2, ease: "easeInOut" }
-            });
-
-            // 2. Explode cube sides
-            await Promise.all([
-                sideControls.front.start({ z: 100, transition: transitionOut }),
-                sideControls.back.start({ z: -100, transition: transitionOut }),
-                sideControls.left.start({ x: -100, transition: transitionOut }),
-                sideControls.right.start({ x: 100, transition: transitionOut }),
-                sideControls.top.start({ y: -100, transition: transitionOut }),
-                sideControls.bottom.start({ y: 100, transition: transitionOut }),
-            ]);
-
-            // 3. Wait for 1 second
-            await new Promise(resolve => setTimeout(resolve, 1000));
-
-            await Promise.all([
-                sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-                sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
-            ]);
-
-            // 4. Reassemble cube (return all sides to their original cube positions)
-            await Promise.all([
-                sideControls.front.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0, transition: transitionIn }),
-                sideControls.back.start({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0, transition: transitionIn }),
-                sideControls.left.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0, transition: transitionIn }),
-                sideControls.right.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0, transition: transitionIn }),
-                sideControls.top.start({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
-                sideControls.bottom.start({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
-            ]);
-
-            // 5. Wait 0.5 seconds, then fade opacity from 1 to 0.5
-            await new Promise(resolve => setTimeout(resolve, 500));
-
-            await cubeControls.start({
-                rotateX: -15,
-                rotateY: 45 + 720,
-                opacity: 0.5,
-                transition: { duration: 1, ease: "easeInOut" }
-            });
-
-            // 6. Return to initial state
-            await cubeControls.start({
-                rotateX: -15,
-                rotateY: 45,
-                opacity: 1,
-                transition: { duration: 1, ease: "easeInOut" }
-            });
-
-            onAnimationComplete?.();
-        } catch (error) {
-            console.error('Animation error:', error);
-        }
-    };
 
     return (
         <div className="relative size-32 cube-perspective">
@@ -135,3 +46,92 @@ const transitionOut: Transition = { duration: 0.5, ease: "easeOut", };
 const transitionIn: Transition = { duration: 0.5, ease: "easeInOut", };
 
 const sideClasses = "absolute size-full text-white font-bold flex items-center justify-center";
+
+async function playAnimation(cubeControls: any, sideControls: any, onAnimationComplete?: () => void) {
+    try {
+        // Reset all animations with isometric view
+        await cubeControls.set({
+            rotateX: -15,
+            rotateY: 45,
+            opacity: 1,
+            scale: 1,
+        });
+
+        // Set initial cube face positions and transforms
+        await Promise.all([
+            // sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            // sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            // sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            // sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            // sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            // sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.front.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.back.set({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0 }),
+            sideControls.left.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0 }),
+            sideControls.right.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0 }),
+            sideControls.top.set({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0 }),
+            sideControls.bottom.set({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0 }),
+        ]);
+
+        // 1. Rotate cube twice (720 degrees total) from isometric view
+        await cubeControls.start({
+            rotateX: -15,
+            rotateY: 45 + 720,
+            transition: { duration: 2, ease: "easeInOut" }
+        });
+
+        // 2. Explode cube sides
+        await Promise.all([
+            sideControls.front.start({ z: 100, transition: transitionOut }),
+            sideControls.back.start({ z: -100, transition: transitionOut }),
+            sideControls.left.start({ x: -100, transition: transitionOut }),
+            sideControls.right.start({ x: 100, transition: transitionOut }),
+            sideControls.top.start({ y: -100, transition: transitionOut }),
+            sideControls.bottom.start({ y: 100, transition: transitionOut }),
+        ]);
+
+        // 3. Wait for 1 second
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        await Promise.all([
+            sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+        ]);
+
+        // 4. Reassemble cube (return all sides to their original cube positions)
+        await Promise.all([
+            sideControls.front.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0, transition: transitionIn }),
+            sideControls.back.start({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0, transition: transitionIn }),
+            sideControls.left.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0, transition: transitionIn }),
+            sideControls.right.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0, transition: transitionIn }),
+            sideControls.top.start({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
+            sideControls.bottom.start({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
+        ]);
+
+        // 5. Wait 0.5 seconds, then fade opacity from 1 to 0.5
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        await cubeControls.start({
+            rotateX: -15,
+            rotateY: 45 + 720,
+            opacity: 0.5,
+            transition: { duration: 1, ease: "easeInOut" }
+        });
+
+        // 6. Return to initial state
+        await cubeControls.start({
+            rotateX: -15,
+            rotateY: 45,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeInOut" }
+        });
+
+        onAnimationComplete?.();
+    } catch (error) {
+        console.error('Animation error:', error);
+    }
+}
