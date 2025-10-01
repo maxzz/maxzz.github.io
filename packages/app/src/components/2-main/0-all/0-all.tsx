@@ -4,7 +4,7 @@ import { type SectionType, sections } from "@maxzz/db-apps";
 import { UIAccordion, UIArrow } from "../../ui";
 import { ProjectsAsGrid } from "./2-project-item-grid";
 import { ProjectsAsList } from "./2-project-item-list";
-import { CubeAnimationDemo } from "../7-cube-animation-demo";
+import { CubeAnimationDemo } from "../0-cube-animation";
 
 export function Section2_Main() {
     return (<>
