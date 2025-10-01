@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { classNames } from "@/utils";
-import { type Transition, motion, useAnimation } from "motion/react";
+import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
 
 interface AnimatedCubeProps {
     trigger: boolean;
@@ -9,7 +9,7 @@ interface AnimatedCubeProps {
 
 export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps) {
     const cubeControls = useAnimation();
-    const sideControls = {
+    const sideControls: SideControls = {
         front: useAnimation(),
         back: useAnimation(),
         left: useAnimation(),
@@ -47,7 +47,16 @@ const transitionIn: Transition = { duration: 0.5, ease: "easeInOut", };
 
 const sideClasses = "absolute size-full text-white font-bold flex items-center justify-center";
 
-async function playAnimation(cubeControls: any, sideControls: any, onAnimationComplete?: () => void) {
+type SideControls = {
+    front: LegacyAnimationControls;
+    back: LegacyAnimationControls;
+    left: LegacyAnimationControls;
+    right: LegacyAnimationControls;
+    top: LegacyAnimationControls;
+    bottom: LegacyAnimationControls;
+};
+
+async function playAnimation(cubeControls: LegacyAnimationControls, sideControls: SideControls, onAnimationComplete?: () => void) {
     try {
         // Reset all animations with isometric view
         await cubeControls.set({
