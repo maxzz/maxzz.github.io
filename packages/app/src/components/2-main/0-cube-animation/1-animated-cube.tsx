@@ -47,16 +47,18 @@ const transitionIn: Transition = { duration: 0.5, ease: "easeInOut", };
 
 const sideClasses = "absolute size-full text-white font-bold flex items-center justify-center";
 
+type AnimationControls = LegacyAnimationControls;
+
 type SideControls = {
-    front: LegacyAnimationControls;
-    back: LegacyAnimationControls;
-    left: LegacyAnimationControls;
-    right: LegacyAnimationControls;
-    top: LegacyAnimationControls;
-    bottom: LegacyAnimationControls;
+    front: AnimationControls;
+    back: AnimationControls;
+    left: AnimationControls;
+    right: AnimationControls;
+    top: AnimationControls;
+    bottom: AnimationControls;
 };
 
-async function playAnimation(cubeControls: LegacyAnimationControls, sideControls: SideControls, onAnimationComplete?: () => void) {
+async function playAnimation(cubeControls: AnimationControls, sideControls: SideControls, onAnimationComplete?: () => void) {
     try {
         // Reset all animations with isometric view
         await cubeControls.set({
