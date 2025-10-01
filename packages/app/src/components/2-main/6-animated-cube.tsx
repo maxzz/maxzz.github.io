@@ -25,10 +25,10 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
     const playAnimation = async () => {
         try {
-            // Reset all animations
+            // Reset all animations with isometric view
             await cubeControls.set({
-                rotateX: 0,
-                rotateY: 0,
+                rotateX: -15,
+                rotateY: 45,
                 opacity: 1,
                 scale: 1,
             });
@@ -45,9 +45,10 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
                 });
             });
 
-            // 1. Rotate cube twice (720 degrees total)
+            // 1. Rotate cube twice (720 degrees total) from isometric view
             await cubeControls.start({
-                rotateY: 720,
+                rotateX: -15,
+                rotateY: 45 + 720,
                 transition: { duration: 2, ease: "easeInOut" }
             });
 
@@ -114,6 +115,8 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
             await new Promise(resolve => setTimeout(resolve, 500));
             
             await cubeControls.start({
+                rotateX: -15,
+                rotateY: 45 + 720,
                 opacity: 0.5,
                 transition: { duration: 1, ease: "easeInOut" }
             });
@@ -129,6 +132,7 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
             <div className="relative w-32 h-32 cube-perspective">
                 <motion.div
                     animate={cubeControls}
+                    initial={{ rotateX: -15, rotateY: 45 }}
                     className="relative w-full h-full cube-3d"
                 >
                     {/* Front face */}
