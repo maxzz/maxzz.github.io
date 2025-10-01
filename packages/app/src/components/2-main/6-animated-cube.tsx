@@ -1,5 +1,5 @@
-import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
+import { motion, useAnimation } from "motion/react";
 
 interface AnimatedCubeProps {
     trigger: boolean;
@@ -52,30 +52,12 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
             // 2. Explode cube sides
             await Promise.all([
-                sideControls.front.start({
-                    z: 100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
-                sideControls.back.start({
-                    z: -100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
-                sideControls.left.start({
-                    x: -100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
-                sideControls.right.start({
-                    x: 100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
-                sideControls.top.start({
-                    y: -100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
-                sideControls.bottom.start({
-                    y: 100,
-                    transition: { duration: 0.5, ease: "easeOut" }
-                }),
+                sideControls.front.start({ z: 100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.back.start({ z: -100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.left.start({ x: -100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.right.start({ x: 100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.top.start({ y: -100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.bottom.start({ y: 100, transition: { duration: 0.5, ease: "easeOut" } }),
             ]);
 
             // 3. Wait for 1 second
@@ -83,35 +65,17 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
             // 4. Reassemble cube (return all sides to their original cube positions)
             await Promise.all([
-                sideControls.front.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
-                sideControls.back.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
-                sideControls.left.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
-                sideControls.right.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
-                sideControls.top.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
-                sideControls.bottom.start({
-                    x: 0, y: 0, z: 0,
-                    transition: { duration: 0.5, ease: "easeInOut" }
-                }),
+                sideControls.front.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.back.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.left.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.right.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.top.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.bottom.start({ x: 0, y: 0, z: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
             ]);
 
             // 5. Wait 0.5 seconds, then fade opacity from 1 to 0.5
             await new Promise(resolve => setTimeout(resolve, 500));
-            
+
             await cubeControls.start({
                 rotateX: -15,
                 rotateY: 45 + 720,
