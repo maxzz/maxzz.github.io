@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "motion/react";
+import { classNames } from "@/utils";
 
 interface AnimatedCubeProps {
     trigger: boolean;
@@ -105,73 +106,16 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
                     initial={{ rotateX: -15, rotateY: 45 }}
                     className="relative w-full h-full cube-3d"
                 >
-                    {/* Front face */}
-                    <motion.div
-                        animate={sideControls.front}
-                        className="absolute w-full h-full bg-red-500 border-2 border-red-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'translateZ(64px)',
-                        }}
-                    >
-                        Front
-                    </motion.div>
-
-                    {/* Back face */}
-                    <motion.div
-                        animate={sideControls.back}
-                        className="absolute w-full h-full bg-blue-500 border-2 border-blue-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'translateZ(-64px) rotateY(180deg)',
-                        }}
-                    >
-                        Back
-                    </motion.div>
-
-                    {/* Left face */}
-                    <motion.div
-                        animate={sideControls.left}
-                        className="absolute w-full h-full bg-green-500 border-2 border-green-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'rotateY(-90deg) translateZ(64px)',
-                        }}
-                    >
-                        Left
-                    </motion.div>
-
-                    {/* Right face */}
-                    <motion.div
-                        animate={sideControls.right}
-                        className="absolute w-full h-full bg-yellow-500 border-2 border-yellow-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'rotateY(90deg) translateZ(64px)',
-                        }}
-                    >
-                        Right
-                    </motion.div>
-
-                    {/* Top face */}
-                    <motion.div
-                        animate={sideControls.top}
-                        className="absolute w-full h-full bg-purple-500 border-2 border-purple-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'rotateX(90deg) translateZ(64px)',
-                        }}
-                    >
-                        Top
-                    </motion.div>
-
-                    {/* Bottom face */}
-                    <motion.div
-                        animate={sideControls.bottom}
-                        className="absolute w-full h-full bg-orange-500 border-2 border-orange-600 flex items-center justify-center text-white font-bold"
-                        style={{
-                            transform: 'rotateX(-90deg) translateZ(64px)',
-                        }}
-                    >
-                        Bottom
-                    </motion.div>
+                    <motion.div animate={sideControls.front}  /**/ className={classNames(sideClesses, "bg-red-500 border-2 border-red-600")}       /**/ style={{ transform: 'translateZ(64px)', }}>Front</motion.div> {/* Front face */}
+                    <motion.div animate={sideControls.back}   /**/ className={classNames(sideClesses, "bg-blue-500 border-2 border-blue-600")}     /**/ style={{ transform: 'translateZ(-64px) rotateY(180deg)', }}>Back</motion.div> {/* Back face */}
+                    <motion.div animate={sideControls.left}   /**/ className={classNames(sideClesses, "bg-green-500 border-2 border-green-600")}   /**/ style={{ transform: 'rotateY(-90deg) translateZ(64px)', }}>Left</motion.div> {/* Left face */}
+                    <motion.div animate={sideControls.right}  /**/ className={classNames(sideClesses, "bg-yellow-500 border-2 border-yellow-600")} /**/ style={{ transform: 'rotateY(90deg) translateZ(64px)', }}>Right</motion.div> {/* Right face */}
+                    <motion.div animate={sideControls.top}    /**/ className={classNames(sideClesses, "bg-purple-500 border-2 border-purple-600")} /**/ style={{ transform: 'rotateX(90deg) translateZ(64px)', }}>Top</motion.div> {/* Top face */}
+                    <motion.div animate={sideControls.bottom} /**/ className={classNames(sideClesses, "bg-orange-500 border-2 border-orange-600")} /**/ style={{ transform: 'rotateX(-90deg) translateZ(64px)', }}>Bottom</motion.div> {/* Bottom face */}
                 </motion.div>
             </div>
         </div>
     );
 }
+
+const sideClesses = "absolute w-full h-full flex items-center justify-center text-white font-bold";

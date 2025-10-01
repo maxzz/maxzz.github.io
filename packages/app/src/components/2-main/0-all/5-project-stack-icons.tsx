@@ -1,7 +1,7 @@
 import { Fragment, type HTMLAttributes, type ReactNode } from "react";
 import { classNames } from "@/utils";
-import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from "../ui/icons";
-import { SymbolManualMode, SymbolReactSpring, SymbolStitches } from "../ui/icons/symbols";
+import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from "../../ui/icons";
+import { SymbolManualMode, SymbolReactSpring, SymbolStitches } from "../../ui/icons/symbols";
 
 export function ProjectStack({ stack, className, ...rest }: { stack?: string[]; } & HTMLAttributes<HTMLDivElement>) {
     return (<>
