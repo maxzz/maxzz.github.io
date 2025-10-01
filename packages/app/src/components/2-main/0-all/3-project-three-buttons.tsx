@@ -2,7 +2,7 @@ import { type HTMLAttributes, type MouseEvent } from "react";
 import { classNames } from "@/utils";
 import { type ProjectType } from "@maxzz/db-apps";
 import { ButtonCopyPath } from "./4-project-button-copy-path";
-import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../ui";
+import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "../../ui";
 
 export function ProjectThreeButtons({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;

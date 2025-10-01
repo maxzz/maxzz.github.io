@@ -1,14 +1,15 @@
 import { useAtom, useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
-import { UIAccordion, UIArrow } from "../ui";
+import { UIAccordion, UIArrow } from "../../ui";
 import { ProjectsAsGrid } from "./2-project-item-grid";
 import { ProjectsAsList } from "./2-project-item-list";
-import { CubeAnimationDemo } from "./7-cube-animation-demo";
+import { CubeAnimationDemo } from "../7-cube-animation-demo";
 
 export function Section2_Main() {
     return (<>
         <CubeAnimationDemo />
+        
         {sections.map(
             (section, idx) => (
                 <ProjectsGroup section={section} key={idx} />
