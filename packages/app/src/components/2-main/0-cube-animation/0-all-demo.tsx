@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AnimatedCube } from "./6-animated-cube";
+import { AnimatedCube } from "./1-animated-cube";
 
 export function CubeAnimationDemo() {
     const [trigger, setTrigger] = useState(false);

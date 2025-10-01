@@ -1,1 +1,1 @@
-export * from "./7-cube-animation-demo";
+export * from "./0-all-demo";
