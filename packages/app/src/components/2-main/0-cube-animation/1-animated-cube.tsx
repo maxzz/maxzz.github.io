@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { motion, useAnimation } from "motion/react";
 import { classNames } from "@/utils";
+import { type Transition, motion, useAnimation } from "motion/react";
 
 interface AnimatedCubeProps {
     trigger: boolean;
@@ -59,25 +59,34 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
             // 2. Explode cube sides
             await Promise.all([
-                sideControls.front.start({ z: 100, transition: { duration: 0.5, ease: "easeOut" } }),
-                sideControls.back.start({ z: -100, transition: { duration: 0.5, ease: "easeOut" } }),
-                sideControls.left.start({ x: -100, transition: { duration: 0.5, ease: "easeOut" } }),
-                sideControls.right.start({ x: 100, transition: { duration: 0.5, ease: "easeOut" } }),
-                sideControls.top.start({ y: -100, transition: { duration: 0.5, ease: "easeOut" } }),
-                sideControls.bottom.start({ y: 100, transition: { duration: 0.5, ease: "easeOut" } }),
+                sideControls.front.start({ z: 100, transition: transitionOut }),
+                sideControls.back.start({ z: -100, transition: transitionOut }),
+                sideControls.left.start({ x: -100, transition: transitionOut }),
+                sideControls.right.start({ x: 100, transition: transitionOut }),
+                sideControls.top.start({ y: -100, transition: transitionOut }),
+                sideControls.bottom.start({ y: 100, transition: transitionOut }),
             ]);
 
             // 3. Wait for 1 second
             await new Promise(resolve => setTimeout(resolve, 1000));
 
+            await Promise.all([
+                sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            ]);
+
             // 4. Reassemble cube (return all sides to their original cube positions)
             await Promise.all([
-                sideControls.front.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
-                sideControls.back.start({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
-                sideControls.left.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
-                sideControls.right.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
-                sideControls.top.start({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
-                sideControls.bottom.start({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0, transition: { duration: 0.5, ease: "easeInOut" } }),
+                sideControls.front.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0, transition: transitionIn }),
+                sideControls.back.start({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0, transition: transitionIn }),
+                sideControls.left.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0, transition: transitionIn }),
+                sideControls.right.start({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 90, rotateZ: 0, transition: transitionIn }),
+                sideControls.top.start({ x: 0, y: 0, z: 64, rotateX: 90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
+                sideControls.bottom.start({ x: 0, y: 0, z: 64, rotateX: -90, rotateY: 0, rotateZ: 0, transition: transitionIn }),
             ]);
 
             // 5. Wait 0.5 seconds, then fade opacity from 1 to 0.5
@@ -121,5 +130,8 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
         </div>
     );
 }
+
+const transitionOut: Transition = { duration: 0.5, ease: "easeOut", };
+const transitionIn: Transition = { duration: 0.5, ease: "easeInOut", };
 
 const sideClasses = "absolute size-full text-white font-bold flex items-center justify-center";
