@@ -12,11 +12,13 @@
     }
 }
 
-/* Firefox scrollbars */
-.smallscroll {
-    --sb-width: 8px;
-    scrollbar-color: #666b7a transparent;
-    scrollbar-width: thin;
+/* Firefox scrollbars - only applied where scrollbar-color is supported (Chrome > 121) */
+@supports (scrollbar-color: auto) {
+    .smallscroll {
+        --sb-width: 8px;
+        scrollbar-color: #666b7a transparent;
+        scrollbar-width: thin;
+    }
 }
 
 /* Chrome scrollbars */
