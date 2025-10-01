@@ -33,17 +33,15 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
                 scale: 1,
             });
 
-            // Reset all sides to initial position
-            Object.values(sideControls).forEach(async (control) => {
-                await control.set({
-                    x: 0,
-                    y: 0,
-                    z: 0,
-                    rotateX: 0,
-                    rotateY: 0,
-                    rotateZ: 0,
-                });
-            });
+            // Reset all sides to initial position (keeping their original CSS transforms)
+            await Promise.all([
+                sideControls.front.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.back.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.left.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+                sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+            ]);
 
             // 1. Rotate cube twice (720 degrees total) from isometric view
             await cubeControls.start({
@@ -83,30 +81,30 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
             // 3. Wait for 1 second
             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            // 4. Reassemble cube
+            // 4. Reassemble cube (return all sides to their original cube positions)
             await Promise.all([
                 sideControls.front.start({
-                    z: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
                 sideControls.back.start({
-                    z: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
                 sideControls.left.start({
-                    x: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
                 sideControls.right.start({
-                    x: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
                 sideControls.top.start({
-                    y: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
                 sideControls.bottom.start({
-                    y: 0,
+                    x: 0, y: 0, z: 0,
                     transition: { duration: 0.5, ease: "easeInOut" }
                 }),
             ]);
