@@ -121,6 +121,14 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
                 transition: { duration: 1, ease: "easeInOut" }
             });
 
+            // 6. Return to initial state
+            await cubeControls.start({
+                rotateX: -15,
+                rotateY: 45,
+                opacity: 1,
+                transition: { duration: 1, ease: "easeInOut" }
+            });
+
             onAnimationComplete?.();
         } catch (error) {
             console.error('Animation error:', error);
