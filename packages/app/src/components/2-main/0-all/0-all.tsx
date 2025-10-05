@@ -5,14 +5,10 @@ import { UIAccordion, UIArrow } from "../../ui";
 import { ProjectsAsGrid } from "./2-project-item-grid";
 import { ProjectsAsList } from "./2-project-item-list";
 import { CubeAnimationDemo } from "../0-cube-animation";
-import { UseAnimationFrame } from "../0-cube-animation/2-animated-cude2";
-import { ListAnimation } from "../0-cube-animation/3-use-motion";
 
 export function Section2_Main() {
     return (<>
-        {/* <CubeAnimationDemo /> */}
-        <UseAnimationFrame />
-        <ListAnimation />
+        <CubeAnimationDemo />
 
         {sections.map(
             (section, idx) => (

@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { AnimatedCube } from "./1-animated-cube";
+import { UseAnimationFrame } from "./2-animated-cude2";
+import { ListAnimation } from "./3-0-use-motion";
+import { PlaybackControls } from "./3-1-use-motion-controls";
+import { ManualReverseAnimation } from "./3-2-use-motion-controls-reverse";
 
 export function CubeAnimationDemo() {
     const [trigger, setTrigger] = useState(false);
@@ -12,10 +16,10 @@ export function CubeAnimationDemo() {
         }
     };
 
-    const handleAnimationComplete = () => {
+    const handleAnimationComplete = useCallback(() => {
         setIsAnimating(false);
         setTrigger(false);
-    };
+    }, []);
 
     return (
         <div className="mx-4 w-full max-w-xl">
@@ -28,10 +32,21 @@ export function CubeAnimationDemo() {
                     </h3>
 
                     <div className="p-8 flex items-center justify-center">
-                        <AnimatedCube
+                        {/* <UseAnimationFrame /> */}
+
+                        <ListAnimation
                             trigger={trigger}
                             onAnimationComplete={handleAnimationComplete}
                         />
+
+                        <PlaybackControls />
+
+                        <ManualReverseAnimation />
+
+                        {/* <AnimatedCube
+                            trigger={trigger}
+                            onAnimationComplete={handleAnimationComplete}
+                        /> */}
                     </div>
 
                     <button
