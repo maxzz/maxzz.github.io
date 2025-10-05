@@ -29,7 +29,7 @@ export function ListAnimation({ trigger, onAnimationComplete }: { trigger: boole
                 animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems }),
             ]);
 
-            await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 0.5 })
+            await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 0.5 });
             /**/
 
             // 3. done
@@ -44,13 +44,15 @@ export function ListAnimation({ trigger, onAnimationComplete }: { trigger: boole
 
     return (
         // 3. Attach the scope ref to the parent element
-        <div ref={scope}>
-            <h1 className="list-title">Loading...</h1>
-            <ul className="list">
-                <li className="list-item">1</li>
-                <li className="list-item">1</li>
-                <li className="list-item">1</li>
-            </ul>
+        <div className="p-8 border border-primary-400/50 rounded-lg overflow-hidden">
+            <div ref={scope}>
+                <h1 className="list-title">Loading...</h1>
+                <ul className="list">
+                    <li className="list-item">One</li>
+                    <li className="list-item">Two</li>
+                    <li className="list-item">Three</li>
+                </ul>
+            </div>
         </div>
     );
 }

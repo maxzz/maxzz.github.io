@@ -48,15 +48,15 @@ export const PlaybackControls = () => {
             // controls.reverse();
             // controls.playbackRate = -1;
             // controls.startTime = 0; // this is only getter
-            controls.time = 0;
+            // controls.time = 0;
             
-            controls.speed = -0.5;
+            controls.speed = -1;
             controls.play();
         }
     };
 
     return (
-        <div>
+        <div className="border border-primary-400/50 rounded-lg">
             <div ref={scope} className="box m-4 size-8 bg-green-700"></div>
             <div className="controls flex gap-2">
                 <button onClick={handlePlay}>Play</button>

@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { AnimatedCube } from "./1-animated-cube";
 import { UseAnimationFrame } from "./2-animated-cude2";
-import { ListAnimation } from "./3-0-use-motion";
+import { ListAnimation } from "./3-0-use-motion-list-animation";
 import { PlaybackControls } from "./3-1-use-motion-controls";
 import { ManualReverseAnimation } from "./3-2-use-motion-controls-reverse";
 
@@ -31,7 +31,7 @@ export function CubeAnimationDemo() {
                         Animated Cube Demo
                     </h3>
 
-                    <div className="p-8 flex items-center justify-center">
+                    <div className="p-8 text-xs font-normal  flex items-center justify-center gap-2">
                         {/* <UseAnimationFrame /> */}
 
                         <ListAnimation
@@ -43,10 +43,10 @@ export function CubeAnimationDemo() {
 
                         <ManualReverseAnimation />
 
-                        {/* <AnimatedCube
+                        <AnimatedCube
                             trigger={trigger}
                             onAnimationComplete={handleAnimationComplete}
-                        /> */}
+                        />
                     </div>
 
                     <button

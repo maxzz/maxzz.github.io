@@ -32,7 +32,7 @@ export const ManualReverseAnimation = () => {
     };
 
     return (
-        <div>
+        <div className="border border-primary-400/50 rounded-lg">
             <div ref={scope} className="box size-8 bg-orange-400" />
             <div className="controls">
                 <button className="min-w-24" onClick={toggleAnimation}>
