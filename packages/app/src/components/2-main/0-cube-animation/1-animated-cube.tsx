@@ -25,7 +25,7 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
     }, [trigger]);
 
     return (
-        <div className="relative size-32 cube-perspective">
+        <div className="relative size-32 scale-50 cube-perspective">
             <motion.div
                 animate={cubeControls}
                 initial={{ rotateX: -15, rotateY: 45 }}
