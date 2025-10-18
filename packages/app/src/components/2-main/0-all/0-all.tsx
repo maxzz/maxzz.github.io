@@ -8,7 +8,7 @@ import { CubeAnimationDemo } from "../0-cube-animation";
 
 export function Section2_Main() {
     return (<>
-        <CubeAnimationDemo />
+        {/* <CubeAnimationDemo /> */}
 
         {sections.map(
             (section, idx) => (
