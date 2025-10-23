@@ -9,6 +9,7 @@
         "bootstrap": "pnpm -w install",
         "dev": "pnpm --filter ./packages/app dev",
         "build": "pnpm -w --filter ./packages/app build",
-        "preview": "pnpm --filter ./packages/app preview"
+        "preview": "pnpm --filter ./packages/app preview",
+        "to-npm": "pnpm -w --filter ./packages/app to-npm"
     }
 }
