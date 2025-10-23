@@ -302,4 +302,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/2-web/0-dp/utils/tailwindcss-plugin-debug-screens",
         stack: ['tw', 'ts'],
     },
+    {
+        primary: 'npm',
+        id: "tailwindcss-plugin-debug-screens-tw4",
+        description: "A utility package for environment variable management.",
+        urlGithub: "https://github.com/maxzz/tailwindcss-plugin-debug-screens-tw4",
+        urlDemo: "https://maxzz.github.io/tailwindcss-plugin-debug-screens-tw4", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-debug-screens-tw4",
+        stack: ['tw', 'ts'],
+    },
 ];
