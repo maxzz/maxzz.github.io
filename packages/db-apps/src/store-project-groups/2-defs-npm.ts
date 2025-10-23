@@ -27,7 +27,7 @@ export const projectsNpm: ProjectType[] = [
         id: "srt-from-vtt",
         description: "Utility to convert .vtt files to .srt format.",
         urlGithub: "https://github.com/maxzz/srt-from-vtt",
-        urlDemo: "https://github.com/maxzz/srt-from-vtt", // no demo
+        urlDemo: "https://www.npmjs.com/package/srt-from-vtt", // no demo
         urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/srt-from-vtt",
         stack: ['ts'],
@@ -57,7 +57,7 @@ export const projectsNpm: ProjectType[] = [
         id: "topdirs",
         description: "The topdirs utility replicates the folder structure without copying the files it contains.",
         urlGithub: "https://github.com/maxzz/topdirs",
-        urlDemo: "https://github.com/maxzz/topdirs", // no demo
+        urlDemo: "https://www.npmjs.com/package/topdirs", // no demo
         urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/topdirs",
         stack: ['npm', 'ts'],
@@ -67,7 +67,7 @@ export const projectsNpm: ProjectType[] = [
         id: "topdirs 2025. make-topdirs",
         description: "The topdirs utility replicates the folder structure without copying the files it contains. 2025 version.",
         urlGithub: "https://github.com/maxzz/make-topdirs",
-        urlDemo: "https://github.com/maxzz/make-topdirs", // no demo
+        urlDemo: "https://www.npmjs.com/package/make-topdirs", // no demo
         urlPreview: images.npm25,
         localPath: "C:/Y/w/1-node/1-utils/make-topdirs",
         stack: ['npm', 'ts'],
@@ -77,7 +77,7 @@ export const projectsNpm: ProjectType[] = [
         id: "sftp-shell",
         description: "Transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-shell",
-        urlDemo: "https://github.com/maxzz/sftp-shell", // no demo
+        urlDemo: "https://www.npmjs.com/package/sftp-shell", // no demo
         urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-shell",
         stack: ['ts'],
@@ -87,7 +87,7 @@ export const projectsNpm: ProjectType[] = [
         id: "sftp-test",
         description: "Test transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-test",
-        urlDemo: "https://github.com/maxzz/sftp-test", // no demo
+        urlDemo: "https://www.npmjs.com/package/sftp-test", // no demo
         urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-test",
         stack: ['js'],
@@ -187,7 +187,7 @@ export const projectsNpm: ProjectType[] = [
         id: "ts-sjcl",
         description: "Stanford Javascript Crypto Library (SJCL) upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-sjcl",
-        urlDemo: "https://github.com/maxzz/ts-sjcl", // no demo
+        urlDemo: "https://www.npmjs.com/package/ts-sjcl", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-sjcl",
         stack: ['ts'],
@@ -197,7 +197,7 @@ export const projectsNpm: ProjectType[] = [
         id: "ts-srpclient",
         description: "Secure Remote Password library upgraded to Typescript and ES6 module format.",
         urlGithub: "https://github.com/maxzz/ts-srpclient",
-        urlDemo: "https://github.com/maxzz/ts-srpclient", // no demo
+        urlDemo: "https://www.npmjs.com/package/ts-srpclient", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-srpclient",
         stack: ['ts'],
@@ -207,7 +207,7 @@ export const projectsNpm: ProjectType[] = [
         id: "ts-digitalpersona-transport",
         description: "Secure Remote Password client library. HID DigitalPersona WebSdk (2023 version). Transport layer aka digitalpersona-transport. This is so far is private",
         urlGithub: "https://github.com/hidglobal/digitalpersona-transport", //TODO: so far is is private
-        urlDemo: "https://github.com/hidglobal/digitalpersona-transport", // no demo
+        urlDemo: "https://www.npmjs.com/package/digitalpersona-transport", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/ts-digitalpersona-transport",
         stack: ['ts'],
@@ -217,7 +217,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-manifest",
         description: "PM manifest definitions.",
         urlGithub: "https://github.com/maxzz/pm-manifest",
-        urlDemo: "https://github.com/maxzz/pm-manifest", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-manifest", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest",
         stack: ['ts'],
@@ -227,7 +227,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-manifest-icons",
         description: "PM manifest icons.",
         urlGithub: "https://github.com/maxzz/pm-manifest-icons",
-        urlDemo: "https://github.com/maxzz/pm-manifest-icons", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-manifest-icons", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-manifest-icons",
         stack: ['react', 'ts'],
@@ -237,7 +237,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-xtn-dom",
         description: "PM extension DOM access.",
         urlGithub: "https://github.com/maxzz/pm-xtn-dom",
-        urlDemo: "https://github.com/maxzz/pm-xtn-dom", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-xtn-dom", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-dom",
         stack: ['react', 'ts'],
@@ -247,7 +247,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-xtn-csui",
         description: "PM extension content scripts UI.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui",
-        urlDemo: "https://github.com/maxzz/pm-xtn-csui", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-xtn-csui", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui",
         stack: ['react', 'ts'],
@@ -257,7 +257,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-xtn-csui-res",
         description: "PM extension content scripts UI resources builder.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-res",
-        urlDemo: "https://github.com/maxzz/pm-xtn-csui-res", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-xtn-csui-res", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/Y/w/2-web/0-dp/utils/pm-xtn-csui-res",
         stack: ['react', 'ts'],
@@ -267,7 +267,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-xtn-csui-test-vanilla",
         description: "Test application for pm-xtn-csui.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
-        urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
+        urlDemo: "https://www.npmjs.com/package/pm-xtn-csui-test-vanilla", // no demo
         urlPreview: images.npm25, // no img
         localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
         stack: ['js'],
@@ -277,7 +277,7 @@ export const projectsNpm: ProjectType[] = [
         id: "update-env",
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/update-env",
-        urlDemo: "https://maxzz.github.io/update-env", // no demo
+        urlDemo: "https://www.npmjs.com/package/update-env", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env",
         stack: ['ts'],
@@ -287,7 +287,7 @@ export const projectsNpm: ProjectType[] = [
         id: "upen",
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/update-env-upen",
-        urlDemo: "https://maxzz.github.io/update-env-upen", // no demo
+        urlDemo: "https://www.npmjs.com/package/upen", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env-upen",
         stack: ['ts'],
@@ -297,7 +297,7 @@ export const projectsNpm: ProjectType[] = [
         id: "tailwindcss-plugin-debug-screens",
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/tailwindcss-plugin-debug-screens",
-        urlDemo: "https://maxzz.github.io/tailwindcss-plugin-debug-screens", // no demo
+        urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/tailwindcss-plugin-debug-screens",
         stack: ['tw', 'ts'],
@@ -307,7 +307,7 @@ export const projectsNpm: ProjectType[] = [
         id: "tailwindcss-plugin-debug-screens-tw4",
         description: "A utility package for environment variable management.",
         urlGithub: "https://github.com/maxzz/tailwindcss-plugin-debug-screens-tw4",
-        urlDemo: "https://maxzz.github.io/tailwindcss-plugin-debug-screens-tw4", // no demo
+        urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens-tw4", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-debug-screens-tw4",
         stack: ['tw', 'ts'],
