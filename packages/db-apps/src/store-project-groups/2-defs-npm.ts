@@ -295,7 +295,7 @@ export const projectsNpm: ProjectType[] = [
     {
         primary: 'npm',
         id: "tailwindcss-plugin-debug-screens",
-        description: "A utility package for environment variable management.",
+        description: "Plugin to display the currently active CSS breakpoint on the screen.",
         urlGithub: "https://github.com/maxzz/tailwindcss-plugin-debug-screens",
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens", // no demo
         urlPreview: images.npm25, // no img
@@ -305,11 +305,31 @@ export const projectsNpm: ProjectType[] = [
     {
         primary: 'npm',
         id: "tailwindcss-plugin-debug-screens-tw4",
-        description: "A utility package for environment variable management.",
+        description: "Plugin to display the currently active CSS breakpoint on the screen. Tailwind CSS v4 version.",
         urlGithub: "https://github.com/maxzz/tailwindcss-plugin-debug-screens-tw4",
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens-tw4", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-debug-screens-tw4",
+        stack: ['tw', 'ts'],
+    },
+    {
+        primary: 'npm',
+        id: "tailwindcss-plugin-overflow-tw4",
+        description: "A Tailwind CSS v4 plugin that adds overflow overlay utilities.",
+        urlGithub: "https://github.com/maxzz/tailwindcss-plugin-overflow-tw4",
+        urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-overflow-tw4", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-overflow-tw4",
+        stack: ['tw', 'ts'],
+    },
+    {
+        primary: 'npm',
+        id: "tailwindcss-plugin-markers-tw4",
+        description: "Tailwind CSS v4 plugin for checkbox markers.",
+        urlGithub: "https://github.com/maxzz/tailwindcss-plugin-markers-tw4",
+        urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-markers-tw4", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-markers-tw4",
         stack: ['tw', 'ts'],
     },
 ];
