@@ -112,4 +112,14 @@ export const projectsDp: ProjectType[] = [
         localPath: "c:/Y/w/2-web/0-dp/pmat-manual-mode",
         stack: ['react', 'jotai', 'tw'],
     },
+    {
+        primary: 'DP',
+        id: "trace-viewer-25",
+        description: "A simple, fast, and lightweight trace viewer.",
+        urlGithub: "https://github.com/maxzz/trace-viewer-25",
+        urlDemo: "https://maxzz.github.io/trace-viewer-25",
+        urlPreview: images.traceViewer25,
+        localPath: "c:/Y/w/2-web/0-dp/trace-viewer-25",
+        stack: ['react', 'jotai', 'tw', 'gemini 3'],
+    },
 ];

@@ -7,6 +7,7 @@ import pageQa2 from "../pages/dp/page-qa2-2022-04-16_16-49-18.png?preset=thumbna
 import testPmDomainLogins from "../pages/dp/test-pm-domain-logins-2022-03-01_19-09-50.jpg?preset=thumbnail";
 import pageExtensionInstallation from "../pages/dp/page-extension-installation-2022-06-24_17-21-17.png?preset=thumbnail";
 import pmat24Lite from "../pages/dp/pmat24-lite,2024-03-12 _16-53-42.png?preset=thumbnail";
+import traceViewer25 from "../pages/dp/trace-viewer-25,2025-11-28_183521.png?preset=thumbnail";
 
 export {
     previewDropzon,
@@ -17,4 +18,5 @@ export {
     testPmDomainLogins,
     pageExtensionInstallation,
     pmat24Lite,
+    traceViewer25,
 };
