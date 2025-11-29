@@ -9,7 +9,9 @@
             "type": "msedge",
             "request": "launch",
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}/packages/app/src"
+            "webRoot": "${workspaceFolder}/packages/app/src",
+            "userDataDir": "C:/x/settings/tm-chrome-debug-profile/.profile",
+            //"userDataDir": "c:/Users/maxzz/AppData/Roaming/Code/User/workspaceStorage/2bd09df41c757ca0ea1d0935b57d0cc7/ms-vscode.js-debug/.profile",
         }
     ]
 }
