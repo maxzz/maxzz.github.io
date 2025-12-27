@@ -7,6 +7,8 @@
     ],
     "scripts": {
         "bootstrap": "pnpm -w install",
+        "_tsc": "pnpm -F ./packages/** tsc -w",
+        "tsc": "pnpm -r --parallel run tsc -w",
         "dev": "pnpm --filter ./packages/app dev",
         "build": "pnpm -w --filter ./packages/app build",
         "preview": "pnpm --filter ./packages/app preview",
