@@ -12,4 +12,14 @@ export const projectsWhatif: ProjectType[] = [
         localPath: "C:/y/w/2-web/0-stack/8-technologiy-tests/20250920-d3-hierarchical-edge-bundling",
         stack: ['react', 'd3'],
     },
+    {
+        primary: 'whatif',
+        id: "whatjsx-1",
+        description: "Converted to JSX format",
+        urlGithub: "https://github.com/maxzz/whatjsx-1",
+        urlDemo: "https://maxzz.github.io/whatjsx-1",
+        urlPreview: images.whatjsx1,
+        localPath: "C:/y/w/2-web/0-dp/utils/whatjsx-1",
+        stack: ['react'],
+    },
 ];
