@@ -1,7 +1,7 @@
 import { type ProjectType } from "./9-types";
 import * as images from "../assets";
 
-export const projectsSt: ProjectType[] = [ // tech stack updates
+export const projectsStack: ProjectType[] = [ // tech stack updates
     {
         primary: 'stack',
         id: "shadcn-tv",
