@@ -62,6 +62,16 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         localPath: "C:/y/w/2-web/0-dp/win-mon-copy",
         stack: ['react', 'ts', 'electron'],
     },
+    {
+        primary: 'stack',
+        id: "win-watch-25", //12.20.25
+        description: "Electron app with electron-vite 2025 edition",
+        urlGithub: "https://github.com/maxzz/win-watch-25",
+        urlDemo: "https://github.com/maxzz/win-watch-25", // no demo
+        urlPreview: images.winwatch25, // no img
+        localPath: "C:/y/w/2-web/0-dp/win-watch-25",
+        stack: ['react', 'ts', 'electron'],
+    },
 ];
 
 //TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table
