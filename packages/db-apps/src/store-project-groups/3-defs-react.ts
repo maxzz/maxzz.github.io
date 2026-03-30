@@ -89,6 +89,15 @@ export const projectsUx: ProjectType[] = [
     },
     {
         primary: 'UX',
+        id: "svg-path26",
+        description: "SVG path exploration 2026 ",
+        urlGithub: "https://github.com/maxzz/svg-path26",
+        urlDemo: "https://maxzz.github.io/svg-path26",
+        urlPreview: images.svgPath26,
+        localPath: "C:/y/w/2-web/0-stack/2-editors/svg-path26",
+    },
+    {
+        primary: 'UX',
         id: "quadratic-curves",
         description: "Quadratic curves experiments.",
         urlGithub: "https://github.com/maxzz/quadratic-curves",

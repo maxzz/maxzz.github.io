@@ -7,6 +7,7 @@ import red3Path from "../pages/react/red3-path-2021-09-04_19-45-16.png?preset=th
 import reactD3Voronoi from "../pages/react/react-d3-voronoi-2022-07-18_15-36-06.png?preset=thumbnail";
 import reactD3 from "../pages/react/react-d3-2021-07-14_18-55-53.png?preset=thumbnail";
 import svgPath from "../pages/react/svg-path-2022-02-03_14-18-21-sub-paths.png?preset=thumbnail";
+import svgPath26 from "../pages/react/svg-path-2026,2026.03.30-143919.png?preset=thumbnail";
 import quadraticCurves from "../pages/react/quadratic-curves-preview.jpg?preset=thumbnail";
 import ngonGen22 from "../pages/react/ngon-gen22-2022-06-11_18-09-01.png?preset=thumbnail";
 import editorsSvgShapes22Template from "../pages/react/editors-svg-shapes22-template-2022-04-25_14-17-36.png?preset=thumbnail";
@@ -38,6 +39,7 @@ export {
     reactD3Voronoi,
     reactD3,
     svgPath,
+    svgPath26,
     quadraticCurves,
     ngonGen22,
     editorsSvgShapes22Template,
