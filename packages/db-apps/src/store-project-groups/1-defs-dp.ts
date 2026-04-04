@@ -104,6 +104,16 @@ export const projectsDp: ProjectType[] = [
     },
     {
         primary: 'DP',
+        id: "manage-dpagent",
+        description: "Manage DPAgent",
+        urlGithub: "https://github.com/maxzz/manage-dpagent",
+        urlDemo: "https://github.com/maxzz/manage-dpagent", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/stop-dpagent",
+        stack: ['npm', 'c++'],
+    },
+    {
+        primary: 'DP',
         id: "pmat-manual-mode",
         description: "Prototype of the PMAT manual mode editor.",
         urlGithub: "https://github.com/maxzz/pmat-manual-mode",
