@@ -265,6 +265,16 @@ export const projectsStack: ProjectType[] = [ // tech stack updates
         localPath: "C:/Y/w/2-web/0-stack/4-flow/flow-xarrows",
         stack: ['radix-ui', 'shadcn', 'nextjs'],
     },
+    {
+        primary: 'stack',
+        id: "pm-piggyback",
+        description: "Piggyback actions editor.",
+        urlGithub: "https://github.com/maxzz/pm-piggyback",
+        urlDemo: "https://maxzz.github.io/pm-piggyback",
+        urlPreview: images.flowXarrows, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/pm-piggyback",
+        stack: ['radix-ui', 'shadcn', 'nextjs'],
+    },
 ];
 
 //TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table

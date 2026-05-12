@@ -332,4 +332,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-markers-tw4",
         stack: ['tw', 'ts'],
     },
+    {
+        primary: 'npm',
+        id: "convert-to-excalidraw-1",
+        description: "A utility for converting Mermaid diagrams from Markdown files to Excalidraw.",
+        urlGithub: "https://github.com/maxzz/convert-to-excalidraw-1",
+        urlDemo: "https://www.npmjs.com/package/markdown-mermaid-to-excalidraw", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/convert-to-excalidraw-1",
+        stack: ['ts', 'excalidraw', 'mermaid'],
+    },
 ];

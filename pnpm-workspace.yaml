@@ -1,7 +1,14 @@
 packages:
   - packages/*
 
+# version 10.28.1
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
   - sharp
+
+# https://pnpm.io/pnpm-workspace_yaml#allowbuilds version 1.11.1
+#allowBuilds:
+#  '@parcel/watcher': true
+#  esbuild: true
+#  sharp: true
