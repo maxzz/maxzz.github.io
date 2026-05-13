@@ -344,12 +344,12 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
-        id: "extractor-from-singlefile",
+        id: "singlefile-extractor",
         description: "A utility for extracting data from SingleFile browser extension.",
-        urlGithub: "https://www.npmjs.com/package/extractor-from-singlefile",
-        urlDemo: "https://www.npmjs.com/package/extractor-from-singlefile", // no demo
+        urlGithub: "https://github.com/maxzz/singlefile-extractor",
+        urlDemo: "https://github.com/maxzz/singlefile-extractor", // no demo
         urlPreview: images.npm25, // no img
-        localPath: "C:/y/w/2-web/0-dp/utils/extractor-from-singlefile",
+        localPath: "C:/y/w/2-web/0-dp/utils/singlefile-extractor",
         stack: ['utility', 'python'],
     },
 ];
