@@ -340,6 +340,16 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/markdown-mermaid-to-excalidraw", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/convert-to-excalidraw-1",
-        stack: ['ts', 'excalidraw', 'mermaid'],
+        stack: ['utility', 'ts', 'excalidraw', 'mermaid'],
+    },
+    {
+        primary: 'npm',
+        id: "extractor-from-singlefile",
+        description: "A utility for extracting data from SingleFile browser extension.",
+        urlGithub: "https://www.npmjs.com/package/extractor-from-singlefile",
+        urlDemo: "https://www.npmjs.com/package/extractor-from-singlefile", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/extractor-from-singlefile",
+        stack: ['utility', 'python'],
     },
 ];
