@@ -352,4 +352,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/2-web/0-dp/utils/singlefile-extractor",
         stack: ['utility', 'python'],
     },
+    {
+        primary: 'npm',
+        id: "singlefile-extractor-go",
+        description: "A utility for extracting data from SingleFile browser extension. Go version.",
+        urlGithub: "https://github.com/maxzz/singlefile-extractor-go",
+        urlDemo: "https://github.com/maxzz/singlefile-extractor-go", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/singlefile-extractor-go",
+        stack: ['utility', 'go'],
+    },
 ];

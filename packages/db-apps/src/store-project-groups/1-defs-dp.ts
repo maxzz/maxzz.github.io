@@ -132,4 +132,14 @@ export const projectsDp: ProjectType[] = [
         localPath: "c:/Y/w/2-web/0-dp/trace-viewer-25",
         stack: ['react', 'jotai', 'tw', 'gemini 3'],
     },
+    {
+        primary: 'DP',
+        id: "pm-tests-piggybacks",
+        description: "Piggyback tests for PM.",
+        urlGithub: "https://github.com/maxzz/pm-tests-piggybacks",
+        urlDemo: "https://maxzz.github.io/pm-tests-piggybacks",
+        urlPreview: images.traceViewer25,
+        localPath: "C:/y/w/2-web/0-dp/utils/pm-tests/piggybacks",
+        stack: ['ts'],
+    },
 ];
