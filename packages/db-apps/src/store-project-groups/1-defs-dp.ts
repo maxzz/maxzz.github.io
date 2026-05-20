@@ -44,6 +44,16 @@ export const projectsDp: ProjectType[] = [
     },
     {
         primary: 'DP',
+        id: "page-qa2-global",
+        description: "QA information website (global version).",
+        urlGithub: "https://github.com/maxzz/page-qa2",
+        urlDemo: "https://digitalpersona.hidglobal.com/g02/pageqa",
+        urlPreview: images.pageQa2,
+        localPath: "C:/Y/w/2-web/0-dp/page-qa2-global",
+        stack: ['react', 'jotai', 'tw'],
+    },
+    {
+        primary: 'DP',
         id: "page-extension-installation",
         description: "Page for installing the DigitalPersona extension.",
         urlGithub: "https://github.com/maxzz/page-extension-installation",
