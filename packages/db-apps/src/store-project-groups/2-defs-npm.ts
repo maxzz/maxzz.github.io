@@ -362,4 +362,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/2-web/0-dp/utils/singlefile-extractor-go",
         stack: ['utility', 'go'],
     },
+    {
+        primary: 'npm',
+        id: "to-bin-copy-go",
+        description: "Binaries File Copier (Go Version) - CLI Utility for copying built binaries",
+        urlGithub: "https://github.com/maxzz/to-bin-copy-go",
+        urlDemo: "https://github.com/maxzz/to-bin-copy-go", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/to-bin-copy-go",
+        stack: ['utility', 'go'],
+    },
 ];
