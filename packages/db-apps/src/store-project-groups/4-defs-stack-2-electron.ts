@@ -72,6 +72,16 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         localPath: "C:/y/w/2-web/0-dp/win-watch-25",
         stack: ['react', 'ts', 'electron'],
     },
+    {
+        primary: 'stack',
+        id: "to-diag-trace-go", //12.27.26
+        description: "Utility to collect diagnostic traces to trace files.",
+        urlGithub: "https://github.com/maxzz/to-diag-trace-go",
+        urlDemo: "https://github.com/maxzz/to-diag-trace-go", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-go",
+        stack: ['utility', 'webview2', 'wails', 'go'],
+    },
 ];
 
 //TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table
