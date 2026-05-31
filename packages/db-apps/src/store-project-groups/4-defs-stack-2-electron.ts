@@ -74,12 +74,22 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
-        id: "to-diag-trace-go", //12.27.26
+        id: "to-diag-trace-go", //05.27.26
         description: "Utility to collect diagnostic traces to trace files.",
         urlGithub: "https://github.com/maxzz/to-diag-trace-go",
         urlDemo: "https://github.com/maxzz/to-diag-trace-go", // no demo
         urlPreview: images.npm, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-go",
+        stack: ['utility', 'webview2', 'wails', 'go'],
+    },
+    {
+        primary: 'stack',
+        id: "to-diag-trace-ne", //05.30.26
+        description: "NeutralinoJS tool to collect diagnostic traces (unstable).",
+        urlGithub: "https://github.com/maxzz/to-diag-trace-ne",
+        urlDemo: "https://github.com/maxzz/to-diag-trace-ne", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
 ];
