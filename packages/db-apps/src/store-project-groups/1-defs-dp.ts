@@ -139,7 +139,7 @@ export const projectsDp: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/trace-viewer-25",
         urlDemo: "https://maxzz.github.io/trace-viewer-25",
         urlPreview: images.traceViewer25,
-        localPath: "c:/Y/w/2-web/0-dp/trace-viewer-25",
+        localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-25",
         stack: ['react', 'jotai', 'tw', 'gemini 3'],
     },
     {

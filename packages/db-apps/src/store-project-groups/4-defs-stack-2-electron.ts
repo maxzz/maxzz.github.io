@@ -99,7 +99,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/trace-viewer-25-go",
         urlDemo: "https://maxzz.github.io/trace-viewer-25-go",
         urlPreview: images.traceViewer25,
-        localPath: "c:/Y/w/2-web/0-dp/trace-viewer-25-go",
+        localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-25-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
 ];
