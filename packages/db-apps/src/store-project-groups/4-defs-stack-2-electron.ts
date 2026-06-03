@@ -74,6 +74,16 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
+        id: "to-diag-trace-ne", //05.30.26
+        description: "NeutralinoJS tool to collect diagnostic traces (unstable).",
+        urlGithub: "https://github.com/maxzz/to-diag-trace-ne",
+        urlDemo: "https://github.com/maxzz/to-diag-trace-ne", // no demo
+        urlPreview: images.npm, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
+        stack: ['utility', 'webview2', 'wails', 'go'],
+    },
+    {
+        primary: 'stack',
         id: "to-diag-trace-go", //05.27.26
         description: "Utility to collect diagnostic traces to trace files.",
         urlGithub: "https://github.com/maxzz/to-diag-trace-go",
@@ -83,13 +93,13 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
-        primary: 'stack',
-        id: "to-diag-trace-ne", //05.30.26
-        description: "NeutralinoJS tool to collect diagnostic traces (unstable).",
-        urlGithub: "https://github.com/maxzz/to-diag-trace-ne",
-        urlDemo: "https://github.com/maxzz/to-diag-trace-ne", // no demo
-        urlPreview: images.npm, // no img
-        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
+        primary: 'DP',
+        id: "trace-viewer-25-go",
+        description: "A simple, fast, and lightweight trace viewer.",
+        urlGithub: "https://github.com/maxzz/trace-viewer-25-go",
+        urlDemo: "https://maxzz.github.io/trace-viewer-25-go",
+        urlPreview: images.traceViewer25,
+        localPath: "c:/Y/w/2-web/0-dp/trace-viewer-25-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
 ];
