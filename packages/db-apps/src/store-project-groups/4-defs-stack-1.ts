@@ -267,13 +267,13 @@ export const projectsStack: ProjectType[] = [ // tech stack updates
     },
     {
         primary: 'stack',
-        id: "pm-piggyback",
+        id: "tm-react-template-26",
         description: "Piggyback actions editor.",
-        urlGithub: "https://github.com/maxzz/pm-piggyback",
-        urlDemo: "https://maxzz.github.io/pm-piggyback",
+        urlGithub: "https://github.com/maxzz/tm-react-template-26",
+        urlDemo: "https://maxzz.github.io/tm-react-template-26",
         urlPreview: images.flowXarrows, // no img
-        localPath: "C:/y/w/2-web/0-dp/utils/pm-piggyback",
-        stack: ['radix-ui', 'shadcn', 'nextjs'],
+        localPath: "C:/y/w/2-web/0-stack/tm-react-template-26",
+        stack: ['react', 'shadcn', 'jotai', 'valtio'],
     },
 ];
 
