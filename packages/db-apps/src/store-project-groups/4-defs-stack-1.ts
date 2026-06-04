@@ -4,6 +4,16 @@ import * as images from "../assets";
 export const projectsStack: ProjectType[] = [ // tech stack updates
     {
         primary: 'stack',
+        id: "tm-template-shadcn-26",
+        description: "React template with Shadcn UI, Jotai, and Valtio.",
+        urlGithub: "https://github.com/maxzz/tm-template-shadcn-26",
+        urlDemo: "https://maxzz.github.io/tm-template-shadcn-26",
+        urlPreview: images.flowXarrows, // no img
+        localPath: "C:/y/w/2-web/0-stack/tm-template-shadcn-26",
+        stack: ['react', 'shadcn', 'jotai', 'valtio'],
+    },
+    {
+        primary: 'stack',
         id: "shadcn-tv",
         description: "Shadcn-tv is a clone of shadcn manually installed components.",
         urlGithub: "https://github.com/maxzz/shadcn-tv",
@@ -264,16 +274,6 @@ export const projectsStack: ProjectType[] = [ // tech stack updates
         urlPreview: images.flowXarrows,
         localPath: "C:/Y/w/2-web/0-stack/4-flow/flow-xarrows",
         stack: ['radix-ui', 'shadcn', 'nextjs'],
-    },
-    {
-        primary: 'stack',
-        id: "tm-react-template-26",
-        description: "Piggyback actions editor.",
-        urlGithub: "https://github.com/maxzz/tm-react-template-26",
-        urlDemo: "https://maxzz.github.io/tm-react-template-26",
-        urlPreview: images.flowXarrows, // no img
-        localPath: "C:/y/w/2-web/0-stack/tm-react-template-26",
-        stack: ['react', 'shadcn', 'jotai', 'valtio'],
     },
 ];
 
