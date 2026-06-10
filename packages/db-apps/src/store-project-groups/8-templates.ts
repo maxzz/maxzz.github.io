@@ -8,7 +8,7 @@ export const projectsTemplates: ProjectType[] = [
         description: "React template with Shadcn UI, Jotai, and Valtio.",
         urlGithub: "https://github.com/maxzz/tm-template-shadcn-26",
         urlDemo: "https://maxzz.github.io/tm-template-shadcn-26",
-        urlPreview: images.templateGo26,
+        urlPreview: images.templateShadcn26,
         localPath: "C:/y/w/2-web/0-stack/0-templates/tm-template-shadcn-26",
         stack: ['react', 'go', 'shadcn', 'jotai', 'valtio'],
     },

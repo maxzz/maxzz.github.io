@@ -78,7 +78,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         description: "NeutralinoJS tool to collect diagnostic traces (unstable).",
         urlGithub: "https://github.com/maxzz/to-diag-trace-ne",
         urlDemo: "https://github.com/maxzz/to-diag-trace-ne", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.templateGo26, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
@@ -88,7 +88,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         description: "Utility to collect diagnostic traces to trace files.",
         urlGithub: "https://github.com/maxzz/to-diag-trace-go",
         urlDemo: "https://github.com/maxzz/to-diag-trace-go", // no demo
-        urlPreview: images.npm, // no img
+        urlPreview: images.templateGo26, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
