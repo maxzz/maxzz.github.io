@@ -7,6 +7,7 @@ import { projectsStackElectron } from "./4-defs-stack-2-electron";
 import { projectsVue } from "./5-defs-vue";
 import { projectsWhatif } from "./6-defs-what-if";
 import { projectsUiLibs } from "./7-ui-libs";
+import { projectsTemplates } from "./8-templates";
 
 export const sections: SectionType[] = [
     {
@@ -32,6 +33,10 @@ export const sections: SectionType[] = [
     {
         name: 'UX, Vue',
         projects: projectsVue,
+    },
+    {
+        name: 'Templates',
+        projects: projectsTemplates,
     },
     {
         name: 'UI libraries',

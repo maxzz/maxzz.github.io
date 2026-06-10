@@ -5,7 +5,7 @@ export const projectsUiLibs: ProjectType[] = [
     {
         primary: 'uilibs',
         id: "ui-small-tests",
-        description: "CSS color names playground",
+        description: "An interactive playground for exploring the use of CSS colors in shadcn",
         urlGithub: "https://github.com/maxzz/ui-small-tests",
         urlDemo: "https://maxzz.github.io/ui-small-tests",
         urlPreview: images.uiSmallTests,
