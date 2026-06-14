@@ -377,7 +377,7 @@ export const projectsNpm: ProjectType[] = [
         id: "tw-az",
         description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files",
         urlGithub: "https://github.com/maxzz/tw-az",
-        urlDemo: "https://github.com/maxzz/tw-az", // no demo
+        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tw-az",
         stack: ['utility', 'go'],
