@@ -102,6 +102,16 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-25-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
+    {
+        primary: 'DP',
+        id: "trace-viewer-26-go",
+        description: "A simple, fast, and lightweight trace viewer. 2026 edition from tm-template-go-26 and trace-viewer-25",
+        urlGithub: "https://github.com/maxzz/trace-viewer-26-go",
+        urlDemo: "https://maxzz.github.io/trace-viewer-26-go",
+        urlPreview: images.traceViewer25,
+        localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-26-go",
+        stack: ['utility', 'webview2', 'wails', 'go'],
+    },
 ];
 
 //TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table
