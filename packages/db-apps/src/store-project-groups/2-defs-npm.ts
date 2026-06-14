@@ -372,4 +372,14 @@ export const projectsNpm: ProjectType[] = [
         localPath: "C:/y/w/2-web/0-dp/utils/to-bin-copy-go",
         stack: ['utility', 'go'],
     },
+    {
+        primary: 'npm',
+        id: "tw-az",
+        description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files",
+        urlGithub: "https://github.com/maxzz/tw-az",
+        urlDemo: "https://github.com/maxzz/tw-az", // no demo
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tw-az",
+        stack: ['utility', 'go'],
+    },
 ];
