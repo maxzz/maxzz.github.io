@@ -280,7 +280,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/update-env", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env",
-        stack: ['ts'],
+        stack: ['ts', 'utility'],
     },
     {
         primary: 'npm',
@@ -290,7 +290,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/upen", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/update-env-upen",
-        stack: ['ts'],
+        stack: ['ts', 'utility'],
     },
     {
         primary: 'npm',
@@ -300,7 +300,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/tailwindcss-plugin-debug-screens",
-        stack: ['tw', 'ts'],
+        stack: ['tw', 'ts', 'plugin'],
     },
     {
         primary: 'npm',
@@ -310,7 +310,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-debug-screens-tw4", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-debug-screens-tw4",
-        stack: ['tw', 'ts'],
+        stack: ['tw', 'ts', 'plugin'],
     },
     {
         primary: 'npm',
@@ -320,7 +320,7 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-overflow-tw4", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-overflow-tw4",
-        stack: ['tw', 'ts'],
+        stack: ['tw', 'ts', 'plugin'],
     },
     {
         primary: 'npm',
@@ -330,7 +330,17 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://www.npmjs.com/package/tailwindcss-plugin-markers-tw4", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tailwindcss-plugin-markers-tw4",
-        stack: ['tw', 'ts'],
+        stack: ['tw', 'ts', 'plugin'],
+    },
+    {
+        primary: 'npm',
+        id: "tw-az",
+        description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files",
+        urlGithub: "https://github.com/maxzz/tw-az",
+        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tw-az",
+        stack: ['tw', 'ts', 'utility'],
     },
     {
         primary: 'npm',
@@ -370,16 +380,6 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://github.com/maxzz/to-bin-copy-go", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/to-bin-copy-go",
-        stack: ['utility', 'go'],
-    },
-    {
-        primary: 'npm',
-        id: "tw-az",
-        description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files",
-        urlGithub: "https://github.com/maxzz/tw-az",
-        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link
-        urlPreview: images.npm25, // no img
-        localPath: "C:/y/w/1-node/1-utils/tw-az",
         stack: ['utility', 'go'],
     },
 ];
