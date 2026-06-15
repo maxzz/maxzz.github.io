@@ -337,7 +337,7 @@ export const projectsNpm: ProjectType[] = [
         id: "tw-az",
         description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files",
         urlGithub: "https://github.com/maxzz/tw-az",
-        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link
+        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link yet
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/1-node/1-utils/tw-az",
         stack: ['tw', 'ts', 'utility'],
@@ -380,6 +380,16 @@ export const projectsNpm: ProjectType[] = [
         urlDemo: "https://github.com/maxzz/to-bin-copy-go", // no demo
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/to-bin-copy-go",
+        stack: ['utility', 'go'],
+    },
+    {
+        primary: 'npm',
+        id: "to-copy-no-nm-cli",
+        description: "Copy from one folder to another without the nested node_modules folder",
+        urlGithub: "https://github.com/maxzz/to-copy-no-nm-cli",
+        urlDemo: "https://www.npmjs.com/package/copy-no-nm",
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/2-web/0-dp/utils/to-copy-no-nm-cli",
         stack: ['utility', 'go'],
     },
 ];
