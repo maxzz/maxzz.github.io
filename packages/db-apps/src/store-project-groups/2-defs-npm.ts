@@ -36,7 +36,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "gluehtml",
         description: "Glue HTML local external files into solid HTML.",
-        urlGithub: "https://www.npmjs.com/package/gluehtml",
+        urlGithub: "https://github.com/maxzz/gluehtml",
         urlDemo: "https://www.npmjs.com/package/gluehtml",
         urlPreview: images.gluehtml,
         localPath: "C:/Y/w/1-node/1-utils/create-single-html",
@@ -87,7 +87,7 @@ export const projectsNpm: ProjectType[] = [
         id: "sftp-test",
         description: "Test transfer files to/from FTP server over SFTP protocol",
         urlGithub: "https://github.com/maxzz/sftp-test",
-        urlDemo: "https://www.npmjs.com/package/sftp-test", // no demo
+        urlDemo: "https://www.npmjs.com/package/sftp-test",
         urlPreview: images.npm25,
         localPath: "C:/Y/w/2-web/0-dp/utils/sftp/sftp-test",
         stack: ['js'],
