@@ -112,6 +112,16 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-26-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
+    {
+        primary: 'DP',
+        id: "traytools-26",
+        description: "Tray tools for Windows 10 and 11. 2026 edition from tm-template-go-26",
+        urlGithub: "https://github.com/maxzz/traytools-26",
+        urlDemo: "https://maxzz.github.io/traytools-26", // no demo
+        urlPreview: images.traceViewer25, // no img
+        localPath: "c:/Y/w/2-web/0-dp/utils/traytools-26",
+        stack: ['utility', 'webview2', 'wails', 'go'],
+    },
 ];
 
 //TODO: C:\Y\w\2-web\0-stack\6-ui\1-listview\listview-tankstack-table
