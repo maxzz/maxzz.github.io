@@ -19,7 +19,7 @@ export const sections: SectionType[] = [
         projects: projectsStack,
     },
     {
-        name: 'Electron',
+        name: 'Electron, Wails, Go',
         projects: projectsStackElectron,
     },
     {

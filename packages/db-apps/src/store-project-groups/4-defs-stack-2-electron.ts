@@ -9,7 +9,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-react",
         urlDemo: "https://github.com/maxzz/electron-react", // no demo
         urlPreview: images.electronReact,
-        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-react",
+        localPath: "c:/y/w/2-web/0-stack/5-electron/electron-react",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -19,7 +19,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-react24",
         urlDemo: "https://github.com/maxzz/electron-react24", // no demo
         urlPreview: images.electronReact24,
-        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-react24",
+        localPath: "c:/y/w/2-web/0-stack/5-electron/electron-react24",
         stack: ['react', 'ts', 'electron'],
     },
     {
@@ -29,7 +29,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-vite-plugin-e",
         urlDemo: "https://github.com/maxzz/electron-vite-plugin-e", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-vite-plugin-e",
+        localPath: "c:/y/w/2-web/0-stack/5-electron/electron-vite-plugin-e",
         stack: ['react', 'ts', 'electron'],
     },
     {
@@ -39,7 +39,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-vite-2025",
         urlDemo: "https://github.com/maxzz/electron-vite-2025", // no demo
         urlPreview: images.electronVite2025,
-        localPath: "C:/Y/w/2-web/0-stack/5-electron/electron-vite-2025",
+        localPath: "c:/y/w/2-web/0-stack/5-electron/electron-vite-2025",
         stack: ['react', 'ts', 'electron'],
     },
     {
@@ -49,7 +49,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/electron-window-monitor",
         urlDemo: "https://github.com/maxzz/electron-window-monitor", // no demo
         urlPreview: images.electronWindowMonitor,
-        localPath: "C:/Y/w/2-web/0-dp/win-mon",
+        localPath: "c:/y/w/2-web/0-dp/win-mon",
         stack: ['react', 'tw', 'ts', 'electron'],
     },
     {
@@ -59,7 +59,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/win-mon-copy",
         urlDemo: "https://github.com/maxzz/win-mon-copy", // no demo
         urlPreview: images.npm, // no img
-        localPath: "C:/y/w/2-web/0-dp/win-mon-copy",
+        localPath: "c:/y/w/2-web/0-dp/win-mon-copy",
         stack: ['react', 'ts', 'electron'],
     },
     {
@@ -69,8 +69,18 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/win-watch-25",
         urlDemo: "https://github.com/maxzz/win-watch-25", // no demo
         urlPreview: images.winwatch25, // no img
-        localPath: "C:/y/w/2-web/0-dp/win-watch-25",
+        localPath: "c:/y/w/2-web/0-dp/win-watch-25",
         stack: ['react', 'ts', 'electron'],
+    },
+    {
+        primary: 'stack',
+        id: "win-watch-26-go",
+        description: "Tray tools for Windows 10 and 11. 2026 edition from tm-template-go-26",
+        urlGithub: "https://github.com/maxzz/win-watch-26-go",
+        urlDemo: "https://maxzz.github.io/win-watch-26-go", // no demo
+        urlPreview: images.winwatch26Go,
+        localPath: "c:/y/w/2-web/0-dp/win-watch-26-go",
+        stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
         primary: 'stack',
@@ -79,7 +89,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/to-diag-trace-ne",
         urlDemo: "https://github.com/maxzz/to-diag-trace-ne", // no demo
         urlPreview: images.templateGo26, // no img
-        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
+        localPath: "c:/y/w/2-web/0-dp/utils/to-diag-trace-ne",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
@@ -89,7 +99,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/to-diag-trace-go",
         urlDemo: "https://github.com/maxzz/to-diag-trace-go", // no demo
         urlPreview: images.templateGo26, // no img
-        localPath: "C:/y/w/2-web/0-dp/utils/to-diag-trace-go",
+        localPath: "c:/y/w/2-web/0-dp/utils/to-diag-trace-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
@@ -99,27 +109,27 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         urlGithub: "https://github.com/maxzz/trace-viewer-25-go",
         urlDemo: "https://maxzz.github.io/trace-viewer-25-go",
         urlPreview: images.traceViewer25,
-        localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-25-go",
+        localPath: "c:/y/w/2-web/0-dp/utils/trace-viewer-25-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
-        primary: 'DP',
+        primary: 'stack',
         id: "trace-viewer-26-go",
         description: "A simple, fast, and lightweight trace viewer. 2026 edition from tm-template-go-26 and trace-viewer-25",
         urlGithub: "https://github.com/maxzz/trace-viewer-26-go",
         urlDemo: "https://maxzz.github.io/trace-viewer-26-go",
         urlPreview: images.traceViewer25,
-        localPath: "c:/Y/w/2-web/0-dp/utils/trace-viewer-26-go",
+        localPath: "c:/y/w/2-web/0-dp/utils/trace-viewer-26-go",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
     {
-        primary: 'DP',
+        primary: 'stack',
         id: "traytools-26",
         description: "Tray tools for Windows 10 and 11. 2026 edition from tm-template-go-26",
         urlGithub: "https://github.com/maxzz/traytools-26",
         urlDemo: "https://maxzz.github.io/traytools-26", // no demo
         urlPreview: images.traceViewer25, // no img
-        localPath: "c:/Y/w/2-web/0-dp/utils/traytools-26",
+        localPath: "c:/y/w/2-web/0-dp/utils/traytools-26",
         stack: ['utility', 'webview2', 'wails', 'go'],
     },
 ];
