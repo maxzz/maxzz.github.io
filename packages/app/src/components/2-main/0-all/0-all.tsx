@@ -55,7 +55,7 @@ const buttonClasses = "\
 px-3 py-2 max-w-min \
 bg-primary-800/70 hover:bg-primary-700/50 \
 border border-primary-400/50 \
-rounded \
-shadow shadow-primary-800 \
+rounded-sm \
+shadow-sm shadow-primary-800 \
 flex items-center \
 ";

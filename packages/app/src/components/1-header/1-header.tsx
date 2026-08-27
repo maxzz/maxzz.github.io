@@ -11,7 +11,7 @@ import { rerenderAtom } from "./8-atoms";
 export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
     return (
-        <header className="p-4 flex items-center justify-between text-xl bg-black shadow-sm shadow-slate-700">
+        <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
             <div className={leftClasses}>
                 {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
 
@@ -58,4 +58,4 @@ text-slate-500 tracking-tighter \
 
 const buttonClasses = "\
 absolute right-0 -top-2 px-2 py-0.5 text-xs \
-bg-slate-800 rounded flex items-center space-x-2";
+bg-slate-800 rounded-sm flex items-center space-x-2";

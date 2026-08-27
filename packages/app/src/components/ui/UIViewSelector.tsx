@@ -46,7 +46,7 @@ function SwitchButtonOld({ thisType, children, ...rest }: { thisType: ShowType; 
     return (
         <button
             className={classNames(
-                "w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded active:scale-[.97]",
+                "w-6 h-6 p-1 hover:bg-primary-800 border-primary-400 rounded-sm active:scale-[.97]",
                 showType === thisType && "border bg-primary-800"
             )}
             onClick={() => setShowType(thisType)}

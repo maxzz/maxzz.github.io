@@ -23,7 +23,7 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
         <section className="flex flex-col">
             <ProjectName name={id} />
 
-            <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded">
+            <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded-sm">
                 <div className=" min-w-0 text-sm overflow-auto">
                     {description}
                 </div>
@@ -31,7 +31,7 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
                 <ProjectThreeButtons className="-mb-2" project={project} inListItem={false} />
 
                 <div className={pictureClasses}>
-                    <a className={classNames("transition-transform border shadow", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
+                    <a className={classNames("transition-transform border shadow-sm", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
                         <ProjectPicture src={urlPreview} />
                     </a>
                 </div>

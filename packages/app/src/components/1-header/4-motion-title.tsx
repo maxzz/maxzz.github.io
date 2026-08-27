@@ -43,7 +43,7 @@ export function MotionTitle() {
     );
 }
 
-const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 };
+const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
 
 //04.29.25
 	//new project https://github.com/maxzz/electron-vite-2025
