@@ -1,5 +1,5 @@
 import path from "node:path";
-import { defineConfig } from "vite";
+import { defineConfig, type PluginOption } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -40,7 +40,7 @@ export default (() => defineConfig({
                     jpg: { quality: 77 }
                 },
             }),
-        }),
+        }) as PluginOption,
 
         replace({
             values: {
