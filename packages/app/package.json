@@ -16,6 +16,8 @@
         "postcss": "8.5.6",
         "rollup-plugin-visualizer": "6.0.5",
         "tailwindcss": "3.4.17",
+        "tailwindcss-plugin-debug-screens-tw4": "^1.0.4",
+        "tailwindcss-plugin-overflow-tw4": "^1.0.1",
         "typescript": "5.9.2",
         "upen": "^1.0.2",
         "vite": "7.3.1",

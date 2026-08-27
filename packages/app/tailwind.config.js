@@ -21,10 +21,11 @@ module.exports = {
         },
     },
     plugins: [
+        require('./tailwind/old-v3/tailwind-plugin-overflow-overlay'),
+        require('./tailwind/old-v3/tailwind-plugin-debug-screens'),
+
         require('./tailwind/tailwnid-plugin-debug-styles'),
-        require('./tailwind/tailwind-plugin-debug-screens'),
-        require('@tailwindcss/forms'),
-        require('./tailwind/tailwind-plugin-overflow-overlay'),
         require('./tailwind/tailwind-plugin-colors-bridge')([ { prefix: '--tm-', groupName: 'primary' }, ]),
+        require('@tailwindcss/forms'),
     ],
 };
