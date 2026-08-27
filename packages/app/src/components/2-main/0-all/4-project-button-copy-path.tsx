@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import { a, easings, useTransition } from "@react-spring/web";
-import { IconCheckFrameless } from "../../ui";
+import { IconCheckFrameless } from "@/components/ui/icons";
 
 export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string; }) {
     const [showNotice, setShowNotice] = useState(false);
@@ -16,7 +16,7 @@ export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string
             <MountCopyNotice show={showNotice} setShow={setShowNotice}
                 items={[
                     label,
-                    <IconCheckFrameless className="w-4 h-4 text-green-100 bg-emerald-500 stroke-[2] rounded-xs" />,
+                    <IconCheckFrameless className="w-4 h-4 text-green-100 bg-emerald-500 stroke-2 rounded-xs" />,
                 ]}
             />
         </button>

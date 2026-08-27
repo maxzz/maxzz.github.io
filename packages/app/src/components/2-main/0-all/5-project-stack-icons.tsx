@@ -9,10 +9,12 @@ export function ProjectStack({ stack, className, ...rest }: { stack?: string[]; 
             <div className={classNames("pb-1 inline-flex items-center space-x-px text-sky-700 uppercase whitespace-nowrap cursor-default select-none", className)} {...rest}>
                 {stack.map(
                     (name, idx) => {
-                        const Item = stackComponentsNew[name] ||
-                            <div className="px-0.5" title={name}>
-                                {name}
-                            </div>;
+                        const Item =
+                            stackComponentsNew[name] || (
+                                <div className="px-0.5" title={name}>
+                                    {name}
+                                </div>
+                            );
                         return (
                             <Fragment key={idx}>
                                 {Item}

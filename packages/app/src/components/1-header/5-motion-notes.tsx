@@ -1,5 +1,5 @@
 import { a, easings, useSpring } from "@react-spring/web";
-import { IconExperiments } from "../ui";
+import { IconExperiments } from "@/components/ui/icons";
 
 export function MotionNotes() {
 

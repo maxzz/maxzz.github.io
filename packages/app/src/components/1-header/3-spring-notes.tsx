@@ -1,5 +1,5 @@
 import { a, easings, useSpring } from "@react-spring/web";
-import { IconExperiments } from "../ui";
+import { IconExperiments } from "../ui/icons";
 
 export function SpringNotes() {
 

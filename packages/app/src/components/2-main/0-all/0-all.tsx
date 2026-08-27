@@ -1,7 +1,8 @@
 import { useAtom, useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
-import { UIAccordion, UIArrow } from "../../ui";
+import { UIAccordion } from "@/components/ui/local-ui/UIAccordion";
+import { UIArrow } from "@/components/ui/local-ui/UIArrow";
 import { ProjectsAsGrid } from "./2-project-item-grid";
 import { ProjectsAsList } from "./2-project-item-list";
 import { CubeAnimationDemo } from "../0-cube-animation";
@@ -22,7 +23,7 @@ function ProjectsGroup({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
-        <div className="w-full px-4 max-w-[96rem] grid grid-rows-[auto_minmax(0,1fr)]">
+        <div className="w-full px-4 max-w-384 grid grid-rows-[auto_minmax(0,1fr)]">
             <ProjectsGroupName section={section} />
 
             <UIAccordion open={sectionOpen}>

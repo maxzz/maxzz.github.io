@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { useAtom } from "jotai";
-import { UIViewSelector } from "../ui";
-import { Stars } from "../ui/icons/icon-star";
+import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
+import { Stars } from "@/components/ui/icons/icon-star";
 import { SpringTitle } from "./2-spring-title";
 import { SpringNotes } from "./3-spring-notes";
-import { MotionTitle } from "./4-motion-title";
-import { MotionNotes } from "./5-motion-notes";
 import { rerenderAtom } from "./8-atoms";
 
 export function Section1_Header() {

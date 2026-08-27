@@ -1,7 +1,7 @@
 import { type HTMLAttributes } from "react";
 import { useAtom } from "jotai";
 import { classNames } from "@/utils";
-import { IconGrid, IconList } from "./icons";
+import { IconGrid, IconList } from "@/components/ui/icons";
 import { ShowType, uiOptionsAtoms } from "@/store/store";
 
 export function UIViewSelector() {
@@ -24,8 +24,8 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
                 "relative transition-all",
                 " hover:text-primary-300 hover:bg-primary-800",
                 isActive ? "text-primary-400 bg-primary-800/70" : "text-primary-600",
-                thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px] rounded-tr-[6px] rounded-br-[6px]",
-                thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px] rounded-tl-[6px] rounded-bl-[6px]",
+                thisType === ShowType.list && "rounded-tl-[36px] rounded-bl-[36px] rounded-tr-md rounded-br-md",
+                thisType === ShowType.preview && "rounded-tr-[36px] rounded-br-[36px] rounded-tl-md rounded-bl-md",
                 isActive && `after:absolute after:inset-0 after:rounded-[inherit] after:[background:linear-gradient(var(--me),#fff1_-.1%,transparent_75%)]`,
             )}
             style={{ boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05', '--me': angle } as React.CSSProperties}

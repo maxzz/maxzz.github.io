@@ -1,6 +1,6 @@
 import { type HTMLAttributes } from "react";
 import { classNames, envBuildVersion, envModifiedDate } from "@/utils";
-import { IconSunnyvale } from "../ui";
+import { IconSunnyvale } from "../ui/icons/normal";
 
 export function Section3_Footer({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
