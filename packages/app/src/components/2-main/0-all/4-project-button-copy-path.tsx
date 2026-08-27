@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { a, easings, useTransition } from "@react-spring/web";
+import { AnimatePresence, motion } from "motion/react";
 import { IconCheckFrameless } from "@/components/ui/icons";
 
 export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string; }) {
@@ -24,13 +24,28 @@ export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string
 }
 
 function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v: boolean) => void; items: ReactNode[]; }) {
-    
-    const transitions = useTransition(Number(show), {
-        from: { scale: 0, opacity: 0, },
-        enter: { scale: 1, opacity: 1, },
-        leave: { scale: 0, opacity: 0, delay: 100, config: { duration: 300, easing: easings.easeOutQuad }, },
-        onRest: ({ finished }) => show && finished && setShow?.(false),
-    });
+    const item = Number(show);
 
-    return transitions((styles, item) => <a.div style={styles} className="absolute left-0 top-0"> {items[item]} </a.div>);
+    return (
+        <AnimatePresence>
+            <motion.div
+                key={item}
+                className="absolute left-0 top-0"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{
+                    scale: 1,
+                    opacity: 1,
+                    transition: { duration: 0.2, ease: "easeOut" },
+                }}
+                exit={{
+                    scale: 0,
+                    opacity: 0,
+                    transition: { delay: 0.1, duration: 0.3, ease: "easeOut" },
+                }}
+                onAnimationComplete={() => show && setShow?.(false)}
+            >
+                {items[item]}
+            </motion.div>
+        </AnimatePresence>
+    );
 }
