@@ -1,24 +1,24 @@
-import { useState } from "react";
-import useMeasure from "@/utils/hooks/useMeasure";
-import { a, config, useSpring } from "@react-spring/web";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 import { disableHiddenChildren } from "@/utils";
 
 export function UIAccordion({ open, children }: { open: boolean, children: React.ReactNode; }) {
-    const [refFn, { height, top }] = useMeasure<HTMLDivElement>();
-    const [refEl, setEl] = useState<HTMLDivElement>();
-    const [firstRun, setFirstRun] = useState(true);
-    const animation = useSpring({
-        overflow: "hidden",
-        height: open ? height + top : 0,
-        ena: disableHiddenChildren(open, refEl),
-        config: firstRun ? { duration: 0 } : { mass: 0.2, tension: 492, clamp: true },
-        onRest: () => firstRun && setFirstRun(false),
-    });
+    const [refEl, setEl] = useState<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        disableHiddenChildren(open, refEl);
+    }, [open, refEl]);
+
     return (
-        <a.div style={animation}>
-            <div ref={(el) => { el && (setEl(el), refFn(el)); }}>
+        <motion.div
+            initial={false}
+            animate={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+            transition={{ type: "spring", mass: 0.2, stiffness: 492, damping: 26, restDelta: 0.001, restSpeed: 0.01 }}
+            style={{ display: "grid" }}
+        >
+            <div ref={setEl} className="min-h-0 overflow-hidden">
                 {children}
             </div>
-        </a.div>
+        </motion.div>
     );
 }
