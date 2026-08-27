@@ -4,9 +4,12 @@
 @plugin "tailwindcss-plugin-debug-screens-tw4";
 @plugin "@tailwindcss/forms";
 
+/*OK, no need for now*/
+/* 
 @plugin "../tailwind/tailwind-cursors.ts";
 @plugin "../tailwind/tailwind-plugin-data-state.ts";
 @plugin "../tailwind/tailwind-plugin-range.ts";
+*/
 
 @theme {
     --color-primary-50: var(--color-slate-50);

@@ -18,8 +18,8 @@ const buildVersion = () => {
 };
 
 // https://vitejs.dev/config/
-export default (({ command }) => defineConfig({
-    base: command === 'build' ? '' : '',
+export default (() => defineConfig({
+    base: "",
     plugins: [
         tailwindcss(),
         react(),
