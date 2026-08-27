@@ -31,7 +31,7 @@
             "@/*": [ "./src/*" ]
         }
     },
-    "include": [ "./src" ],
+    "include": [ "./src", "./tailwind" ],
     "references": [{ "path": "./tsconfig.node.json" }],
     "exclude": [ "./node_modules" ]
 }
