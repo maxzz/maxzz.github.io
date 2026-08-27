@@ -1,65 +1,66 @@
 import { type Getter } from "jotai";
 import { Atomize, atomsFamily, atomWithCallback, debounce } from "@/utils";
 
+export const ShowType = {
+    list: 0,
+    preview: 1,
+} as const;
+
+export type ShowType = typeof ShowType[keyof typeof ShowType];
+
 type UIOptions = {
     showType: ShowType;
 };
 
-export const enum ShowType {
-    list = 0,
-    preview,
-}
-
 //#region LocalStorage
 
-namespace Storage {
-    const KEY = 'maxzz-io-01';
+const STORAGE_KEY = 'maxzz-io-01';
 
-    type Store = {
-        uiOptions: UIOptions;
-        openSections: Record<string, boolean>;
-    };
+type Store = {
+    uiOptions: UIOptions;
+    openSections: Record<string, boolean>;
+};
 
-    export let initialData: Store = {
+function loadInitialData(): Store {
+    const defaults: Store = {
         uiOptions: {
             showType: ShowType.preview,
         },
         openSections: {},
     };
 
-    function load() {
-        const s = localStorage.getItem(KEY);
-        if (s) {
-            try {
-                let obj = JSON.parse(s) as Store;
-                initialData = { ...initialData, ...obj };
-            } catch (error) {
-            }
+    const s = localStorage.getItem(STORAGE_KEY);
+    if (s) {
+        try {
+            const obj = JSON.parse(s) as Store;
+            return { ...defaults, ...obj };
+        } catch (error) {
         }
-
-        //initialData.vaultData.shapes = initialData.vaultData?.shapes?.length ? initialData.vaultData.shapes : defaultShapes;
     }
-    load();
 
-    export const saveDebounced = debounce(function _save(get: Getter) {
-        let newStore: Store = {
-            uiOptions: {
-                showType: get(uiOptionsAtoms.showTypeAtom),
-            },
-            openSections: sectionOpenAtoms.getValues(get),
-        };
-        localStorage.setItem(KEY, JSON.stringify(newStore));
-    }, 1000);
-
-    export const save = ({ get }: { get: Getter; }) => Storage.saveDebounced(get);
+    return defaults;
 }
+
+const initialData = loadInitialData();
+
+const saveDebounced = debounce(function _save(get: Getter) {
+    const newStore: Store = {
+        uiOptions: {
+            showType: get(uiOptionsAtoms.showTypeAtom),
+        },
+        openSections: sectionOpenAtoms.getValues(get),
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newStore));
+}, 1000);
+
+const save = ({ get }: { get: Getter; }) => saveDebounced(get);
 
 //#endregion LocalStorage
 
-export const sectionOpenAtoms = atomsFamily<boolean>(Storage.initialData.openSections, false, (param: boolean) => atomWithCallback(param, Storage.save));
+export const sectionOpenAtoms = atomsFamily<boolean>(initialData.openSections, false, (param: boolean) => atomWithCallback(param, save));
 
 //////////
 
 export const uiOptionsAtoms: Atomize<UIOptions> = {
-    showTypeAtom: atomWithCallback(Storage.initialData.uiOptions.showType, Storage.save),
+    showTypeAtom: atomWithCallback(initialData.uiOptions.showType, save),
 };
