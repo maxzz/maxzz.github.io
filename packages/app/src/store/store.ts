@@ -1,5 +1,5 @@
 import { type Getter } from "jotai";
-import { Atomize, atomsFamily, atomWithCallback, debounce } from "@/utils";
+import { type Atomize, atomsFamily, atomWithCallback, debounce } from "@/utils";
 
 export const ShowType = {
     list: 0,
