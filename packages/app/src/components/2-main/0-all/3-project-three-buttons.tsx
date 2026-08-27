@@ -42,7 +42,7 @@ export function ProjectThreeButtons({ project, inListItem, className, ...rest }:
 
 function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded active:scale-[.97] flex items-center", className)} {...rest}>
+        <div className={classNames("h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded-sm active:scale-[.97] flex items-center", className)} {...rest}>
             {children}
         </div>
     );

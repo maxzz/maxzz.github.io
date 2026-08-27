@@ -1,6 +1,6 @@
 import { a, useSpring } from "@react-spring/web";
 
-const textStroke = { WebkitTextStrokeColor: 'var(--tm-primary-500)', WebkitTextStrokeWidth: .5 };
+const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
 
 export function SpringTitle() {
     const styles = useSpring({

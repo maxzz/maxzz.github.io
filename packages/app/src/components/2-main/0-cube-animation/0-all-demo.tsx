@@ -54,7 +54,7 @@ export function CubeAnimationDemo() {
                         disabled={isAnimating}
                         type="button"
                         className={`
-                            px-3 py-2.5 text-sm rounded transition-all duration-200
+                            px-3 py-2.5 text-sm rounded-sm transition-all duration-200
                             ${isAnimating
                                 ? 'bg-primary-600/50 text-primary-400 cursor-not-allowed'
                                 : 'bg-primary-600 hover:bg-primary-500 text-white cursor-pointer'}

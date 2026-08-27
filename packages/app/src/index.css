@@ -1,42 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer components {
-    .hoverurl {
-        @apply hover:border-b border-primary-200/40 hover:text-url;
+@plugin "tailwindcss-plugin-overflow-tw4";
+@plugin "tailwindcss-plugin-debug-screens-tw4";
+@plugin "@tailwindcss/forms";
+
+/*OK, no need for now*/
+/* 
+@plugin "../tailwind/tailwind-cursors.ts";
+@plugin "../tailwind/tailwind-plugin-data-state.ts";
+@plugin "../tailwind/tailwind-plugin-range.ts";
+*/
+
+@theme {
+    --color-primary-50: var(--color-slate-50);
+    --color-primary-100: var(--color-slate-100);
+    --color-primary-200: var(--color-slate-200);
+    --color-primary-300: var(--color-slate-300);
+    --color-primary-400: var(--color-slate-400);
+    --color-primary-500: var(--color-slate-500);
+    --color-primary-600: var(--color-slate-600);
+    --color-primary-700: var(--color-slate-700);
+    --color-primary-800: var(--color-slate-800);
+    --color-primary-900: var(--color-slate-900);
+    --color-primary-950: var(--color-slate-950);
+
+    --color-url: var(--color-slate-300);
+}
+
+/* Preserve v3 border default so uncolored `border` utilities stay gray-200. */
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
     }
 
-    .extension-small-icon-outline {
-        @apply outline outline-1 sm:outline-2 outline-offset-1 outline-green-500 sm:outline-green-500/30;
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
     }
 }
 
-/* Firefox scrollbars - only applied where scrollbar-color is supported (Chrome > 121) */
-@supports (scrollbar-color: auto) {
-    .smallscroll {
-        --sb-width: 8px;
-        scrollbar-color: #666b7a transparent;
-        scrollbar-width: thin;
-    }
+@utility hoverurl {
+    @apply border-primary-200/40 hover:border-b hover:text-url;
 }
 
-/* Chrome scrollbars */
-.smallscroll::-webkit-scrollbar {
-    width: var(--sb-width);
-    height: var(--sb-width);
-    background-color: transparent;
+@utility extension-small-icon-outline {
+    @apply outline-1 sm:outline-2 outline-offset-1 outline-green-500 sm:outline-green-500/30;
 }
 
-.smallscroll::-webkit-scrollbar-thumb {
-    background-color: #666b7a;
-}
-
-/* 3D cube animations */
-.cube-perspective {
+@utility cube-perspective {
     perspective: 800px;
 }
 
-.cube-3d {
+@utility cube-3d {
     transform-style: preserve-3d;
 }

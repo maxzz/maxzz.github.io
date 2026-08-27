@@ -10,7 +10,7 @@ export function UISection({ className, title, children, openAtom }: { className?
     return (
         <div>
             <UISectionPane
-                className={classNames("pl-4 px-2 py-2 bg-title4 text-stone-100 uppercase rounded flex items-center justify-between select-none cursor-pointer font-ui", className)}
+                className={classNames("pl-4 px-2 py-2 bg-title4 text-stone-100 uppercase rounded-sm flex items-center justify-between select-none cursor-pointer font-ui", className)}
                 style={textShadow}
                 open={open}
                 onClick={() => setOpen(v => !v)}
