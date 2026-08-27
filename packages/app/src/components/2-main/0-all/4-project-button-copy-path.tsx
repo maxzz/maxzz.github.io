@@ -27,7 +27,7 @@ function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v
     const item = Number(show);
 
     return (
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
             <motion.div
                 key={item}
                 className="absolute left-0 top-0"
