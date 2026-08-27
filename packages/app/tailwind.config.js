@@ -8,6 +8,7 @@ module.exports = {
                 primary: colors.slate,
                 url: colors.slate[300],
             },
+
             // keyframes: {
             //     slidein: {
             //         '0%': { ransform: 'translateY(-100%)',},
@@ -24,8 +25,6 @@ module.exports = {
         require('./tailwind/tailwind-plugin-debug-screens'),
         require('@tailwindcss/forms'),
         require('./tailwind/tailwind-plugin-overflow-overlay'),
-        require('./tailwind/tailwind-plugin-colors-bridge')([
-            { prefix: '--tm-', groupName: 'primary' },
-        ]),
+        require('./tailwind/tailwind-plugin-colors-bridge')([ { prefix: '--tm-', groupName: 'primary' }, ]),
     ],
 };
