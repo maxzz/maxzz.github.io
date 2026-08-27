@@ -7,7 +7,7 @@ const midPath = "M 50 13 L 50 42 L 50 72";
 const openPath = "M 80 35 L 50 65 L 20 35";
 
 export function UIArrow({ open, className, ...rest }: { open: boolean; } & SVGAttributes<SVGSVGElement>) {
-    const progress = useSpring(open ? 1 : 0, { mass: 0.2, stiffness: 492, bounce: 0 });
+    const progress = useSpring(open ? 1 : 0, { visualDuration: 0.45, bounce: 0 });
     const d = useTransform(progress, [0, 0.3, 1], [closedPath, midPath, openPath]);
 
     useEffect(() => {
