@@ -30,7 +30,8 @@ export function SpringIntro() {
             [".js-title", { scaleX: 0.5, scaleY: 4 }, spring],
             [".js-title", { scaleX: 0.5, scaleY: 1 }, spring],
             [".js-title", { scaleX: 1, scaleY: 1 }, spring],
-            [".js-notes", { x: 0, opacity: 1, scaleY: 0.2 }, { duration: 0.2, at: 1 }],
+            
+            [".js-notes", { x: 0, opacity: 1, scaleY: 0.2 }, spring],
             [".js-notes", { scaleY: 1 }, { delay: 0.2, duration: 1.2, ease: easeOutBounce }],
         ]);
 
