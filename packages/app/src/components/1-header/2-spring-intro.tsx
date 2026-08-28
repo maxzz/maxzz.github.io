@@ -3,7 +3,7 @@ import { motion, useAnimate } from "motion/react";
 import { IconExperiments } from "../ui/icons";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
-const spring = { type: "spring" as const, visualDuration: 0.45, bounce: 0 };
+const spring = { type: "spring" as const, stiffness: 170, damping: 26 };
 
 const easeOutBounce = (x: number) => {
     const n1 = 7.5625;
@@ -25,10 +25,11 @@ export function SpringIntro() {
 
     useEffect(() => {
         const playback = animate([
-            [".js-title", { scaleY: 1 }, { duration: 0.2 }],
-            [".js-title", { scaleY: 4 }, spring],
-            [".js-title", { scaleY: 1 }, spring],
-            [".js-title", { scaleX: 1 }, spring],
+            // keep scaleX at 0.5 until the last title step
+            [".js-title", { scaleX: 0.5, scaleY: 1 }, { duration: 0.2 }],
+            [".js-title", { scaleX: 0.5, scaleY: 4 }, spring],
+            [".js-title", { scaleX: 0.5, scaleY: 1 }, spring],
+            [".js-title", { scaleX: 1, scaleY: 1 }, spring],
             [".js-notes", { x: 0, opacity: 1, scaleY: 0.2 }, { duration: 0.2 }],
             [".js-notes", { scaleY: 1 }, { delay: 0.2, duration: 1.2, ease: easeOutBounce }],
         ]);
@@ -40,11 +41,11 @@ export function SpringIntro() {
 
     return (
         <div ref={scope} className={leftClasses}>
-            <div className="overflow-hidden">
+            <div>
                 <motion.div
-                    className="js-title text-xl text-primary-700 sm:text-4xl origin-left"
-                    initial={{ scaleY: 0.1, scaleX: 0.5 }}
-                    style={textStroke}
+                    className="js-title text-xl text-primary-700 sm:text-4xl"
+                    initial={{ scaleX: 0.5, scaleY: 0.1 }}
+                    style={{ ...textStroke, transformOrigin: "left center" }}
                 >
                     Directory of ...
                 </motion.div>
