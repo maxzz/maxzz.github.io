@@ -3,8 +3,7 @@ import { type Transition, motion, useAnimate } from "motion/react";
 import { IconExperiments } from "../ui/icons";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
-const spring: Transition = { type: "spring", stiffness: 270, damping: 26 };
-const spring2: Transition = { type: "spring", stiffness: 470, damping: 26, bounce: .1 };
+const spring: Transition = { type: "spring", stiffness: 170, damping: 26 };
 
 const easeOutBounce = (x: number) => {
     const n1 = 7.5625;
@@ -26,13 +25,12 @@ export function SpringIntro() {
 
     useEffect(() => {
         const playback = animate([
-            // keep scaleX at 0.5 until the last title step
-            [".js-title", { scaleX: 0.4, scaleY: 1 }, { duration: 0.125 }],
-            [".js-title", { scaleX: 0.4, scaleY: 1.5 }, spring2],
-            [".js-title", { scaleX: 0.4, scaleY: 1 }, spring],
-            [".js-title", { scaleX: 1, scaleY: 1 }, spring2],
-
-            [".js-notes", { x: 0, opacity: 1, scaleY: 0.2 }, spring],
+            // pin scaleX: a sequence step that only sets scaleY drops it back to 1
+            [".js-title", { scaleX: 0.5, scaleY: 1 }, { duration: 0.2 }],
+            [".js-title", { scaleX: 0.5, scaleY: 4 }, spring],
+            [".js-title", { scaleX: 0.5, scaleY: 1 }, spring],
+            [".js-title", { scaleX: 1, scaleY: 1 }, spring],
+            [".js-notes", { x: 0, opacity: 1, scaleY: 0.2 }, { duration: 0.2, at: 1 }],
             [".js-notes", { scaleY: 1 }, { delay: 0.2, duration: 1.2, ease: easeOutBounce }],
         ]);
 
@@ -45,9 +43,9 @@ export function SpringIntro() {
         <div ref={scope} className={leftClasses}>
             <div className="overflow-hidden">
                 <motion.div
-                    className="js-title text-xl text-primary-700 sm:text-4xl"
-                    initial={{ scaleX: 0.5, scaleY: 0.1 }}
-                    style={{ ...textStroke, transformOrigin: "left center" }}
+                    className="js-title text-xl text-primary-700 sm:text-4xl origin-left"
+                    initial={{ scaleY: 0.1, scaleX: 0.5 }}
+                    style={textStroke}
                 >
                     Directory of ...
                 </motion.div>
