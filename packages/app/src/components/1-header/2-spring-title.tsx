@@ -1,28 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useAnimate } from "motion/react";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
-const spring = { type: "spring" as const, stiffness: 170, damping: 26 };
+const spring = { type: "spring" as const, visualDuration: 0.45, bounce: 0 };
 
-export function SpringTitle() {
+export function SpringTitle({ onComplete }: { onComplete?: () => void; }) {
     const [scope, animate] = useAnimate();
+    const onCompleteRef = useRef(onComplete);
+    onCompleteRef.current = onComplete;
 
     useEffect(() => {
+        const el = scope.current;
+        if (!el) return;
+
         let cancelled = false;
+        const playback = animate([
+            [el, { scaleY: 1 }, { duration: 0.2 }],
+            [el, { scaleY: 4 }, spring],
+            [el, { scaleY: 1 }, spring],
+            [el, { scaleX: 1 }, spring],
+        ]);
 
-        async function play() {
-            if (!scope.current) return;
-            await animate(scope.current, { scaleY: 1 }, { duration: 0.2 });
-            if (cancelled) return;
-            await animate(scope.current, { scaleY: 4 }, spring);
-            if (cancelled) return;
-            await animate(scope.current, { scaleY: 1 }, spring);
-            if (cancelled) return;
-            await animate(scope.current, { scaleX: 1 }, spring);
-        }
+        playback.then(() => {
+            if (!cancelled) onCompleteRef.current?.();
+        });
 
-        play();
-        return () => { cancelled = true; };
+        return () => {
+            cancelled = true;
+            playback.stop();
+        };
     }, [animate]);
 
     return (

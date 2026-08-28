@@ -17,22 +17,24 @@ const easeOutBounce = (x: number) => {
     return n1 * (x -= 2.625 / d1) * x + 0.984375;
 };
 
-export function SpringNotes() {
+export function SpringNotes({ start }: { start: boolean; }) {
     const [scope, animate] = useAnimate();
 
     useEffect(() => {
-        let cancelled = false;
+        if (!start) return;
 
-        async function play() {
-            if (!scope.current) return;
-            await animate(scope.current, { x: 0, opacity: 1, scaleY: 0.2 }, { delay: 1, duration: 0.2 });
-            if (cancelled) return;
-            await animate(scope.current, { scaleY: 1 }, { delay: 0.2, duration: 1.2, ease: easeOutBounce });
-        }
+        const el = scope.current;
+        if (!el) return;
 
-        play();
-        return () => { cancelled = true; };
-    }, [animate]);
+        const playback = animate([
+            [el, { x: 0, opacity: 1, scaleY: 0.2 }, { duration: 0.2 }],
+            [el, { scaleY: 1 }, { delay: 0.2, duration: 1.2, ease: easeOutBounce }],
+        ]);
+
+        return () => {
+            playback.stop();
+        };
+    }, [start, animate]);
 
     return (
         <motion.div ref={scope} className="origin-bottom-left" initial={{ x: 400, opacity: 0, scaleY: 0 }}>

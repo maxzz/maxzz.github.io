@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useAtom } from "jotai";
 import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
 import { Stars } from "@/components/ui/icons/icon-star";
@@ -7,13 +8,14 @@ import { rerenderAtom } from "./8-atoms";
 
 export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
+    const [titleDone, setTitleDone] = useState(false);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
             <div className={leftClasses}>
                 {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
 
-                <SpringTitle />
-                <SpringNotes />
+                <SpringTitle onComplete={() => setTitleDone(true)} />
+                <SpringNotes start={titleDone} />
                 
                 {/* <MotionTitle />
                 <MotionNotes /> */}
