@@ -1,25 +1,17 @@
-import { useState } from "react";
 import { useAtom } from "jotai";
 import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
 import { Stars } from "@/components/ui/icons/icon-star";
-import { SpringTitle } from "./2-spring-title";
-import { SpringNotes } from "./3-spring-notes";
+import { SpringIntro } from "./2-spring-intro";
 import { rerenderAtom } from "./8-atoms";
 
 export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
-    const [titleDone, setTitleDone] = useState(false);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
-            <div className={leftClasses}>
-                {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
-
-                <SpringTitle onComplete={() => setTitleDone(true)} />
-                <SpringNotes start={titleDone} />
-                
-                {/* <MotionTitle />
-                <MotionNotes /> */}
-            </div>
+            {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
+            <SpringIntro />
+            {/* <MotionTitle />
+            <MotionNotes /> */}
 
             <div className="relative">
                 <UIViewSelector />
@@ -43,17 +35,6 @@ function ButtonRerender({ foo, setFoo }: { foo: boolean; setFoo: (v: boolean) =>
         </button>
     );
 }
-
-const leftClasses = "\
-relative \
-grid \
-grid-rows-[minmax(0,1fr)_1rem] \
-sm:grid-rows-none \
-sm:grid-cols-2 \
-items-end \
-sm:gap-2 \
-text-slate-500 tracking-tighter \
-1scale-y-125"; //TODO: return scale back after done switching to motion
 
 const buttonClasses = "\
 absolute right-0 -top-2 px-2 py-0.5 text-xs \
