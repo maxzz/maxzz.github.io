@@ -10,7 +10,7 @@ const settle: Transition = { type: "spring", visualDuration: 0.42, bounce: 0.5 }
 const slide: Transition = { type: "spring", visualDuration: 0.4, bounce: 0.28 };
 const land: Transition = { type: "spring", visualDuration: 0.55, bounce: 0.55 };
 
-export function SpringIntro() {
+export function IntroTitleAnimationMotion() {
     const [scope, animate] = useAnimate();
     const shouldReduceMotion = useReducedMotion();
 

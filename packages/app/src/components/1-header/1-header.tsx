@@ -1,17 +1,19 @@
 import { useAtom } from "jotai";
+import { IntroTitleAnimationSpring } from "./2-1-title-animation-spring";
+import { IntroTitleAnimationMotion } from "./2-2-title-animation-motion";
 import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
 import { Stars } from "@/components/ui/icons/icon-star";
-import { SpringIntro } from "./2-spring-intro";
 import { rerenderAtom } from "./8-atoms";
 
 export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
+            
             {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
-            <SpringIntro />
-            {/* <MotionTitle />
-            <MotionNotes /> */}
+
+            <IntroTitleAnimationSpring />
+            {/* <IntroTitleAnimationMotion /> */}
 
             <div className="relative">
                 <UIViewSelector />
@@ -27,10 +29,7 @@ export function Section1_Header() {
 
 function ButtonRerender({ foo, setFoo }: { foo: boolean; setFoo: (v: boolean) => void; }) {
     return (
-        <button
-            className={buttonClasses}
-            onClick={() => setFoo(!foo)}
-        >
+        <button className={buttonClasses} onClick={() => setFoo(!foo)}>
             Rerender ({foo ? "y" : "n"})
         </button>
     );
