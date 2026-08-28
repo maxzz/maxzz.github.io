@@ -29,6 +29,31 @@
 					"label": "package.json - root"
 				}
 			]
+		},
+		{
+			"path": "node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/index.d.ts",
+			"bookmarks": [
+				{
+					"line": 2036,
+					"column": 10,
+					"label": "interface SpringOptions"
+				},
+				{
+					"line": 2286,
+					"column": 0,
+					"label": "interface CSSStyleDeclarationWithTransform"
+				}
+			]
+		},
+		{
+			"path": "node_modules/.pnpm/framer-motion@12.43.0_react_5f02bb507a9a9735ad33d210a4057575/node_modules/framer-motion/dist/index.d.ts",
+			"bookmarks": [
+				{
+					"line": 683,
+					"column": 0,
+					"label": "type AnimationSequence"
+				}
+			]
 		}
 	]
 }
