@@ -2,20 +2,22 @@
 
 Links to my projects with demos and source code. (Main)
 
+![](packages/app/src/assets/previews/2026-08-28_20-20-33.png)
+
 Legend:
 
 <div style="margin-top:0.5rem; display:flex; align-items:center;gap:0.5rem; color:var(--bgColor-default, #4141d0);">
-    <img src="src/assets/icons/readme/1-play.svg" />
+    <img src="packages/app/src/assets/icons/readme/1-play.svg" />
     Open demo website
 </div>
 
 <div style="margin-top:0.5rem; display:flex; align-items:center;gap:0.5rem; color:var(--bgColor-default, #4141d0);">
-    <img src="src/assets/icons/readme/2-github.svg" />
+    <img src="packages/app/src/assets/icons/readme/2-github.svg" />
     Open source code on GitHub
 </div>
 
 <div style="margin-top:0.5rem; display:flex; align-items:center;gap:0.5rem; color:var(--bgColor-default, #4141d0);">
-    <img src="src/assets/icons/readme/3-drive.svg" />
+    <img src="packages/app/src/assets/icons/readme/3-drive.svg" />
     Location on local hard drive
 </div>
 
