@@ -2,11 +2,24 @@ import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments } from "../ui/icons";
 
 export function IntroTitleAnimationSpring() {
-    return (<>
-        <SpringTitle />
-        <SpringNotes />
-    </>);
+    return (
+        <div className={leftClasses}>
+            <SpringTitle />
+            <SpringNotes />
+        </div>
+    );
 }
+
+const leftClasses = "\
+relative \
+grid \
+grid-rows-[minmax(0,1fr)_1rem] \
+sm:grid-rows-none \
+sm:grid-cols-2 \
+items-end \
+sm:gap-2 \
+text-slate-500 tracking-tighter \
+1scale-y-125"; //TODO: return scale back after done switching to motion
 
 //---------------------------------------------------------------------------
 
@@ -82,9 +95,9 @@ function SpringNotes() {
 
     return (
         <a.div style={styles}>
-            <a className="inline-block translate-y-px space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
+            <a className="flex-1 inline-block translate-y-px space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
                 <span className="text-[.65rem] leading-[.65rem] sm:text-sm">
-                         // todo: name to come up with
+                    // todo: name to come up with
                 </span>
 
                 <IconExperiments className="pb-0.5 w-4 h-4 origin-bottom scale-75 sm:scale-125 stroke-slate-400 inline-block" />
