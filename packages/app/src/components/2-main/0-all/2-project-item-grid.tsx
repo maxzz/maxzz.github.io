@@ -2,7 +2,7 @@ import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
 import { ImageUrl, ProjectType, SectionType } from "@maxzz/db-apps";
 import { ProjectName } from "./2-project-item-list";
-import { ProjectThreeButtons } from "./3-project-three-buttons";
+import { ProjectThreeButtons } from "@/components/4-private-repo-notice";
 
 export function ProjectsAsGrid({ section }: { section: SectionType; }) {
     return (

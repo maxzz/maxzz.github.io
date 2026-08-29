@@ -1,10 +1,12 @@
 import { Section1_Header, Section2_Main, Section3_Footer } from "..";
+import { PrivateRepoNoticeHost } from "../4-private-repo-notice";
 import { UISymbolDefs } from "../ui/icons/symbols";
 
 export function App() {
     return (<>
         <PopperRoot />
         <UISymbolDefs />
+        <PrivateRepoNoticeHost />
         
         <div className="h-screen min-h-full overflow-hidden text-slate-100 bg-slate-900 flex flex-col"> {/* debug-screens */}
             <Section1_Header />

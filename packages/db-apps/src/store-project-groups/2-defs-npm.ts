@@ -206,6 +206,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "ts-digitalpersona-transport",
         description: "Secure Remote Password client library. HID DigitalPersona WebSdk (2023 version). Transport layer aka digitalpersona-transport. This is so far is private",
+        private: true,
         urlGithub: "https://github.com/hidglobal/digitalpersona-transport", //TODO: so far is is private
         urlDemo: "https://www.npmjs.com/package/digitalpersona-transport", // no demo
         urlPreview: images.npm25, // no img
@@ -216,6 +217,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "pm-manifest",
         description: "PM manifest definitions.",
+        private: true,
         urlGithub: "https://github.com/maxzz/pm-manifest",
         urlDemo: "https://www.npmjs.com/package/pm-manifest", // no demo
         urlPreview: images.npm25, // no img
@@ -226,6 +228,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "pm-manifest-icons",
         description: "PM manifest icons.",
+        private: true,
         urlGithub: "https://github.com/maxzz/pm-manifest-icons",
         urlDemo: "https://www.npmjs.com/package/pm-manifest-icons", // no demo
         urlPreview: images.npm25, // no img
@@ -256,6 +259,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "pm-xtn-csui-res",
         description: "PM extension content scripts UI resources builder.",
+        private: true,
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-res",
         urlDemo: "https://www.npmjs.com/package/pm-xtn-csui-res", // no demo
         urlPreview: images.npm25, // no img

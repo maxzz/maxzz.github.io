@@ -13,6 +13,7 @@ export type ProjectType = {
     urlPreview: ImageUrl;
     localPath?: string;
     stack?: string[];
+    private?: boolean;
 };
 
 export type SectionType = {
