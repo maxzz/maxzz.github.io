@@ -9,11 +9,14 @@ export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
-            
-            <ButtonRerender foo={foo} setFoo={setFoo} />
+
+            {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
 
             <IntroTitleAnimationSpring />
             {/* <IntroTitleAnimationMotion /> */}
+
+            {/* {foo ? <IntroTitleAnimationSpring /> : <DummyText />} */}
+            {/* {foo ? <IntroTitleAnimationMotion /> : <DummyText />} */}
 
             <div className="relative">
                 <UIViewSelector />
@@ -27,11 +30,19 @@ export function Section1_Header() {
     );
 }
 
+// Button Rerender
+
 function ButtonRerender({ foo, setFoo }: { foo: boolean; setFoo: (v: boolean) => void; }) {
     return (
         <button className={buttonClasses} onClick={() => setFoo(!foo)}>
             Rerender ({foo ? "y" : "n"})
         </button>
+    );
+}
+
+function DummyText() {
+    return (
+        <div className="h-10">Once again...</div>
     );
 }
 
