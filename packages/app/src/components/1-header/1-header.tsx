@@ -10,7 +10,7 @@ export function Section1_Header() {
     return (
         <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
             
-            {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
+            <ButtonRerender foo={foo} setFoo={setFoo} />
 
             <IntroTitleAnimationSpring />
             {/* <IntroTitleAnimationMotion /> */}
@@ -36,5 +36,5 @@ function ButtonRerender({ foo, setFoo }: { foo: boolean; setFoo: (v: boolean) =>
 }
 
 const buttonClasses = "\
-absolute right-0 -top-2 px-2 py-0.5 text-xs \
-bg-slate-800 rounded-sm flex items-center space-x-2";
+absolute right-48 top-7 px-2 py-0.5 text-[.65rem] \
+bg-slate-800 rounded border border-slate-700 flex items-center space-x-2";

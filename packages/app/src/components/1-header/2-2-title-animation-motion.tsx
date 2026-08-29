@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { type Transition, motion, useAnimate, useReducedMotion } from "motion/react";
 import { IconExperiments } from "../ui/icons";
+import { rerenderAtom } from "./8-atoms";
+import { useAtomValue } from "jotai";
 
 const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
 
@@ -11,6 +13,8 @@ const slide: Transition = { type: "spring", visualDuration: 0.4, bounce: 0.28 };
 const land: Transition = { type: "spring", visualDuration: 0.55, bounce: 0.55 };
 
 export function IntroTitleAnimationMotion() {
+    const foo = useAtomValue(rerenderAtom);
+
     const [scope, animate] = useAnimate();
     const shouldReduceMotion = useReducedMotion();
 
@@ -34,16 +38,18 @@ export function IntroTitleAnimationMotion() {
             [".js-icon", { rotate: [0, -16, 10, 0] }, { ...settle, at: "<" }],
         ]);
 
-        playback.then(() => {
-            const root = scope.current;
-            if (!root) return;
-            for (const node of root.querySelectorAll(".js-title, .js-notes, .js-icon")) {
-                (node as HTMLElement).style.willChange = "auto";
+        playback.then(
+            () => {
+                const root = scope.current;
+                if (!root) return;
+                for (const node of root.querySelectorAll(".js-title, .js-notes, .js-icon")) {
+                    (node as HTMLElement).style.willChange = "auto";
+                }
             }
-        });
+        );
 
         return () => playback.stop();
-    }, [animate, shouldReduceMotion]);
+    }, [animate, shouldReduceMotion, foo]);
 
     return (
         <div ref={scope} className={leftClasses}>

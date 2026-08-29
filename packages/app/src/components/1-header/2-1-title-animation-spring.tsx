@@ -1,7 +1,10 @@
 import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments } from "../ui/icons";
+import { rerenderAtom } from "./8-atoms";
+import { useAtomValue } from "jotai";
 
 export function IntroTitleAnimationSpring() {
+    useAtomValue(rerenderAtom);
     return (
         <div className={leftClasses}>
             <SpringTitle />
