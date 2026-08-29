@@ -13,15 +13,15 @@ export function IntroTitleAnimationSpring() {
 function SpringTitle() {
     const styles = useSpring({
         from: {
-            scaley: '10%',
-            scalex: '50%',
+            scaleY: 0.1,
+            scaleX: 0.5,
             transformOrigin: 'left center',
         },
         to: [
-            { scaley: '100%', config: { duration: 200 }, },
-            { scaley: '400%', },
-            { scaley: '100%', },
-            { scalex: '100%', },
+            { scaleY: 1, config: { duration: 200 }, },
+            { scaleY: 4, },
+            { scaleY: 1, },
+            { scaleX: 1, },
         ],
         //config: { duration: 2000, },
     });
@@ -61,19 +61,19 @@ function SpringNotes() {
         from: {
             x: 400,
             opacity: 0,
-            scaley: 0,
+            scaleY: 0,
             transformOrigin: 'left bottom'
         },
         to: [
             {
                 x: 0,
                 opacity: 1,
-                scaley: .2,
+                scaleY: .2,
                 delay: 1000,
                 config: { duration: 200 },
             },
             {
-                scaley: 1,
+                scaleY: 1,
                 delay: 200,
                 config: { duration: 1200, easing: easings.easeOutBounce },
             },
