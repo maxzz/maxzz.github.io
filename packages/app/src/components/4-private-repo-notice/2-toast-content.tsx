@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 import { XIcon } from "lucide-react";
 import { type ProjectType } from "@maxzz/db-apps";
-import { ProjectThreeButtons } from "@/components/2-main/0-all/3-project-three-buttons";
+import { ProjectThreeButtonsActions } from "@/components/2-main/0-all/3-project-three-buttons";
 
 export function PrivateRepoNoticeToast({ project, toastId }: { project: ProjectType; toastId: number | string; }) {
     return (
@@ -23,7 +23,7 @@ export function PrivateRepoNoticeToast({ project, toastId }: { project: ProjectT
             </div>
 
             <div className="flex justify-start">
-                <ProjectThreeButtons
+                <ProjectThreeButtonsActions
                     className="[&>div]:text-slate-600 [&>div]:hover:bg-slate-200 [&>div]:hover:text-slate-900"
                     project={project}
                     inListItem={false}

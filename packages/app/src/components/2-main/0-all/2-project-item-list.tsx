@@ -2,7 +2,7 @@ import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
 import { ProjectType, SectionType } from "@maxzz/db-apps";
 import { ProjectStack } from "./5-project-stack-icons";
-import { ProjectThreeButtons } from "@/components/4-private-repo-notice";
+import { ProjectThreeButtons } from "./3-project-three-buttons";
 
 export function ProjectsAsList({ section }: { section: SectionType; }) {
     return (
