@@ -1,7 +1,7 @@
 import { type HTMLAttributes } from "react";
+import { LockIcon } from "lucide-react";
 import { classNames } from "@/utils";
 import { ProjectType, SectionType } from "@maxzz/db-apps";
-import { PrivateRepoMarker } from "@/components/4-private-repo-notice/4-private-marker";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectThreeButtons } from "./3-project-three-buttons";
 
@@ -34,5 +34,16 @@ export function ProjectName({ name, className, ...rest }: { name: string; } & HT
         <div className={classNames("pb-1 text-sm text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
             {name}
         </div>
+    );
+}
+
+function PrivateRepoMarker({ className }: { className?: string; }) {
+    return (
+        <span
+            className={classNames("pb-1.25 inline-flex items-center text-slate-400", className)}
+            title="Private repository"
+        >
+            <LockIcon className="size-3" aria-label="Private repository" />
+        </span>
     );
 }
