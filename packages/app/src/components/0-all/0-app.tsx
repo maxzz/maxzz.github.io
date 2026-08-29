@@ -5,6 +5,7 @@ export function App() {
     return (<>
         <PopperRoot />
         <UISymbolDefs />
+        
         <div className="h-screen min-h-full overflow-hidden text-slate-100 bg-slate-900 flex flex-col"> {/* debug-screens */}
             <Section1_Header />
 
