@@ -10,7 +10,7 @@ export function requestPrivateRepoNotice(project: ProjectType) {
     toast.custom(
         (toastId) => <PrivateRepoNoticeToast project={project} toastId={toastId} />,
         {
-            duration: 5000,
+            duration: 3000,
             unstyled: true,
         },
     );

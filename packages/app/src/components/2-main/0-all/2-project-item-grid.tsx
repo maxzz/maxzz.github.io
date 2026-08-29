@@ -1,7 +1,7 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
 import { ImageUrl, ProjectType, SectionType } from "@maxzz/db-apps";
-import { ProjectName } from "./2-project-item-list";
+import { PrivateRepoMarker, ProjectName } from "./2-project-item-list";
 import { ProjectThreeButtons } from "./3-project-three-buttons";
 
 export function ProjectsAsGrid({ section }: { section: SectionType; }) {
@@ -28,7 +28,10 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
                     {description}
                 </div>
 
-                <ProjectThreeButtons className="-mb-2" project={project} inListItem={false} />
+                <div className="-mb-2 flex items-center">
+                    <ProjectThreeButtons project={project} inListItem={false} />
+                    {project.private && <PrivateRepoMarker className="ml-1.25 pb-0!" />}
+                </div>
 
                 <div className={pictureClasses}>
                     <a className={classNames("transition-transform border shadow-sm", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>

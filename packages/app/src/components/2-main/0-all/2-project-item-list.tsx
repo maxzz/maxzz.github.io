@@ -37,12 +37,9 @@ export function ProjectName({ name, className, ...rest }: { name: string; } & HT
     );
 }
 
-function PrivateRepoMarker({ className }: { className?: string; }) {
+export function PrivateRepoMarker({ className }: { className?: string; }) {
     return (
-        <span
-            className={classNames("pb-1.25 inline-flex items-center text-slate-400", className)}
-            title="Private repository"
-        >
+        <span className={classNames("-mr-1 pb-1.25 inline-flex items-center text-sky-500", className)} title="Private repository">
             <LockIcon className="size-3" aria-label="Private repository" />
         </span>
     );

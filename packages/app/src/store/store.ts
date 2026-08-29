@@ -24,7 +24,7 @@ type Store = {
 function loadInitialData(): Store {
     const defaults: Store = {
         uiOptions: {
-            showType: ShowType.preview,
+            showType: ShowType.list,
         },
         openSections: {},
     };
