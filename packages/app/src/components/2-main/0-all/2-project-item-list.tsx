@@ -1,6 +1,7 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils";
 import { ProjectType, SectionType } from "@maxzz/db-apps";
+import { PrivateRepoMarker } from "@/components/4-private-repo-notice/4-private-marker";
 import { ProjectStack } from "./5-project-stack-icons";
 import { ProjectThreeButtons } from "./3-project-three-buttons";
 
@@ -22,6 +23,7 @@ function ProjectItem_List({ project }: { project: ProjectType; }) {
         <section className="text-sm flex items-center gap-x-2">
             <ProjectThreeButtons className="" project={project} inListItem={true} />
             <ProjectName className="" name={id} />
+            {project.private && <PrivateRepoMarker />}
             <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
         </section>
     );
