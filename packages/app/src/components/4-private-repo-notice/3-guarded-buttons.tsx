@@ -1,9 +1,10 @@
 import { type HTMLAttributes, type MouseEvent } from "react";
 import { type ProjectType } from "@maxzz/db-apps";
 import { ProjectThreeButtons as ProjectThreeButtonsActions } from "@/components/2-main/0-all/3-project-three-buttons";
-import { requestPrivateRepoNotice } from "./3-show-notice";
+import { requestPrivateRepoNotice } from "./1-show-notice";
 
 export function ProjectThreeButtons({ project, onClickCapture, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
+
     function onGuardedClick(event: MouseEvent<HTMLDivElement>) {
         event.preventDefault();
         event.stopPropagation();
@@ -12,9 +13,9 @@ export function ProjectThreeButtons({ project, onClickCapture, ...rest }: { proj
 
     return (
         <ProjectThreeButtonsActions
-            {...rest}
             project={project}
             onClickCapture={project.private ? onGuardedClick : onClickCapture}
+            {...rest}
         />
     );
 }
