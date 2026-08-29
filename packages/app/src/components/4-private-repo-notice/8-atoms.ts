@@ -1,4 +1,4 @@
-import { atom, getDefaultStore } from "jotai";
+import { atom } from "jotai";
 import { type ProjectType } from "@maxzz/db-apps";
 
 export type PrivateRepoNotice = {
@@ -7,7 +7,3 @@ export type PrivateRepoNotice = {
 };
 
 export const privateRepoNoticeAtom = atom<PrivateRepoNotice | null>(null);
-
-export function requestPrivateRepoNotice(project: ProjectType) {
-    getDefaultStore().set(privateRepoNoticeAtom, { project, nonce: Date.now() });
-}
