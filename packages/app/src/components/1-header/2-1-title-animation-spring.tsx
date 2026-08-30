@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments } from "../ui/icons";
 
@@ -24,6 +25,7 @@ text-slate-500 tracking-tighter \
 //---------------------------------------------------------------------------
 
 function SpringTitle() {
+    const [textShadow, setTextShadow] = useState("none");
     const styles = useSpring({
         from: {
             scaleY: 0.1,
@@ -34,7 +36,7 @@ function SpringTitle() {
             { scaleY: 1, config: { duration: 200 }, },
             { scaleY: 4, },
             { scaleY: 1, },
-            { scaleX: 1, },
+            { scaleX: 1, onRest: () => setTextShadow("1px 1px 1px #991010") },
         ],
         //config: { duration: 2000, },
     });
@@ -57,7 +59,7 @@ function SpringTitle() {
     */
     return (
         <div className="overflow-hidden">
-            <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke }}>
+            <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke, textShadow }}>
                 Directory of ...
             </a.div>
         </div>
