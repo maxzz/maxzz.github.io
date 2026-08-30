@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { type DOMKeyframesDefinition, type ElementOrSelector, type Transition, useAnimate, } from "motion/react";
 
-export type AnimateParams = [ElementOrSelector, DOMKeyframesDefinition, (Transition | undefined)?];
+export type TimelineRow = [ElementOrSelector, DOMKeyframesDefinition, (Transition | undefined)?];
 
-export type Animation = AnimateParams | Animation[];
+export type TimelineItems = TimelineRow | TimelineItems[];
 
-export const useMotionTimeline = (keyframes: Animation[], count: number = 1) => {
+export const useMotionTimeline = (allTimelineItems: TimelineItems[], count: number = 1) => {
     const mounted = useRef(true);
 
     const [scope, animate] = useAnimate();
@@ -22,24 +22,26 @@ export const useMotionTimeline = (keyframes: Animation[], count: number = 1) => 
         },
         []);
 
-    const processAnimation = async (animation: Animation) => {
-        // If list of animations, run all concurrently
-        if (Array.isArray(animation[0])) {
+    const processAnimation = async (timelineItems: TimelineItems) => {
+        if (Array.isArray(timelineItems[0])) { // If list of animations, run all concurrently
             await Promise.all(
-                animation.map(async (a) => {
-                    await processAnimation(a as Animation);
-                })
+                timelineItems.map(
+                    async (a) => {
+                        await processAnimation(a as TimelineItems);
+                    }
+                )
             );
-        } else {
-            // Else run the single animation
-            await animate(...(animation as AnimateParams));
+        } else { // else run the single animation
+            await animate(...(timelineItems as TimelineRow));
         }
     };
 
     const handleAnimate = async () => {
         for (let i = 0; i < count; i++) {
-            for (const animation of keyframes) {
-                if (!mounted.current) return;
+            for (const animation of allTimelineItems) {
+                if (!mounted.current) {
+                    return;
+                }
                 await processAnimation(animation);
             }
         }
