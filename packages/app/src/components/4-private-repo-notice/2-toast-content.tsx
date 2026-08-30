@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 import { XIcon } from "lucide-react";
 import { type ProjectType } from "@maxzz/db-apps";
-import { ProjectThreeButtonsActions } from "@/components/2-main/0-all/3-project-three-buttons";
+import { ProjectThreeButtonsActions } from "@/components/2-main/0-all/3-project-3-buttons";
 
 export function PrivateRepoNoticeToast({ project, toastId }: { project: ProjectType; toastId: number | string; }) {
     return (

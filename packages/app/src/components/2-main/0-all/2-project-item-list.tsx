@@ -3,7 +3,7 @@ import { LockIcon } from "lucide-react";
 import { classNames } from "@/utils";
 import { ProjectType, SectionType } from "@maxzz/db-apps";
 import { ProjectStack } from "./5-project-stack-icons";
-import { ProjectThreeButtons } from "./3-project-three-buttons";
+import { ProjectThreeButtons } from "./3-project-3-buttons";
 
 export function ProjectsAsList({ section }: { section: SectionType; }) {
     return (
