@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments } from "../ui/icons";
 
@@ -24,37 +23,27 @@ text-slate-500 tracking-tighter \
 
 //---------------------------------------------------------------------------
 
+const shadowHidden = "1px 1px 1px rgba(170, 170, 170, 0)";
+const shadowVisible = "1px 1px 1px rgba(170, 170, 170, 1)";
+
 function SpringTitle() {
-    const [textShadow, setTextShadow] = useState("none");
-    const timersRef = useRef<number[]>([]);
-
-    useEffect(() => () => {
-        for (const id of timersRef.current) window.clearTimeout(id);
-    }, []);
-
-    const styles = useSpring({
+    const [styles] = useSpring(() => ({
         from: {
             scaleY: 0.1,
             scaleX: 0.5,
-            transformOrigin: 'left center',
+            transformOrigin: "left center",
+            textShadow: shadowHidden,
         },
         to: [
-            { scaleY: 1, config: { duration: 200 }, },
-            { scaleY: 4, },
-            { scaleY: 1, },
-            {
-                scaleX: 1,
-                onRest: () => {
-                    for (const id of timersRef.current) window.clearTimeout(id);
-                    timersRef.current = [
-                        window.setTimeout(() => setTextShadow("1px 1px 1px #991010"), 1000),
-                        window.setTimeout(() => setTextShadow("none"), 1200),
-                    ];
-                },
-            },
+            { scaleY: 1, config: { duration: 200 } },
+            { scaleY: 4 },
+            { scaleY: 1 },
+            { scaleX: 1 },
+            { textShadow: shadowVisible, config: { duration: 0 } },
+            { textShadow: shadowHidden, delay: 1000, config: { duration: 0 } },
         ],
         //config: { duration: 2000, },
-    });
+    }));
     /*
     const styles = useSpring({
         from: {
@@ -74,7 +63,17 @@ function SpringTitle() {
     */
     return (
         <div className="overflow-hidden">
-            <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke, textShadow }}>
+            <a.div
+                className="relative text-xl text-primary-700 sm:text-4xl"
+                style={{ scaleX: styles.scaleX, scaleY: styles.scaleY, transformOrigin: styles.transformOrigin, ...textStroke }}
+            >
+                <a.span
+                    aria-hidden
+                    className="absolute inset-0 pointer-events-none select-none"
+                    style={{ textShadow: styles.textShadow, color: "transparent", WebkitTextFillColor: "transparent", WebkitTextStrokeWidth: 0 }}
+                >
+                    Directory of ...
+                </a.span>
                 Directory of ...
             </a.div>
         </div>
