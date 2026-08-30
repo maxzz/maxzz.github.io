@@ -271,7 +271,7 @@ export const projectsNpm: ProjectType[] = [
         id: "pm-xtn-csui-test-vanilla",
         description: "Test application for pm-xtn-csui.",
         urlGithub: "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
-        urlDemo: "https://www.npmjs.com/package/pm-xtn-csui-test-vanilla", // no demo
+        urlDemo: "https://maxzz.github.io/pm-xtn-csui-test-vanilla", // no demo
         urlPreview: images.npm25, // no img
         localPath: "c:/Y/w/2-web/0-dp/utils/pm-xtn-csui-test-vanilla",
         stack: ['js'],

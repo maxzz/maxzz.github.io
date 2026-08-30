@@ -1,5 +1,5 @@
 import path from "node:path";
-import { defineConfig, type PluginOption } from "vite";
+import { defineConfig, type Plugin, type PluginOption } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -16,6 +16,19 @@ const buildVersion = () => {
     const d = new Date();
     return `${d.getFullYear().toString().substring(3)}.${d.getMonth() + 1}${d.getDate()} (${d.getHours()}${d.getMinutes()})`;
 };
+
+/** vite-plugin-image-presets 0.3.5 uses node:path.join, so Windows builds encode `\` as %5C in src/srcset. */
+function fixWindowsImagePresetUrls(): Plugin {
+    return {
+        name: "fix-windows-image-preset-urls",
+        transform(code, id) {
+            if (!id.includes("preset=") || !code.includes("%5C")) {
+                return;
+            }
+            return code.replaceAll("%5C", "/");
+        },
+    };
+}
 
 // https://vitejs.dev/config/
 export default (() => defineConfig({
@@ -41,6 +54,7 @@ export default (() => defineConfig({
                 },
             }),
         }) as PluginOption,
+        fixWindowsImagePresetUrls(),
 
         replace({
             values: {
@@ -65,8 +79,9 @@ export default (() => defineConfig({
     },
 
     build: {
+        // minify: false,
         minify: 'esbuild',
-        target: "esnext"
+        target: "esnext",
     },
 
     server: {
