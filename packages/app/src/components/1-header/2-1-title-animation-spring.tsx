@@ -23,9 +23,6 @@ text-slate-500 tracking-tighter \
 
 //---------------------------------------------------------------------------
 
-const shadowHidden = "1px 1px 1px rgba(170, 170, 170, 0)";
-const shadowVisible = "1px 1px 1px rgba(170, 170, 170, 1)";
-
 function SpringTitle() {
     const [styles] = useSpring(() => ({
         from: {
@@ -40,7 +37,7 @@ function SpringTitle() {
             { scaleY: 1 },
             { scaleX: 1 },
             { textShadow: shadowVisible, config: { duration: 0 } },
-            { textShadow: shadowHidden, delay: 1000, config: { duration: 0 } },
+            { textShadow: shadowHidden, delay: 150, config: { duration: 0 } },
         ],
         //config: { duration: 2000, },
     }));
@@ -65,15 +62,8 @@ function SpringTitle() {
         <div className="overflow-hidden">
             <a.div
                 className="relative text-xl text-primary-700 sm:text-4xl"
-                style={{ scaleX: styles.scaleX, scaleY: styles.scaleY, transformOrigin: styles.transformOrigin, ...textStroke }}
+                style={{ scaleX: styles.scaleX, scaleY: styles.scaleY, transformOrigin: styles.transformOrigin, ...textStroke, textShadow: styles.textShadow }}
             >
-                <a.span
-                    aria-hidden
-                    className="absolute inset-0 pointer-events-none select-none"
-                    style={{ textShadow: styles.textShadow, color: "transparent", WebkitTextFillColor: "transparent", WebkitTextStrokeWidth: 0 }}
-                >
-                    Directory of ...
-                </a.span>
                 Directory of ...
             </a.div>
         </div>
@@ -81,6 +71,8 @@ function SpringTitle() {
 }
 
 const textStroke = { WebkitTextStrokeColor: 'var(--color-primary-500)', WebkitTextStrokeWidth: .5 };
+const shadowHidden = "1px 1px 1px rgba(170, 170, 170, 0)";
+const shadowVisible = "1px 1px 1px rgba(132, 71, 71, 1)";
 
 //---------------------------------------------------------------------------
 
