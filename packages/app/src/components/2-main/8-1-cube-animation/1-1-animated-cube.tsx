@@ -9,6 +9,7 @@ interface AnimatedCubeProps {
 
 export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps) {
     const cubeControls = useAnimation();
+
     const sideControls: SideControls = {
         front: useAnimation(),
         back: useAnimation(),
@@ -26,17 +27,13 @@ export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps
 
     return (
         <div className="relative size-32 scale-50 cube-perspective">
-            <motion.div
-                animate={cubeControls}
-                initial={{ rotateX: -15, rotateY: 45 }}
-                className="relative w-full h-full cube-3d"
-            >
-                <motion.div animate={sideControls.front}  /**/ className={classNames(sideClasses, "bg-red-500 border-2 border-red-600")}       /**/ style={{ transform: 'translateZ(64px)', }}>Front</motion.div> {/* Front face */}
-                <motion.div animate={sideControls.back}   /**/ className={classNames(sideClasses, "bg-blue-500 border-2 border-blue-600")}     /**/ style={{ transform: 'translateZ(-64px) rotateY(180deg)', }}>Back</motion.div> {/* Back face */}
-                <motion.div animate={sideControls.left}   /**/ className={classNames(sideClasses, "bg-green-500 border-2 border-green-600")}   /**/ style={{ transform: 'rotateY(-90deg) translateZ(64px)', }}>Left</motion.div> {/* Left face */}
-                <motion.div animate={sideControls.right}  /**/ className={classNames(sideClasses, "bg-yellow-500 border-2 border-yellow-600")} /**/ style={{ transform: 'rotateY(90deg) translateZ(64px)', }}>Right</motion.div> {/* Right face */}
-                <motion.div animate={sideControls.top}    /**/ className={classNames(sideClasses, "bg-purple-500 border-2 border-purple-600")} /**/ style={{ transform: 'rotateX(90deg) translateZ(64px)', }}>Top</motion.div> {/* Top face */}
-                <motion.div animate={sideControls.bottom} /**/ className={classNames(sideClasses, "bg-orange-500 border-2 border-orange-600")} /**/ style={{ transform: 'rotateX(-90deg) translateZ(64px)', }}>Bottom</motion.div> {/* Bottom face */}
+            <motion.div className="relative w-full h-full cube-3d" animate={cubeControls} initial={{ rotateX: -15, rotateY: 45 }}>
+                <motion.div animate={sideControls.front}  /**/ className={classNames(sideClasses, "bg-red-500 border-2 border-red-600")}       /* Front face  */ style={{ transform: 'translateZ(64px)', }}>Front</motion.div>
+                <motion.div animate={sideControls.back}   /**/ className={classNames(sideClasses, "bg-blue-500 border-2 border-blue-600")}     /* Back face   */ style={{ transform: 'translateZ(-64px) rotateY(180deg)', }}>Back</motion.div>
+                <motion.div animate={sideControls.left}   /**/ className={classNames(sideClasses, "bg-green-500 border-2 border-green-600")}   /* Left face   */ style={{ transform: 'rotateY(-90deg) translateZ(64px)', }}>Left</motion.div>
+                <motion.div animate={sideControls.right}  /**/ className={classNames(sideClasses, "bg-yellow-500 border-2 border-yellow-600")} /* Right face  */ style={{ transform: 'rotateY(90deg) translateZ(64px)', }}>Right</motion.div>
+                <motion.div animate={sideControls.top}    /**/ className={classNames(sideClasses, "bg-purple-500 border-2 border-purple-600")} /* Top face    */ style={{ transform: 'rotateX(90deg) translateZ(64px)', }}>Top</motion.div>
+                <motion.div animate={sideControls.bottom} /**/ className={classNames(sideClasses, "bg-orange-500 border-2 border-orange-600")} /* Bottom face */ style={{ transform: 'rotateX(-90deg) translateZ(64px)', }}>Bottom</motion.div>
             </motion.div>
         </div>
     );
@@ -61,7 +58,7 @@ type SideControls = {
 async function playAnimation(cubeControls: AnimationControls, sideControls: SideControls, onAnimationComplete?: () => void) {
     try {
         // Reset all animations with isometric view
-        await cubeControls.set({
+        cubeControls.set({
             rotateX: -15,
             rotateY: 45,
             opacity: 1,
@@ -76,6 +73,7 @@ async function playAnimation(cubeControls: AnimationControls, sideControls: Side
             // sideControls.right.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
             // sideControls.top.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
             // sideControls.bottom.set({ x: 0, y: 0, z: 0, rotateX: 0, rotateY: 0, rotateZ: 0 }),
+
             sideControls.front.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: 0, rotateZ: 0 }),
             sideControls.back.set({ x: 0, y: 0, z: -64, rotateX: 0, rotateY: 180, rotateZ: 0 }),
             sideControls.left.set({ x: 0, y: 0, z: 64, rotateX: 0, rotateY: -90, rotateZ: 0 }),

@@ -11,7 +11,7 @@ import { TimelineExample } from "../8-2-demo-timeline/TimelineExample";
 export function Section2_Main() {
     return (<>
         <CubeAnimationDemo />
-        <TimelineExample />
+        {/* <TimelineExample /> */}
 
         {sections.map(
             (section, idx) => (

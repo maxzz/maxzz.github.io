@@ -39,4 +39,9 @@ const TIMELINE_ITEMS: TimelineItems[] = [
         [".bar-2", { rotate: 0,  /**/ height: 96, background: "#1FFFFF" }, { ...TRANSITION, delay: 2 },],
         [".bar-3", { rotate: 0, x: 0, height: 96, background: "#1FFFFF" }, { ...TRANSITION, delay: 2 },],
     ],
+    [
+        [".bar-1", { rotate: 0, x: 0, height: 96, background: "#FFFFFF" }, { ...TRANSITION, delay: 2 },],
+        [".bar-2", { rotate: 0,  /**/ height: 96, background: "#FFFFFF" }, { ...TRANSITION, delay: 2 },],
+        [".bar-3", { rotate: 0, x: 0, height: 96, background: "#FFFFFF" }, { ...TRANSITION, delay: 2 },],
+    ],
 ];

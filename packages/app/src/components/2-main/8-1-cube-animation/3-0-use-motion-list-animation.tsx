@@ -5,48 +5,51 @@ export function ListAnimation({ trigger, onAnimationComplete }: { trigger: boole
     // 1. Get the `scope` and `animate` function from useAnimate
     const [scope, animate] = useAnimate();
 
-    useEffect(() => {
-        // 2. Call the animate function with a sequence
-        //    The async function ensures that each animation step completes before the next one starts
-        async function sequence() {
-            /** /
-            // 1. version 1
+    useEffect(
+        () => {
+            // 2. Call the animate function with a sequence
+            //    The async function ensures that each animation step completes before the next one starts
+            async function sequence() {
+                /** /
+                // 1. version 1
+    
+                // Step 1: Animate the list title
+                await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
+    
+                // Step 2: Animate the list items with a stagger effect
+                await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems });
+                /**/
 
-            // Step 1: Animate the list title
-            await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
+                /**/
+                // 2. version 2
 
-            // Step 2: Animate the list items with a stagger effect
-            await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems });
-            /**/
+                await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 0.5 });
 
-            /**/
-            // 2. version 2
+                await Promise.all([
+                    animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 }),
+                    animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems }),
+                ]);
 
-            await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 0.5 });
+                await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 0.5 });
+                /**/
 
-            await Promise.all([
-                animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 }),
-                animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems }),
-            ]);
+                // 3. done
 
-            await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 0.5 });
-            /**/
+                onAnimationComplete?.();
+            }
 
-            // 3. done
-
-            onAnimationComplete?.();
-        }
-
-        if (trigger) {
-            sequence();
-        }
-    }, [trigger]);
+            if (trigger) {
+                sequence();
+            }
+        },
+        [trigger]);
 
     return (
         // 3. Attach the scope ref to the parent element
         <div className="p-8 border border-primary-400/50 rounded-lg overflow-hidden">
             <div ref={scope}>
                 <h1 className="list-title">Loading...</h1>
+
                 <ul className="list">
                     <li className="list-item">One</li>
                     <li className="list-item">Two</li>
