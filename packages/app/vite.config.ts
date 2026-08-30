@@ -82,6 +82,18 @@ export default (() => defineConfig({
         // minify: false,
         minify: 'esbuild',
         target: "esnext",
+        rolldownOptions: {
+            output: {
+                codeSplitting: {
+                    groups: [
+                        { name: "react", test: /[\\/]node_modules[\\/](?:\.pnpm[\\/][^/\\]+[\\/])?node_modules[\\/](?:react|react-dom)[\\/]/ },
+                        { name: "motion", test: /[\\/]node_modules[\\/](?:\.pnpm[\\/][^/\\]+[\\/])?node_modules[\\/]motion[\\/]/ },
+                        { name: "react-spring", test: /[\\/]node_modules[\\/](?:\.pnpm[\\/][^/\\]+[\\/])?node_modules[\\/]@react-spring[\\/]/ },
+                        { name: "vendor", test: /[\\/]node_modules[\\/]/ },
+                    ],
+                },
+            },
+        },
     },
 
     server: {
