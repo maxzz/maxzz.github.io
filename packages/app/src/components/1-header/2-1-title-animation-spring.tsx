@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { a, easings, useSpring } from "@react-spring/web";
 import { IconExperiments } from "../ui/icons";
 
@@ -26,6 +26,12 @@ text-slate-500 tracking-tighter \
 
 function SpringTitle() {
     const [textShadow, setTextShadow] = useState("none");
+    const timersRef = useRef<number[]>([]);
+
+    useEffect(() => () => {
+        for (const id of timersRef.current) window.clearTimeout(id);
+    }, []);
+
     const styles = useSpring({
         from: {
             scaleY: 0.1,
@@ -36,7 +42,16 @@ function SpringTitle() {
             { scaleY: 1, config: { duration: 200 }, },
             { scaleY: 4, },
             { scaleY: 1, },
-            { scaleX: 1, onRest: () => setTextShadow("1px 1px 1px #991010") },
+            {
+                scaleX: 1,
+                onRest: () => {
+                    for (const id of timersRef.current) window.clearTimeout(id);
+                    timersRef.current = [
+                        window.setTimeout(() => setTextShadow("1px 1px 1px #991010"), 1000),
+                        window.setTimeout(() => setTextShadow("none"), 1200),
+                    ];
+                },
+            },
         ],
         //config: { duration: 2000, },
     });
