@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { type DOMKeyframesDefinition, type ElementOrSelector, type Transition, useAnimate, } from "motion/react";
+import { type Transition } from "motion/react";
+import { useMotionTimeline } from "./motion-timeline";
 
 const TRANSITION: Transition = { ease: "easeInOut", duration: 0.5, };
 
@@ -40,51 +40,4 @@ export const TimelineExample = () => {
             <div className="bar-3 bg-white" style={{ width: 48, height: 96, }} />
         </div>
     );
-};
-
-type AnimateParams = [ElementOrSelector, DOMKeyframesDefinition, (Transition | undefined)?];
-
-type Animation = AnimateParams | Animation[];
-
-const useMotionTimeline = (keyframes: Animation[], count: number = 1) => {
-    const mounted = useRef(true);
-
-    const [scope, animate] = useAnimate();
-
-    useEffect(
-        () => {
-            mounted.current = true;
-
-            handleAnimate();
-
-            return () => {
-                mounted.current = false;
-            };
-        },
-        []);
-
-    const processAnimation = async (animation: Animation) => {
-        // If list of animations, run all concurrently
-        if (Array.isArray(animation[0])) {
-            await Promise.all(
-                animation.map(async (a) => {
-                    await processAnimation(a as Animation);
-                })
-            );
-        } else {
-            // Else run the single animation
-            await animate(...(animation as AnimateParams));
-        }
-    };
-
-    const handleAnimate = async () => {
-        for (let i = 0; i < count; i++) {
-            for (const animation of keyframes) {
-                if (!mounted.current) return;
-                await processAnimation(animation);
-            }
-        }
-    };
-
-    return scope;
 };
