@@ -1,11 +1,16 @@
+import { lazy, Suspense } from "react";
 import { useAtom, useAtomValue } from "jotai";
 import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
 import { UIAccordion } from "@/components/ui/local-ui/UIAccordion";
 import { UIArrow } from "@/components/ui/local-ui/UIArrow";
-import { ProjectsAsGrid } from "./2-project-item-grid";
 import { ProjectsAsList } from "./2-project-item-list";
 import { CubeAnimationDemo } from "../0-cube-animation";
+
+const ProjectsAsGrid = lazy(async () => {
+    const { ProjectsAsGrid } = await import("./2-project-item-grid");
+    return { default: ProjectsAsGrid };
+});
 
 export function Section2_Main() {
     return (<>
@@ -29,7 +34,11 @@ function ProjectsGroup({ section }: { section: SectionType; }) {
             <UIAccordion open={sectionOpen}>
                 {showType === ShowType.list
                     ? <ProjectsAsList section={section} />
-                    : <ProjectsAsGrid section={section} />
+                    : (
+                        <Suspense fallback={<div className="min-h-24" />}>
+                            <ProjectsAsGrid section={section} />
+                        </Suspense>
+                    )
                 }
             </UIAccordion>
         </div>

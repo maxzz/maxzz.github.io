@@ -30,6 +30,11 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
             )}
             style={{ boxShadow: '0 0 0 1px #ffffff07, 0 2px 4px #ffffff05, 0 12px 24px #ffffff05', '--me': angle } as React.CSSProperties}
             onClick={() => setShowType(thisType)}
+            onMouseEnter={() => {
+                if (thisType === ShowType.preview) {
+                    void import("@/components/2-main/0-all/2-project-item-grid");
+                }
+            }}
             title={thisType === ShowType.list ? "Show List" : "Show Grid"}
             {...rest}
         >
