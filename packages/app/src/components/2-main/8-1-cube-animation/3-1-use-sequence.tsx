@@ -41,6 +41,31 @@ export function Demo_Sequences() {
     );
 }
 
+type AnimateFn = ReturnType<typeof useAnimate>[1];
+
+async function sequenceA(animate: AnimateFn) {
+    await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 1 });
+
+    await Promise.all([
+        animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 1.5 }),
+        animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems2 }),
+    ]);
+
+    await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 1.5 });
+}
+
+async function sequenceB(animate: AnimateFn) {
+    await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 1 });
+    await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 1.5 });
+    await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems2 });
+    await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 1.5 });
+}
+
+async function sequenceC(animate: AnimateFn) {
+    await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
+    await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems1 });
+}
+
 function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
     // 1. Get the `scope` and `animate` function from useAnimate
     const [scope, animate] = useAnimate();
@@ -50,25 +75,9 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
             // 3. Call the animate function with a sequence
             //    The async function ensures that each animation step completes before the next one starts
             async function sequence() {
-
-                // // 1. version 1
-                // // Step 1: Animate the list title
-                // await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
-                // // Step 2: Animate the list items with a stagger effect
-                // await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems1 });
-
-                // 2. version 2
-
-                await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 1 });
-
-                await Promise.all([
-                    animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 1.5 }),
-                    animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems2 }),
-                ]);
-
-                await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 1.5 });
-
-                // 3. done
+                await sequenceA(animate);
+                await sequenceB(animate);
+                await sequenceC(animate);
 
                 onAnimationComplete?.();
             }
