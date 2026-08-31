@@ -41,6 +41,54 @@ export function Demo_Sequences() {
     );
 }
 
+function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
+    // 1. Get the `scope` and `animate` function from useAnimate
+    const [scope, animate] = useAnimate();
+
+    const [step, setStep] = useState(0);
+
+    useEffect(
+        () => {
+            // 3. Call the animate function with a sequence
+            //    The async function ensures that each animation step completes before the next one starts
+            async function sequence() {
+                setStep(1);
+                await sequenceA(animate);
+                setStep(2);
+                await sequenceB(animate);
+                setStep(3);
+                await sequenceC(animate);
+                setStep(0);
+
+                onAnimationComplete?.();
+            }
+
+            if (trigger) {
+                sequence();
+            }
+        },
+        [trigger]);
+
+    return (
+        // 2. Attach the scope ref to the parent element
+        <div className="px-4 py-2 border border-primary-400/50 rounded-lg overflow-hidden grid grid-rows-[auto_1fr] gap-y-4">
+            <div>Step {step}</div>
+
+            <div ref={scope}>
+                <h1 className="text-sky-500">Loading...</h1>
+
+                <ul>
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+//---------------------------------------------------------------------------
+
 type AnimateFn = ReturnType<typeof useAnimate>[1];
 
 async function sequenceA(animate: AnimateFn) {
@@ -66,46 +114,10 @@ async function sequenceC(animate: AnimateFn) {
     await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems1 });
 }
 
-function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
-    // 1. Get the `scope` and `animate` function from useAnimate
-    const [scope, animate] = useAnimate();
-
-    useEffect(
-        () => {
-            // 3. Call the animate function with a sequence
-            //    The async function ensures that each animation step completes before the next one starts
-            async function sequence() {
-                await sequenceA(animate);
-                await sequenceB(animate);
-                await sequenceC(animate);
-
-                onAnimationComplete?.();
-            }
-
-            if (trigger) {
-                sequence();
-            }
-        },
-        [trigger]);
-
-    return (
-        // 2. Attach the scope ref to the parent element
-        <div className="p-8 border border-primary-400/50 rounded-lg overflow-hidden">
-            <div ref={scope}>
-                <h1 className="list-title">Loading...</h1>
-
-                <ul className="list">
-                    <li className="list-item">One</li>
-                    <li className="list-item">Two</li>
-                    <li className="list-item">Three</li>
-                </ul>
-            </div>
-        </div>
-    );
-}
-
 const staggerItems1 = stagger(0.1, { startDelay: 0.25 });
 const staggerItems2 = stagger(0.1, { startDelay: 1.25 });
+
+//---------------------------------------------------------------------------
 
 // gai: 'what to use instead of deprecated LegacyAnimationControls in framer-motion'
 // 	'is framer-motion function  useAnimationControls deprecated?' <- Yes, the useAnimationControls function has been deprecated and replaced by the useAnimate hook in Framer Motion.
