@@ -6,8 +6,8 @@ import { ManualReverseAnimation } from "./3-2-use-motion-controls-reverse";
 
 export function CubeAnimationDemo() {
     return (
-        <div className="px-4 py-2 mx-4 bg-primary-800/30 border border-primary-400/50 rounded-lg grid place-items-center gap-y-2">
-            <h3 className="text-sm text-primary-200">
+        <div className="px-4 py-2 mx-4 text-primary-200 bg-primary-800/30 border border-primary-400/50 rounded-lg grid place-items-center gap-y-2">
+            <h3 className="text-sm">
                 Motion
             </h3>
 

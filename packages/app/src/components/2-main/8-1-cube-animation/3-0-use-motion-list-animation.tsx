@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAnimate, stagger } from "motion/react";
 import { classNames } from "@/utils/classnames";
-import { buttonClasses } from "./8-shared-controls";
+import { buttonClasses, frameClasses } from "./8-shared-controls";
 
 export function Demo_ListAnimation() {
     const [trigger, setTrigger] = useState(false);
@@ -20,10 +20,10 @@ export function Demo_ListAnimation() {
     }, []);
 
     return (
-        <div className="text-xs font-normal p-1 border border-primary-400/50 rounded-lg grid grid-rows-[auto_1fr_auto] place-items-center gap-y-1">
+        <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center gap-y-1")}>
 
-            <h3 className="text-primary-200">
-                Animated Cube Demo
+            <h3>
+                List animation
             </h3>
 
             <div className="p-1">

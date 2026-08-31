@@ -1,5 +1,7 @@
 import { classNames } from "@/utils/classnames";
 
+export const frameClasses = "py-2 border border-primary-400/50 rounded-lg";
+
 export function buttonClasses(isAnimating: boolean): string {
     const rvClasses = classNames("px-3 py-1.5 text-xs font-light rounded-sm transition-all duration-200",
         isAnimating

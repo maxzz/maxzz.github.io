@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { useAnimationFrame } from "motion/react"; //https://motion.dev/docs/react-use-animation-frame
+import { classNames } from "@/utils/classnames";
+import { frameClasses } from "./8-shared-controls";
 
 export function UseAnimationFrame() {
     const ref = useRef<HTMLDivElement>(null);
@@ -17,17 +19,20 @@ export function UseAnimationFrame() {
     );
 
     return (
-        <div className="container">
-            <div className="cube" ref={ref}>
-                <div className="side front" />
-                <div className="side left" />
-                <div className="side right" />
-                <div className="side top" />
-                <div className="side bottom" />
-                <div className="side back" />
-            </div>
+        <div className={classNames(frameClasses, "")}>
+            <div className="container border border-primary-200">
+                
+                <div className="cube" ref={ref}>
+                    <div className="side front" />
+                    <div className="side left" />
+                    <div className="side right" />
+                    <div className="side top" />
+                    <div className="side bottom" />
+                    <div className="side back" />
+                </div>
 
-            <StyleSheet />
+                <StyleSheet />
+            </div>
         </div>
     );
 }

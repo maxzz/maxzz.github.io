@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { classNames } from "@/utils";
 import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
-import { buttonClasses } from "./8-shared-controls";
+import { buttonClasses, frameClasses } from "./8-shared-controls";
 
 export function CubeAnimationDemo1() {
     const [trigger, setTrigger] = useState(false);
@@ -23,7 +23,7 @@ export function CubeAnimationDemo1() {
 
     return (
 
-        <div className="p-4 bg-primary-800/30 border border-primary-400/50 rounded-lg flex flex-col items-center">
+        <div className={classNames(frameClasses, "flex flex-col items-center")}>
             <h3 className="text-sm text-primary-200">
                 Animated Cube Demo
             </h3>
