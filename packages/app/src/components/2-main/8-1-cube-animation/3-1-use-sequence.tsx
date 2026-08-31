@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAnimate, stagger } from "motion/react";
 import { classNames } from "@/utils/classnames";
-import { buttonAnimatingClasses, frameClasses, iconClasses } from "./8-shared-controls";
 import { PlayIcon } from "lucide-react";
+import { type AnimateFn } from "@/utils/motion-timeline";
+import { buttonAnimatingClasses, frameClasses, iconClasses } from "./8-shared-controls";
 
 export function Demo_Sequences() {
     const [trigger, setTrigger] = useState(false);
@@ -83,8 +84,6 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
 }
 
 //---------------------------------------------------------------------------
-
-type AnimateFn = ReturnType<typeof useAnimate>[1];
 
 async function sequenceA(animate: AnimateFn) {
     await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 1 });

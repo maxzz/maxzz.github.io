@@ -49,3 +49,5 @@ export const useMotionTimeline = (allTimelineItems: TimelineItems[], count: numb
 
     return scope;
 };
+
+export type AnimateFn = ReturnType<typeof useAnimate>[1];

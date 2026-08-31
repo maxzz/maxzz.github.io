@@ -1,5 +1,5 @@
 import { type Transition } from "motion/react";
-import { type TimelineItems, useMotionTimeline } from "./motion-timeline";
+import { type TimelineItems, useMotionTimeline } from "@/utils/motion-timeline";
 
 export const TimelineExample = () => {
     const scope = useMotionTimeline(TIMELINE_ITEMS, Infinity);

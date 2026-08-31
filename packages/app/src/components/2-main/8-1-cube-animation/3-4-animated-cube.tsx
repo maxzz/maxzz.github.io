@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { classNames } from "@/utils";
-import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
+import { type LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
 import { buttonAnimatingClasses, frameClasses } from "./8-shared-controls";
 
 export function Demo_CubeAnimation() {
@@ -52,11 +52,13 @@ function AnimatedCube({ trigger, onAnimationComplete }: { trigger: boolean; onAn
         bottom: useAnimation(),
     };
 
-    useEffect(() => {
-        if (trigger) {
-            playAnimation(cubeControls, sideControls, onAnimationComplete);
-        }
-    }, [trigger]);
+    useEffect(
+        () => {
+            if (trigger) {
+                playAnimation(cubeControls, sideControls, onAnimationComplete);
+            }
+        },
+        [trigger]);
 
     return (
         <div className="relative size-32 scale-50 cube-perspective">

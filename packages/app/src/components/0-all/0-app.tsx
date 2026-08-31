@@ -1,5 +1,5 @@
 import { Section1_Header } from "../1-header";
-import { Section2_Main } from "../2-main";
+import { Section2_Main } from "../2-main/0-all";
 import { Section3_Footer } from "../3-footer";
 import { Toaster } from "../ui/shadcn/sonner";
 import { UISymbolDefs } from "../ui/icons/symbols";

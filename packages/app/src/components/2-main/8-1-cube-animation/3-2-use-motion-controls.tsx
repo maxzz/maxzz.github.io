@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { type AnimationPlaybackControlsWithThen, useAnimate, type ValueAnimationTransition } from "motion/react";
-import { a } from "@react-spring/web";
-import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 import { classNames } from "@/utils/classnames";
+import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
+import { type AnimationPlaybackControlsWithThen, useAnimate, type ValueAnimationTransition } from "motion/react";
 import { buttonClasses, frameClasses, iconClasses } from "./8-shared-controls";
 
 export const Demo_PlaybackControls = () => {

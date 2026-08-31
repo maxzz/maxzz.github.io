@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { IntroTitleAnimationSpring } from "./2-1-title-animation-spring";
 import { IntroTitleAnimationMotion } from "./2-2-title-animation-motion";
-import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
+import { UIViewSelector } from "@/components/ui/local-ui/ui-view-selector";
 import { Stars } from "@/components/ui/icons/icon-star";
 import { rerenderAtom } from "./8-atoms";
 

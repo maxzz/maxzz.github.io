@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { UIViewSelector } from "@/components/ui/local-ui/UIViewSelector";
+import { UIViewSelector } from "@/components/ui/local-ui/ui-view-selector";
 import { Stars } from "@/components/ui/icons/icon-star";
 import { SpringTitle } from "./2-spring-title";
 import { SpringNotes } from "./3-spring-notes";

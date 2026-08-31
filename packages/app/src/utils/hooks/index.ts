@@ -1,4 +1,4 @@
 export * from "./atomsX";
-export * from "./useIsomorphicLayoutEffect";
+export * from "./use-isomorphic-layout-effect";
 // export * from "./useMeasure";
 export * from "./utils";

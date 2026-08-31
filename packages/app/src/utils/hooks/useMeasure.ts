@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
+import useIsomorphicLayoutEffect from "./use-isomorphic-layout-effect";
 import { isBrowser, noop } from "./utils";
 
 export type UseMeasureRect = Pick<DOMRectReadOnly, "x" | "y" | "top" | "left" | "right" | "bottom" | "height" | "width">;

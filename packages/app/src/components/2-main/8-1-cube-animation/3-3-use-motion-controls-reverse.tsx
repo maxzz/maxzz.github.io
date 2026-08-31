@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { classNames } from "@/utils/classnames";
 import { useAnimate } from "motion/react";
 import { PlayIcon, RotateCcwIcon } from "lucide-react";
-import { classNames } from "@/utils/classnames";
 import { buttonClasses, frameClasses, iconClasses } from "./8-shared-controls";
 
 export const Demo_ManualReverse = () => {
