@@ -26,7 +26,7 @@ export function Project_3_ButtonsActions({ project, inListItem, className, ...re
     const { urlGithub, urlDemo, localPath, } = project;
 
     return (
-        <div className={classNames("text-xs flex items-center select-none", className)} {...rest}>
+        <div className={classNames("text-xs select-none flex items-center", className)} {...rest}>
             <ButtonShell
                 className={inListItem ? "px-px" : "p-1"}
                 title="Open demo page"
@@ -60,7 +60,7 @@ export function Project_3_ButtonsActions({ project, inListItem, className, ...re
 
 function ButtonShell({ children, className, ...rest }: HTMLAttributes<HTMLDivElement>) {
     return (
-        <div className={classNames("h-5 py-3 text-primary-500 hover:text-primary-200 hover:bg-primary-700 rounded-sm active:scale-[.97] flex items-center", className)} {...rest}>
+        <div className={classNames("py-3 h-5 text-primary-500 hover:text-primary-200 hover:bg-primary-700 active:scale-[.97] rounded-sm flex items-center", className)} {...rest}>
             {children}
         </div>
     );

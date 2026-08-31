@@ -24,7 +24,7 @@ function ProjectItem_List({ project }: { project: ProjectType; }) {
             <Project_3_Buttons className="" project={project} inListItem={true} />
             <ProjectName className="" name={id} />
             {project.private && <PrivateRepoMarker />}
-            <ProjectStack className="flex text-[.6rem] text-sky-700" stack={stack} />
+            <ProjectStack className="text-[.6rem] text-sky-700 flex" stack={stack} />
         </section>
     );
 }
@@ -39,7 +39,7 @@ export function ProjectName({ name, className, ...rest }: { name: string; } & HT
 
 export function PrivateRepoMarker({ className }: { className?: string; }) {
     return (
-        <span className={classNames("-mr-1 pb-1.25 inline-flex items-center text-sky-500", className)} title="Private repository">
+        <span className={classNames("pb-1.25 text-sky-500 inline-flex items-center -mr-1", className)} title="Private repository">
             <LockIcon className="size-3" aria-label="Private repository" />
         </span>
     );

@@ -6,7 +6,7 @@ import { ShowType, uiOptionsAtoms } from "@/store/store";
 
 export function UIViewSelector() {
     return (
-        <div className="p-0.5 flex items-center space-x-1 bg-slate-800/20 rounded-3xl select-none">
+        <div className="p-0.5 bg-slate-800/20 rounded-3xl select-none flex items-center space-x-1">
             <SwitchButton thisType={ShowType.list}><><IconList className="p-1 w-6 h-6" /><span>List</span></></SwitchButton>
             <SwitchButton thisType={ShowType.preview}><><IconGrid className="p-1 w-6 h-6" /><span>Grid</span></></SwitchButton>
         </div>
@@ -25,7 +25,7 @@ function SwitchButton({ thisType, children, ...rest }: { thisType: ShowType; } &
             title={thisType === ShowType.list ? "Show List" : "Show Grid"}
             {...rest}
         >
-            <div className="px-4 py-1 flex items-center text-[.65rem] bg-primary-800/30 rounded-[inherit]">
+            <div className="px-4 py-1 text-[.65rem] bg-primary-800/30 rounded-[inherit] flex items-center">
                 {children}
             </div>
         </button>

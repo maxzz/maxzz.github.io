@@ -5,10 +5,10 @@ import { Project_3_ButtonsActions } from "@/components/2-main/0-all/3-project-3-
 
 export function PrivateRepoNoticeToast({ project, toastId }: { project: ProjectType; toastId: number | string; }) {
     return (
-        <div className="relative flex w-72 flex-col gap-4 rounded-lg bg-popover p-2.5 pr-8 text-xs text-popover-foreground shadow-md ring-1 ring-foreground/10">
+        <div className="relative p-2.5 pr-8 w-72 text-xs text-popover-foreground bg-popover ring-1 ring-foreground/10 rounded-lg shadow-md flex flex-col gap-4">
             <button
                 type="button"
-                className="absolute top-1.5 right-1.5 rounded-sm p-0.5 text-muted-foreground hover:bg-accent hover:text-foreground"
+                className="absolute top-1.5 right-1.5 p-0.5 text-muted-foreground hover:bg-accent hover:text-foreground rounded-sm"
                 aria-label="Dismiss"
                 onClick={() => toast.dismiss(toastId)}
             >

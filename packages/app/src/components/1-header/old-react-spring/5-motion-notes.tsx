@@ -29,11 +29,11 @@ export function MotionNotes() {
     return (
         <a.div style={styles}>
             <a className="inline-block translate-y-px space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
-                <span className="text-[.65rem] leading-[.65rem] sm:text-sm">
+                <span className="sm:text-sm text-[.65rem] leading-[.65rem]">
                          // todo: name to come up with
                 </span>
 
-                <IconExperiments className="pb-0.5 w-4 h-4 origin-bottom scale-75 sm:scale-125 stroke-slate-400 inline-block" />
+                <IconExperiments className="inline-block pb-0.5 w-4 h-4 stroke-slate-400 sm:scale-125 origin-bottom scale-75" />
             </a>
         </a.div>
     );

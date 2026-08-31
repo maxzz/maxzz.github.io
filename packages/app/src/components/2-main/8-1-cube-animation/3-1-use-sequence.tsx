@@ -68,7 +68,7 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
 
     return (
         <div className="px-4 py-2 border border-primary-400/50 rounded-lg overflow-hidden grid grid-rows-[auto_1fr] gap-y-4">
-            <div className="text-[0.65rem] font-light text-center text-primary-400">Step {step}</div>
+            <div className="font-light text-[0.65rem] text-center text-primary-400">Step {step}</div>
 
             <div ref={scope}>
                 <h1 className="text-sky-500">Loading...</h1>

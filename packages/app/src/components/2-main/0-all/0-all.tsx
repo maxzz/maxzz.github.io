@@ -25,7 +25,7 @@ function ProjectsGroup({ section }: { section: SectionType; }) {
     const sectionOpen = useAtomValue(sectionOpenAtoms(section.name));
     const showType = useAtomValue(uiOptionsAtoms.showTypeAtom);
     return (
-        <div className="w-full px-4 max-w-384 grid grid-rows-[auto_minmax(0,1fr)]">
+        <div className="px-4 w-full max-w-384 grid grid-rows-[auto_minmax(0,1fr)]">
             <ProjectsGroupName section={section} />
 
             <UIAccordion open={sectionOpen}>
@@ -41,10 +41,10 @@ function ProjectsGroup({ section }: { section: SectionType; }) {
 function ProjectsGroupName({ section }: { section: SectionType; }) {
     const [sectionOpen, setSectionOpen] = useAtom(sectionOpenAtoms(section.name));
     return (
-        <div className="mb-2 text-xl cursor-pointer select-none" onClick={() => setSectionOpen((v) => !v)}>
+        <div className="mb-2 text-xl select-none cursor-pointer" onClick={() => setSectionOpen((v) => !v)}>
             <div className={buttonClasses}>
 
-                <div className="w-max leading-5 left-t">
+                <div className="left-t w-max leading-5">
                     {section.name}
                 </div>
 

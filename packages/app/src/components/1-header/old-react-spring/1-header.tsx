@@ -8,7 +8,7 @@ import { rerenderAtom } from "../8-atoms";
 export function Section1_Header() {
     const [foo, setFoo] = useAtom(rerenderAtom);
     return (
-        <header className="p-4 flex items-center justify-between text-xl bg-black shadow-xs shadow-slate-700">
+        <header className="p-4 text-xl bg-black shadow-xs shadow-slate-700 flex items-center justify-between">
             <div className={leftClasses}>
                 {/* <ButtonRerender foo={foo} setFoo={setFoo} /> */}
 

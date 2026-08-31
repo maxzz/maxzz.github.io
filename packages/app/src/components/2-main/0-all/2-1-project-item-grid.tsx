@@ -23,7 +23,7 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
         <section className="flex flex-col">
             <ProjectName name={id} />
 
-            <div className="flex-1 p-4 grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2 text-slate-400 bg-slate-800 rounded-sm">
+            <div className="flex-1 p-4 text-slate-400 bg-slate-800 rounded-sm grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2">
                 <div className=" min-w-0 text-sm overflow-auto">
                     {description}
                 </div>

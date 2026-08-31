@@ -51,7 +51,7 @@ export function IntroTitleAnimationMotion() {
     return (
         <div ref={scope} className={leftClasses}>
             <motion.div
-                className="js-title text-xl text-primary-700 sm:text-4xl origin-left"
+                className="text-xl sm:text-4xl text-primary-700 js-title origin-left"
                 initial={shouldReduceMotion ? { scaleX: 1, scaleY: 1, rotate: 0 } : { scaleX: 0.5, scaleY: 0.1, rotate: 0 }}
                 whileHover={shouldReduceMotion ? undefined : { scaleX: 1.04, scaleY: 1.04 }}
                 transition={settle}
@@ -66,11 +66,11 @@ export function IntroTitleAnimationMotion() {
                 style={{ willChange: "transform" }}
             >
                 <a className="inline-block translate-y-px space-x-1" href="https://github.com/maxzz" target="_blank" title="Open Max's GitHub">
-                    <span className="text-[.65rem] leading-[.65rem] sm:text-sm">
+                    <span className="sm:text-sm text-[.65rem] leading-[.65rem]">
                              // todo: name to come up with
                     </span>
 
-                    <IconExperiments className="js-icon pb-0.5 w-4 h-4 origin-bottom scale-75 sm:scale-125 stroke-slate-400 inline-block" />
+                    <IconExperiments className="inline-block pb-0.5 w-4 h-4 stroke-slate-400 sm:scale-125 js-icon origin-bottom scale-75" />
                 </a>
             </motion.div>
         </div>

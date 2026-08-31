@@ -36,7 +36,7 @@ export function SpringTitle() {
     */
     return (
         <div className="overflow-hidden">
-            <a.div className="text-xl text-primary-700 sm:text-4xl" style={{ ...styles, ...textStroke }}>
+            <a.div className="text-xl sm:text-4xl text-primary-700" style={{ ...styles, ...textStroke }}>
                 Directory of ...
             </a.div>
         </div>

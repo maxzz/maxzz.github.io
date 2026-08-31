@@ -5,7 +5,7 @@ export const TimelineExample = () => {
     const scope = useMotionTimeline(TIMELINE_ITEMS, Infinity);
 
     return (
-        <div ref={scope} className="mx-4 h-32 border border-primary-400/50 rounded-lg flex items-center justify-center overflow-hidden bg-zinc-950 bg-grid-zinc-900">
+        <div ref={scope} className="mx-4 h-32 bg-zinc-950 bg-grid-zinc-900 border border-primary-400/50 rounded-lg overflow-hidden flex items-center justify-center">
             <div className="bar-1 bg-white" style={{ width: width, height: heightFull, }} />
             <div className="bar-2 bg-white" style={{ width: width, height: heightFull, }} />
             <div className="bar-3 bg-white" style={{ width: width, height: heightFull, }} />

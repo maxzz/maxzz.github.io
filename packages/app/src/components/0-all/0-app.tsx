@@ -10,10 +10,10 @@ export function App() {
         <UISymbolDefs />
         <Toaster /> {/* can use these props: expand visibleToasts={5} */}
         
-        <div className="h-screen min-h-full overflow-hidden text-slate-100 bg-slate-900 flex flex-col"> {/* debug-screens */}
+        <div className="h-screen min-h-full text-slate-100 bg-slate-900 overflow-hidden flex flex-col"> {/* debug-screens */}
             <Section1_Header />
 
-            <main className="flex-1 my-4 space-y-4 overflow-y-overlay smallscroll">
+            <main className="flex-1 my-4 overflow-y-overlay space-y-4 smallscroll">
                 <Section2_Main />
             </main>
 
