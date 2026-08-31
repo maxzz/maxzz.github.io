@@ -1,8 +1,8 @@
 import { type HTMLAttributes } from "react";
-import { classNames } from "@/utils";
-import { ImageUrl, ProjectType, SectionType } from "@maxzz/db-apps";
-import { PrivateRepoMarker, ProjectName } from "./2-project-item-list";
-import { ProjectThreeButtons } from "./3-project-3-buttons";
+import { classNames } from "@/utils/classnames";
+import { PrivateRepoMarker, ProjectName } from "./2-2-project-item-list";
+import { Project_3_Buttons } from "./3-project-3-buttons";
+import { type ProjectType, type SectionType, type ImageUrl } from "@maxzz/db-apps";
 
 export function ProjectsAsGrid({ section }: { section: SectionType; }) {
     return (
@@ -29,7 +29,7 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
                 </div>
 
                 <div className="-mb-2 flex items-center">
-                    <ProjectThreeButtons project={project} inListItem={false} />
+                    <Project_3_Buttons project={project} inListItem={false} />
                     {project.private && <PrivateRepoMarker className="ml-1.25 pb-0!" />}
                 </div>
 

@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { IconCheckFrameless } from "@/components/ui/icons";
 
@@ -7,10 +7,7 @@ export function ButtonCopyPath({ label, text }: { label: ReactNode; text: string
     return (
         <button
             className="relative w-4 h-4"
-            onClick={(event) => {
-                navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\'));
-                setShowNotice(true);
-            }}
+            onClick={(event) => { navigator.clipboard.writeText(event.ctrlKey ? text : text.replace(/\//g, '\\')); setShowNotice(true); }}
             aria-label="Copy the project path"
         >
             <MountCopyNotice show={showNotice} setShow={setShowNotice}
@@ -29,19 +26,11 @@ function MountCopyNotice({ show, setShow, items }: { show: boolean; setShow?: (v
     return (
         <AnimatePresence initial={false}>
             <motion.div
-                key={item}
                 className="absolute left-0 top-0"
+                key={item}
                 initial={{ scale: 0, opacity: 0 }}
-                animate={{
-                    scale: 1,
-                    opacity: 1,
-                    transition: { duration: 0.2, ease: "easeOut" },
-                }}
-                exit={{
-                    scale: 0,
-                    opacity: 0,
-                    transition: { delay: 0.1, duration: 0.3, ease: "easeOut" },
-                }}
+                animate={{ scale: 1, opacity: 1, transition: { duration: 0.2, ease: "easeOut" } }}
+                exit={{ scale: 0, opacity: 0, transition: { delay: 0.1, duration: 0.3, ease: "easeOut" } }}
                 onAnimationComplete={() => show && setShow?.(false)}
             >
                 {items[item]}

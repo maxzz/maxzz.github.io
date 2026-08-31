@@ -1,5 +1,5 @@
 import { Fragment, type HTMLAttributes, type ReactNode } from "react";
-import { classNames } from "@/utils";
+import { classNames } from "@/utils/classnames";
 import { IconJotai, IconJs, IconNpm, IconReact, IconStackJotai, IconStackNpmLines, IconStackReact, IconStackTailwind, IconStackVue, IconTailwind, IconVue } from "../../ui/icons";
 import { SymbolManualMode, SymbolReactSpring, SymbolStitches } from "../../ui/icons/symbols";
 

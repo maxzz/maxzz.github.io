@@ -1,11 +1,28 @@
 import { type HTMLAttributes, type MouseEvent } from "react";
 import { classNames } from "@/utils";
-import { type ProjectType } from "@maxzz/db-apps";
-import { ButtonCopyPath } from "./4-project-button-copy-path";
 import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "@/components/ui/icons/symbols";
+import { ButtonCopyPath } from "./4-project-button-copy-path";
 import { requestPrivateRepoNotice } from "@/components/4-private-repo-notice/1-show-notice";
+import { type ProjectType } from "@maxzz/db-apps";
 
-export function ProjectThreeButtonsActions({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
+export function Project_3_Buttons({ project, onClickCapture, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
+
+    function onGuardedClick(event: MouseEvent<HTMLDivElement>) {
+        event.preventDefault();
+        event.stopPropagation();
+        requestPrivateRepoNotice(project);
+    }
+
+    return (
+        <Project_3_ButtonsActions
+            project={project}
+            onClickCapture={project.private ? onGuardedClick : onClickCapture}
+            {...rest}
+        />
+    );
+}
+
+export function Project_3_ButtonsActions({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
 
     return (
@@ -55,21 +72,4 @@ function OpenFromGithub(event: MouseEvent, urlGithub: string) {
         event.preventDefault();
         window.open(`${urlGithub}/blob/master/package.json`, '_blank');
     }
-}
-
-export function ProjectThreeButtons({ project, onClickCapture, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
-
-    function onGuardedClick(event: MouseEvent<HTMLDivElement>) {
-        event.preventDefault();
-        event.stopPropagation();
-        requestPrivateRepoNotice(project);
-    }
-
-    return (
-        <ProjectThreeButtonsActions
-            project={project}
-            onClickCapture={project.private ? onGuardedClick : onClickCapture}
-            {...rest}
-        />
-    );
 }
