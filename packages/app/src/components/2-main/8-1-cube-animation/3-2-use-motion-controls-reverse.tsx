@@ -46,7 +46,7 @@ export const Demo_ManualReverse = () => {
 
             <div className="controls">
 
-                <button className={classNames(buttonClasses, "min-w-28 flex items-center gap-1")} onClick={toggleAnimation}>
+                <button className={classNames(buttonClasses, "px-2 flex items-center gap-1")} onClick={toggleAnimation}>
                     {isReversed ? <PlayIcon className={iconClasses} /> : <RotateCcwIcon className={iconClasses} />}
                     {isReversed ? "Play forward" : "Play reverse"}
                 </button>

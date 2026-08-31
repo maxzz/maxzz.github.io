@@ -25,7 +25,7 @@ export function CubeAnimationDemo1() {
 
         <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center")}>
             <h3>
-                Animated Cube Demo
+                Cube (scale 50%)
             </h3>
 
             <AnimatedCube trigger={trigger} onAnimationComplete={handleAnimationComplete} />
