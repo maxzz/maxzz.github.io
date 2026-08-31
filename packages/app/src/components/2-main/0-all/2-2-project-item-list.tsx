@@ -1,11 +1,9 @@
-import { type HTMLAttributes } from "react";
-import { classNames } from "@/utils/classnames";
-import { LockIcon } from "lucide-react";
 import { ProjectStack } from "./5-project-stack-icons";
 import { Project_3_Buttons } from "./3-project-3-buttons";
+import { PrivateRepoMarker, RepoName } from "./8-shared-ui";
 import { type ProjectType, type SectionType } from "@maxzz/db-apps";
 
-export function Repo_AsList({ section }: { section: SectionType; }) {
+export function Repos_AsList({ section }: { section: SectionType; }) {
     return (
         <div className="columns-1 md:columns-2 xl:columns-3 2xl:columns-4">
             {section.projects.map(
@@ -18,29 +16,13 @@ export function Repo_AsList({ section }: { section: SectionType; }) {
 }
 
 function Item({ project }: { project: ProjectType; }) {
-    const { id, stack } = project;
+    const { id, private: isPrivate, stack } = project;
     return (
         <section className="text-sm flex items-center gap-x-2">
             <Project_3_Buttons className="" project={project} inListItem={true} />
             <RepoName className="" name={id} />
-            {project.private && <PrivateRepoMarker />}
+            {isPrivate && <PrivateRepoMarker />}
             <ProjectStack className="text-[.6rem] text-sky-700 flex" stack={stack} />
         </section>
-    );
-}
-
-export function RepoName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
-    return (
-        <div className={classNames("pb-1 text-sm text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
-            {name}
-        </div>
-    );
-}
-
-export function PrivateRepoMarker({ className }: { className?: string; }) {
-    return (
-        <span className={classNames("pb-1.25 text-sky-500 inline-flex items-center -mr-1", className)} title="Private repository">
-            <LockIcon className="size-3" aria-label="Private repository" />
-        </span>
     );
 }

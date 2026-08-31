@@ -1,7 +1,7 @@
 import { type HTMLAttributes, type MouseEvent } from "react";
 import { classNames } from "@/utils";
 import { SymbolGithubLogo, SymbolHardDrive, SymbolTv } from "@/components/ui/icons/symbols";
-import { ButtonCopyPath } from "./4-project-button-copy-path";
+import { ButtonCopyPath } from "../../ui/local-ui/ui-button-copy-animated";
 import { requestPrivateRepoNotice } from "@/components/4-private-repo-notice/1-show-notice";
 import { type ProjectType } from "@maxzz/db-apps";
 
