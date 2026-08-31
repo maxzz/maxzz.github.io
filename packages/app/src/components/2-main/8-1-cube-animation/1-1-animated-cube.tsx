@@ -23,19 +23,14 @@ export function CubeAnimationDemo1() {
 
     return (
 
-        <div className={classNames(frameClasses, "flex flex-col items-center")}>
-            <h3 className="text-sm text-primary-200">
+        <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center")}>
+            <h3>
                 Animated Cube Demo
             </h3>
 
             <AnimatedCube trigger={trigger} onAnimationComplete={handleAnimationComplete} />
 
-            <button
-                className={buttonAnimatingClasses(isAnimating)}
-                onClick={handleStartAnimation}
-                disabled={isAnimating}
-                type="button"
-            >
+            <button className={buttonAnimatingClasses(isAnimating)} onClick={handleStartAnimation} disabled={isAnimating} type="button">
                 {isAnimating
                     ? 'Playing Animation...'
                     : 'Play Cube Animation'

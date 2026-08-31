@@ -3,7 +3,7 @@ import { useAnimationFrame } from "motion/react"; //https://motion.dev/docs/reac
 import { classNames } from "@/utils/classnames";
 import { frameClasses } from "./8-shared-controls";
 
-export function UseAnimationFrame() {
+export function Demo_UseAnimationFrame() {
     const ref = useRef<HTMLDivElement>(null);
 
     useAnimationFrame(
@@ -19,9 +19,13 @@ export function UseAnimationFrame() {
     );
 
     return (
-        <div className={classNames(frameClasses, "")}>
+        <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr] place-items-center")}>
+            <h3>
+                useAnimationFrame
+            </h3>
+
             <div className="container border border-primary-200">
-                
+
                 <div className="cube" ref={ref}>
                     <div className="side front" />
                     <div className="side left" />

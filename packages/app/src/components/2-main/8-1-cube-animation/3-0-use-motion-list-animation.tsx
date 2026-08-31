@@ -29,12 +29,7 @@ export function Demo_ListAnimation() {
                 <ListAnimation trigger={trigger} onAnimationComplete={handleAnimationComplete} />
             </div>
 
-            <button
-                className={buttonAnimatingClasses(isAnimating)}
-                onClick={handleStartAnimation}
-                disabled={isAnimating}
-                type="button"
-            >
+            <button className={buttonAnimatingClasses(isAnimating)} onClick={handleStartAnimation} disabled={isAnimating} type="button">
                 {isAnimating
                     ? 'Playing ...'
                     : 'Play animation'
