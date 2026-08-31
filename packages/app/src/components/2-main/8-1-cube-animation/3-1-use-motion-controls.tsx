@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { type AnimationPlaybackControlsWithThen, useAnimate, type ValueAnimationTransition } from "motion/react";
 import { a } from "@react-spring/web";
 import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
+import { classNames } from "@/utils/classnames";
+import { buttonClasses, frameClasses, iconClasses } from "./8-shared-controls";
 
-export const PlaybackControls = () => {
+export const Demo_PlaybackControls = () => {
     // `scope` allows us to reference a DOM element
     // `animate` is the function to trigger animations
     const [scope, animate] = useAnimate();
@@ -57,8 +59,13 @@ export const PlaybackControls = () => {
     };
 
     return (
-        <div className="p-4 border border-primary-400/50 rounded-lg grid grid-rows-[1fr_auto] place-items-center">
-            <div ref={scope} className="box m-4 size-8 bg-green-700"></div>
+        <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center")}>
+            <h3>
+                Playback Controls
+            </h3>
+
+            <div ref={scope} className="box m-4 size-10 bg-green-700 rounded-sm" />
+
             <div className="controls flex gap-2">
                 <button className={buttonClasses} onClick={handlePlay} title="Play"><PlayIcon className={iconClasses} /></button>
                 <button className={buttonClasses} onClick={handlePause} title="Pause"><PauseIcon className={iconClasses} /></button>
@@ -67,6 +74,3 @@ export const PlaybackControls = () => {
         </div>
     );
 };
-
-const buttonClasses = "p-1 rounded-sm bg-primary-600 hover:bg-primary-500 text-white";
-const iconClasses = "size-3";

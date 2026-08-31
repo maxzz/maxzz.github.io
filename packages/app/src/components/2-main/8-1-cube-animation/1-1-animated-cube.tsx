@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { classNames } from "@/utils";
 import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
-import { buttonClasses, frameClasses } from "./8-shared-controls";
+import { buttonAnimatingClasses, frameClasses } from "./8-shared-controls";
 
 export function CubeAnimationDemo1() {
     const [trigger, setTrigger] = useState(false);
@@ -31,7 +31,7 @@ export function CubeAnimationDemo1() {
             <AnimatedCube trigger={trigger} onAnimationComplete={handleAnimationComplete} />
 
             <button
-                className={buttonClasses(isAnimating)}
+                className={buttonAnimatingClasses(isAnimating)}
                 onClick={handleStartAnimation}
                 disabled={isAnimating}
                 type="button"

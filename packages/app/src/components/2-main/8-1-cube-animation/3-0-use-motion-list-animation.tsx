@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAnimate, stagger } from "motion/react";
 import { classNames } from "@/utils/classnames";
-import { buttonClasses, frameClasses } from "./8-shared-controls";
+import { buttonAnimatingClasses, frameClasses } from "./8-shared-controls";
 
 export function Demo_ListAnimation() {
     const [trigger, setTrigger] = useState(false);
@@ -21,7 +21,6 @@ export function Demo_ListAnimation() {
 
     return (
         <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center gap-y-1")}>
-
             <h3>
                 List animation
             </h3>
@@ -31,7 +30,7 @@ export function Demo_ListAnimation() {
             </div>
 
             <button
-                className={buttonClasses(isAnimating)}
+                className={buttonAnimatingClasses(isAnimating)}
                 onClick={handleStartAnimation}
                 disabled={isAnimating}
                 type="button"

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useAnimate } from "motion/react";
 import { PlayIcon, RotateCcwIcon } from "lucide-react";
+import { classNames } from "@/utils/classnames";
+import { buttonClasses, frameClasses, iconClasses } from "./8-shared-controls";
 
-export const ManualReverseAnimation = () => {
+export const Demo_ManualReverse = () => {
     const [scope, animate] = useAnimate();
     const [isReversed, setIsReversed] = useState(false);
 
@@ -33,24 +35,26 @@ export const ManualReverseAnimation = () => {
     };
 
     return (
-        <div className="p-4 border border-primary-400/50 rounded-lg grid grid-rows-[1fr_auto] place-items-center">
+        <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center")}>
+            <h3>
+                Manual Reverse Animation
+            </h3>
 
             <div className="w-16 h-8 border border-primary-400/50 rounded-sm flex items-center 1justify-center">
                 <div ref={scope} className="box size-8 bg-orange-400 rounded-sm" />
             </div>
 
             <div className="controls">
-                <button className={buttonClasses} onClick={toggleAnimation}>
+
+                <button className={classNames(buttonClasses, "min-w-28 flex items-center gap-1")} onClick={toggleAnimation}>
                     {isReversed ? <PlayIcon className={iconClasses} /> : <RotateCcwIcon className={iconClasses} />}
                     {isReversed ? "Play forward" : "Play reverse"}
                 </button>
+
             </div>
         </div>
     );
 };
-
-const buttonClasses = "p-1 rounded-sm bg-primary-600 hover:bg-primary-500 text-white min-w-28 flex items-center gap-1";
-const iconClasses = "size-3";
 
 /*
     gai: 'what to use instead of deprecated LegacyAnimationControls in framer-motion'
