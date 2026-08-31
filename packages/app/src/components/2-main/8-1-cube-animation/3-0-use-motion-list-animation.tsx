@@ -1,7 +1,54 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useAnimate, stagger } from "motion/react";
 
-export function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
+export function TriggerAnimationDemo() {
+    const [trigger, setTrigger] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleStartAnimation = () => {
+        if (!isAnimating) {
+            setIsAnimating(true);
+            setTrigger(true);
+        }
+    };
+
+    const handleAnimationComplete = useCallback(() => {
+        setIsAnimating(false);
+        setTrigger(false);
+    }, []);
+
+    return (
+        <div className="text-xs font-normal p-1 border border-primary-400/50 rounded-lg grid grid-rows-[auto_1fr_auto] place-items-center gap-y-1">
+
+            <h3 className="text-primary-200">
+                Animated Cube Demo
+            </h3>
+
+            <div className="p-1">
+                <ListAnimation trigger={trigger} onAnimationComplete={handleAnimationComplete} />
+            </div>
+
+            <button
+                onClick={handleStartAnimation}
+                disabled={isAnimating}
+                type="button"
+                className={`
+                            px-3 py-2.5 text-sm rounded-sm transition-all duration-200
+                            ${isAnimating
+                        ? 'bg-primary-600/50 text-primary-400 cursor-not-allowed'
+                        : 'bg-primary-600 hover:bg-primary-500 text-white cursor-pointer'}
+                        `}
+            >
+                {isAnimating
+                    ? 'Playing Animation...'
+                    : 'Play Cube Animation'
+                }
+            </button>
+        </div>
+    );
+}
+
+function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
     // 1. Get the `scope` and `animate` function from useAnimate
     const [scope, animate] = useAnimate();
 
