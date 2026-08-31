@@ -3,7 +3,7 @@ import { classNames } from "@/utils";
 import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
 import { buttonAnimatingClasses, frameClasses } from "./8-shared-controls";
 
-export function CubeAnimationDemo1() {
+export function Demo_CubeAnimation() {
     const [trigger, setTrigger] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 

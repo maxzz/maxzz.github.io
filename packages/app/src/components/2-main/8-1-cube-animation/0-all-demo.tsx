@@ -1,8 +1,8 @@
-import { CubeAnimationDemo1 } from "./1-1-animated-cube";
-import { Demo_UseAnimationFrame } from "./1-2-animated-cude-with-frame";
-import { Demo_ListAnimation } from "./3-0-use-motion-list-animation";
-import { Demo_PlaybackControls } from "./3-1-use-motion-controls";
-import { Demo_ManualReverse } from "./3-2-use-motion-controls-reverse";
+import { Demo_CubeAnimation } from "./3-4-animated-cube";
+import { Demo_Cube_UseAnimationFrame } from "./3-5-animated-cude-with-frame";
+import { Demo_Sequences } from "./3-1-use-sequence";
+import { Demo_PlaybackControls } from "./3-2-use-motion-controls";
+import { Demo_ManualReverse } from "./3-3-use-motion-controls-reverse";
 
 export function CubeAnimationDemo() {
     return (
@@ -12,10 +12,10 @@ export function CubeAnimationDemo() {
             </h3>
 
             <div className="text-xs font-normal grid grid-cols-3 gap-2">
-                <Demo_UseAnimationFrame />
-                <CubeAnimationDemo1 />
+                <Demo_CubeAnimation />
+                <Demo_Cube_UseAnimationFrame />
                 <div />
-                <Demo_ListAnimation />
+                <Demo_Sequences />
                 <Demo_PlaybackControls />
                 <Demo_ManualReverse />
             </div>

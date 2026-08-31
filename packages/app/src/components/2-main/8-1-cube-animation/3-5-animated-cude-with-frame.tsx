@@ -3,7 +3,7 @@ import { useAnimationFrame } from "motion/react"; //https://motion.dev/docs/reac
 import { classNames } from "@/utils/classnames";
 import { frameClasses } from "./8-shared-controls";
 
-export function Demo_UseAnimationFrame() {
+export function Demo_Cube_UseAnimationFrame() {
     const ref = useRef<HTMLDivElement>(null);
 
     useAnimationFrame(

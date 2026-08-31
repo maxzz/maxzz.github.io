@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { useAnimate, stagger } from "motion/react";
 import { classNames } from "@/utils/classnames";
-import { buttonAnimatingClasses, frameClasses } from "./8-shared-controls";
+import { buttonAnimatingClasses, frameClasses, iconClasses } from "./8-shared-controls";
+import { PlayIcon } from "lucide-react";
 
-export function Demo_ListAnimation() {
+export function Demo_Sequences() {
     const [trigger, setTrigger] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -22,7 +23,7 @@ export function Demo_ListAnimation() {
     return (
         <div className={classNames(frameClasses, "grid grid-rows-[auto_1fr_auto] place-items-center gap-y-1")}>
             <h3>
-                List animation
+                Sequences
             </h3>
 
             <div className="p-1">
@@ -30,6 +31,7 @@ export function Demo_ListAnimation() {
             </div>
 
             <button className={buttonAnimatingClasses(isAnimating)} onClick={handleStartAnimation} disabled={isAnimating} type="button">
+                {!isAnimating && <PlayIcon className={iconClasses} />}
                 {isAnimating
                     ? 'Playing ...'
                     : 'Play animation'
@@ -45,31 +47,26 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
 
     useEffect(
         () => {
-            // 2. Call the animate function with a sequence
+            // 3. Call the animate function with a sequence
             //    The async function ensures that each animation step completes before the next one starts
             async function sequence() {
-                /** /
-                // 1. version 1
-    
-                // Step 1: Animate the list title
-                await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
-    
-                // Step 2: Animate the list items with a stagger effect
-                await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems });
-                /**/
 
-                /**/
+                // // 1. version 1
+                // // Step 1: Animate the list title
+                // await animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 });
+                // // Step 2: Animate the list items with a stagger effect
+                // await animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems1 });
+
                 // 2. version 2
 
-                await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 0.5 });
+                await animate("h1", { opacity: 1, scaleX: 1 }, { duration: 1 });
 
                 await Promise.all([
-                    animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 0.5 }),
-                    animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems }),
+                    animate("h1", { opacity: 1, y: [0, 100, -100, 0] }, { duration: 1.5 }),
+                    animate("li", { opacity: 1, x: [-100, 0] }, { delay: staggerItems2 }),
                 ]);
 
-                await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 0.5 });
-                /**/
+                await animate("h1", { opacity: 1, scaleX: 0 }, { duration: 1.5 });
 
                 // 3. done
 
@@ -83,7 +80,7 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
         [trigger]);
 
     return (
-        // 3. Attach the scope ref to the parent element
+        // 2. Attach the scope ref to the parent element
         <div className="p-8 border border-primary-400/50 rounded-lg overflow-hidden">
             <div ref={scope}>
                 <h1 className="list-title">Loading...</h1>
@@ -98,7 +95,8 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
     );
 }
 
-const staggerItems = stagger(0.1, { startDelay: 0.25 });
+const staggerItems1 = stagger(0.1, { startDelay: 0.25 });
+const staggerItems2 = stagger(0.1, { startDelay: 1.25 });
 
 // gai: 'what to use instead of deprecated LegacyAnimationControls in framer-motion'
 // 	'is framer-motion function  useAnimationControls deprecated?' <- Yes, the useAnimationControls function has been deprecated and replaced by the useAnimate hook in Framer Motion.
