@@ -39,4 +39,9 @@ const stackComponentIcons: Record<string, ReactNode> = {
     'react-use-gesture': <SymbolManualMode className="size-3 text-sky-700" title="@use-gesture/react" />,
 };
 
-const baseClasses = "pb-1 inline-flex items-center space-x-px text-sky-700 uppercase whitespace-nowrap cursor-default select-none";
+const baseClasses = "\
+text-[.5rem] \
+pb-1 uppercase \
+text-sky-700 \
+cursor-default select-none whitespace-nowrap \
+inline-flex items-center gap-x-px";

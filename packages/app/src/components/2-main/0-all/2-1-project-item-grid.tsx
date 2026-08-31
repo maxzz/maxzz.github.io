@@ -1,27 +1,26 @@
 import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils/classnames";
-import { PrivateRepoMarker, ProjectName } from "./2-2-project-item-list";
+import { PrivateRepoMarker, RepoName } from "./2-2-project-item-list";
 import { Project_3_Buttons } from "./3-project-3-buttons";
 import { type ProjectType, type SectionType, type ImageUrl } from "@maxzz/db-apps";
 
-export function ProjectsAsGrid({ section }: { section: SectionType; }) {
+export function Repo_AsGrid({ section }: { section: SectionType; }) {
     return (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-[minmax(150px,1fr)] gap-2">
             {section.projects.map(
                 (project, idx) => (
-                    <ProjectItem_Grid project={project} key={idx} />
+                    <Item project={project} key={idx} />
                 )
             )}
         </div>
     );
 }
 
-function ProjectItem_Grid({ project }: { project: ProjectType; }) {
-    const { id, description, urlDemo, urlPreview, } = project;
-    const isSvg = typeof urlPreview === "string" && urlPreview.endsWith(".svg");
+function Item({ project }: { project: ProjectType; }) {
+    const { id, description, } = project;
     return (
         <section className="flex flex-col">
-            <ProjectName name={id} />
+            <RepoName name={id} />
 
             <div className="flex-1 p-4 text-slate-400 bg-slate-800 rounded-sm grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2">
                 <div className=" min-w-0 text-sm overflow-auto">
@@ -33,23 +32,21 @@ function ProjectItem_Grid({ project }: { project: ProjectType; }) {
                     {project.private && <PrivateRepoMarker className="ml-1.25 pb-0!" />}
                 </div>
 
-                <div className={pictureClasses}>
-                    <a className={classNames("transition-transform border shadow-sm", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
-                        <ProjectPicture src={urlPreview} />
-                    </a>
-                </div>
+                <RepoPreview project={project} />
             </div >
         </section>
     );
 }
 
-function ProjectPicture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
-    const srcUrl = Array.isArray(src) ? src : [{ src: src }];
-    const url = srcUrl[srcUrl.length - 1].src;
+function RepoPreview({ project }: { project: ProjectType; }) {
+    const { id, urlDemo, urlPreview, } = project;
+    const isSvg = typeof urlPreview === "string" && urlPreview.endsWith(".svg");
     return (
-        <picture className={classNames("object-contain grayscale hover:grayscale-0", className)} {...rest}>
-            <img className="max-h-48" src={url} alt="project preview" />
-        </picture>
+        <div className={pictureClasses}>
+            <a className={classNames("transition-transform border shadow-sm", isSvg ? "hover:scale-125 hover:border-slate-700" : "hover:scale-150")} href={urlDemo} target="_blank" title={`Open demo page for\n${id}`}>
+                <RepoPicture src={urlPreview} />
+            </a>
+        </div>
     );
 }
 
@@ -60,3 +57,13 @@ bg-primary-900 \
 border-primary-700/70 \
 shadow-primary-600/50 \
 hover:shadow-primary-400/50";
+
+function RepoPicture({ className, src, ...rest }: { src: ImageUrl; } & HTMLAttributes<HTMLPictureElement>) {
+    const srcUrl = Array.isArray(src) ? src : [{ src: src }];
+    const url = srcUrl[srcUrl.length - 1].src;
+    return (
+        <picture className={classNames("object-contain grayscale hover:grayscale-0", className)} {...rest}>
+            <img className="max-h-48" src={url} alt="project preview" />
+        </picture>
+    );
+}

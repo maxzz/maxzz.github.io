@@ -3,8 +3,8 @@ import { sectionOpenAtoms, ShowType, uiOptionsAtoms } from "@/store/store";
 import { type SectionType, sections } from "@maxzz/db-apps";
 import { UIAccordion } from "@/components/ui/local-ui/ui-accordion";
 import { UIArrow } from "@/components/ui/local-ui/ui-accordion-arrow";
-import { ProjectsAsGrid } from "./2-1-project-item-grid";
-import { ProjectsAsList } from "./2-2-project-item-list";
+import { Repo_AsGrid } from "./2-1-project-item-grid";
+import { Repo_AsList } from "./2-2-project-item-list";
 import { CubeAnimationDemo } from "../8-1-cube-animation";
 import { TimelineExample } from "../8-2-demo-timeline/TimelineExample";
 
@@ -30,8 +30,8 @@ function ProjectsGroup({ section }: { section: SectionType; }) {
 
             <UIAccordion open={sectionOpen}>
                 {showType === ShowType.list
-                    ? <ProjectsAsList section={section} />
-                    : <ProjectsAsGrid section={section} />
+                    ? <Repo_AsList section={section} />
+                    : <Repo_AsGrid section={section} />
                 }
             </UIAccordion>
         </div>
