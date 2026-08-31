@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { classNames } from "@/utils";
 import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
+import { buttonClasses } from "./8-shared-controls";
 
 export function CubeAnimationDemo1() {
     const [trigger, setTrigger] = useState(false);
@@ -30,22 +31,17 @@ export function CubeAnimationDemo1() {
             <AnimatedCube trigger={trigger} onAnimationComplete={handleAnimationComplete} />
 
             <button
+                className={buttonClasses(isAnimating)}
                 onClick={handleStartAnimation}
                 disabled={isAnimating}
                 type="button"
-                className={`
-                            px-3 py-2.5 text-sm rounded-sm transition-all duration-200
-                            ${isAnimating
-                        ? 'bg-primary-600/50 text-primary-400 cursor-not-allowed'
-                        : 'bg-primary-600 hover:bg-primary-500 text-white cursor-pointer'}
-                        `}
             >
                 {isAnimating
                     ? 'Playing Animation...'
                     : 'Play Cube Animation'
                 }
             </button>
-        </div>
+        </div >
     );
 }
 

@@ -1,6 +1,6 @@
 import { CubeAnimationDemo1 } from "./1-1-animated-cube";
 import { UseAnimationFrame } from "./1-2-animated-cude-with-frame";
-import { TriggerAnimationDemo } from "./3-0-use-motion-list-animation";
+import { Demo_ListAnimation } from "./3-0-use-motion-list-animation";
 import { PlaybackControls } from "./3-1-use-motion-controls";
 import { ManualReverseAnimation } from "./3-2-use-motion-controls-reverse";
 
@@ -12,7 +12,7 @@ export function CubeAnimationDemo() {
             </h3>
 
             <div className="text-xs font-normal grid grid-cols-3 gap-2">
-                <TriggerAnimationDemo />
+                <Demo_ListAnimation />
                 <PlaybackControls />
                 <ManualReverseAnimation />
                 <UseAnimationFrame />
