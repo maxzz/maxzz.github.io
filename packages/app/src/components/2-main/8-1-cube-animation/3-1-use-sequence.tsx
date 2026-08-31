@@ -42,15 +42,11 @@ export function Demo_Sequences() {
 }
 
 function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onAnimationComplete?: () => void; }) {
-    // 1. Get the `scope` and `animate` function from useAnimate
     const [scope, animate] = useAnimate();
-
     const [step, setStep] = useState(0);
 
     useEffect(
         () => {
-            // 3. Call the animate function with a sequence
-            //    The async function ensures that each animation step completes before the next one starts
             async function sequence() {
                 setStep(1);
                 await sequenceA(animate);
@@ -70,9 +66,8 @@ function ListAnimation({ trigger, onAnimationComplete }: { trigger: boolean, onA
         [trigger]);
 
     return (
-        // 2. Attach the scope ref to the parent element
         <div className="px-4 py-2 border border-primary-400/50 rounded-lg overflow-hidden grid grid-rows-[auto_1fr] gap-y-4">
-            <div>Step {step}</div>
+            <div className="text-[0.65rem] font-light text-center text-primary-400">Step {step}</div>
 
             <div ref={scope}>
                 <h1 className="text-sky-500">Loading...</h1>
