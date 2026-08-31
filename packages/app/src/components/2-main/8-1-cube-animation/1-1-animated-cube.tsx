@@ -1,13 +1,55 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { classNames } from "@/utils";
 import { LegacyAnimationControls, type Transition, motion, useAnimation } from "motion/react";
 
-interface AnimatedCubeProps {
-    trigger: boolean;
-    onAnimationComplete?: () => void;
+export function CubeAnimationDemo1() {
+    const [trigger, setTrigger] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleStartAnimation = () => {
+        if (!isAnimating) {
+            setIsAnimating(true);
+            setTrigger(true);
+        }
+    };
+
+    const handleAnimationComplete = useCallback(
+        () => {
+            setIsAnimating(false);
+            setTrigger(false);
+        },
+        []);
+
+    return (
+
+        <div className="p-4 bg-primary-800/30 border border-primary-400/50 rounded-lg flex flex-col items-center">
+            <h3 className="text-sm text-primary-200">
+                Animated Cube Demo
+            </h3>
+
+            <AnimatedCube trigger={trigger} onAnimationComplete={handleAnimationComplete} />
+
+            <button
+                onClick={handleStartAnimation}
+                disabled={isAnimating}
+                type="button"
+                className={`
+                            px-3 py-2.5 text-sm rounded-sm transition-all duration-200
+                            ${isAnimating
+                        ? 'bg-primary-600/50 text-primary-400 cursor-not-allowed'
+                        : 'bg-primary-600 hover:bg-primary-500 text-white cursor-pointer'}
+                        `}
+            >
+                {isAnimating
+                    ? 'Playing Animation...'
+                    : 'Play Cube Animation'
+                }
+            </button>
+        </div>
+    );
 }
 
-export function AnimatedCube({ trigger, onAnimationComplete }: AnimatedCubeProps) {
+function AnimatedCube({ trigger, onAnimationComplete }: { trigger: boolean; onAnimationComplete?: () => void; }) {
     const cubeControls = useAnimation();
 
     const sideControls: SideControls = {
