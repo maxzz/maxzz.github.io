@@ -13,23 +13,7 @@ export default (() => defineConfig({
         tailwindcss(),
         react(),
 
-        imagePresets({
-            thumbnail: widthPreset({
-                className: 'img thumb',
-                loading: 'lazy',
-                widths: [128],
-
-                //height: 190, // avoid layout shift
-                //baseWidth: 48,
-
-                formats: {
-                    // avif: {},
-                    // webp: { quality: 70 },
-                    // png: {},
-                    jpg: { quality: 77 }
-                },
-            }),
-        }) as PluginOption,
+        thumbnailImagePresets(),
         fixWindowsImagePresetUrls(),
 
         replace({
@@ -137,6 +121,26 @@ const buildVersion = () => {
     const d = new Date();
     return `${d.getFullYear().toString().substring(3)}.${d.getMonth() + 1}${d.getDate()} (${d.getHours()}${d.getMinutes()})`;
 };
+
+function thumbnailImagePresets(): PluginOption {
+    return imagePresets({
+        thumbnail: widthPreset({
+            className: 'img thumb',
+            loading: 'lazy',
+            widths: [128],
+
+            //height: 190, // avoid layout shift
+            //baseWidth: 48,
+
+            formats: {
+                // avif: {},
+                // webp: { quality: 70 },
+                // png: {},
+                jpg: { quality: 77 }
+            },
+        }),
+    }) as PluginOption;
+}
 
 /** vite-plugin-image-presets 0.3.5 uses node:path.join, so Windows builds encode `\` as %5C in src/srcset. */
 function fixWindowsImagePresetUrls(): Plugin {
