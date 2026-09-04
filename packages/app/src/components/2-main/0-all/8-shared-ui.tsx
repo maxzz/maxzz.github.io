@@ -2,7 +2,15 @@ import { type HTMLAttributes } from "react";
 import { classNames } from "@/utils/classnames";
 import { LockIcon } from "lucide-react";
 
-export function RepoName({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
+export function RepoNameGrid({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div className={classNames("pb-1 text-sm text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
+            {name}
+        </div>
+    );
+}
+
+export function RepoNameList({ name, className, ...rest }: { name: string; } & HTMLAttributes<HTMLDivElement>) {
     return (
         <div className={classNames("pb-1 text-sm text-slate-300 uppercase whitespace-nowrap", className)} {...rest}>
             {name}

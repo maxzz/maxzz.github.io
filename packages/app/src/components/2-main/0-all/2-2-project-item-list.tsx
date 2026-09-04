@@ -1,6 +1,6 @@
 import { ProjectStack } from "./5-project-stack-icons";
 import { Project_3_Buttons } from "./3-project-3-buttons";
-import { PrivateRepoMarker, RepoName } from "./8-shared-ui";
+import { PrivateRepoMarker, RepoNameList } from "./8-shared-ui";
 import { type ProjectType, type SectionType } from "@maxzz/db-apps";
 
 export function Repos_AsList({ section }: { section: SectionType; }) {
@@ -20,7 +20,7 @@ function Item({ project }: { project: ProjectType; }) {
     return (
         <section className="text-sm flex items-center gap-x-2">
             <Project_3_Buttons className="" project={project} inListItem={true} />
-            <RepoName className="" name={id} />
+            <RepoNameList className="" name={id} />
             {isPrivate && <PrivateRepoMarker />}
             <ProjectStack className="text-[.6rem] text-sky-700 flex" stack={stack} />
         </section>

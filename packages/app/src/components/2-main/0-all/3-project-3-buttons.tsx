@@ -24,33 +24,24 @@ export function Project_3_Buttons({ project, onClickCapture, ...rest }: { projec
 
 export function Project_3_ButtonsActions({ project, inListItem, className, ...rest }: { project: ProjectType; inListItem: boolean; } & HTMLAttributes<HTMLDivElement>) {
     const { urlGithub, urlDemo, localPath, } = project;
+    const btnClasses = inListItem ? "px-px" : "px-0.5";
 
     return (
         <div className={classNames("text-xs select-none flex items-center", className)} {...rest}>
-            <ButtonShell
-                className={inListItem ? "px-px" : "p-1"}
-                title="Open demo page"
-            >
+            <ButtonShell className={btnClasses} title="Open demo page">
                 <a href={urlDemo} target="_blank" aria-label="Open demo page">
                     <SymbolTv className="size-4" />
                 </a>
             </ButtonShell>
 
-            <ButtonShell
-                className={inListItem ? "px-px" : "p-1"}
-                title={"Open source on GitHub\nCtrl+click to open project.json"}
-                onClick={(event) => OpenFromGithub(event, urlGithub)}
-            >
+            <ButtonShell className={btnClasses} title={"Open source on GitHub\nCtrl+click to open project.json"} onClick={(event) => OpenFromGithub(event, urlGithub)}>
                 <a href={urlGithub} target="_blank" aria-label="Open source code on GitHub">
                     <SymbolGithubLogo className="size-4" />
                 </a>
             </ButtonShell>
 
             {localPath && (
-                <ButtonShell
-                    className={inListItem ? "px-px" : "p-1"}
-                    title={`Copy path to the project location on your hard drive.\nCtrl+Click to copy path in Unix format\n${localPath}`}
-                >
+                <ButtonShell className={btnClasses} title={`Copy path to the project location on your hard drive.\nCtrl+Click to copy path in Unix format\n${localPath}`}>
                     <ButtonCopyPath label={<SymbolHardDrive className="size-4" />} text={localPath} />
                 </ButtonShell>
             )}

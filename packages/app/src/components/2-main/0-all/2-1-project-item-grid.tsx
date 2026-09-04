@@ -1,4 +1,4 @@
-import { PrivateRepoMarker, RepoName } from "./8-shared-ui";
+import { PrivateRepoMarker, RepoNameList } from "./8-shared-ui";
 import { RepoPreview } from "./2-4-repo-preview";
 import { Project_3_Buttons } from "./3-project-3-buttons";
 import { type ProjectType, type SectionType } from "@maxzz/db-apps";
@@ -19,7 +19,7 @@ function Item({ project }: { project: ProjectType; }) {
     const { id, description, } = project;
     return (
         <section className="flex flex-col">
-            <RepoName name={id} />
+            <RepoNameList name={id} />
 
             <div className="flex-1 p-4 text-slate-400 bg-slate-800 rounded-sm grid grid-rows-[1fr_auto] grid-cols-[1fr_auto] gap-x-4 gap-y-2">
                 <div className=" min-w-0 text-sm overflow-auto">
