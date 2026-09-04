@@ -4,6 +4,16 @@ import * as images from "../assets";
 export const projectsUx: ProjectType[] = [
     {
         primary: 'UX',
+        id: "transitions",
+        description: "Transitions experiments",
+        urlGithub: "https://github.com/maxzz/transitions",
+        urlDemo: "https://maxzz.github.io/transitions",
+        urlPreview: images.colorNames22,
+        localPath: "C:/y/w/2-web/0-stack/7-animations/transitions",
+        stack: ["react", "jotai", "valtio", "tw", "shardcn", "react-spring", "motion", "gsap"],
+    },
+    {
+        primary: 'UX',
         id: "color-names23",
         description: "CSS color names selector",
         urlGithub: "https://github.com/maxzz/color-names23",
