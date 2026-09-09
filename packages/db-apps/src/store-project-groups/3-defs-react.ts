@@ -8,7 +8,7 @@ export const projectsUx: ProjectType[] = [
         description: "Transitions experiments",
         urlGithub: "https://github.com/maxzz/transitions",
         urlDemo: "https://maxzz.github.io/transitions",
-        urlPreview: images.colorNames22,
+        urlPreview: images.transitions,
         localPath: "C:/y/w/2-web/0-stack/7-animations/transitions",
         stack: ["react", "jotai", "valtio", "tw", "shardcn", "react-spring", "motion", "gsap"],
     },
