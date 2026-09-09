@@ -6,6 +6,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "pmat24-lite",
         description: "Password Manager Admin Tool (inital, light version).",
+        private: true,
         urlGithub: "https://github.com/maxzz/pmat24-lite", //https://deepwiki.com/maxzz/pmat24-lite
         urlDemo: "https://maxzz.github.io/pmat24-lite",
         urlPreview: images.pmat24Lite,
@@ -16,6 +17,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "PMIT",
         description: "Password manager investigation tool as an experiment with data-driven user interfaces (D2UI).",
+        private: true,
         urlGithub: "https://github.com/maxzz/dropzone",
         urlDemo: "https://maxzz.github.io/dropzone",
         urlPreview: images.previewDropzon,
@@ -36,6 +38,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "page-qa2",
         description: "QA information website",
+        private: true,
         urlGithub: "https://github.com/maxzz/page-qa2",
         urlDemo: "https://maxzz.github.io/page-qa2",
         urlPreview: images.pageQa2,
@@ -116,6 +119,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "manage-dpagent",
         description: "Manage DPAgent",
+        private: true,
         urlGithub: "https://github.com/maxzz/manage-dpagent",
         urlDemo: "https://github.com/maxzz/manage-dpagent", // no demo
         urlPreview: images.npm, // no img
@@ -136,6 +140,7 @@ export const projectsDp: ProjectType[] = [
         primary: 'DP',
         id: "trace-viewer-25",
         description: "A simple, fast, and lightweight trace viewer.",
+        private: true,
         urlGithub: "https://github.com/maxzz/trace-viewer-25",
         urlDemo: "https://maxzz.github.io/trace-viewer-25",
         urlPreview: images.traceViewer25,
