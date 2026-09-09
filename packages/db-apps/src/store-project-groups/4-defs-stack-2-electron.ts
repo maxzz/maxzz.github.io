@@ -106,6 +106,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         primary: 'DP',
         id: "trace-viewer-25-go",
         description: "A simple, fast, and lightweight trace viewer.",
+        private: true,
         urlGithub: "https://github.com/maxzz/trace-viewer-25-go",
         urlDemo: "https://maxzz.github.io/trace-viewer-25-go",
         urlPreview: images.traceViewer25,
@@ -116,6 +117,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         primary: 'stack',
         id: "trace-viewer-26-go",
         description: "A simple, fast, and lightweight trace viewer. 2026 edition from tm-template-go-26 and trace-viewer-25",
+        private: true,
         urlGithub: "https://github.com/maxzz/trace-viewer-26-go",
         urlDemo: "https://maxzz.github.io/trace-viewer-26-go",
         urlPreview: images.traceViewer25,
@@ -126,6 +128,7 @@ export const projectsStackElectron: ProjectType[] = [ // tech stack updates
         primary: 'stack',
         id: "traytools-26",
         description: "Tray tools for Windows 10 and 11. 2026 edition from tm-template-go-26",
+        private: true,
         urlGithub: "https://github.com/maxzz/traytools-26",
         urlDemo: "https://maxzz.github.io/traytools-26", // no demo
         urlPreview: images.traceViewer25, // no img
