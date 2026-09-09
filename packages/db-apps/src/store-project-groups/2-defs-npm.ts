@@ -76,6 +76,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "sftp-shell",
         description: "Transfer files to/from FTP server over SFTP protocol",
+        private: true,
         urlGithub: "https://github.com/maxzz/sftp-shell",
         urlDemo: "https://www.npmjs.com/package/sftp-shell", // no demo
         urlPreview: images.npm25,
@@ -196,6 +197,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "ts-srpclient",
         description: "Secure Remote Password library upgraded to Typescript and ES6 module format.",
+        private: true,
         urlGithub: "https://github.com/maxzz/ts-srpclient",
         urlDemo: "https://www.npmjs.com/package/ts-srpclient", // no demo
         urlPreview: images.npm25, // no img
@@ -249,6 +251,7 @@ export const projectsNpm: ProjectType[] = [
         primary: 'npm',
         id: "pm-xtn-csui",
         description: "PM extension content scripts UI.",
+        private: true,
         urlGithub: "https://github.com/maxzz/pm-xtn-csui",
         urlDemo: "https://www.npmjs.com/package/pm-xtn-csui", // no demo
         urlPreview: images.npm25, // no img
