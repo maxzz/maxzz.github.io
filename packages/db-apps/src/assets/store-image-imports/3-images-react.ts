@@ -29,7 +29,6 @@ import svgIconsFontSw from "../pages/react/svg-icons-font-sw-2022-07-18_18-03-13
 import reactAdminAddressBook from "../pages/react/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
 import maxzz from "../pages/react/maxzz-main.svg?preset=thumbnail";
 import maxzzGithubIo from "../../assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
-import transitions from "../pages/react/transitions-2026,09.04.26, 14.58.52.png?preset=thumbnail";
 
 export {
     colorNames22,
@@ -62,5 +61,4 @@ export {
     reactAdminAddressBook,
     maxzz,
     maxzzGithubIo,
-    transitions,
 };
