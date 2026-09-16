@@ -8,8 +8,17 @@ import { projectsVue } from "./5-defs-vue";
 import { projectsWhatif } from "./6-defs-what-if";
 import { projectsUiLibs } from "./7-ui-libs";
 import { projectsTemplates } from "./8-templates";
+import { projectsVisualization } from "./a-visualization";
 
 export const sections: SectionType[] = [
+    {
+        name: 'Visualization',
+        projects: projectsVisualization,
+    },
+    {
+        name: 'Electron, Wails, Go',
+        projects: projectsStackElectron,
+    },
     {
         name: 'UX, React',
         projects: projectsUx,
@@ -17,10 +26,6 @@ export const sections: SectionType[] = [
     {
         name: 'Stack',
         projects: projectsStack,
-    },
-    {
-        name: 'Electron, Wails, Go',
-        projects: projectsStackElectron,
     },
     {
         name: 'node, npm',

@@ -155,7 +155,8 @@ function replaceBuildInfo(): PluginOption {
 function bundleVisualizer(): PluginOption {
     return visualizer({
         filename: 'visualization.html',
-        template: 'sunburst', // sunburst - d3 style (good as default as well); treemap - table (default); network - graph (slow to open).
+        //template: 'sunburst', 
+        template: 'flamegraph', // flamegraph - as flamegraph; sunburst - as d3 style (good as default as well); treemap - as table (default); network - as graph (slow to open).
         gzipSize: true,
         brotliSize: true,
     });
