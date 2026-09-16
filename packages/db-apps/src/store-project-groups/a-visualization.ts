@@ -17,7 +17,7 @@ export const projectsVisualization: ProjectType[] = [
         id: "transitions-chrome",
         description: "Visualization of transitions in Chrome.",
         urlGithub: "https://github.com/maxzz/transitions-chrome",
-        urlDemo: "https://maxzz.github.io/transitions-chrome",
+        urlDemo: "https://github.com/maxzz/transitions-chrome", // no demo
         urlPreview: images.transitionsChrome,
         localPath: "C:/y/w/2-web/0-stack/7-animations/transitions-chrome",
         stack: ['react', 'ts', 'tw', 'shadcn', 'jotai', 'valtio'],
