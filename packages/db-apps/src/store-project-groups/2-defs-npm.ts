@@ -354,7 +354,7 @@ export const projectsNpm: ProjectType[] = [
         id: "tw-az-go",
         description: "Check and automatically fix Tailwind CSS utility class order in JSX/TSX files. Go version.",
         urlGithub: "https://github.com/maxzz/tw-az-go",
-        urlDemo: "https://www.npmjs.com/package/twaz", // npmjs link yet
+        urlDemo: "https://www.npmjs.com/package/twaz-go", // npmjs link yet
         urlPreview: images.npm25, // no img
         localPath: "C:/y/w/2-web/0-dp/utils/tw-az-go",
         stack: ['tw', 'go', 'utility'],
