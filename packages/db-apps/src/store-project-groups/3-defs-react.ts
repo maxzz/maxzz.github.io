@@ -9,7 +9,7 @@ export const projectsUx: ProjectType[] = [
         urlGithub: "https://github.com/maxzz/svg-led",
         urlDemo: "https://maxzz.github.io/svg-led",
         urlPreview: images.svgLed,
-        localPath: "C:/Y/w/2-web/8-websites-ideas/4-react/svg-led",
+        localPath: "C:/y/w/2-web/0-stack/2-editors/svg-led",
     },
     {
         primary: 'UX',
