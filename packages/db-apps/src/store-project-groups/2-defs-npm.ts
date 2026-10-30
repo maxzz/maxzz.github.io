@@ -361,6 +361,16 @@ export const projectsNpm: ProjectType[] = [
     },
     {
         primary: 'npm',
+        id: "tw-ts-go",
+        description: "Rewrite TypeScript import and export statements, and check files that still break the rules.",
+        urlGithub: "https://github.com/maxzz/tw-ts-go",
+        urlDemo: "https://www.npmjs.com/package/tw-ts-go", // npmjs link not yet
+        urlPreview: images.npm25, // no img
+        localPath: "C:/y/w/1-node/1-utils/tw-ts-go",
+        stack: ['tw', 'go', 'utility'],
+    },
+    {
+        primary: 'npm',
         id: "convert-to-excalidraw-1",
         description: "A utility for converting Mermaid diagrams from Markdown files to Excalidraw.",
         urlGithub: "https://github.com/maxzz/convert-to-excalidraw-1",
