@@ -1,4 +1,5 @@
 //ux, react
+import maxzzGithubIo from "../../assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
 import colorNames22 from "../pages/react/color-names22-2022-06-02_3-49-34.png?preset=thumbnail";
 import simpleBorderRadius from "../pages/react/simple-border-radius22-2022-07-08_18-46-46.png?preset=thumbnail";
 import borderRadiusGenerator from "../pages/react/border-radius-generator-2020-12-18_4-44-41.png?preset=thumbnail";
@@ -25,10 +26,10 @@ import reactGsapMenu from "../pages/react/react-gsap-menu-2022-07-18_17-20-08.pn
 import reactSpringInterpolation from "../pages/react/react-spring-interpolation-2022-07-18_17-37-52.png?preset=thumbnail";
 import reactDelayUnmount from "../pages/react/react-delay-unmount-2021-03-13_2-07-43.png?preset=thumbnail";
 import reactScrollingCarousel from "../pages/react/react-scrolling-carousel-2022-07-18_17-49-30.png?preset=thumbnail";
+import svgLed from "../pages/react/svg-led-2026-10-29.png?preset=thumbnail";
 import svgIconsFontSw from "../pages/react/svg-icons-font-sw-2022-07-18_18-03-13.png?preset=thumbnail";
 import reactAdminAddressBook from "../pages/react/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
 import maxzz from "../pages/react/maxzz-main.svg?preset=thumbnail";
-import maxzzGithubIo from "../../assets/previews/2022-07-12_18-24-45.png?preset=thumbnail";
 
 export {
     colorNames22,
@@ -57,6 +58,7 @@ export {
     reactSpringInterpolation,
     reactDelayUnmount,
     reactScrollingCarousel,
+    svgLed,
     svgIconsFontSw,
     reactAdminAddressBook,
     maxzz,
