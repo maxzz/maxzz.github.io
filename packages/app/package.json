@@ -13,7 +13,7 @@
         "@types/react": "19.3.0",
         "@types/react-dom": "19.3.0",
         "@vitejs/plugin-react": "6.2.1",
-        "rollup-plugin-visualizer": "7.1.1",
+        "rollup-plugin-visualizer": "7.1.2",
         "tailwindcss": "4.3.5",
         "tailwindcss-plugin-debug-screens-tw4": "^1.0.4",
         "tailwindcss-plugin-overflow-tw4": "^1.0.1",
