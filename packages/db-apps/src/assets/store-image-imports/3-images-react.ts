@@ -27,6 +27,7 @@ import reactSpringInterpolation from "../pages/react/react-spring-interpolation-
 import reactDelayUnmount from "../pages/react/react-delay-unmount-2021-03-13_2-07-43.png?preset=thumbnail";
 import reactScrollingCarousel from "../pages/react/react-scrolling-carousel-2022-07-18_17-49-30.png?preset=thumbnail";
 import svgLed from "../pages/react/svg-led-2026-10-29.png?preset=thumbnail";
+import tMarks from "../pages/react/tmarks-2026-11-25.png?preset=thumbnail";
 import svgIconsFontSw from "../pages/react/svg-icons-font-sw-2022-07-18_18-03-13.png?preset=thumbnail";
 import reactAdminAddressBook from "../pages/react/react-admin-address-book-2022-07-18_18-16-00.png?preset=thumbnail";
 import maxzz from "../pages/react/maxzz-main.svg?preset=thumbnail";
@@ -59,6 +60,7 @@ export {
     reactDelayUnmount,
     reactScrollingCarousel,
     svgLed,
+    tMarks,
     svgIconsFontSw,
     reactAdminAddressBook,
     maxzz,

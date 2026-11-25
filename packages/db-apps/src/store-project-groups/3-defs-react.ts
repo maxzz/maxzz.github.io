@@ -31,6 +31,16 @@ export const projectsUx: ProjectType[] = [
     },
     {
         primary: 'UX',
+        id: "tmarks",
+        description: "Bookmarks manager.",
+        urlGithub: "https://github.com/maxzz/tmarks",
+        urlDemo: "https://maxzz.github.io/tmarks",
+        urlPreview: images.tMarks,
+        localPath: "C:/y/w/2-web/0-stack/2-editors/tmarks",
+        stack: ['ts', 'shadcn', 'tw'],
+    },
+    {
+        primary: 'UX',
         id: "quadratic-curves",
         description: "Quadratic curves experiments.",
         urlGithub: "https://github.com/maxzz/quadratic-curves",
